@@ -14,6 +14,11 @@ const NOMBRES_SECUENCIAS = {
   "himno nacional": "Himno Nacional"
 };
 
+const RUTAS_DICCIONARIO = [
+  "datos/diccionario_lsp.json",
+  "https://raw.githubusercontent.com/gabriel-lsp/banco-digital-lsp/main/datos/diccionario_lsp.json"
+];
+
 const elementos = {
   busqueda: document.querySelector("#busqueda"),
   categoria: document.querySelector("#categoria"),
@@ -169,7 +174,7 @@ function crearTarjeta(item) {
     : "Representación visual en Lengua de Señas Peruana";
 
   if (esSecuencia(item)) {
-    categoria.textContent = "none";
+    categoria.textContent = "";
     categoria.hidden = true;
   } else {
     categoria.textContent = formatearCategoria(item.categoria);
@@ -268,24 +273,39 @@ function mostrarMas() {
   renderizar();
 }
 
+async function cargarJsonDesdeRutas() {
+  let ultimoError = null;
+
+  for (const ruta of RUTAS_DICCIONARIO) {
+    try {
+      const respuesta = await fetch(ruta, { cache: "no-store" });
+
+      if (!respuesta.ok) {
+        throw new Error(`Error HTTP ${respuesta.status} en ${ruta}`);
+      }
+
+      const datos = await respuesta.json();
+
+      if (!Array.isArray(datos)) {
+        throw new TypeError(`El archivo cargado desde ${ruta} no contiene una lista.`);
+      }
+
+      return datos;
+    } catch (error) {
+      ultimoError = error;
+      console.warn("No se pudo cargar el diccionario desde:", ruta, error);
+    }
+  }
+
+  throw ultimoError || new Error("No se pudo cargar el diccionario LSP.");
+}
+
 async function cargarBanco() {
   try {
     elementos.estado.hidden = false;
     elementos.estado.textContent = "Preparando el banco de señas…";
 
-    const respuesta = await fetch("datos/diccionario_lsp.json");
-
-    if (!respuesta.ok) {
-      throw new Error(`Error HTTP ${respuesta.status}`);
-    }
-
-    const datos = await respuesta.json();
-
-    if (!Array.isArray(datos)) {
-      throw new TypeError("El archivo diccionario_lsp.json debe contener una lista.");
-    }
-
-    banco = datos;
+    banco = await cargarJsonDesdeRutas();
 
     cargarCategorias();
     actualizarPestanasSecuencia();
@@ -295,7 +315,7 @@ async function cargarBanco() {
 
     elementos.estado.hidden = false;
     elementos.estado.textContent =
-      "No fue posible cargar el banco. Verifica que el archivo datos/diccionario_lsp.json esté disponible y que la plataforma se abra desde GitHub Pages o un servidor local.";
+      "No fue posible cargar el banco. Verifica que el archivo datos/diccionario_lsp.json esté disponible o que el respaldo del repositorio principal esté accesible.";
 
     elementos.contador.textContent = "Datos no disponibles";
     elementos.mostrando.textContent = "";
