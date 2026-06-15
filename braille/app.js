@@ -3,6 +3,11 @@
 const CANTIDAD_INICIAL_VISIBLE = 6;
 const INCREMENTO_VISIBLE = 6;
 
+const RUTAS_BRAILLE = [
+  "braille.json",
+  "https://raw.githubusercontent.com/gabriel-lsp/banco-digital-braille/main/braille.json"
+];
+
 const elementos = {
   buscador: document.querySelector("#buscador"),
   filtros: [...document.querySelectorAll(".filtro")],
@@ -286,21 +291,36 @@ function restablecerVista() {
   elementos.buscador.focus();
 }
 
+async function cargarJsonDesdeRutas() {
+  let ultimoError = null;
+
+  for (const ruta of RUTAS_BRAILLE) {
+    try {
+      const respuesta = await fetch(ruta, { cache: "no-store" });
+
+      if (!respuesta.ok) {
+        throw new Error(`Error HTTP ${respuesta.status} en ${ruta}`);
+      }
+
+      const datos = await respuesta.json();
+
+      if (!Array.isArray(datos)) {
+        throw new TypeError(`El archivo cargado desde ${ruta} no contiene una lista.`);
+      }
+
+      return datos;
+    } catch (error) {
+      ultimoError = error;
+      console.warn("No se pudo cargar el banco Braille desde:", ruta, error);
+    }
+  }
+
+  throw ultimoError || new Error("No se pudo cargar braille.json.");
+}
+
 async function cargarContenidos() {
   try {
-    const respuesta = await fetch("braille.json");
-
-    if (!respuesta.ok) {
-      throw new Error(`Error HTTP ${respuesta.status}`);
-    }
-
-    const datos = await respuesta.json();
-
-    if (!Array.isArray(datos)) {
-      throw new TypeError("El archivo braille.json debe contener una lista.");
-    }
-
-    contenidos = datos;
+    contenidos = await cargarJsonDesdeRutas();
     elementos.lista.setAttribute("aria-busy", "false");
     renderizar();
   } catch (error) {
