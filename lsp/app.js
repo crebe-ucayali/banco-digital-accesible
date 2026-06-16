@@ -201,11 +201,19 @@ function crearTarjeta(item) {
   palabra.textContent = item.palabra || "Contenido sin título";
 
   if (descripcion) {
-    descripcion.textContent = item.descripcion || "Descripción no disponible.";
-    descripcion.style.margin = "10px 0 0";
-    descripcion.style.color = "#5b6871";
-    descripcion.style.fontSize = "0.92rem";
-    descripcion.style.lineHeight = "1.55";
+    const descripcionTexto = String(item.descripcion || "").trim();
+
+    if (descripcionTexto) {
+      descripcion.textContent = descripcionTexto;
+      descripcion.hidden = false;
+      descripcion.style.margin = "10px 0 0";
+      descripcion.style.color = "#5b6871";
+      descripcion.style.fontSize = "0.92rem";
+      descripcion.style.lineHeight = "1.55";
+    } else {
+      descripcion.textContent = "";
+      descripcion.hidden = true;
+    }
   }
 
   if (fuente) {
