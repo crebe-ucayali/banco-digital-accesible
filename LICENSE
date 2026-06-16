@@ -1,6 +1,6 @@
 MIT License
 
-Copyright (c) 2026 gabriel-lsp
+Copyright (c) 2026 Gabriel Berrospi
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -11,6 +11,18 @@ furnished to do so, subject to the following conditions:
 
 The above copyright notice and this permission notice shall be included in all
 copies or substantial portions of the Software.
+
+This license applies to the software code contained in this repository. It does
+not automatically grant rights over institutional logos, external documents,
+images, educational materials, Ministry of Education materials, visual resources
+or contents whose authorship belongs to other people, institutions or public
+entities. Those materials must respect their own source, credits and conditions
+of use.
+
+The educational organization, digital adaptation, interface, search structure,
+classification of resources and repository arrangement correspond to the work
+developed for this project, without affecting the authorship or ownership of
+external reference materials used as source.
 
 THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
 IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
