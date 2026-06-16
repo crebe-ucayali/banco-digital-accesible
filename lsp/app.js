@@ -185,6 +185,7 @@ function crearTarjeta(item) {
   const imagen = tarjeta.querySelector(".imagen-sena");
   const categoria = tarjeta.querySelector(".categoria-tarjeta");
   const palabra = tarjeta.querySelector(".palabra-tarjeta");
+  const descripcion = tarjeta.querySelector(".descripcion-tarjeta");
   const fuente = tarjeta.querySelector(".fuente-tarjeta");
 
   imagen.src = item.archivo_imagen;
@@ -192,14 +193,20 @@ function crearTarjeta(item) {
     ? `Representación visual de ${item.palabra} en Lengua de Señas Peruana`
     : "Representación visual en Lengua de Señas Peruana";
 
-  if (esSecuencia(item)) {
+  if (categoria) {
     categoria.textContent = "";
     categoria.hidden = true;
-  } else {
-    categoria.textContent = formatearCategoria(item.categoria);
   }
 
   palabra.textContent = item.palabra || "Contenido sin título";
+
+  if (descripcion) {
+    descripcion.textContent = item.descripcion || "Descripción no disponible.";
+    descripcion.style.margin = "10px 0 0";
+    descripcion.style.color = "#5b6871";
+    descripcion.style.fontSize = "0.92rem";
+    descripcion.style.lineHeight = "1.55";
+  }
 
   if (fuente) {
     fuente.textContent = "";
