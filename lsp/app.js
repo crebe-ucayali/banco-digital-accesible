@@ -111,6 +111,19 @@ function ordenarResultados(lista) {
   });
 }
 
+function obtenerNumeroImagen(item) {
+  const ruta = String(item.archivo_imagen || "");
+  const coincidencia = ruta.match(/(\d+)/);
+
+  return coincidencia ? Number(coincidencia[1]) : 9999;
+}
+
+function ordenarPorImagen(lista) {
+  return [...lista].sort((a, b) => {
+    return obtenerNumeroImagen(a) - obtenerNumeroImagen(b);
+  });
+}
+
 function obtenerCategorias() {
   const categorias = banco
     .filter((item) => !esSecuencia(item))
@@ -171,6 +184,10 @@ function obtenerResultados() {
 
     return !esSecuencia(item) && coincideCategoria && coincideBusqueda;
   });
+
+  if (secuenciaActiva !== "") {
+    return ordenarPorImagen(resultados);
+  }
 
   return ordenarResultados(resultados);
 }
