@@ -3,15 +3,15 @@
 const LIMITE_INICIAL = 8;
 
 const SECUENCIAS = [
-  "padre nuestro",
   "ave maria",
+  "padre nuestro",
   "himno nacional"
 ];
 
 const NOMBRES_SECUENCIAS = {
-  "padre nuestro": "Padre Nuestro",
   "ave maria": "Ave María",
   "himno nacional": "Himno Nacional"
+  "padre nuestro": "Padre Nuestro",
 };
 
 const RUTAS_DICCIONARIO = [
