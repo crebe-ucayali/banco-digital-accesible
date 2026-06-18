@@ -5,10 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta
     name="description"
-    content="Banco Digital Accesible: plataforma educativa para acceder a recursos digitales de Lengua de Señas Peruana, sistema Braille, materiales, juegos, capacitaciones y noticias inclusivas."
+    content="Banco Digital Accesible: plataforma educativa para acceder a recursos digitales de Lengua de Señas Peruana y sistema Braille."
   >
   <title>Banco Digital Accesible</title>
-  <link rel="stylesheet" href="estilos.css?v=16">
+  <link rel="stylesheet" href="estilos.css?v=17">
   <style>
     .grid-materiales{
       grid-template-columns:repeat(3,1fr);
@@ -16,6 +16,25 @@
 
     .tarjeta-material h3{
       min-height:48px;
+    }
+
+    .tarjeta-material.en-construccion{
+      background:#ffffff;
+      border-color:#d9e2ec;
+      opacity:.92;
+    }
+
+    .estado-material.construccion{
+      background:#fff8e5;
+      color:#725918;
+      border:1px solid #ebd599;
+    }
+
+    .enlace-material.deshabilitado{
+      background:#d9e2ec;
+      color:#486581;
+      cursor:not-allowed;
+      pointer-events:none;
     }
 
     .footer-marca{
@@ -117,9 +136,9 @@
           <p class="sobretitulo">Banco de recursos</p>
           <h2 id="titulo-catalogo">Explora los módulos disponibles</h2>
           <p class="texto-panel">
-            Selecciona una tarjeta para ingresar al recurso que necesitas. Cada módulo
-            mantiene una organización visual clara y está orientado al apoyo educativo,
-            la accesibilidad y la inclusión.
+            Selecciona una tarjeta para ingresar al recurso que necesitas. Los módulos
+            disponibles actualmente son Lengua de Señas Peruana y Sistema Braille.
+            Las demás secciones quedan como espacios en construcción.
           </p>
         </div>
       </div>
@@ -157,67 +176,63 @@
           </div>
         </article>
 
-        <article class="tarjeta-material disponible">
+        <article class="tarjeta-material en-construccion">
           <div>
-            <div class="material-icono" aria-hidden="true">MEA</div>
-            <h3>Materiales Educativos Accesibles</h3>
+            <div class="material-icono" aria-hidden="true">AV</div>
+            <h3>Aula Visual</h3>
             <p>
-              Repositorio de materiales visuales, generadores, pictogramas, rutinas y apoyos
-              pedagógicos para docentes, familias y estudiantes.
+              Espacio proyectado para recursos visuales complementarios, organizados de forma clara y accesible.
             </p>
           </div>
 
           <div class="tarjeta-pie">
-            <span class="estado-material disponible">Disponible</span>
-            <a class="enlace-material" href="https://gabriel-lsp.github.io/materiales-educativos-accesibles/">Ingresar</a>
+            <span class="estado-material construccion">En construcción</span>
+            <span class="enlace-material deshabilitado">Próximamente</span>
           </div>
         </article>
 
-        <article class="tarjeta-material disponible">
+        <article class="tarjeta-material en-construccion">
           <div>
-            <div class="material-icono" aria-hidden="true">JIA</div>
-            <h3>Juegos Interactivos Accesibles</h3>
+            <div class="material-icono" aria-hidden="true">RA</div>
+            <h3>Recursos de Apoyo</h3>
             <p>
-              Actividades digitales lúdicas para fortalecer el aprendizaje mediante recursos
-              visuales, interactivos y accesibles.
+              Sección referencial para organizar futuros apoyos pedagógicos dirigidos a docentes y familias.
             </p>
           </div>
 
           <div class="tarjeta-pie">
-            <span class="estado-material disponible">Disponible</span>
-            <a class="enlace-material" href="https://gabriel-lsp.github.io/juegos-interactivos-accesibles/">Ingresar</a>
+            <span class="estado-material construccion">En construcción</span>
+            <span class="enlace-material deshabilitado">Próximamente</span>
           </div>
         </article>
 
-        <article class="tarjeta-material disponible">
+        <article class="tarjeta-material en-construccion">
           <div>
-            <div class="material-icono" aria-hidden="true">CAP</div>
-            <h3>Capacitaciones CREBE</h3>
+            <div class="material-icono" aria-hidden="true">AI</div>
+            <h3>Actividades Inclusivas</h3>
             <p>
-              Espacio digital para organizar jornadas de capacitación, videos, flyers,
-              infografías y diapositivas de apoyo formativo.
+              Módulo reservado para futuras actividades educativas accesibles y de uso práctico.
             </p>
           </div>
 
           <div class="tarjeta-pie">
-            <span class="estado-material disponible">Disponible</span>
-            <a class="enlace-material" href="https://gabriel-lsp.github.io/capacitaciones-crebe-ucayali/">Ingresar</a>
+            <span class="estado-material construccion">En construcción</span>
+            <span class="enlace-material deshabilitado">Próximamente</span>
           </div>
         </article>
 
-        <article class="tarjeta-material disponible">
+        <article class="tarjeta-material en-construccion">
           <div>
-            <div class="material-icono" aria-hidden="true">NI</div>
-            <h3>Noti Inclusivos</h3>
+            <div class="material-icono" aria-hidden="true">ED</div>
+            <h3>Espacio Didáctico</h3>
             <p>
-              Boletín digital para compartir comunicados, orientaciones, recursos y novedades
-              vinculadas a la inclusión educativa.
+              Apartado en desarrollo para incorporar nuevos recursos educativos dentro de la plataforma.
             </p>
           </div>
 
           <div class="tarjeta-pie">
-            <span class="estado-material disponible">Disponible</span>
-            <a class="enlace-material" href="https://gabriel-lsp.github.io/noti-inclusivos/">Ingresar</a>
+            <span class="estado-material construccion">En construcción</span>
+            <span class="enlace-material deshabilitado">Próximamente</span>
           </div>
         </article>
       </div>
@@ -232,13 +247,13 @@
         <div>
           <p class="sobretitulo">Organización del repositorio</p>
           <h2 id="titulo-presentacion">
-            Una portada común para los recursos accesibles
+            Una portada común para los bancos digitales
           </h2>
         </div>
         <p>
-          Esta página funciona como entrada principal a los módulos digitales. Desde aquí
-          se puede acceder a bancos de consulta, materiales educativos, juegos, capacitaciones
-          y noticias inclusivas, manteniendo una identidad visual común y una navegación sencilla.
+          Esta página funciona como entrada principal a los módulos digitales disponibles.
+          Actualmente reúne el banco de Lengua de Señas Peruana y el banco del Sistema Braille,
+          dejando otros espacios preparados para futuras ampliaciones.
         </p>
       </div>
     </section>
@@ -284,10 +299,8 @@
           <a href="https://crebeucayali.weebly.com/">Inicio principal</a><br>
           <a href="contacto.html">Contacto</a><br>
           <a href="https://gabriel-lsp.github.io/banco-digital-accesible/">Banco Digital Accesible</a><br>
-          <a href="https://gabriel-lsp.github.io/materiales-educativos-accesibles/">Material Educativo Accesible</a><br>
-          <a href="https://gabriel-lsp.github.io/juegos-interactivos-accesibles/">Juegos Educativos Accesibles</a><br>
-          <a href="https://gabriel-lsp.github.io/capacitaciones-crebe-ucayali/">Capacitaciones CREBE</a><br>
-          <a href="https://gabriel-lsp.github.io/noti-inclusivos/">Noti Inclusivos</a>
+          <a href="lsp/index.html">Banco Digital LSP</a><br>
+          <a href="braille/index.html">Banco Digital Braille</a>
         </p>
       </div>
 
