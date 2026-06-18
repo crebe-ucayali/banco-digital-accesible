@@ -8,7 +8,7 @@ El proyecto busca reunir distintos recursos en un solo espacio de consulta, faci
 
 La finalidad principal del Banco Digital Accesible es reunir y organizar recursos educativos digitales que favorezcan la accesibilidad, la inclusión educativa y el uso pedagógico de materiales de apoyo.
 
-El proyecto puede funcionar como plataforma integradora para enlazar o presentar bancos específicos, como el Banco Digital de Lengua de Señas Peruana, el Banco Digital del Sistema Braille, materiales educativos accesibles, juegos interactivos y recursos complementarios.
+El proyecto puede funcionar como plataforma integradora para enlazar o presentar bancos específicos, como el Banco Digital de Lengua de Señas Peruana, el Banco Digital del Sistema Braille, materiales educativos accesibles, juegos interactivos, capacitaciones, boletines y recursos complementarios.
 
 Este recurso tiene finalidad educativa, accesible y no comercial. No reemplaza la intervención profesional, la planificación docente, la enseñanza especializada ni los ajustes razonables que cada estudiante pueda requerir. Debe entenderse como una herramienta personal de apoyo pedagógico y organización digital.
 
@@ -20,8 +20,10 @@ El recurso está dirigido a docentes, familias, estudiantes, profesionales de ed
 
 - Banco Digital de Lengua de Señas Peruana.
 - Banco Digital del Sistema Braille.
-- Materiales educativos accesibles.
-- Juegos interactivos accesibles.
+- Materiales Educativos Accesibles.
+- Juegos Interactivos Accesibles.
+- Capacitaciones o recursos formativos.
+- Noti Inclusivos u otros boletines educativos.
 - Orientaciones para docentes y familias.
 - Fichas descargables.
 - Enlaces a recursos complementarios.
@@ -48,15 +50,18 @@ banco-digital-accesible/
 │   └── descargables/
 │
 └── docs/
-    ├── alcance-pedagogico.md
+    ├── autoria-y-contexto.md
+    ├── aviso-legal.md
     ├── fuentes-y-creditos.md
     ├── uso-permitido.md
-    ├── autoria-y-contexto.md
+    ├── alcance-pedagogico.md
+    ├── criterios-de-integracion.md
+    ├── mapa-de-repositorios.md
     ├── estructura-del-proyecto.md
     └── bitacora-de-cambios.md
 ```
 
-La estructura puede ajustarse según el crecimiento del proyecto. La carpeta `docs` reúne documentos de respaldo pedagógico, autoral, técnico y organizativo.
+La estructura puede ajustarse según el crecimiento del proyecto. La carpeta `docs` reúne documentos de respaldo pedagógico, autoral, legal, técnico y organizativo.
 
 ## Alcance pedagógico
 
@@ -74,7 +79,7 @@ Cuando el recurso sea utilizado dentro de acciones educativas del CREBE "Señor 
 
 El proyecto puede ser consultado y utilizado con fines educativos, pedagógicos, familiares y de sensibilización.
 
-Toda reutilización debe conservar la referencia al proyecto, al autor responsable y a las fuentes de los materiales externos que puedan incorporarse. Si el recurso se usa en un contexto institucional, debe respetarse el marco de uso autorizado.
+Toda reutilización debe conservar la referencia al proyecto, al autor responsable y a las fuentes de los materiales externos que puedan incorporarse. Si el recurso se usa en un contexto institucional, debe respetarse el marco de uso autorizado sin presentar el proyecto como propiedad institucional.
 
 ## Licencia
 
