@@ -15,7 +15,6 @@ const NOMBRES_SECUENCIAS = {
 };
 
 const RUTAS_DICCIONARIO = [
-  "datos/diccionario_lsp.json",
   "https://raw.githubusercontent.com/gabriel-lsp/banco-digital-lsp/main/datos/diccionario_lsp.json"
 ];
 
@@ -368,7 +367,7 @@ async function cargarBanco() {
 
     elementos.estado.hidden = false;
     elementos.estado.textContent =
-      "No fue posible cargar el banco. Verifica que el archivo datos/diccionario_lsp.json esté disponible o que el respaldo del repositorio principal esté accesible.";
+      "No fue posible cargar el banco. Verifica que el diccionario LSP del repositorio maestro esté disponible.";
 
     elementos.contador.textContent = "Datos no disponibles";
     elementos.mostrando.textContent = "";
