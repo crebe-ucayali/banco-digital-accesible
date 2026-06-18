@@ -14,19 +14,19 @@ Los recursos integrados deben utilizarse como apoyo complementario y adaptarse a
 
 La estructura digital, organización general, navegación, criterios de integración y adaptación del proyecto corresponden al trabajo desarrollado para este repositorio personal.
 
-El uso del recurso en una institución educativa no implica transferencia de autoría, propiedad intelectual ni titularidad del proyecto digital.
+El uso del recurso en espacios educativos no implica transferencia de autoría, propiedad intelectual ni titularidad del proyecto digital.
 
 ## Recursos externos
 
-El repositorio puede integrar enlaces, imágenes, documentos, materiales, recursos del Ministerio de Educación del Perú, materiales institucionales, bancos de recursos abiertos u otros contenidos externos.
+El repositorio puede integrar enlaces, imágenes, documentos, materiales, recursos del Ministerio de Educación del Perú, bancos de recursos abiertos u otros contenidos externos.
 
 Cada recurso externo mantiene su propia autoría, fuente, licencia y condiciones de uso. La presencia de un recurso dentro del Banco Digital Accesible no significa que dicho contenido sea propiedad del proyecto.
 
-## Uso de logos y referencias institucionales
+## Uso de logos y referencias de terceros
 
-Los logos, nombres institucionales, imágenes oficiales o documentos de terceros solo deben utilizarse dentro del marco autorizado.
+Los logos, nombres, imágenes oficiales o documentos de terceros solo deben utilizarse dentro del marco autorizado.
 
-La mención del CREBE "Señor de los Milagros" - Ucayali u otra institución debe entenderse como referencia de contexto o uso coordinado cuando corresponda, no como transferencia de titularidad del proyecto.
+Cuando se mencione una institución, entidad o fuente externa, dicha referencia debe entenderse como contexto de procedencia, uso o coordinación, no como transferencia de titularidad del proyecto.
 
 ## Uso no comercial
 
@@ -34,4 +34,4 @@ El proyecto tiene finalidad educativa y no comercial. El uso comercial del códi
 
 ## Responsabilidad de uso
 
-Toda persona o institución que utilice, adapte o comparta este repositorio debe conservar los créditos, citar las fuentes externas y diferenciar claramente cualquier modificación realizada.
+Toda persona que utilice, adapte o comparta este repositorio debe conservar los créditos, citar las fuentes externas y diferenciar claramente cualquier modificación realizada.
