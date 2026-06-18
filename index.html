@@ -37,6 +37,14 @@
       pointer-events:none;
     }
 
+    .enlaces-cabecera{
+      display:flex;
+      align-items:center;
+      justify-content:flex-end;
+      flex-wrap:wrap;
+      gap:12px;
+    }
+
     .footer-marca{
       display:flex;
       align-items:flex-start;
@@ -74,6 +82,10 @@
         grid-template-columns:1fr;
       }
 
+      .enlaces-cabecera{
+        justify-content:flex-start;
+      }
+
       .footer-marca{
         align-items:center;
       }
@@ -98,9 +110,14 @@
         <span>Banco Digital Accesible</span>
       </a>
 
-      <a class="enlace-cabecera" href="https://crebeucayali.weebly.com/">
-        Inicio principal
-      </a>
+      <div class="enlaces-cabecera">
+        <a class="enlace-cabecera" href="https://crebeucayali.weebly.com/">
+          Inicio principal
+        </a>
+        <a class="enlace-cabecera" href="contacto.html">
+          Contacto
+        </a>
+      </div>
     </nav>
 
     <div class="portada">
