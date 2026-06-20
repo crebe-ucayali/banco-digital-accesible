@@ -1,71 +1,108 @@
 <!doctype html>
-<html lang='es'>
+<html lang="es">
 <head>
-  <meta charset='utf-8'>
-  <meta name='viewport' content='width=device-width, initial-scale=1'>
-  <meta name='description' content='Banco Digital de Lengua de Señas Peruana para consulta educativa.'>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta
+    name="description"
+    content="Banco Digital de Lengua de Señas Peruana para consulta educativa."
+  >
   <title>Banco Digital de Lengua de Señas Peruana</title>
-  <link rel='stylesheet' href='estilos.css?v=16'>
+  <link rel="stylesheet" href="estilos.css?v=16">
 </head>
 <body>
-  <a class='salto-contenido' href='#contenido'>Ir al contenido</a>
+  <a class="salto-contenido" href="#contenido">Ir al contenido</a>
 
-  <header class='cabecera'>
-    <nav class='navegacion' aria-label='Navegación principal'>
-      <a class='marca' href='index.html' aria-label='Inicio'>
-        <span class='marca-icono' aria-hidden='true'>LSP</span>
+  <header class="cabecera">
+    <nav class="navegacion" aria-label="Navegación principal">
+      <a class="marca" href="index.html" aria-label="Inicio">
+        <span class="marca-icono" aria-hidden="true">LSP</span>
         <span>Banco Digital</span>
       </a>
 
-      <div class='enlaces-superiores'>
-        <a class='enlace-inicio' href='https://crebeucayali.weebly.com/'>Inicio</a>
-        <a class='enlace-creditos' href='creditos.html'>Créditos</a>
-        <a class='enlace-creditos' href='../contacto.html'>Contacto</a>
+      <div class="enlaces-superiores">
+        <a class="enlace-inicio" href="https://crebeucayali.weebly.com/">Inicio</a>
+        <a class="enlace-creditos" href="creditos.html">Créditos</a>
+        <a class="enlace-creditos" href="../contacto.html">Contacto</a>
       </div>
     </nav>
 
-    <div class='presentacion'>
-      <div class='bloque-institucional' aria-label='Identidad institucional'>
+    <div class="presentacion">
+      <div class="bloque-institucional" aria-label="Identidad institucional">
         <img
-          class='logo-crebe'
-          src='https://gabriel-lsp.github.io/banco-digital-accesible/logo-crebe.png'
-          alt='Logo del CREBE Señor de los Milagros - Ucayali'
+          class="logo-crebe"
+          src="https://gabriel-lsp.github.io/banco-digital-accesible/logo-crebe.png"
+          alt="Logo del CREBE Señor de los Milagros - Ucayali"
         >
-        <div class='texto-institucional'>
-          <p class='nombre-institucional'>CREBE "Señor de los Milagros" - Ucayali</p>
-          <p class='detalle-institucional'>Centro de Recursos de Educación Básica Especial</p>
+        <div class="texto-institucional">
+          <p class="nombre-institucional">
+            CREBE "Señor de los Milagros" - Ucayali
+          </p>
+          <p class="detalle-institucional">
+            Centro de Recursos de Educación Básica Especial
+          </p>
         </div>
       </div>
 
-      <p class='etiqueta-superior'>Recurso educativo de consulta visual</p>
+      <p class="etiqueta-superior">Recurso educativo de consulta visual</p>
       <h1>Banco Digital de Lengua de Señas Peruana</h1>
-      <p class='subtitulo'>Recurso visual de apoyo para la inclusión educativa</p>
+      <p class="subtitulo">
+        Recurso visual de apoyo para la inclusión educativa
+      </p>
     </div>
   </header>
 
-  <main id='contenido'>
-    <section class='panel-busqueda' aria-labelledby='titulo-busqueda'>
-      <div class='panel-encabezado'>
+  <main id="contenido">
+    <section class="panel-busqueda" aria-labelledby="titulo-busqueda">
+      <div class="panel-encabezado">
         <div>
-          <p class='seccion-etiqueta'>Explorar el banco</p>
-          <h2 id='titulo-busqueda'>Encuentra una seña</h2>
+          <p class="seccion-etiqueta">Explorar el banco</p>
+          <h2 id="titulo-busqueda">Encuentra una seña</h2>
         </div>
-        <button id='limpiar' class='boton-secundario' type='button'>Limpiar búsqueda</button>
+        <button id="limpiar" class="boton-secundario" type="button">
+          Limpiar búsqueda
+        </button>
       </div>
 
-      <div class='controles'>
-        <div class='campo'>
-          <label for='busqueda'>Buscar por palabra</label>
-          <div class='entrada-busqueda'>
-            <input id='busqueda' type='search' placeholder='Escribe una palabra'>
+      <div class="controles">
+        <div class="campo">
+          <label for="busqueda">Buscar por palabra</label>
+          <div class="entrada-busqueda">
+            <svg
+              aria-hidden="true"
+              viewBox="0 0 24 24"
+              width="20"
+              height="20"
+            >
+              <path
+                d="m21 21-4.7-4.7m2.2-5.3a7.5 7.5 0 1 1-15 0 7.5 7.5 0 0 1 15 0Z"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+              />
+            </svg>
+            <input id="busqueda" type="search" placeholder="Ejemplo: familia, agua, estudiar">
           </div>
         </div>
+
+        <div class="campo">
+          <label for="categoria">Filtrar por categoría</label>
+          <select id="categoria">
+            <option value="">Todas las categorías</option>
+          </select>
+        </div>
       </div>
 
-      <div id='resultados' class='grid-senas' aria-live='polite'></div>
+      <div id="resumen" class="resumen" aria-live="polite"></div>
+      <div id="contenedor" class="grid-senas"></div>
     </section>
   </main>
 
-  <script src='app.js?v=16'></script>
+  <footer>
+    <p>© 2026 Gabriel Berrospi. Desarrollo original. Uso institucional autorizado al CREBE "Señor de los Milagros" - Ucayali.</p>
+  </footer>
+
+  <script src="app.js?v=16"></script>
 </body>
 </html>
