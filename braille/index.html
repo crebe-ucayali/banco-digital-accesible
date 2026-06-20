@@ -11,6 +11,13 @@
   <link rel="stylesheet" href="estilos.css?v=6">
 
   <style>
+    .enlaces-cabecera{
+      display:flex;
+      flex-wrap:wrap;
+      justify-content:flex-end;
+      gap:10px;
+    }
+
     .acciones-panel{
       display:flex;
       flex-direction:column;
@@ -43,6 +50,10 @@
     }
 
     @media (max-width:700px){
+      .enlaces-cabecera{
+        justify-content:flex-start;
+      }
+
       .acciones-panel{
         align-items:flex-start;
         width:100%;
@@ -77,7 +88,10 @@
         <span>Banco Digital</span>
       </a>
 
-      <a class="enlace-cabecera" href="../contacto.html">Contacto</a>
+      <div class="enlaces-cabecera">
+        <a class="enlace-cabecera" href="../creditos.html">Créditos</a>
+        <a class="enlace-cabecera" href="../contacto.html">Contacto</a>
+      </div>
     </nav>
 
     <div class="portada">
