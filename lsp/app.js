@@ -129,6 +129,21 @@ function crearAccesosSecuencias() {
   referencia.parentNode.insertBefore(contenedor, referencia);
 }
 
+function obtenerPrioridadBusqueda(item, tokens, consulta) {
+  if (!tokens.length) return 0;
+
+  const palabra = limpiarTexto(item.palabra);
+  const categoria = limpiarTexto(item.categoria);
+  const descripcion = limpiarTexto(item.descripcion);
+
+  if (palabra === consulta) return 1;
+  if (tokens.every((token) => palabra.includes(token))) return 2;
+  if (tokens.every((token) => categoria.includes(token))) return 3;
+  if (tokens.every((token) => descripcion.includes(token))) return 4;
+
+  return 0;
+}
+
 function filtrar() {
   const consulta = limpiarTexto(elementos.busqueda.value);
   const tokens = consulta ? consulta.split(" ").filter(Boolean) : [];
@@ -141,17 +156,24 @@ function filtrar() {
     return;
   }
 
-  resultados = bancoSenas.filter((item) => {
-    const texto = limpiarTexto(`${item.palabra || ""} ${item.categoria || ""} ${item.descripcion || ""}`);
-    const coincideTexto = !tokens.length || tokens.every((token) => texto.includes(token));
-    const coincideCategoria = !categoria || item.categoria === categoria;
-    return coincideTexto && coincideCategoria;
-  });
+  resultados = bancoSenas
+    .map((item) => ({ ...item, prioridadBusqueda: obtenerPrioridadBusqueda(item, tokens, consulta) }))
+    .filter((item) => {
+      const coincideTexto = !tokens.length || item.prioridadBusqueda > 0;
+      const coincideCategoria = !categoria || item.categoria === categoria;
+      return coincideTexto && coincideCategoria;
+    });
 
   if (!tokens.length && !categoria) {
     resultados.sort((a, b) => a.ordenAleatorio - b.ordenAleatorio);
   } else {
-    resultados.sort((a, b) => String(a.palabra || "").localeCompare(String(b.palabra || ""), "es", { numeric: true }));
+    resultados.sort((a, b) => {
+      if (a.prioridadBusqueda !== b.prioridadBusqueda) {
+        return a.prioridadBusqueda - b.prioridadBusqueda;
+      }
+
+      return String(a.palabra || "").localeCompare(String(b.palabra || ""), "es", { numeric: true });
+    });
   }
 }
 
