@@ -1,0 +1,139 @@
+.cabecera{
+  background:linear-gradient(135deg,#0b3550 0%,#0f4f57 48%,#0f766e 100%);
+  padding:30px 18px 145px;
+}
+
+.cabecera::after{
+  content:none;
+}
+
+.navegacion,
+.portada{
+  max-width:1120px;
+}
+
+.navegacion{
+  gap:20px;
+}
+
+.marca{
+  gap:14px;
+  font-weight:900;
+  font-size:1.05rem;
+  letter-spacing:0;
+}
+
+.marca-icono{
+  width:54px;
+  height:54px;
+  border-radius:18px;
+  font-size:.9rem;
+  font-weight:900;
+  letter-spacing:0;
+}
+
+.enlaces-cabecera{
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:flex-end;
+  gap:12px;
+}
+
+.enlace-cabecera{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  min-height:46px;
+  padding:10px 22px;
+  font-size:1rem;
+  font-weight:800;
+  background:rgba(255,255,255,.08);
+}
+
+.enlace-cabecera:hover{
+  color:var(--blanco);
+  background:rgba(255,255,255,.16);
+}
+
+.portada{
+  margin:70px auto 0;
+}
+
+.bloque-institucional{
+  gap:22px;
+  max-width:none;
+  margin-bottom:34px;
+}
+
+.logo-crebe{
+  height:92px;
+}
+
+.texto-institucional{
+  padding-left:22px;
+}
+
+.nombre-institucional{
+  margin:0 0 8px;
+  font-size:1.2rem;
+  font-weight:900;
+}
+
+.detalle-institucional{
+  margin:0;
+  color:rgba(255,255,255,.94);
+  font-size:1rem;
+  font-weight:700;
+  line-height:1.4;
+}
+
+.etiqueta{
+  margin:0 0 14px;
+  color:#c9f7ee;
+  font-size:.86rem;
+  letter-spacing:.18em;
+}
+
+.portada h1{
+  max-width:900px;
+  margin:0 0 22px;
+  font-size:clamp(2.5rem,5.8vw,4.15rem);
+  line-height:1.04;
+  letter-spacing:-.04em;
+}
+
+.subtitulo{
+  max-width:880px;
+  margin:0;
+  color:rgba(255,255,255,.96);
+  font-size:1.22rem;
+  line-height:1.65;
+}
+
+main{
+  width:min(1120px, calc(100% - 40px));
+}
+
+@media (max-width:700px){
+  .cabecera{padding:26px 18px 116px;}
+  .navegacion{align-items:flex-start;flex-direction:column;}
+  .enlaces-cabecera{justify-content:flex-start;}
+  .portada{margin-top:54px;}
+  .bloque-institucional{gap:16px;margin-bottom:28px;}
+  .logo-crebe{width:80px;max-width:80px;height:80px;}
+  .texto-institucional{padding-left:16px;}
+  .nombre-institucional{font-size:1rem;}
+  .detalle-institucional{font-size:.9rem;}
+  main{width:min(100% - 28px, 1120px);}
+}
+
+@media (max-width:500px){
+  .marca-icono{width:50px;height:50px;}
+  .bloque-institucional{gap:14px;}
+  .logo-crebe{width:72px;max-width:72px;height:72px;}
+  .texto-institucional{padding-left:14px;}
+  .nombre-institucional{font-size:.95rem;}
+  .detalle-institucional{font-size:.82rem;}
+  .portada h1{font-size:clamp(2.25rem,12vw,3rem);}
+  .subtitulo{font-size:1rem;}
+}
