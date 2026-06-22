@@ -8650,96 +8650,96 @@
   {
     "id": "LSP-920001",
     "categoria": "himno_nacional",
-    "palabra": "Somos libres",
-    "descripcion": "Secuencia 01 del Himno Nacional del Perú.",
+    "palabra": "Somos libres seámoslo siempre",
+    "descripcion": "",
     "archivo_imagen": "imagenes/himno_nacional/himno_nacional_01.png",
     "fuente": "Ministerio de Educación del Perú - Guía de Lengua de Señas Peruana"
   },
   {
     "id": "LSP-920002",
     "categoria": "himno_nacional",
-    "palabra": "Seámoslo siempre",
-    "descripcion": "Secuencia 02 del Himno Nacional del Perú.",
+    "palabra": "Antes niegue sus luces el sol",
+    "descripcion": "",
     "archivo_imagen": "imagenes/himno_nacional/himno_nacional_02.png",
     "fuente": "Ministerio de Educación del Perú - Guía de Lengua de Señas Peruana"
   },
   {
     "id": "LSP-920003",
     "categoria": "himno_nacional",
-    "palabra": "Y antes niegue sus luces",
-    "descripcion": "Secuencia 03 del Himno Nacional del Perú.",
+    "palabra": "Que faltemos al voto solemne",
+    "descripcion": "",
     "archivo_imagen": "imagenes/himno_nacional/himno_nacional_03.png",
     "fuente": "Ministerio de Educación del Perú - Guía de Lengua de Señas Peruana"
   },
   {
     "id": "LSP-920004",
     "categoria": "himno_nacional",
-    "palabra": "El sol",
-    "descripcion": "Secuencia 04 del Himno Nacional del Perú.",
+    "palabra": "Que la patria al eterno elevó",
+    "descripcion": "",
     "archivo_imagen": "imagenes/himno_nacional/himno_nacional_04.png",
     "fuente": "Ministerio de Educación del Perú - Guía de Lengua de Señas Peruana"
   },
   {
     "id": "LSP-920005",
     "categoria": "himno_nacional",
-    "palabra": "Que faltemos",
-    "descripcion": "Secuencia 05 del Himno Nacional del Perú.",
+    "palabra": "En su cima",
+    "descripcion": "",
     "archivo_imagen": "imagenes/himno_nacional/himno_nacional_05.png",
     "fuente": "Ministerio de Educación del Perú - Guía de Lengua de Señas Peruana"
   },
   {
     "id": "LSP-920006",
     "categoria": "himno_nacional",
-    "palabra": "Al voto solemne",
-    "descripcion": "Secuencia 06 del Himno Nacional del Perú.",
+    "palabra": "Los andes sostengan",
+    "descripcion": "",
     "archivo_imagen": "imagenes/himno_nacional/himno_nacional_06.png",
     "fuente": "Ministerio de Educación del Perú - Guía de Lengua de Señas Peruana"
   },
   {
     "id": "LSP-920007",
     "categoria": "himno_nacional",
-    "palabra": "Que la patria",
-    "descripcion": "Secuencia 07 del Himno Nacional del Perú.",
+    "palabra": "La bandera o pendón bicolor",
+    "descripcion": "",
     "archivo_imagen": "imagenes/himno_nacional/himno_nacional_07.png",
     "fuente": "Ministerio de Educación del Perú - Guía de Lengua de Señas Peruana"
   },
   {
     "id": "LSP-920008",
     "categoria": "himno_nacional",
-    "palabra": "Al eterno elevó",
-    "descripcion": "Secuencia 08 del Himno Nacional del Perú.",
+    "palabra": "Que a los siglos anuncie el esfuerzo",
+    "descripcion": "",
     "archivo_imagen": "imagenes/himno_nacional/himno_nacional_08.png",
     "fuente": "Ministerio de Educación del Perú - Guía de Lengua de Señas Peruana"
   },
   {
     "id": "LSP-920009",
     "categoria": "himno_nacional",
-    "palabra": "Somos libres, seámoslo siempre",
-    "descripcion": "Secuencia 09 del Himno Nacional del Perú.",
+    "palabra": "Que ser libre por siempre nos dio",
+    "descripcion": "",
     "archivo_imagen": "imagenes/himno_nacional/himno_nacional_09.png",
     "fuente": "Ministerio de Educación del Perú - Guía de Lengua de Señas Peruana"
   },
   {
     "id": "LSP-920010",
     "categoria": "himno_nacional",
-    "palabra": "Y antes niegue sus luces el sol",
-    "descripcion": "Secuencia 10 del Himno Nacional del Perú.",
+    "palabra": "A su sombra vivamos tranquilos",
+    "descripcion": "",
     "archivo_imagen": "imagenes/himno_nacional/himno_nacional_10.png",
     "fuente": "Ministerio de Educación del Perú - Guía de Lengua de Señas Peruana"
   },
   {
     "id": "LSP-920011",
     "categoria": "himno_nacional",
-    "palabra": "Que faltemos al voto solemne",
-    "descripcion": "Secuencia 11 del Himno Nacional del Perú.",
+    "palabra": "Y al nacer por sus cumbres el sol renovemos",
+    "descripcion": "",
     "archivo_imagen": "imagenes/himno_nacional/himno_nacional_11.png",
     "fuente": "Ministerio de Educación del Perú - Guía de Lengua de Señas Peruana"
   },
   {
     "id": "LSP-920012",
     "categoria": "himno_nacional",
-    "palabra": "Que la patria al eterno elevó",
-    "descripcion": "Secuencia 12 del Himno Nacional del Perú.",
+    "palabra": "El gran juramento que rendimos al Dios de Jacob",
+    "descripcion": "",
     "archivo_imagen": "imagenes/himno_nacional/himno_nacional_12.png",
     "fuente": "Ministerio de Educación del Perú - Guía de Lengua de Señas Peruana"
   },
@@ -8747,7 +8747,7 @@
     "id": "LSP-900001",
     "categoria": "padre_nuestro",
     "palabra": "Padre nuestro que estás en el cielo",
-    "descripcion": "Secuencia 01 del Padre Nuestro en Lengua de Señas Peruana.",
+    "descripcion": "",
     "archivo_imagen": "imagenes/padre_nuestro/padre_nuestro_01.png",
     "fuente": "Ministerio de Educación del Perú - Guía de Lengua de Señas Peruana"
   },
@@ -8755,7 +8755,7 @@
     "id": "LSP-900002",
     "categoria": "padre_nuestro",
     "palabra": "Santificado sea tu nombre",
-    "descripcion": "Secuencia 02 del Padre Nuestro en Lengua de Señas Peruana.",
+    "descripcion": "",
     "archivo_imagen": "imagenes/padre_nuestro/padre_nuestro_02.png",
     "fuente": "Ministerio de Educación del Perú - Guía de Lengua de Señas Peruana"
   },
@@ -8763,7 +8763,7 @@
     "id": "LSP-900003",
     "categoria": "padre_nuestro",
     "palabra": "Venga a nosotros tu reino",
-    "descripcion": "Secuencia 03 del Padre Nuestro en Lengua de Señas Peruana.",
+    "descripcion": "",
     "archivo_imagen": "imagenes/padre_nuestro/padre_nuestro_03.png",
     "fuente": "Ministerio de Educación del Perú - Guía de Lengua de Señas Peruana"
   },
@@ -8771,15 +8771,15 @@
     "id": "LSP-900004",
     "categoria": "padre_nuestro",
     "palabra": "Hágase tu voluntad",
-    "descripcion": "Secuencia 04 del Padre Nuestro en Lengua de Señas Peruana.",
+    "descripcion": "",
     "archivo_imagen": "imagenes/padre_nuestro/padre_nuestro_04.png",
     "fuente": "Ministerio de Educación del Perú - Guía de Lengua de Señas Peruana"
   },
   {
     "id": "LSP-900005",
     "categoria": "padre_nuestro",
-    "palabra": "En la tierra",
-    "descripcion": "Secuencia 05 del Padre Nuestro en Lengua de Señas Peruana.",
+    "palabra": "Así en la tierra",
+    "descripcion": "",
     "archivo_imagen": "imagenes/padre_nuestro/padre_nuestro_05.png",
     "fuente": "Ministerio de Educación del Perú - Guía de Lengua de Señas Peruana"
   },
@@ -8787,55 +8787,55 @@
     "id": "LSP-900006",
     "categoria": "padre_nuestro",
     "palabra": "Como en el cielo",
-    "descripcion": "Secuencia 06 del Padre Nuestro en Lengua de Señas Peruana.",
+    "descripcion": "",
     "archivo_imagen": "imagenes/padre_nuestro/padre_nuestro_06.png",
     "fuente": "Ministerio de Educación del Perú - Guía de Lengua de Señas Peruana"
   },
   {
     "id": "LSP-900007",
     "categoria": "padre_nuestro",
-    "palabra": "Danos hoy",
-    "descripcion": "Secuencia 07 del Padre Nuestro en Lengua de Señas Peruana.",
+    "palabra": "Danos hoy nuestro pan de cada día",
+    "descripcion": "",
     "archivo_imagen": "imagenes/padre_nuestro/padre_nuestro_07.png",
     "fuente": "Ministerio de Educación del Perú - Guía de Lengua de Señas Peruana"
   },
   {
     "id": "LSP-900008",
     "categoria": "padre_nuestro",
-    "palabra": "Nuestro pan de cada día",
-    "descripcion": "Secuencia 08 del Padre Nuestro en Lengua de Señas Peruana.",
+    "palabra": "Y perdona nuestras ofensas",
+    "descripcion": "",
     "archivo_imagen": "imagenes/padre_nuestro/padre_nuestro_08.png",
     "fuente": "Ministerio de Educación del Perú - Guía de Lengua de Señas Peruana"
   },
   {
     "id": "LSP-900009",
     "categoria": "padre_nuestro",
-    "palabra": "Perdona nuestras ofensas",
-    "descripcion": "Secuencia 09 del Padre Nuestro en Lengua de Señas Peruana.",
+    "palabra": "Así como nosotros perdonamos",
+    "descripcion": "",
     "archivo_imagen": "imagenes/padre_nuestro/padre_nuestro_09.png",
     "fuente": "Ministerio de Educación del Perú - Guía de Lengua de Señas Peruana"
   },
   {
     "id": "LSP-900010",
     "categoria": "padre_nuestro",
-    "palabra": "Como también nosotros perdonamos",
-    "descripcion": "Secuencia 10 del Padre Nuestro en Lengua de Señas Peruana.",
+    "palabra": "A los que nos ofenden",
+    "descripcion": "",
     "archivo_imagen": "imagenes/padre_nuestro/padre_nuestro_10.png",
     "fuente": "Ministerio de Educación del Perú - Guía de Lengua de Señas Peruana"
   },
   {
     "id": "LSP-900011",
     "categoria": "padre_nuestro",
-    "palabra": "A los que nos ofenden",
-    "descripcion": "Secuencia 11 del Padre Nuestro en Lengua de Señas Peruana.",
+    "palabra": "Y no nos dejes caer",
+    "descripcion": "",
     "archivo_imagen": "imagenes/padre_nuestro/padre_nuestro_11.png",
     "fuente": "Ministerio de Educación del Perú - Guía de Lengua de Señas Peruana"
   },
   {
     "id": "LSP-900012",
     "categoria": "padre_nuestro",
-    "palabra": "No nos dejes caer en la tentación",
-    "descripcion": "Secuencia 12 del Padre Nuestro en Lengua de Señas Peruana.",
+    "palabra": "En la tentación",
+    "descripcion": "",
     "archivo_imagen": "imagenes/padre_nuestro/padre_nuestro_12.png",
     "fuente": "Ministerio de Educación del Perú - Guía de Lengua de Señas Peruana"
   },
@@ -8843,7 +8843,7 @@
     "id": "LSP-900013",
     "categoria": "padre_nuestro",
     "palabra": "Y líbranos del mal",
-    "descripcion": "Secuencia 13 del Padre Nuestro en Lengua de Señas Peruana.",
+    "descripcion": "",
     "archivo_imagen": "imagenes/padre_nuestro/padre_nuestro_13.png",
     "fuente": "Ministerio de Educación del Perú - Guía de Lengua de Señas Peruana"
   },
@@ -8851,7 +8851,7 @@
     "id": "LSP-900014",
     "categoria": "padre_nuestro",
     "palabra": "Amén",
-    "descripcion": "Secuencia 14 del Padre Nuestro en Lengua de Señas Peruana.",
+    "descripcion": "",
     "archivo_imagen": "imagenes/padre_nuestro/padre_nuestro_14.png",
     "fuente": "Ministerio de Educación del Perú - Guía de Lengua de Señas Peruana"
   },
@@ -8859,7 +8859,7 @@
     "id": "LSP-910001",
     "categoria": "ave_maria",
     "palabra": "Dios te salve María",
-    "descripcion": "Secuencia 01 del Ave María en Lengua de Señas Peruana.",
+    "descripcion": "",
     "archivo_imagen": "imagenes/ave_maria/ave_maria_01.png",
     "fuente": "Ministerio de Educación del Perú - Guía de Lengua de Señas Peruana"
   },
@@ -8867,7 +8867,7 @@
     "id": "LSP-910002",
     "categoria": "ave_maria",
     "palabra": "Llena eres de gracia",
-    "descripcion": "Secuencia 02 del Ave María en Lengua de Señas Peruana.",
+    "descripcion": "",
     "archivo_imagen": "imagenes/ave_maria/ave_maria_02.png",
     "fuente": "Ministerio de Educación del Perú - Guía de Lengua de Señas Peruana"
   },
@@ -8875,7 +8875,7 @@
     "id": "LSP-910003",
     "categoria": "ave_maria",
     "palabra": "El Señor es contigo",
-    "descripcion": "Secuencia 03 del Ave María en Lengua de Señas Peruana.",
+    "descripcion": "",
     "archivo_imagen": "imagenes/ave_maria/ave_maria_03.png",
     "fuente": "Ministerio de Educación del Perú - Guía de Lengua de Señas Peruana"
   },
@@ -8883,7 +8883,7 @@
     "id": "LSP-910004",
     "categoria": "ave_maria",
     "palabra": "Bendita tú eres",
-    "descripcion": "Secuencia 04 del Ave María en Lengua de Señas Peruana.",
+    "descripcion": "",
     "archivo_imagen": "imagenes/ave_maria/ave_maria_04.png",
     "fuente": "Ministerio de Educación del Perú - Guía de Lengua de Señas Peruana"
   },
@@ -8891,7 +8891,7 @@
     "id": "LSP-910005",
     "categoria": "ave_maria",
     "palabra": "Entre todas las mujeres",
-    "descripcion": "Secuencia 05 del Ave María en Lengua de Señas Peruana.",
+    "descripcion": "",
     "archivo_imagen": "imagenes/ave_maria/ave_maria_05.png",
     "fuente": "Ministerio de Educación del Perú - Guía de Lengua de Señas Peruana"
   },
@@ -8899,7 +8899,7 @@
     "id": "LSP-910006",
     "categoria": "ave_maria",
     "palabra": "Y bendito es el fruto",
-    "descripcion": "Secuencia 06 del Ave María en Lengua de Señas Peruana.",
+    "descripcion": "",
     "archivo_imagen": "imagenes/ave_maria/ave_maria_06.png",
     "fuente": "Ministerio de Educación del Perú - Guía de Lengua de Señas Peruana"
   },
@@ -8907,7 +8907,7 @@
     "id": "LSP-910007",
     "categoria": "ave_maria",
     "palabra": "De tu vientre Jesús",
-    "descripcion": "Secuencia 07 del Ave María en Lengua de Señas Peruana.",
+    "descripcion": "",
     "archivo_imagen": "imagenes/ave_maria/ave_maria_07.png",
     "fuente": "Ministerio de Educación del Perú - Guía de Lengua de Señas Peruana"
   },
@@ -8915,7 +8915,7 @@
     "id": "LSP-910008",
     "categoria": "ave_maria",
     "palabra": "Santa María, Madre de Dios",
-    "descripcion": "Secuencia 08 del Ave María en Lengua de Señas Peruana.",
+    "descripcion": "",
     "archivo_imagen": "imagenes/ave_maria/ave_maria_08.png",
     "fuente": "Ministerio de Educación del Perú - Guía de Lengua de Señas Peruana"
   },
@@ -8923,23 +8923,23 @@
     "id": "LSP-910009",
     "categoria": "ave_maria",
     "palabra": "Ruega por nosotros pecadores",
-    "descripcion": "Secuencia 09 del Ave María en Lengua de Señas Peruana.",
+    "descripcion": "",
     "archivo_imagen": "imagenes/ave_maria/ave_maria_09.png",
     "fuente": "Ministerio de Educación del Perú - Guía de Lengua de Señas Peruana"
   },
   {
     "id": "LSP-910010",
     "categoria": "ave_maria",
-    "palabra": "Ahora y en la hora",
-    "descripcion": "Secuencia 10 del Ave María en Lengua de Señas Peruana.",
+    "palabra": "Ahora y en la hora de nuestra muerte",
+    "descripcion": "",
     "archivo_imagen": "imagenes/ave_maria/ave_maria_10.png",
     "fuente": "Ministerio de Educación del Perú - Guía de Lengua de Señas Peruana"
   },
   {
     "id": "LSP-910011",
     "categoria": "ave_maria",
-    "palabra": "De nuestra muerte. Amén",
-    "descripcion": "Secuencia 11 del Ave María en Lengua de Señas Peruana.",
+    "palabra": "DAmén",
+    "descripcion": "",
     "archivo_imagen": "imagenes/ave_maria/ave_maria_11.png",
     "fuente": "Ministerio de Educación del Perú - Guía de Lengua de Señas Peruana"
   }
