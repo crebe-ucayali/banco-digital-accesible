@@ -1,0 +1,74 @@
+[
+  {
+    "palabra": "Familia",
+    "categoria": "personas y familia",
+    "descripcion": "Registro inicial para organizar la consulta educativa de señas relacionadas con familia.",
+    "archivo_imagen": "imagenes/sena-referencia.svg"
+  },
+  {
+    "palabra": "Mamá",
+    "categoria": "personas y familia",
+    "descripcion": "Registro inicial para incorporar la seña real correspondiente.",
+    "archivo_imagen": "imagenes/sena-referencia.svg"
+  },
+  {
+    "palabra": "Papá",
+    "categoria": "personas y familia",
+    "descripcion": "Registro inicial para incorporar la seña real correspondiente.",
+    "archivo_imagen": "imagenes/sena-referencia.svg"
+  },
+  {
+    "palabra": "Agua",
+    "categoria": "necesidades básicas",
+    "descripcion": "Registro inicial para organizar vocabulario de uso cotidiano.",
+    "archivo_imagen": "imagenes/sena-referencia.svg"
+  },
+  {
+    "palabra": "Comer",
+    "categoria": "necesidades básicas",
+    "descripcion": "Registro inicial para incorporar la seña real correspondiente.",
+    "archivo_imagen": "imagenes/sena-referencia.svg"
+  },
+  {
+    "palabra": "Baño",
+    "categoria": "necesidades básicas",
+    "descripcion": "Registro inicial para incorporar la seña real correspondiente.",
+    "archivo_imagen": "imagenes/sena-referencia.svg"
+  },
+  {
+    "palabra": "Hola",
+    "categoria": "saludos y comunicación",
+    "descripcion": "Registro inicial para organizar saludos y expresiones básicas.",
+    "archivo_imagen": "imagenes/sena-referencia.svg"
+  },
+  {
+    "palabra": "Gracias",
+    "categoria": "saludos y comunicación",
+    "descripcion": "Registro inicial para incorporar la seña real correspondiente.",
+    "archivo_imagen": "imagenes/sena-referencia.svg"
+  },
+  {
+    "palabra": "Estudiar",
+    "categoria": "escuela",
+    "descripcion": "Registro inicial para organizar vocabulario del contexto escolar.",
+    "archivo_imagen": "imagenes/sena-referencia.svg"
+  },
+  {
+    "palabra": "Profesor",
+    "categoria": "escuela",
+    "descripcion": "Registro inicial para incorporar la seña real correspondiente.",
+    "archivo_imagen": "imagenes/sena-referencia.svg"
+  },
+  {
+    "palabra": "Cuaderno",
+    "categoria": "escuela",
+    "descripcion": "Registro inicial para incorporar la seña real correspondiente.",
+    "archivo_imagen": "imagenes/sena-referencia.svg"
+  },
+  {
+    "palabra": "Ayuda",
+    "categoria": "apoyo y convivencia",
+    "descripcion": "Registro inicial para organizar vocabulario de apoyo comunicativo.",
+    "archivo_imagen": "imagenes/sena-referencia.svg"
+  }
+]
