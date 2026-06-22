@@ -8,7 +8,7 @@ La bitácora permite dejar evidencia del desarrollo progresivo del proyecto, dif
 
 Se crea el Banco Digital Accesible como plataforma educativa digital personal para integrar recursos vinculados a la accesibilidad, la inclusión educativa y la atención a la diversidad.
 
-El proyecto se plantea como un espacio articulador para enlazar o presentar recursos como el Banco Digital de Lengua de Señas Peruana, el Banco Digital del Sistema Braille, materiales educativos accesibles, juegos interactivos, capacitaciones, boletines y orientaciones para docentes y familias.
+El proyecto se plantea como un espacio articulador para integrar módulos internos de Lengua de Señas Peruana y Sistema Braille, materiales educativos accesibles, juegos interactivos, capacitaciones, boletines y orientaciones para docentes y familias.
 
 Se registra la autoría del desarrollo, organización, adaptación digital, estructura de consulta y presentación web a cargo de Gabriel Berrospi.
 
@@ -33,7 +33,7 @@ Se agregan documentos de respaldo en la carpeta `docs`:
 ## Pendientes de desarrollo
 
 - Definir módulos principales de la plataforma.
-- Integrar enlaces a bancos específicos de LSP y Braille.
+- Consolidar los módulos internos de Lengua de Señas Peruana y Sistema Braille dentro de BDA.
 - Organizar materiales educativos accesibles.
 - Incorporar fichas, guías o recursos descargables.
 - Revisar criterios de accesibilidad visual y navegación.
