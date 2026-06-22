@@ -134,12 +134,10 @@ function obtenerPrioridadBusqueda(item, tokens, consulta) {
 
   const palabra = limpiarTexto(item.palabra);
   const categoria = limpiarTexto(item.categoria);
-  const descripcion = limpiarTexto(item.descripcion);
 
   if (palabra === consulta) return 1;
   if (tokens.every((token) => palabra.includes(token))) return 2;
   if (tokens.every((token) => categoria.includes(token))) return 3;
-  if (tokens.every((token) => descripcion.includes(token))) return 4;
 
   return 0;
 }
