@@ -3,9 +3,9 @@
 const BASE_ORIGINAL = "https://gabriel-lsp.github.io/banco-digital-lsp/";
 const BASE_BDA = "https://gabriel-lsp.github.io/banco-digital-accesible/lsp/";
 const RUTAS = [
-  { url: BASE_ORIGINAL + "datos/diccionario_lsp.json", base: BASE_ORIGINAL },
   { url: "datos/diccionario_lsp.json", base: BASE_BDA },
-  { url: BASE_BDA + "datos/diccionario_lsp.json", base: BASE_BDA }
+  { url: BASE_BDA + "datos/diccionario_lsp.json", base: BASE_BDA },
+  { url: BASE_ORIGINAL + "datos/diccionario_lsp.json", base: BASE_ORIGINAL }
 ];
 
 const $ = (selector) => document.querySelector(selector);
