@@ -2,11 +2,11 @@
 
 Este documento orienta la integración de recursos dentro del repositorio Banco Digital Accesible.
 
-El Banco Digital Accesible funciona como una plataforma organizadora que puede reunir o enlazar distintos recursos educativos digitales vinculados a accesibilidad, inclusión educativa, Lengua de Señas Peruana, sistema Braille, materiales accesibles, juegos interactivos y otros apoyos pedagógicos.
+El Banco Digital Accesible funciona como una plataforma organizadora que reúne módulos internos y puede enlazar recursos educativos digitales vinculados a accesibilidad, inclusión educativa, Lengua de Señas Peruana, sistema Braille, materiales accesibles, juegos interactivos y otros apoyos pedagógicos.
 
 ## Finalidad de la integración
 
-La integración de recursos busca facilitar el acceso ordenado a materiales educativos, evitando que los repositorios o herramientas queden dispersos.
+La integración de recursos busca facilitar el acceso ordenado a materiales educativos, evitando que los contenidos o herramientas queden dispersos.
 
 Cada recurso integrado debe aportar a la accesibilidad, la participación, la comunicación, el aprendizaje, la orientación docente, el apoyo familiar o la sensibilización sobre atención a la diversidad.
 
@@ -26,8 +26,8 @@ Antes de integrar un recurso, se recomienda verificar:
 
 El repositorio puede integrar:
 
-- Banco Digital de Lengua de Señas Peruana.
-- Banco Digital del Sistema Braille.
+- Módulo de Lengua de Señas Peruana.
+- Módulo del Sistema Braille.
 - Materiales Educativos Accesibles.
 - Juegos Interactivos Accesibles.
 - Capacitaciones o recursos formativos.
