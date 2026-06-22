@@ -53,8 +53,34 @@ function rutaImagen(ruta) {
   return baseImagenes + limpia.replace(/^\.\//, "");
 }
 
-function compararPorNumero(a, b) {
-  return String(a.id || "").localeCompare(String(b.id || ""), "es", { numeric: true });
+function obtenerNumeroSecuencia(item) {
+  const campos = [
+    item.orden,
+    item.numero,
+    item.parte,
+    item.paso,
+    item.archivo_imagen,
+    item.palabra,
+    item.id
+  ];
+
+  for (const campo of campos) {
+    const texto = String(campo || "");
+    const coincidencia = texto.match(/(?:^|[^0-9])(\d{1,4})(?=[^0-9]|$)/);
+    if (coincidencia) return Number(coincidencia[1]);
+  }
+
+  return Number.MAX_SAFE_INTEGER;
+}
+
+function compararPorSecuencia(a, b) {
+  const numeroA = obtenerNumeroSecuencia(a);
+  const numeroB = obtenerNumeroSecuencia(b);
+
+  if (numeroA !== numeroB) return numeroA - numeroB;
+
+  return String(a.archivo_imagen || a.palabra || a.id || "")
+    .localeCompare(String(b.archivo_imagen || b.palabra || b.id || ""), "es", { numeric: true });
 }
 
 function asignarOrdenAleatorio() {
@@ -111,7 +137,7 @@ function filtrar() {
   if (secuenciaActiva) {
     resultados = bancoSecuencias
       .filter((item) => item.categoria === secuenciaActiva)
-      .sort(compararPorNumero);
+      .sort(compararPorSecuencia);
     return;
   }
 
