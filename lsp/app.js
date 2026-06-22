@@ -9,9 +9,9 @@ const RUTAS = [
 ];
 
 const SECUENCIAS = {
-  padre_nuestro: "Padre Nuestro",
   ave_maria: "Ave María",
-  himno_nacional: "Himno Nacional"
+  himno_nacional: "Himno Nacional",
+  padre_nuestro: "Padre Nuestro"
 };
 
 const $ = (selector) => document.querySelector(selector);
