@@ -8,7 +8,7 @@ El proyecto busca reunir distintos recursos en un solo espacio de consulta, faci
 
 La finalidad principal del Banco Digital Accesible es reunir y organizar recursos educativos digitales que favorezcan la accesibilidad, la inclusión educativa y el uso pedagógico de materiales de apoyo.
 
-El proyecto puede funcionar como plataforma integradora para enlazar o presentar bancos específicos, como el Banco Digital de Lengua de Señas Peruana, el Banco Digital del Sistema Braille, materiales educativos accesibles, juegos interactivos, capacitaciones, boletines y recursos complementarios.
+Dentro de BDA se integran los módulos de Lengua de Señas Peruana y Sistema Braille, de modo que ya no se requiere mantener repositorios separados para esos contenidos. Otros recursos, como materiales educativos accesibles, juegos interactivos, capacitaciones, boletines y accesos complementarios, pueden mantenerse como espacios relacionados según su función.
 
 Este recurso tiene finalidad educativa, accesible y no comercial. No reemplaza la intervención profesional, la planificación docente, la enseñanza especializada ni los ajustes razonables que cada estudiante pueda requerir. Debe entenderse como una herramienta personal de apoyo pedagógico y organización digital.
 
@@ -18,8 +18,8 @@ El recurso está dirigido a docentes, familias, estudiantes, profesionales de ed
 
 ## Recursos que puede integrar
 
-- Banco Digital de Lengua de Señas Peruana.
-- Banco Digital del Sistema Braille.
+- Módulo de Lengua de Señas Peruana.
+- Módulo del Sistema Braille.
 - Materiales Educativos Accesibles.
 - Juegos Interactivos Accesibles.
 - Capacitaciones o recursos formativos.
@@ -40,11 +40,11 @@ banco-digital-accesible/
 ├── README.md
 ├── LICENSE
 │
-├── datos/
-│   └── recursos.json
+├── lsp/
+│   └── index.html
 │
-├── imagenes/
-│   └── recursos/
+├── braille/
+│   └── index.html
 │
 ├── materiales/
 │   └── descargables/
@@ -92,7 +92,7 @@ Repositorio en proceso de construcción y ampliación progresiva.
 Las siguientes etapas pueden incluir:
 
 - Organización de módulos por tipo de recurso.
-- Integración de enlaces a bancos específicos.
+- Consolidación de los contenidos LSP y Braille dentro de BDA.
 - Incorporación de materiales descargables.
 - Revisión de accesibilidad visual y navegación.
 - Registro de fuentes y créditos.

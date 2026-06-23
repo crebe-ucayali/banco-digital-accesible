@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Criterios de accesibilidad del módulo Braille dentro del Banco Digital Accesible.">
+  <link rel="canonical" href="https://gabriel-lsp.github.io/banco-digital-accesible/braille/accesibilidad.html">
+  <title>Accesibilidad | Sistema Braille</title>
+  <link rel="stylesheet" href="estilos.css?v=6">
+  <link rel="stylesheet" href="cabecera-bda.css?v=1">
+  <style>
+    .pagina-informativa{display:grid;gap:18px;margin-top:28px;}
+    .tarjeta-info{background:#ffffff;border:1px solid #d9e2ec;border-radius:22px;padding:24px;box-shadow:0 10px 22px rgba(16,42,67,.06);}
+    .tarjeta-info h3{margin:0 0 10px;color:#0b2f4a;font-size:1.15rem;line-height:1.3;}
+    .tarjeta-info p{margin:0;color:#486581;line-height:1.7;}
+    .nota-accesibilidad{margin-top:26px;background:#e6f4f1;border:1px solid rgba(15,118,110,.28);border-radius:22px;padding:22px;color:#0b4f4a;line-height:1.7;}
+    .nota-accesibilidad p{margin:0;color:#0b4f4a;}
+    .acciones-informativas{display:flex;flex-wrap:wrap;gap:12px;margin-top:26px;}
+    .boton-apoyo{display:inline-flex;align-items:center;justify-content:center;min-height:44px;padding:10px 18px;color:#ffffff;background:linear-gradient(135deg,#0b4f4a 0%,#0f766e 100%);border:1px solid rgba(255,255,255,.18);border-radius:999px;box-shadow:0 8px 18px rgba(15,118,110,.20);font-weight:800;text-decoration:none;}
+    .boton-apoyo:hover{color:#ffffff;background:linear-gradient(135deg,#0b3f3b 0%,#0b4f4a 100%);}
+    .boton-secundario-info{display:inline-flex;align-items:center;justify-content:center;min-height:44px;padding:10px 18px;border-radius:999px;border:1px solid #0f766e;color:#0f766e;text-decoration:none;font-weight:800;background:#ffffff;}
+    .boton-secundario-info:hover{background:#e6f4f1;color:#0b4f4a;}
+    @media (max-width:700px){.acciones-informativas{flex-direction:column;}.boton-apoyo,.boton-secundario-info{width:100%;}}
+  </style>
+</head>
+<body>
+  <a class="salto-contenido" href="#contenido-principal">Ir al contenido</a>
+
+  <header class="cabecera">
+    <nav class="navegacion" aria-label="Navegación principal">
+      <a class="marca" href="index.html" aria-label="Volver al módulo Braille">
+        <span class="marca-icono" aria-hidden="true">BRL</span>
+        <span>Banco Digital Braille</span>
+      </a>
+
+      <div class="enlaces-cabecera">
+        <a class="enlace-cabecera" href="index.html">Inicio Braille</a>
+        <a class="enlace-cabecera" href="../index.html">Inicio BDA</a>
+        <a class="enlace-cabecera" href="https://crebeucayali.weebly.com/">Inicio principal</a>
+        <a class="enlace-cabecera" href="https://gabriel-lsp.github.io/accesos-complementarios/contacto.html">Contacto</a>
+      </div>
+    </nav>
+
+    <div class="portada">
+      <div class="bloque-institucional" aria-label="Identidad institucional">
+        <img class="logo-crebe" src="https://gabriel-lsp.github.io/banco-digital-accesible/logo-crebe.png" alt="Logo del CREBE Señor de los Milagros - Ucayali">
+        <div class="texto-institucional">
+          <p class="nombre-institucional">CREBE "Señor de los Milagros" - Ucayali</p>
+          <p class="detalle-institucional">Centro de Recursos de Educación Básica Especial</p>
+        </div>
+      </div>
+
+      <p class="etiqueta">Módulo Braille</p>
+      <h1>Accesibilidad</h1>
+      <p class="subtitulo">Criterios de uso accesible del Banco Digital del Sistema Braille para una consulta visual clara, organizada y funcional.</p>
+    </div>
+  </header>
+
+  <main id="contenido-principal">
+    <section class="panel-busqueda" aria-labelledby="titulo-accesibilidad">
+      <div class="panel-encabezado">
+        <div>
+          <p class="sobretitulo">Criterios de uso accesible</p>
+          <h2 id="titulo-accesibilidad">Contenido visual del recurso</h2>
+          <p class="ayuda">Este apartado organiza los criterios de accesibilidad del módulo Braille en una lectura similar a preguntas frecuentes, para revisar cada punto de manera clara e independiente.</p>
+        </div>
+      </div>
+
+      <div class="pagina-informativa">
+        <article class="tarjeta-info">
+          <h3>¿Cómo se presenta el contenido Braille?</h3>
+          <p>El recurso muestra letras, números, signos y palabras básicas mediante una representación visual del carácter en tinta y su forma correspondiente en Braille.</p>
+        </article>
+
+        <article class="tarjeta-info">
+          <h3>¿Cómo ayuda la búsqueda?</h3>
+          <p>El buscador permite ubicar un contenido específico con rapidez, ya sea por letra, número, signo, palabra o categoría relacionada.</p>
+        </article>
+
+        <article class="tarjeta-info">
+          <h3>¿Para qué sirven los filtros?</h3>
+          <p>Los filtros organizan el recurso por alfabeto, números, signos básicos, vocales acentuadas y palabras básicas, facilitando una consulta progresiva.</p>
+        </article>
+
+        <article class="tarjeta-info">
+          <h3>¿El diseño se adapta a distintos dispositivos?</h3>
+          <p>Sí. La página está preparada para visualizarse en computadora, tablet y celular, procurando que el contenido se mantenga legible y ordenado.</p>
+        </article>
+
+        <article class="tarjeta-info">
+          <h3>¿Se puede navegar con teclado?</h3>
+          <p>Los enlaces, botones, campo de búsqueda y filtros están preparados para ser utilizados mediante teclado, favoreciendo una navegación más accesible.</p>
+        </article>
+
+        <article class="tarjeta-info">
+          <h3>¿Qué límite tiene este recurso visual?</h3>
+          <p>El módulo facilita la consulta visual, pero no sustituye la lectura táctil en relieve. Para el aprendizaje formal del Braille se requieren materiales táctiles y acompañamiento especializado.</p>
+        </article>
+      </div>
+
+      <div class="nota-accesibilidad">
+        <p>La accesibilidad del módulo puede seguir fortaleciéndose con recursos descargables, materiales táctiles complementarios, orientaciones para docentes y ejemplos de uso educativo.</p>
+      </div>
+
+      <div class="acciones-informativas">
+        <a class="boton-apoyo" href="index.html">Volver al módulo Braille</a>
+        <a class="boton-secundario-info" href="faq.html">Ver preguntas frecuentes</a>
+        <a class="boton-secundario-info" href="teoria.html">Conoce el sistema Braille</a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-contenido">
+      <div class="footer-bloque">
+        <h2>Banco Digital Braille</h2>
+        <p>Recurso educativo para la consulta y el reconocimiento inicial del sistema Braille en contextos inclusivos.</p>
+      </div>
+
+      <div class="footer-bloque">
+        <h2>Enlaces</h2>
+        <p>
+          <a href="../index.html">Banco Digital Accesible</a><br>
+          <a href="index.html">Inicio Braille</a><br>
+          <a href="teoria.html">Conoce el sistema Braille</a><br>
+          <a href="faq.html">Preguntas frecuentes</a>
+        </p>
+      </div>
+
+      <div class="footer-bloque">
+        <h2>Contacto</h2>
+        <p><a href="https://gabriel-lsp.github.io/accesos-complementarios/contacto.html">Contacto institucional en AC</a></p>
+      </div>
+
+      <div class="footer-bloque">
+        <h2>Uso pedagógico</h2>
+        <p>El recurso debe acompañarse con orientación especializada y materiales táctiles reales cuando se trabaje aprendizaje formal del Braille.</p>
+      </div>
+    </div>
+
+    <div class="footer-final">
+      <p>© 2026 Banco Digital del Sistema Braille. Desarrollado por Gabriel Berrospi con apoyo institucional del CREBE "Señor de los Milagros" - Ucayali.</p>
+    </div>
+  </footer>
+</body>
+</html>

@@ -5,19 +5,71 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta
     name="description"
-    content="Banco Digital de Lengua de Señas Peruana para consulta educativa."
+    content="Lengua de Señas Peruana para consulta educativa dentro del Banco Digital Accesible."
   >
-  <title>Banco Digital de Lengua de Señas Peruana</title>
-  <link rel="stylesheet" href="estilos.css?v=16">
+  <title>Lengua de Señas Peruana</title>
+  <link rel="stylesheet" href="estilos.css?v=17">
+  <link rel="stylesheet" href="cabecera-bda.css?v=1">
+  <style>
+    .acciones-panel-lsp{
+      display:flex;
+      flex-direction:column;
+      align-items:flex-end;
+      gap:10px;
+    }
+
+    .enlaces-apoyo-lsp{
+      display:flex;
+      flex-wrap:wrap;
+      justify-content:flex-end;
+      gap:10px;
+    }
+
+    .boton-apoyo-lsp{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      min-height:44px;
+      padding:10px 18px;
+      color:#ffffff;
+      background:linear-gradient(135deg,#0b4f4a 0%,#0f766e 100%);
+      border:1px solid rgba(255,255,255,.18);
+      border-radius:999px;
+      box-shadow:0 8px 18px rgba(15,118,110,.20);
+      font-weight:800;
+      text-decoration:none;
+      white-space:nowrap;
+    }
+
+    .boton-apoyo-lsp:hover{
+      color:#ffffff;
+      background:linear-gradient(135deg,#0b3f3b 0%,#0b4f4a 100%);
+    }
+
+    @media (max-width:700px){
+      .acciones-panel-lsp{
+        align-items:stretch;
+        width:100%;
+      }
+
+      .enlaces-apoyo-lsp{
+        flex-direction:column;
+      }
+
+      .boton-apoyo-lsp{
+        width:100%;
+      }
+    }
+  </style>
 </head>
 <body>
   <a class="salto-contenido" href="#contenido">Ir al contenido</a>
 
   <header class="cabecera">
     <nav class="navegacion" aria-label="Navegación principal">
-      <a class="marca" href="index.html" aria-label="Inicio">
+      <a class="marca" href="../index.html" aria-label="Volver al Banco Digital Accesible">
         <span class="marca-icono" aria-hidden="true">LSP</span>
-        <span>Banco Digital</span>
+        <span>Lengua de Señas Peruana</span>
       </a>
 
       <div class="enlaces-superiores">
@@ -45,7 +97,7 @@
       </div>
 
       <p class="etiqueta-superior">Recurso educativo de consulta visual</p>
-      <h1>Banco Digital de Lengua de Señas Peruana</h1>
+      <h1>Lengua de Señas Peruana</h1>
       <p class="subtitulo">
         Recurso visual de apoyo para la inclusión educativa
       </p>
@@ -56,12 +108,18 @@
     <section class="panel-busqueda" aria-labelledby="titulo-busqueda">
       <div class="panel-encabezado">
         <div>
-          <p class="seccion-etiqueta">Explorar el banco</p>
+          <p class="seccion-etiqueta">Explorar el módulo</p>
           <h2 id="titulo-busqueda">Encuentra una seña</h2>
         </div>
-        <button id="limpiar" class="boton-secundario" type="button">
-          Limpiar búsqueda
-        </button>
+        <div class="acciones-panel-lsp">
+          <button id="limpiar" class="boton-secundario" type="button">
+            Limpiar búsqueda
+          </button>
+          <div class="enlaces-apoyo-lsp" aria-label="Enlaces de apoyo del módulo LSP">
+            <a class="boton-apoyo-lsp" href="faq.html">Preguntas frecuentes</a>
+            <a class="boton-apoyo-lsp" href="accesibilidad.html">Accesibilidad</a>
+          </div>
+        </div>
       </div>
 
       <div class="controles">
@@ -94,15 +152,74 @@
         </div>
       </div>
 
-      <div id="resumen" class="resumen" aria-live="polite"></div>
-      <div id="contenedor" class="grid-senas"></div>
+      <div class="resultado-resumen" aria-live="polite">
+        <p id="contador">Preparando contenidos…</p>
+        <p id="mostrando" class="mostrando"></p>
+      </div>
+
+      <div id="estado" class="estado-carga" role="status" aria-live="polite">
+        Preparando el módulo de Lengua de Señas Peruana…
+      </div>
+
+      <div id="galeria" class="galeria" aria-label="Resultados de señas"></div>
+
+      <div class="acciones-galeria">
+        <button id="cargar-mas" class="boton-principal" type="button" hidden>
+          Mostrar más señas
+        </button>
+      </div>
     </section>
   </main>
 
+  <template id="plantilla-tarjeta">
+    <article class="tarjeta">
+      <div class="marco-imagen">
+        <img class="imagen-sena" src="" alt="">
+      </div>
+      <div class="tarjeta-contenido">
+        <p class="categoria-tarjeta"></p>
+        <h3 class="palabra-tarjeta"></h3>
+        <p class="descripcion-tarjeta" hidden></p>
+        <p class="fuente-tarjeta" hidden></p>
+      </div>
+    </article>
+  </template>
+
   <footer>
-    <p>© 2026 Gabriel Berrospi. Desarrollo original. Uso institucional autorizado al CREBE "Señor de los Milagros" - Ucayali.</p>
+    <div class="footer-contenido">
+      <div class="footer-bloque">
+        <h2>Lengua de Señas Peruana</h2>
+        <p>Recurso visual de apoyo para consultar señas organizadas por palabra y categoría dentro del Banco Digital Accesible.</p>
+      </div>
+
+      <div class="footer-bloque">
+        <h2>Enlaces</h2>
+        <p>
+          <a href="../index.html">Banco Digital Accesible</a><br>
+          <a href="creditos.html">Créditos LSP</a><br>
+          <a href="faq.html">Preguntas frecuentes</a><br>
+          <a href="accesibilidad.html">Accesibilidad</a>
+        </p>
+      </div>
+
+      <div class="footer-bloque">
+        <h2>Contacto</h2>
+        <p>
+          <a href="https://gabriel-lsp.github.io/accesos-complementarios/contacto.html">Contacto institucional en AC</a>
+        </p>
+      </div>
+
+      <div class="footer-bloque">
+        <h2>Uso pedagógico</h2>
+        <p>Los recursos deben emplearse con acompañamiento pedagógico, considerando el contexto y las características de cada estudiante.</p>
+      </div>
+    </div>
+
+    <div class="footer-final">
+      <p>© 2026 Gabriel Berrospi. Desarrollo original. Uso institucional autorizado al CREBE "Señor de los Milagros" - Ucayali.</p>
+    </div>
   </footer>
 
-  <script src="app.js?v=16"></script>
+  <script src="app.js?v=20"></script>
 </body>
 </html>
