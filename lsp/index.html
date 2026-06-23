@@ -63,7 +63,7 @@
   </style>
 </head>
 <body>
-  <a class="salto-contenido" href="#contenido">Ir al contenido</a>
+  <a class="salto-contenido" href="#contenido-principal">Ir al contenido</a>
 
   <header class="cabecera">
     <nav class="navegacion" aria-label="Navegación principal">
@@ -72,10 +72,10 @@
         <span>Lengua de Señas Peruana</span>
       </a>
 
-      <div class="enlaces-superiores">
-        <a class="enlace-inicio" href="https://crebeucayali.weebly.com/">Inicio</a>
-        <a class="enlace-creditos" href="creditos.html">Créditos</a>
-        <a class="enlace-creditos" href="https://gabriel-lsp.github.io/accesos-complementarios/contacto.html">Contacto</a>
+      <div class="enlaces-cabecera">
+        <a class="enlace-cabecera" href="../index.html">Volver a BDA</a>
+        <a class="enlace-cabecera" href="https://crebeucayali.weebly.com/">Inicio principal</a>
+        <a class="enlace-cabecera" href="https://gabriel-lsp.github.io/accesos-complementarios/contacto.html">Contacto</a>
       </div>
     </nav>
 
@@ -104,7 +104,7 @@
     </div>
   </header>
 
-  <main id="contenido">
+  <main id="contenido-principal">
     <section class="panel-busqueda" aria-labelledby="titulo-busqueda">
       <div class="panel-encabezado">
         <div>
@@ -185,15 +185,16 @@
     </article>
   </template>
 
-  <footer>
-    <div class="footer-contenido">
-      <div class="footer-bloque">
-        <h2>Lengua de Señas Peruana</h2>
+  <footer class="footer-crebe" aria-label="Pie de página institucional">
+    <div class="footer-contenido footer-contenedor">
+      <section class="footer-bloque footer-columna" aria-labelledby="titulo-footer-descripcion">
+        <h2 id="titulo-footer-descripcion">Lengua de Señas Peruana</h2>
         <p>Recurso visual de apoyo para consultar señas organizadas por palabra y categoría dentro del Banco Digital Accesible.</p>
-      </div>
+        <p>Los recursos deben emplearse con acompañamiento pedagógico, considerando el contexto y las características de cada estudiante.</p>
+      </section>
 
-      <div class="footer-bloque">
-        <h2>Enlaces</h2>
+      <nav class="footer-bloque footer-columna" aria-labelledby="titulo-footer-enlaces">
+        <h2 id="titulo-footer-enlaces">Enlaces</h2>
         <p>
           <a href="../index.html">Banco Digital Accesible</a><br>
           <a href="index.html">Inicio LSP</a><br>
@@ -201,20 +202,15 @@
           <a href="faq.html">Preguntas frecuentes</a><br>
           <a href="accesibilidad.html">Accesibilidad LSP</a>
         </p>
-      </div>
+      </nav>
 
-      <div class="footer-bloque">
-        <h2>Contacto</h2>
+      <section class="footer-bloque footer-columna contacto-footer" aria-labelledby="titulo-footer-contacto">
+        <h2 id="titulo-footer-contacto">Contacto</h2>
         <p>
           <a href="https://gabriel-lsp.github.io/accesos-complementarios/contacto.html">Contacto institucional</a><br>
           CREBE "Señor de los Milagros" - Ucayali<br>
           Horario: lunes a viernes, 8:00 a.m. - 12:00 p.m.</p>
-      </div>
-
-      <div class="footer-bloque">
-        <h2>Uso pedagógico</h2>
-        <p>Los recursos deben emplearse con acompañamiento pedagógico, considerando el contexto y las características de cada estudiante.</p>
-      </div>
+      </section>
     </div>
 
     <div class="footer-final">
