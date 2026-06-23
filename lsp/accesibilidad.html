@@ -3,94 +3,138 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta
-    name="description"
-    content="Criterios de accesibilidad del Banco Digital de Lengua de Señas Peruana."
-  >
-  <title>Accesibilidad | Banco Digital de Lengua de Señas Peruana</title>
-  <link rel="stylesheet" href="estilos.css?v=6">
-  <link rel="stylesheet" href="cabecera-bda.css?v=1">
+  <meta name="description" content="Criterios de accesibilidad del módulo de Lengua de Señas Peruana dentro del Banco Digital Accesible.">
+  <link rel="canonical" href="https://gabriel-lsp.github.io/banco-digital-accesible/lsp/accesibilidad.html">
+  <title>Accesibilidad | Lengua de Señas Peruana</title>
+  <link rel="stylesheet" href="../estilos.css?v=17">
+  <style>
+    .enlaces-cabecera{display:flex;align-items:center;justify-content:flex-end;flex-wrap:wrap;gap:12px;}
+    .pagina-informativa{display:grid;grid-template-columns:repeat(2,1fr);gap:18px;margin-top:28px;}
+    .tarjeta-info{background:#ffffff;border:1px solid #d9e2ec;border-radius:22px;padding:24px;box-shadow:0 10px 22px rgba(16,42,67,.06);}
+    .tarjeta-info h3{margin:0 0 10px;color:#0b2f4a;font-size:1.15rem;line-height:1.3;}
+    .tarjeta-info p{margin:0;color:#486581;line-height:1.7;}
+    .nota-accesibilidad{margin-top:26px;background:#e6f4f1;border:1px solid rgba(15,118,110,.28);border-radius:22px;padding:22px;color:#0b4f4a;line-height:1.7;}
+    .nota-accesibilidad p{margin:0;color:#0b4f4a;}
+    .acciones-informativas{display:flex;flex-wrap:wrap;gap:12px;margin-top:26px;}
+    .boton-secundario-info{display:inline-flex;align-items:center;justify-content:center;min-height:44px;padding:10px 18px;border-radius:999px;border:1px solid #0f766e;color:#0f766e;text-decoration:none;font-weight:800;background:#ffffff;}
+    .boton-secundario-info:hover{background:#e6f4f1;color:#0b4f4a;}
+    @media (max-width:900px){.pagina-informativa{grid-template-columns:1fr;}}
+    @media (max-width:700px){.enlaces-cabecera{justify-content:flex-start;}.acciones-informativas{flex-direction:column;}.boton-secundario-info{width:100%;}}
+  </style>
 </head>
 <body>
-  <a class="salto-contenido" href="#contenido">Ir al contenido</a>
+  <a class="salto-contenido" href="#contenido-principal">Ir al contenido</a>
 
-  <header class="cabecera cabecera-interior">
+  <header class="cabecera">
     <nav class="navegacion" aria-label="Navegación principal">
-      <a class="marca" href="index.html" aria-label="Inicio">
+      <a class="marca" href="index.html" aria-label="Volver al módulo de Lengua de Señas Peruana">
         <span class="marca-icono" aria-hidden="true">LSP</span>
-        <span>Banco Digital</span>
+        <span>Lengua de Señas Peruana</span>
       </a>
-      <a class="enlace-creditos" href="creditos.html">Créditos</a>
+
+      <div class="enlaces-cabecera">
+        <a class="enlace-cabecera" href="index.html">Inicio LSP</a>
+        <a class="enlace-cabecera" href="../index.html">Inicio BDA</a>
+        <a class="enlace-cabecera" href="https://crebeucayali.weebly.com/">Inicio principal</a>
+        <a class="enlace-cabecera" href="https://gabriel-lsp.github.io/accesos-complementarios/contacto.html">Contacto</a>
+      </div>
     </nav>
+
+    <div class="portada">
+      <div class="bloque-institucional" aria-label="Identidad institucional">
+        <img class="logo-crebe" src="https://gabriel-lsp.github.io/banco-digital-accesible/logo-crebe.png" alt="Logo del CREBE Señor de los Milagros - Ucayali">
+        <div class="texto-institucional">
+          <p class="nombre-institucional">CREBE "Señor de los Milagros" - Ucayali</p>
+          <p class="detalle-institucional">Centro de Recursos de Educación Básica Especial</p>
+        </div>
+      </div>
+
+      <p class="etiqueta">Módulo LSP</p>
+      <h1>Accesibilidad</h1>
+      <p class="subtitulo">Criterios de uso accesible del banco visual de Lengua de Señas Peruana para una consulta clara, ordenada y funcional.</p>
+    </div>
   </header>
 
-  <main id="contenido" class="contenido-creditos">
-    <a class="volver" href="index.html">← Volver al banco digital</a>
+  <main id="contenido-principal">
+    <section class="panel-busqueda" aria-labelledby="titulo-accesibilidad">
+      <div class="panel-encabezado">
+        <div>
+          <p class="sobretitulo">Criterios de uso accesible</p>
+          <h2 id="titulo-accesibilidad">Consulta visual del recurso</h2>
+          <p class="texto-panel">El módulo LSP busca facilitar el acceso al vocabulario visual mediante una organización sencilla, adaptable y compatible con distintos dispositivos.</p>
+        </div>
+      </div>
 
-    <article class="tarjeta-creditos">
-      <p class="seccion-etiqueta">Criterios de uso accesible</p>
-      <h1>Accesibilidad</h1>
+      <div class="pagina-informativa">
+        <article class="tarjeta-info">
+          <h3>Consulta visual</h3>
+          <p>Las señas se presentan mediante imágenes organizadas por categorías, permitiendo ubicar vocabulario de manera rápida y visual.</p>
+        </article>
 
-      <p class="introduccion">
-        El Banco Digital de Lengua de Señas Peruana busca ofrecer una experiencia de consulta clara, ordenada y funcional para distintos usuarios de la comunidad educativa.
-      </p>
+        <article class="tarjeta-info">
+          <h3>Búsqueda por palabra</h3>
+          <p>La plataforma permite buscar señas mediante palabras clave. Esta función facilita el acceso directo al vocabulario requerido sin necesidad de recorrer todo el banco.</p>
+        </article>
 
-      <section>
-        <h2>Consulta visual</h2>
-        <p>
-          Las señas se presentan mediante imágenes organizadas por categorías, permitiendo ubicar vocabulario de manera rápida y visual.
-        </p>
-      </section>
+        <article class="tarjeta-info">
+          <h3>Filtro por categoría</h3>
+          <p>Las categorías ayudan a organizar las señas por campos de uso, como familia, colores, números, lugares u otros grupos de vocabulario.</p>
+        </article>
 
-      <section>
-        <h2>Búsqueda por palabra</h2>
-        <p>
-          La plataforma permite buscar señas mediante palabras clave. Esta función facilita el acceso directo al vocabulario requerido sin necesidad de recorrer todo el banco.
-        </p>
-      </section>
+        <article class="tarjeta-info">
+          <h3>Diseño adaptable</h3>
+          <p>La página se adapta a pantallas de computadora, tablet y celular, procurando que la consulta pueda realizarse desde distintos dispositivos.</p>
+        </article>
 
-      <section>
-        <h2>Filtro por categoría</h2>
-        <p>
-          Las categorías ayudan a organizar las señas por campos de uso, como familia, colores, números, lugares u otros grupos de vocabulario.
-        </p>
-      </section>
+        <article class="tarjeta-info">
+          <h3>Navegación con teclado</h3>
+          <p>Los enlaces, botones, campos de búsqueda y filtros están preparados para ser usados mediante teclado, favoreciendo una navegación más accesible.</p>
+        </article>
 
-      <section>
-        <h2>Diseño adaptable</h2>
-        <p>
-          La página se adapta a pantallas de computadora, tablet y celular, procurando que la consulta pueda realizarse desde distintos dispositivos.
-        </p>
-      </section>
+        <article class="tarjeta-info">
+          <h3>Contraste visual</h3>
+          <p>Se emplean colores con contraste suficiente entre fondo, texto y botones, con el fin de mejorar la lectura y la identificación de los elementos principales.</p>
+        </article>
+      </div>
 
-      <section>
-        <h2>Navegación con teclado</h2>
-        <p>
-          Los enlaces, botones, campos de búsqueda y filtros están preparados para ser usados mediante teclado, favoreciendo una navegación más accesible.
-        </p>
-      </section>
+      <div class="nota-accesibilidad">
+        <p>La plataforma puede seguir ampliándose con videos demostrativos, descripciones complementarias, variantes regionales, ejemplos de uso y recursos descargables para docentes y familias.</p>
+      </div>
 
-      <section>
-        <h2>Contraste visual</h2>
-        <p>
-          Se emplean colores con contraste suficiente entre fondo, texto y botones, con el fin de mejorar la lectura y la identificación de los elementos principales.
-        </p>
-      </section>
-
-      <section>
-        <h2>Mejoras pendientes</h2>
-        <p>
-          La plataforma puede seguir ampliándose con videos demostrativos, descripciones complementarias, variantes regionales, ejemplos de uso y recursos descargables para docentes y familias.
-        </p>
-      </section>
-    </article>
+      <div class="acciones-informativas">
+        <a class="enlace-material" href="index.html">Volver al módulo LSP</a>
+        <a class="boton-secundario-info" href="faq.html">Ver preguntas frecuentes</a>
+        <a class="boton-secundario-info" href="https://gabriel-lsp.github.io/accesos-complementarios/contacto.html">Ir a contacto</a>
+      </div>
+    </section>
   </main>
 
   <footer>
-    <p>
-      Banco Digital de Lengua de Señas Peruana.
-      <a href="creditos.html">Fuente y condiciones de uso</a>.
-    </p>
+    <div class="footer-contenido">
+      <div class="footer-bloque">
+        <h2>Lengua de Señas Peruana</h2>
+        <p>Recurso visual de apoyo para la consulta educativa de señas organizadas por palabra y categoría.</p>
+      </div>
+
+      <div class="footer-bloque">
+        <h2>Enlaces</h2>
+        <p>
+          <a href="../index.html">Banco Digital Accesible</a><br>
+          <a href="index.html">Inicio LSP</a><br>
+          <a href="creditos.html">Créditos LSP</a><br>
+          <a href="faq.html">Preguntas frecuentes</a>
+        </p>
+      </div>
+
+      <div class="footer-bloque">
+        <h2>Contacto</h2>
+        <p><a href="https://gabriel-lsp.github.io/accesos-complementarios/contacto.html">Contacto institucional en AC</a></p>
+      </div>
+    </div>
+
+    <div class="footer-final">
+      <p>© 2026 Gabriel Berrospi. Desarrollo original. Uso institucional autorizado al CREBE "Señor de los Milagros" - Ucayali.</p>
+    </div>
   </footer>
 </body>
 </html>
