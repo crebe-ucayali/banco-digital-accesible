@@ -1,1 +1,35 @@
-/* La alineación visual con AC fue integrada directamente en lsp/estilos.css. Archivo conservado solo para compatibilidad con páginas que aún lo cargan. */
+/* Compatibilidad visual de cabecera BDA para subpáginas LSP. */
+.enlaces-cabecera{
+  display:flex;
+  align-items:center;
+  justify-content:flex-end;
+  gap:12px;
+  flex-wrap:wrap;
+}
+
+.enlace-cabecera{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  min-height:46px;
+  padding:10px 22px;
+  color:#ffffff;
+  border:1px solid rgba(255,255,255,.45);
+  border-radius:999px;
+  font-size:1rem;
+  font-weight:800;
+  text-decoration:none;
+  background:rgba(255,255,255,.08);
+}
+
+.enlace-cabecera:hover,
+.enlace-cabecera:focus{
+  color:#ffffff;
+  background:rgba(255,255,255,.16);
+}
+
+@media(max-width:760px){
+  .enlaces-cabecera{
+    justify-content:flex-start;
+  }
+}
