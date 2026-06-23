@@ -9,6 +9,10 @@
   >
   <title>Créditos | Banco Digital Accesible</title>
   <link rel="stylesheet" href="estilos.css">
+  <style>
+    .enlaces-cabecera{display:flex;align-items:center;justify-content:flex-end;flex-wrap:wrap;gap:12px;}
+    @media (max-width:700px){.enlaces-cabecera{justify-content:flex-start;}}
+  </style>
 </head>
 <body class="pagina-creditos">
   <a class="salto-contenido" href="#contenido">Ir al contenido</a>
@@ -19,7 +23,11 @@
         <span class="marca-icono" aria-hidden="true">BDA</span>
         <span>Banco Digital Accesible</span>
       </a>
-      <a class="enlace-creditos activo" href="creditos.html">Créditos</a>
+
+      <div class="enlaces-cabecera">
+        <a class="enlace-cabecera" href="https://crebeucayali.weebly.com/">Inicio principal</a>
+        <a class="enlace-cabecera" href="https://gabriel-lsp.github.io/accesos-complementarios/contacto.html">Contacto Institucional</a>
+      </div>
     </nav>
   </header>
 
