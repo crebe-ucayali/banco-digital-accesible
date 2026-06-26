@@ -8,6 +8,8 @@ El proyecto busca reunir distintos recursos en un solo espacio de consulta, faci
 
 https://gabriel-lsp.github.io/banco-digital-accesible/
 
+La raíz del sitio conserva un `index.html` mínimo para mantener activa la entrada de GitHub Pages y dirigir hacia la portada organizada en `inicio/`.
+
 ## Página principal del ecosistema
 
 https://crebeucayali.weebly.com/
@@ -43,21 +45,32 @@ El recurso está dirigido a docentes, familias, estudiantes, profesionales de ed
 banco-digital-accesible/
 │
 ├── index.html
-├── estilos.css
-├── app.js
 ├── README.md
 ├── LICENSE
+├── logo-crebe.png
+├── patron-shipibo.png
+│
+├── inicio/
+│   ├── index.html
+│   ├── estilos.css
+│   └── app.js
 │
 ├── lsp/
-│   └── index.html
+│   ├── index.html
+│   ├── estilos.css
+│   └── app.js
 │
 ├── braille/
-│   └── index.html
+│   ├── index.html
+│   ├── estilos.css
+│   └── app.js
 │
 ├── materiales/
 │   └── descargables/
 │
 └── docs/
+    ├── sustento-del-proyecto-personal.md
+    ├── documentos-del-repositorio.md
     ├── autoria-y-contexto.md
     ├── aviso-legal.md
     ├── fuentes-y-creditos.md
@@ -69,7 +82,7 @@ banco-digital-accesible/
     └── bitacora-de-cambios.md
 ```
 
-La estructura puede ajustarse según el crecimiento del proyecto. La carpeta `docs` reúne documentos de respaldo pedagógico, autoral, legal, técnico y organizativo.
+La estructura puede ajustarse según el crecimiento del proyecto. La carpeta `inicio` contiene la portada principal del BDA. Las carpetas `lsp` y `braille` conservan sus propias páginas, estilos y scripts. La carpeta `docs` reúne documentos de respaldo pedagógico, autoral, técnico y organizativo.
 
 ## Alcance pedagógico
 
