@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Banco Digital Accesible: plataforma educativa para acceder a recursos digitales de Lengua de Señas Peruana y sistema Braille.">
+  <meta name="description" content="Banco Digital Accesible: plataforma educativa para acceder a recursos digitales de Lengua de Señas Peruana, sistema Braille y Biblioteca Accesible.">
   <title>Banco Digital Accesible</title>
   <link rel="stylesheet" href="estilos.css?v=2">
   <style>
@@ -17,26 +17,8 @@
     .footer-logo{width:72px;max-width:72px;height:auto;object-fit:contain;display:block;flex-shrink:0;}
     .footer-contenido{grid-template-columns:1.2fr 1fr 1.25fr;gap:32px;}
     .footer-bloque a{text-decoration:underline;text-underline-offset:3px;}
-    .patron-portada{
-                    position:absolute;
-                    inset:0;
-                    z-index:0;
-                    overflow:hidden;
-                    pointer-events:none;
-                    
-                    background-image:url("patron-shipibo.png");
-                    background-repeat:repeat;
-                    background-size:cover;
-                    background-position:center;
-                    
-                    opacity:.30;
-                    filter:saturate(1.15) contrast(1.08);
-    }
-    .cabecera .navegacion,
-    .cabecera .portada {
-                    position: relative;
-                    z-index: 1;
-    }
+    .patron-portada{position:absolute;inset:0;z-index:0;overflow:hidden;pointer-events:none;background-image:url("patron-shipibo.png");background-repeat:repeat;background-size:cover;background-position:center;opacity:.30;filter:saturate(1.15) contrast(1.08);}
+    .cabecera .navegacion,.cabecera .portada{position:relative;z-index:1;}
     @media (max-width:1000px){.grid-materiales{grid-template-columns:repeat(2,1fr);}}
     @media (max-width:700px){.grid-materiales,.footer-contenido{grid-template-columns:1fr;}.enlaces-cabecera{justify-content:flex-start;}.footer-marca{align-items:center;}.footer-logo{width:60px;max-width:60px;}}
   </style>
@@ -74,18 +56,13 @@
         <div>
           <p class="sobretitulo">Banco de recursos</p>
           <h2 id="titulo-catalogo">Explora los módulos disponibles</h2>
-          <p class="texto-panel">Selecciona una tarjeta para ingresar al recurso que necesitas. Los módulos disponibles actualmente son Lengua de Señas Peruana y Sistema Braille. Las demás secciones quedan como espacios en construcción.</p>
+          <p class="texto-panel">Selecciona una tarjeta para ingresar al recurso que necesitas. Los módulos disponibles actualmente son Lengua de Señas Peruana, Sistema Braille y Biblioteca Accesible. Las demás secciones quedan como espacios en construcción.</p>
         </div>
       </div>
       <div class="grid-materiales">
-        <article class="tarjeta-material disponible">
-          <div><div class="material-icono" aria-hidden="true">LSP</div><h3>Lengua de Señas Peruana</h3><p>Recurso visual para consultar señas organizadas por palabra y categoría, con apoyo para docentes, familias y estudiantes.</p></div>
-          <div class="tarjeta-pie"><span class="estado-material disponible">Disponible</span><a class="enlace-material" href="lsp/index.html">Ingresar</a></div>
-        </article>
-        <article class="tarjeta-material disponible">
-          <div><div class="material-icono" aria-hidden="true">BR</div><h3>Sistema Braille</h3><p>Espacio para acceder a recursos digitales vinculados al sistema Braille, reconocimiento visual y materiales de apoyo.</p></div>
-          <div class="tarjeta-pie"><span class="estado-material disponible">Disponible</span><a class="enlace-material" href="braille/index.html">Ingresar</a></div>
-        </article>
+        <article class="tarjeta-material disponible"><div><div class="material-icono" aria-hidden="true">LSP</div><h3>Lengua de Señas Peruana</h3><p>Recurso visual para consultar señas organizadas por palabra y categoría, con apoyo para docentes, familias y estudiantes.</p></div><div class="tarjeta-pie"><span class="estado-material disponible">Disponible</span><a class="enlace-material" href="lsp/index.html">Ingresar</a></div></article>
+        <article class="tarjeta-material disponible"><div><div class="material-icono" aria-hidden="true">BR</div><h3>Sistema Braille</h3><p>Espacio para acceder a recursos digitales vinculados al sistema Braille, reconocimiento visual y materiales de apoyo.</p></div><div class="tarjeta-pie"><span class="estado-material disponible">Disponible</span><a class="enlace-material" href="braille/index.html">Ingresar</a></div></article>
+        <article class="tarjeta-material disponible"><div><div class="material-icono" aria-hidden="true">BIB</div><h3>Biblioteca Accesible</h3><p>Espacio para organizar libros digitales, bases académicas, repositorios abiertos y accesos de consulta educativa.</p></div><div class="tarjeta-pie"><span class="estado-material disponible">Disponible</span><a class="enlace-material" href="biblioteca/index.html">Ingresar</a></div></article>
         <article class="tarjeta-material en-construccion"><div><div class="material-icono" aria-hidden="true">AV</div><h3>Aula Visual</h3><p>Espacio proyectado para recursos visuales complementarios, organizados de forma clara y accesible.</p></div><div class="tarjeta-pie"><span class="estado-material construccion">En construcción</span><span class="enlace-material deshabilitado">Próximamente</span></div></article>
         <article class="tarjeta-material en-construccion"><div><div class="material-icono" aria-hidden="true">AP</div><h3>Recursos de Apoyo</h3><p>Sección referencial para organizar futuros apoyos pedagógicos dirigidos a docentes y familias.</p></div><div class="tarjeta-pie"><span class="estado-material construccion">En construcción</span><span class="enlace-material deshabilitado">Próximamente</span></div></article>
         <article class="tarjeta-material en-construccion"><div><div class="material-icono" aria-hidden="true">AI</div><h3>Actividades Inclusivas</h3><p>Módulo reservado para futuras actividades educativas accesibles y de uso práctico.</p></div><div class="tarjeta-pie"><span class="estado-material construccion">En construcción</span><span class="enlace-material deshabilitado">Próximamente</span></div></article>
@@ -95,7 +72,7 @@
     <section id="presentacion" class="seccion-presentacion" aria-labelledby="titulo-presentacion">
       <div class="panel-presentacion">
         <div><p class="sobretitulo">Organización del repositorio</p><h2 id="titulo-presentacion">Una portada común para los módulos digitales</h2></div>
-        <p>Esta página funciona como entrada principal a los módulos digitales disponibles. Actualmente reúne Lengua de Señas Peruana y Sistema Braille, dejando otros espacios preparados para futuras ampliaciones.</p>
+        <p>Esta página funciona como entrada principal a los módulos digitales disponibles. Actualmente reúne Lengua de Señas Peruana, Sistema Braille y Biblioteca Accesible, dejando otros espacios preparados para futuras ampliaciones.</p>
       </div>
     </section>
     <section id="aviso-pedagogico" class="seccion-aviso" aria-labelledby="titulo-aviso">
@@ -109,38 +86,18 @@
     <div class="footer-contenido footer-contenedor">
       <section class="footer-bloque footer-columna footer-marca" aria-labelledby="titulo-footer-descripcion">
         <img class="footer-logo" src="https://gabriel-lsp.github.io/banco-digital-accesible/logo-crebe.png" alt="Logo del CREBE Señor de los Milagros - Ucayali">
-        <div>
-          <h2 id="titulo-footer-descripcion">Banco Digital Accesible</h2>
-          <p>Plataforma educativa para reunir recursos digitales accesibles vinculados a la comunicación, la inclusión y la atención a la diversidad.</p>
-        </div>
+        <div><h2 id="titulo-footer-descripcion">Banco Digital Accesible</h2><p>Plataforma educativa para reunir recursos digitales accesibles vinculados a la comunicación, la inclusión y la atención a la diversidad.</p></div>
       </section>
       <nav class="footer-bloque footer-columna" aria-labelledby="titulo-footer-enlaces">
         <h2 id="titulo-footer-enlaces">Módulos</h2>
-        <p>
-          <a href="https://gabriel-lsp.github.io/capacitaciones-crebe-ucayali/">Capacitaciones CREBE</a><br>
-          <a href="https://gabriel-lsp.github.io/materiales-educativos-accesibles/">Materiales Educativos Accesibles</a><br>
-          <a href="https://gabriel-lsp.github.io/juegos-interactivos-accesibles/">Juegos Interactivos Accesibles</a><br>
-          <a href="https://gabriel-lsp.github.io/noti-inclusivos/">Noti Inclusivo</a><br>
-          <a href="https://gabriel-lsp.github.io/repositorio-accesible/">Repositorio Accesible</a><br>
-        </p>
+        <p><a href="biblioteca/index.html">Biblioteca Accesible</a><br><a href="https://gabriel-lsp.github.io/capacitaciones-crebe-ucayali/">Capacitaciones CREBE</a><br><a href="https://gabriel-lsp.github.io/materiales-educativos-accesibles/">Materiales Educativos Accesibles</a><br><a href="https://gabriel-lsp.github.io/juegos-interactivos-accesibles/">Juegos Interactivos Accesibles</a><br><a href="https://gabriel-lsp.github.io/noti-inclusivos/">Noti Inclusivo</a><br><a href="https://gabriel-lsp.github.io/repositorio-accesible/">Repositorio Accesible</a><br></p>
       </nav>
       <section class="footer-bloque footer-columna contacto-footer" aria-labelledby="titulo-footer-contacto">
         <h2 id="titulo-footer-contacto">Contacto CREBE</h2>
-        <p>
-          CREBE "Señor de los Milagros" - Ucayali<br>
-          Correo: senordelosmilagroscrebe@gmail.com<br>
-          Horario: lunes a viernes, 8:00 a.m. - 12:00 p.m.<br>
-          Dirección: I.E. Santa Clara 64039<br>
-          Avenida Santa Clara mz d lt 20<br>
-          Coronel Portillo-Manantay<br>
-          <a href="https://www.facebook.com/CREBESM" target="_blank" rel="noopener noreferrer">Facebook</a><br>
-          <a href="https://www.tiktok.com/@crebe.sm.ucayali" target="_blank" rel="noopener noreferrer">TikTok</a><br>
-        </p>
+        <p>CREBE "Señor de los Milagros" - Ucayali<br>Centro de Recursos de Educación Básica Especial<br><a href="https://gabriel-lsp.github.io/accesos-complementarios/paginas/contacto.html">Contacto Institucional</a></p>
       </section>
     </div>
-    <div class="footer-final">
-      <p>© 2026 Gabriel Berrospi. Desarrollo original. Uso institucional autorizado al CREBE "Señor de los Milagros" - Ucayali.</p>
-    </div>
+    <div class="footer-final"><p>© 2026 Gabriel Berrospi. Desarrollo original. Uso institucional autorizado al CREBE "Señor de los Milagros" - Ucayali.</p></div>
   </footer>
   <script src="app.js?v=2" defer></script>
 </body>
