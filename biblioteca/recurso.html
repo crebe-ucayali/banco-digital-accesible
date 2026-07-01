@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Ficha completa de recurso bibliográfico de la Biblioteca Digital Accesible.">
+  <title>Ficha de recurso | Biblioteca Digital Accesible</title>
+  <link rel="stylesheet" href="../estilos.css?v=2">
+  <link rel="stylesheet" href="biblioteca.css?v=2">
+</head>
+<body>
+  <a class="salto-contenido" href="#contenido-principal">Ir al contenido</a>
+
+  <header class="cabecera">
+    <div class="patron-portada" aria-hidden="true"></div>
+    <nav class="navegacion" aria-label="Navegación principal">
+      <a class="marca" href="index.html" aria-label="Volver a la Biblioteca Digital Accesible">
+        <span class="marca-icono" aria-hidden="true">BD</span>
+        <span>Biblioteca Digital Accesible</span>
+      </a>
+      <div class="enlaces-cabecera">
+        <a class="enlace-cabecera" href="index.html">Volver a biblioteca</a>
+        <a class="enlace-cabecera" href="../index.html">Volver a BDA</a>
+        <a class="enlace-cabecera" href="criterios.html">Criterios de uso</a>
+      </div>
+    </nav>
+
+    <div class="portada">
+      <div class="bloque-institucional" aria-label="Identidad institucional">
+        <img class="logo-crebe" src="https://gabriel-lsp.github.io/banco-digital-accesible/logo-crebe.png" alt="Logo del CREBE Señor de los Milagros - Ucayali">
+        <div class="texto-institucional">
+          <p class="nombre-institucional">CREBE "Señor de los Milagros" - Ucayali</p>
+          <p class="detalle-institucional">Centro de Recursos de Educación Básica Especial</p>
+        </div>
+      </div>
+      <p class="etiqueta">Ficha bibliográfica</p>
+      <h1 id="titulo-portada-recurso">Ficha de recurso</h1>
+      <p class="subtitulo" id="subtitulo-portada-recurso">Consulta los datos completos del recurso seleccionado.</p>
+    </div>
+  </header>
+
+  <main id="contenido-principal">
+    <section class="panel-ficha" aria-labelledby="titulo-ficha-recurso">
+      <div id="estado-ficha" class="estado-catalogo" role="status" aria-live="polite">Cargando ficha del recurso...</div>
+      <div id="contenedor-ficha" hidden>
+        <div class="ficha-layout">
+          <article>
+            <p class="sobretitulo" id="tipo-ficha-recurso">Recurso</p>
+            <h2 id="titulo-ficha-recurso">Título del recurso</h2>
+            <p class="ficha-resumen" id="resumen-ficha-recurso"></p>
+
+            <div class="ficha-datos" id="datos-ficha-recurso" aria-label="Datos bibliográficos del recurso"></div>
+
+            <div class="cita-recurso" id="cita-ficha-recurso"></div>
+
+            <div>
+              <p class="sobretitulo" style="margin-top:22px;">Palabras clave</p>
+              <div class="ficha-palabras" id="palabras-ficha-recurso"></div>
+            </div>
+          </article>
+
+          <aside class="ficha-lateral" aria-label="Acciones y condición del recurso">
+            <h3>Acceso al recurso</h3>
+            <p id="estado-texto-ficha"></p>
+            <p id="condicion-texto-ficha"></p>
+            <div class="ficha-acciones" id="acciones-ficha-recurso"></div>
+          </aside>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer-crebe" aria-label="Pie de página institucional">
+    <div class="footer-contenido footer-contenedor">
+      <section class="footer-bloque footer-columna footer-marca" aria-labelledby="titulo-footer-descripcion">
+        <img class="footer-logo" src="https://gabriel-lsp.github.io/banco-digital-accesible/logo-crebe.png" alt="Logo del CREBE Señor de los Milagros - Ucayali">
+        <div>
+          <h2 id="titulo-footer-descripcion">Biblioteca Digital Accesible</h2>
+          <p>Ficha completa para consulta de datos bibliográficos, fuente, condición de uso y cita sugerida.</p>
+        </div>
+      </section>
+
+      <nav class="footer-bloque footer-columna" aria-labelledby="titulo-footer-enlaces">
+        <h2 id="titulo-footer-enlaces">Enlaces</h2>
+        <p>
+          <a href="index.html">Biblioteca Digital Accesible</a><br>
+          <a href="../index.html">Banco Digital Accesible</a><br>
+          <a href="criterios.html">Criterios de uso</a><br>
+        </p>
+      </nav>
+
+      <section class="footer-bloque footer-columna contacto-footer" aria-labelledby="titulo-footer-contacto">
+        <h2 id="titulo-footer-contacto">Contacto</h2>
+        <p>
+          <a href="https://gabriel-lsp.github.io/accesos-complementarios/paginas/contacto.html">Contacto Institucional</a><br>
+          CREBE "Señor de los Milagros" - Ucayali<br>
+          Horario: lunes a viernes, 8:00 a.m. - 12:00 p.m.
+        </p>
+      </section>
+    </div>
+
+    <div class="footer-final">
+      <p>© 2026 Gabriel Berrospi. Desarrollo original. Uso institucional autorizado al CREBE "Señor de los Milagros" - Ucayali.</p>
+    </div>
+  </footer>
+
+  <script src="recurso.js?v=1" defer></script>
+</body>
+</html>
