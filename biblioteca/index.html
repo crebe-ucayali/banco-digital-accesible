@@ -47,6 +47,9 @@
     .paso-biblioteca p{margin:0;color:var(--texto-suave);line-height:1.65;}
     .nota-uso{margin-top:24px;padding:20px 22px;border-radius:22px;background:#f7fbfa;border:1px solid rgba(15,118,110,.22);color:var(--texto-suave);line-height:1.65;}
     .form-api{display:grid;grid-template-columns:1.2fr .75fr auto;gap:14px;align-items:end;margin-top:28px;}
+    .sugerencias-api{display:flex;flex-wrap:wrap;gap:10px;margin-top:14px;}
+    .sugerencia-api{border:1px solid rgba(15,118,110,.35);background:#ffffff;color:var(--verde);border-radius:999px;padding:8px 14px;font-weight:800;cursor:pointer;}
+    .sugerencia-api:hover,.sugerencia-api:focus{background:var(--verde-suave);}
     .lista-api{display:grid;grid-template-columns:repeat(2,1fr);gap:18px;margin-top:22px;}
     .tarjeta-api{background:#ffffff;border:1px solid var(--borde);border-radius:24px;padding:22px;display:flex;flex-direction:column;justify-content:space-between;box-shadow:0 10px 22px rgba(16,42,67,.06);}
     .tarjeta-api h3{margin:0;color:#0b2f4a;font-size:1.08rem;line-height:1.3;}
@@ -59,7 +62,7 @@
     .footer-contenido{grid-template-columns:1.2fr 1fr 1.25fr;gap:32px;}
     .footer-bloque a{text-decoration:underline;text-underline-offset:3px;}
     @media (max-width:1000px){.estructura-grid{grid-template-columns:repeat(2,1fr);}.biblioteca-intro,.lista-recursos,.mapa-biblioteca,.lista-api{grid-template-columns:1fr;}}
-    @media (max-width:760px){.estructura-grid,.filtros-biblioteca,.footer-contenido,.meta-recurso,.form-api{grid-template-columns:1fr;}.enlaces-cabecera{justify-content:flex-start;}.footer-marca{align-items:center;}.footer-logo{width:60px;max-width:60px;}.acciones-biblioteca{flex-direction:column;}.boton-secundario,.acciones-biblioteca .enlace-material,.form-api .enlace-material{width:100%;text-align:center;}}
+    @media (max-width:760px){.estructura-grid,.filtros-biblioteca,.footer-contenido,.meta-recurso,.form-api{grid-template-columns:1fr;}.enlaces-cabecera{justify-content:flex-start;}.footer-marca{align-items:center;}.footer-logo{width:60px;max-width:60px;}.acciones-biblioteca{flex-direction:column;}.boton-secundario,.acciones-biblioteca .enlace-material,.form-api .enlace-material,.sugerencia-api{width:100%;text-align:center;}}
   </style>
 </head>
 <body>
@@ -163,12 +166,12 @@
       <div class="panel-api">
         <p class="sobretitulo">Fase 1</p>
         <h2 id="titulo-fuentes-abiertas">Explorar libros abiertos con Gutendex</h2>
-        <p class="texto-panel">Esta búsqueda consulta libros abiertos de Project Gutenberg mediante Gutendex. Los resultados se muestran como referencia externa y no se almacenan dentro del repositorio.</p>
+        <p class="texto-panel">Esta búsqueda consulta libros abiertos de Project Gutenberg mediante Gutendex. Para mejorar los resultados, la página inicia con una búsqueda de ejemplo y también reintenta sin filtro de idioma cuando no encuentra coincidencias.</p>
 
         <form class="form-api" id="form-gutendex" aria-label="Buscar libros abiertos en Gutendex">
           <div class="campo-biblioteca">
             <label for="busqueda-gutendex">Buscar por título, autor o tema</label>
-            <input id="busqueda-gutendex" type="search" placeholder="Ejemplo: educación, infancia, lenguaje" autocomplete="off">
+            <input id="busqueda-gutendex" type="search" placeholder="Ejemplo: education, child, language" autocomplete="off">
           </div>
           <div class="campo-biblioteca">
             <label for="idioma-gutendex">Idioma</label>
@@ -183,7 +186,14 @@
           <button class="enlace-material" type="submit">Buscar libros</button>
         </form>
 
-        <p id="contador-gutendex" class="resultado-biblioteca" aria-live="polite">Escribe una palabra y busca libros abiertos.</p>
+        <div class="sugerencias-api" aria-label="Búsquedas sugeridas">
+          <button class="sugerencia-api" type="button" data-consulta="education">Educación</button>
+          <button class="sugerencia-api" type="button" data-consulta="children">Infancia</button>
+          <button class="sugerencia-api" type="button" data-consulta="language">Lenguaje</button>
+          <button class="sugerencia-api" type="button" data-consulta="psychology">Psicología</button>
+        </div>
+
+        <p id="contador-gutendex" class="resultado-biblioteca" aria-live="polite">Cargando búsqueda inicial de libros abiertos.</p>
         <div id="estado-gutendex" class="estado-catalogo" role="status" aria-live="polite" hidden></div>
         <div class="lista-api" id="lista-gutendex" aria-label="Resultados de Gutendex"></div>
       </div>
@@ -256,7 +266,23 @@
     const listaGutendex = document.getElementById('lista-gutendex');
     const contadorGutendex = document.getElementById('contador-gutendex');
     const estadoGutendex = document.getElementById('estado-gutendex');
+    const sugerenciasGutendex = Array.from(document.querySelectorAll('.sugerencia-api'));
     let recursos = [];
+
+    const equivalenciasGutendex = {
+      educacion:'education',
+      educativo:'education',
+      escuela:'school',
+      infancia:'children',
+      nino:'children',
+      ninos:'children',
+      lenguaje:'language',
+      comunicacion:'language',
+      psicologia:'psychology',
+      inclusion:'education',
+      discapacidad:'disability',
+      familia:'family'
+    };
 
     function normalizar(texto){
       return String(texto || '').normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase();
@@ -266,25 +292,15 @@
       const articulo = document.createElement('article');
       articulo.className = 'tarjeta-recurso';
       articulo.dataset.tipo = recurso.tipo || '';
-      articulo.dataset.texto = normalizar([
-        recurso.titulo,
-        recurso.tipoEtiqueta,
-        recurso.descripcion,
-        recurso.area,
-        recurso.nivel,
-        recurso.fuente,
-        recurso.condicion
-      ].join(' '));
+      articulo.dataset.texto = normalizar([recurso.titulo,recurso.tipoEtiqueta,recurso.descripcion,recurso.area,recurso.nivel,recurso.fuente,recurso.condicion].join(' '));
 
       const contenido = document.createElement('div');
       const cabecera = document.createElement('div');
       cabecera.className = 'cabecera-recurso';
-
       const icono = document.createElement('div');
       icono.className = 'icono-recurso';
       icono.setAttribute('aria-hidden','true');
       icono.textContent = recurso.icono || 'BIB';
-
       const datosTitulo = document.createElement('div');
       const etiqueta = document.createElement('p');
       etiqueta.className = 'tipo-recurso';
@@ -293,19 +309,11 @@
       titulo.textContent = recurso.titulo || 'Recurso sin título';
       datosTitulo.append(etiqueta,titulo);
       cabecera.append(icono,datosTitulo);
-
       const descripcion = document.createElement('p');
       descripcion.textContent = recurso.descripcion || 'Recurso pendiente de descripción.';
-
       const meta = document.createElement('div');
       meta.className = 'meta-recurso';
-      const campos = [
-        ['Área', recurso.area],
-        ['Dirigido a', recurso.nivel],
-        ['Fuente', recurso.fuente],
-        ['Condición', recurso.condicion]
-      ];
-      campos.forEach(([nombre, valor]) => {
+      [['Área', recurso.area],['Dirigido a', recurso.nivel],['Fuente', recurso.fuente],['Condición', recurso.condicion]].forEach(([nombre, valor]) => {
         const caja = document.createElement('div');
         const span = document.createElement('span');
         span.textContent = nombre;
@@ -314,25 +322,19 @@
         caja.append(span,parrafo);
         meta.appendChild(caja);
       });
-
       contenido.append(cabecera,descripcion,meta);
-
       const pie = document.createElement('div');
       pie.className = 'tarjeta-pie';
       const estado = document.createElement('span');
       estado.className = `estado-material ${recurso.estado === 'disponible' ? 'disponible' : 'pendiente'}`;
       estado.textContent = recurso.estadoEtiqueta || 'Pendiente';
       pie.appendChild(estado);
-
       if(recurso.enlace){
         const enlace = document.createElement('a');
         enlace.className = 'enlace-material';
         enlace.href = recurso.enlace;
         enlace.textContent = recurso.accion || 'Acceder';
-        if(/^https?:\/\//.test(recurso.enlace)){
-          enlace.target = '_blank';
-          enlace.rel = 'noopener noreferrer';
-        }
+        if(/^https?:\/\//.test(recurso.enlace)){enlace.target = '_blank';enlace.rel = 'noopener noreferrer';}
         pie.appendChild(enlace);
       }else{
         const pendiente = document.createElement('span');
@@ -340,7 +342,6 @@
         pendiente.textContent = recurso.accion || 'Configurar';
         pie.appendChild(pendiente);
       }
-
       articulo.append(contenido,pie);
       return articulo;
     }
@@ -350,22 +351,15 @@
       const tipoSeleccionado = tipo.value;
       let visibles = 0;
       lista.innerHTML = '';
-
       recursos.forEach((recurso) => {
         const tarjeta = crearTarjeta(recurso);
         const coincideTexto = !texto || tarjeta.dataset.texto.includes(texto);
         const coincideTipo = !tipoSeleccionado || recurso.tipo === tipoSeleccionado;
-        if(coincideTexto && coincideTipo){
-          lista.appendChild(tarjeta);
-          visibles += 1;
-        }
+        if(coincideTexto && coincideTipo){lista.appendChild(tarjeta);visibles += 1;}
       });
-
       contador.textContent = visibles === 1 ? 'Mostrando 1 recurso.' : `Mostrando ${visibles} recursos.`;
       estadoCatalogo.hidden = visibles > 0;
-      if(visibles === 0){
-        estadoCatalogo.textContent = 'No se encontraron recursos con esos criterios. Prueba con otra palabra o limpia el filtro.';
-      }
+      if(visibles === 0){estadoCatalogo.textContent = 'No se encontraron recursos con esos criterios. Prueba con otra palabra o limpia el filtro.';}
     }
 
     async function cargarCatalogo(){
@@ -385,12 +379,7 @@
     }
 
     function obtenerFormatoDisponible(formatos){
-      const prioridad = [
-        ['text/html', 'Leer en línea'],
-        ['application/epub+zip', 'Descargar EPUB'],
-        ['application/pdf', 'Ver PDF'],
-        ['text/plain', 'Texto simple']
-      ];
+      const prioridad = [['text/html', 'Leer en línea'],['application/epub+zip', 'Descargar EPUB'],['application/pdf', 'Ver PDF'],['text/plain', 'Texto simple']];
       for(const [clave, etiqueta] of prioridad){
         const entrada = Object.entries(formatos || {}).find(([tipo]) => tipo.includes(clave));
         if(entrada){return {url: entrada[1], etiqueta};}
@@ -402,18 +391,10 @@
     function crearTarjetaGutendex(libro){
       const articulo = document.createElement('article');
       articulo.className = 'tarjeta-api';
-
-      const autores = Array.isArray(libro.authors) && libro.authors.length
-        ? libro.authors.map((autor) => autor.name).join(', ')
-        : 'Autor no identificado';
-      const idiomas = Array.isArray(libro.languages) && libro.languages.length
-        ? libro.languages.join(', ').toUpperCase()
-        : 'No indicado';
-      const materias = Array.isArray(libro.subjects) && libro.subjects.length
-        ? libro.subjects.slice(0,3).join('; ')
-        : 'Sin materias registradas';
+      const autores = Array.isArray(libro.authors) && libro.authors.length ? libro.authors.map((autor) => autor.name).join(', ') : 'Autor no identificado';
+      const idiomas = Array.isArray(libro.languages) && libro.languages.length ? libro.languages.join(', ').toUpperCase() : 'No indicado';
+      const materias = Array.isArray(libro.subjects) && libro.subjects.length ? libro.subjects.slice(0,3).join('; ') : 'Sin materias registradas';
       const formato = obtenerFormatoDisponible(libro.formats);
-
       const contenido = document.createElement('div');
       const etiqueta = document.createElement('p');
       etiqueta.className = 'tipo-recurso';
@@ -426,14 +407,12 @@
       formatos.className = 'api-formatos';
       formatos.innerHTML = `<span>Fuente:</span> Project Gutenberg mediante Gutendex`;
       contenido.append(etiqueta,titulo,datos,formatos);
-
       const pie = document.createElement('div');
       pie.className = 'tarjeta-pie';
       const estado = document.createElement('span');
       estado.className = 'estado-material disponible';
       estado.textContent = 'Disponible';
       pie.appendChild(estado);
-
       if(formato && formato.url){
         const enlace = document.createElement('a');
         enlace.className = 'enlace-material';
@@ -448,16 +427,67 @@
         pendiente.textContent = 'Sin enlace directo';
         pie.appendChild(pendiente);
       }
-
       articulo.append(contenido,pie);
       return articulo;
+    }
+
+    async function consultarGutendex(consulta, idioma){
+      const parametros = new URLSearchParams({search: consulta});
+      if(idioma){parametros.set('languages', idioma);}
+      const respuesta = await fetch(`https://gutendex.com/books/?${parametros.toString()}`);
+      if(!respuesta.ok){throw new Error('No se pudo consultar Gutendex.');}
+      const datos = await respuesta.json();
+      return Array.isArray(datos.results) ? datos.results.slice(0,8) : [];
+    }
+
+    function consultasAlternativas(consulta){
+      const base = normalizar(consulta).trim();
+      const alternativas = [consulta, base];
+      Object.entries(equivalenciasGutendex).forEach(([clave, valor]) => {
+        if(base.includes(clave)){alternativas.push(valor);}
+      });
+      alternativas.push('education');
+      return [...new Set(alternativas.filter(Boolean))];
+    }
+
+    function mostrarResultadosGutendex(resultados, mensaje){
+      listaGutendex.innerHTML = '';
+      resultados.forEach((libro) => listaGutendex.appendChild(crearTarjetaGutendex(libro)));
+      contadorGutendex.textContent = resultados.length === 1 ? 'Mostrando 1 libro abierto.' : `Mostrando ${resultados.length} libros abiertos.`;
+      estadoGutendex.hidden = !mensaje;
+      if(mensaje){estadoGutendex.textContent = mensaje;}
+    }
+
+    async function ejecutarBusquedaGutendex(consulta, idioma, esInicial = false){
+      listaGutendex.innerHTML = '';
+      estadoGutendex.hidden = false;
+      estadoGutendex.textContent = 'Consultando Gutendex...';
+      contadorGutendex.textContent = 'Buscando libros abiertos.';
+      const intentos = consultasAlternativas(consulta);
+
+      try{
+        for(const intento of intentos){
+          let resultados = await consultarGutendex(intento, idioma);
+          if(!resultados.length && idioma){resultados = await consultarGutendex(intento, '');}
+          if(resultados.length){
+            const mensaje = intento !== consulta || idioma ? `Resultados encontrados usando "${intento}". Si el filtro de idioma no devuelve libros, se muestran coincidencias generales.` : '';
+            mostrarResultadosGutendex(resultados, esInicial ? 'Búsqueda inicial cargada automáticamente para comprobar el funcionamiento de Gutendex.' : mensaje);
+            return;
+          }
+        }
+        mostrarResultadosGutendex([], 'No se encontraron libros con esos criterios. Prueba con los botones sugeridos o usa términos como education, children, language o psychology.');
+      }catch(error){
+        listaGutendex.innerHTML = '';
+        contadorGutendex.textContent = 'No se pudo completar la búsqueda.';
+        estadoGutendex.hidden = false;
+        estadoGutendex.textContent = 'La consulta externa no respondió. Intenta nuevamente o revisa la conexión.';
+      }
     }
 
     async function buscarGutendex(evento){
       evento.preventDefault();
       const consulta = busquedaGutendex.value.trim();
       const idioma = idiomaGutendex.value;
-
       if(!consulta){
         listaGutendex.innerHTML = '';
         contadorGutendex.textContent = 'Escribe una palabra para buscar libros abiertos.';
@@ -466,36 +496,7 @@
         busquedaGutendex.focus();
         return;
       }
-
-      listaGutendex.innerHTML = '';
-      estadoGutendex.hidden = false;
-      estadoGutendex.textContent = 'Consultando Gutendex...';
-      contadorGutendex.textContent = 'Buscando libros abiertos.';
-
-      const parametros = new URLSearchParams({search: consulta});
-      if(idioma){parametros.set('languages', idioma);}
-
-      try{
-        const respuesta = await fetch(`https://gutendex.com/books/?${parametros.toString()}`);
-        if(!respuesta.ok){throw new Error('No se pudo consultar Gutendex.');}
-        const datos = await respuesta.json();
-        const resultados = Array.isArray(datos.results) ? datos.results.slice(0,8) : [];
-
-        if(!resultados.length){
-          contadorGutendex.textContent = 'Mostrando 0 libros.';
-          estadoGutendex.hidden = false;
-          estadoGutendex.textContent = 'No se encontraron libros con esos criterios. Prueba con otra palabra o cambia el idioma.';
-          return;
-        }
-
-        resultados.forEach((libro) => listaGutendex.appendChild(crearTarjetaGutendex(libro)));
-        contadorGutendex.textContent = resultados.length === 1 ? 'Mostrando 1 libro abierto.' : `Mostrando ${resultados.length} libros abiertos.`;
-        estadoGutendex.hidden = true;
-      }catch(error){
-        contadorGutendex.textContent = 'No se pudo completar la búsqueda.';
-        estadoGutendex.hidden = false;
-        estadoGutendex.textContent = 'La consulta externa no respondió. Intenta nuevamente o revisa la conexión.';
-      }
+      await ejecutarBusquedaGutendex(consulta, idioma);
     }
 
     busqueda.addEventListener('input', renderizarRecursos);
@@ -507,8 +508,17 @@
       busqueda.focus();
     });
     formGutendex.addEventListener('submit', buscarGutendex);
+    sugerenciasGutendex.forEach((boton) => {
+      boton.addEventListener('click', () => {
+        busquedaGutendex.value = boton.dataset.consulta || '';
+        idiomaGutendex.value = '';
+        ejecutarBusquedaGutendex(busquedaGutendex.value, '');
+      });
+    });
 
     cargarCatalogo();
+    busquedaGutendex.value = 'education';
+    ejecutarBusquedaGutendex('education', '', true);
   </script>
 </body>
 </html>
