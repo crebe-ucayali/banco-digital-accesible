@@ -24,10 +24,10 @@
 .atajo-busqueda,.sugerencia-api{border:1px solid rgba(15,118,110,.35);background:#ffffff;color:var(--bd-acento);border-radius:999px;padding:8px 14px;font-weight:800;cursor:pointer;}
 .atajo-busqueda:hover,.atajo-busqueda:focus,.sugerencia-api:hover,.sugerencia-api:focus{background:var(--bd-suave);}
 
-.panel-biblioteca,.panel-api,.panel-organizacion{background:var(--bd-blanco);border:1px solid var(--bd-borde);border-radius:26px;box-shadow:var(--sombra);padding:34px 42px;}
+.panel-biblioteca,.panel-api,.panel-organizacion,.panel-ficha{background:var(--bd-blanco);border:1px solid var(--bd-borde);border-radius:26px;box-shadow:var(--sombra);padding:34px 42px;}
 .panel-biblioteca + .panel-biblioteca,.seccion-api,.seccion-organizacion{margin-top:28px;}
 .panel-encabezado-bd{display:flex;align-items:flex-start;justify-content:space-between;gap:24px;flex-wrap:wrap;margin-bottom:20px;}
-.panel-encabezado-bd h2,.panel-api h2,.panel-organizacion h2{margin:0;color:#072f57;font-family:Georgia,"Times New Roman",serif;font-size:clamp(1.75rem,3.2vw,2.45rem);line-height:1.12;}
+.panel-encabezado-bd h2,.panel-api h2,.panel-organizacion h2,.panel-ficha h2{margin:0;color:#072f57;font-family:Georgia,"Times New Roman",serif;font-size:clamp(1.75rem,3.2vw,2.45rem);line-height:1.12;}
 .texto-panel{max-width:860px;margin:12px 0 0;color:var(--bd-texto-suave);line-height:1.65;font-size:1rem;}
 .sobretitulo{margin:0 0 14px;color:var(--bd-acento);font-size:.86rem;font-weight:900;letter-spacing:.18em;text-transform:uppercase;}
 
@@ -70,6 +70,19 @@
 .api-formatos span{font-weight:800;color:#0b2f4a;}
 .sugerencias-api{display:flex;flex-wrap:wrap;gap:10px;margin-top:14px;}
 
+.ficha-layout{display:grid;grid-template-columns:1fr .72fr;gap:24px;align-items:start;}
+.ficha-resumen{margin-top:18px;color:var(--bd-texto-suave);line-height:1.72;font-size:1rem;}
+.ficha-datos{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin-top:22px;}
+.ficha-dato{border:1px solid var(--bd-borde);border-radius:18px;padding:14px 16px;background:#f8fbfc;}
+.ficha-dato span{display:block;margin-bottom:5px;color:#0b2f4a;font-size:.78rem;font-weight:900;text-transform:uppercase;letter-spacing:.06em;}
+.ficha-dato p{margin:0;color:var(--bd-texto-suave);line-height:1.5;}
+.ficha-palabras{display:flex;flex-wrap:wrap;gap:10px;margin-top:16px;}
+.ficha-palabra{display:inline-flex;border:1px solid rgba(15,118,110,.28);background:#ffffff;color:var(--bd-acento);border-radius:999px;padding:7px 12px;font-weight:800;font-size:.85rem;}
+.ficha-lateral{background:#f7fbfa;border:1px solid rgba(15,118,110,.22);border-radius:24px;padding:22px;}
+.ficha-lateral h3{margin:0 0 12px;color:#0b2f4a;font-size:1.05rem;}
+.ficha-lateral p{margin:0 0 12px;color:var(--bd-texto-suave);line-height:1.6;}
+.ficha-acciones{display:flex;flex-direction:column;gap:10px;margin-top:18px;}
+
 .mapa-biblioteca{display:grid;grid-template-columns:repeat(2,1fr);gap:18px;margin-top:24px;}
 .paso-biblioteca{border:1px solid var(--bd-borde);border-radius:22px;padding:20px;background:#ffffff;}
 .paso-biblioteca h3{margin:0 0 10px;color:#0b2f4a;font-size:1.04rem;}
@@ -81,14 +94,14 @@
 .footer-bloque a{text-decoration:underline;text-underline-offset:3px;}
 
 @media (max-width:1000px){
-  .biblioteca-intro,.lista-recursos,.lista-api,.mapa-biblioteca{grid-template-columns:1fr;}
+  .biblioteca-intro,.lista-recursos,.lista-api,.mapa-biblioteca,.ficha-layout{grid-template-columns:1fr;}
   .form-busqueda-principal,.filtros-biblioteca,.form-api{grid-template-columns:1fr 1fr;}
 }
 @media (max-width:760px){
-  .form-busqueda-principal,.filtros-biblioteca,.form-api,.footer-contenido,.meta-recurso{grid-template-columns:1fr;}
+  .form-busqueda-principal,.filtros-biblioteca,.form-api,.footer-contenido,.meta-recurso,.ficha-datos{grid-template-columns:1fr;}
   .enlaces-cabecera{justify-content:flex-start;}
   .portada{margin-top:44px;}
-  .hero-busqueda,.panel-biblioteca,.panel-api,.panel-organizacion{padding:24px 20px;}
+  .hero-busqueda,.panel-biblioteca,.panel-api,.panel-organizacion,.panel-ficha{padding:24px 20px;}
   .footer-marca{align-items:center;}
   .footer-logo{width:60px;max-width:60px;}
   .boton-secundario,.enlace-material,.atajo-busqueda,.sugerencia-api{width:100%;text-align:center;}
