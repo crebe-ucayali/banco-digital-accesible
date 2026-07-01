@@ -25,14 +25,20 @@
     .resultado-biblioteca{margin:18px 0 0;color:var(--texto-suave);line-height:1.6;}
     .lista-recursos{display:grid;grid-template-columns:repeat(2,1fr);gap:18px;margin-top:22px;}
     .tarjeta-recurso{background:#ffffff;border:1px solid var(--borde);border-radius:24px;padding:22px;display:flex;flex-direction:column;justify-content:space-between;box-shadow:0 10px 22px rgba(16,42,67,.06);}
-    .tarjeta-recurso[hidden]{display:none;}
     .cabecera-recurso{display:flex;gap:14px;align-items:flex-start;margin-bottom:14px;}
     .icono-recurso{width:52px;height:52px;border-radius:18px;background:var(--verde-suave);color:var(--verde);display:flex;align-items:center;justify-content:center;font-weight:900;flex:0 0 auto;}
     .tipo-recurso{margin:0 0 6px;color:var(--verde);font-size:.78rem;font-weight:900;letter-spacing:.12em;text-transform:uppercase;}
     .tarjeta-recurso h3{margin:0;color:#0b2f4a;font-size:1.08rem;line-height:1.3;}
     .tarjeta-recurso p{margin:0;color:var(--texto-suave);line-height:1.62;font-size:.96rem;}
+    .meta-recurso{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin-top:16px;}
+    .meta-recurso div{border:1px solid var(--borde);border-radius:16px;padding:10px 12px;background:#f8fbfc;}
+    .meta-recurso span{display:block;margin-bottom:4px;color:#0b2f4a;font-size:.78rem;font-weight:900;}
+    .meta-recurso p{font-size:.88rem;line-height:1.45;}
     .tarjeta-recurso .tarjeta-pie{margin-top:20px;}
     .estado-material.pendiente{background:#fff8e5;color:#725918;border:1px solid #ebd599;}
+    .enlace-material.deshabilitado{background:#d9e2ec;color:#486581;cursor:not-allowed;pointer-events:none;}
+    .estado-catalogo{margin-top:18px;padding:16px 18px;border-radius:18px;background:#f7fbfa;border:1px solid rgba(15,118,110,.22);color:var(--texto-suave);line-height:1.6;}
+    .estado-catalogo[hidden]{display:none;}
     .seccion-organizacion{margin-top:28px;}
     .panel-organizacion{background:var(--blanco);border:1px solid var(--borde);border-radius:26px;box-shadow:var(--sombra);padding:34px 42px;}
     .mapa-biblioteca{display:grid;grid-template-columns:repeat(2,1fr);gap:18px;margin-top:24px;}
@@ -45,7 +51,7 @@
     .footer-contenido{grid-template-columns:1.2fr 1fr 1.25fr;gap:32px;}
     .footer-bloque a{text-decoration:underline;text-underline-offset:3px;}
     @media (max-width:1000px){.estructura-grid{grid-template-columns:repeat(2,1fr);}.biblioteca-intro,.lista-recursos,.mapa-biblioteca{grid-template-columns:1fr;}}
-    @media (max-width:760px){.estructura-grid,.filtros-biblioteca,.footer-contenido{grid-template-columns:1fr;}.enlaces-cabecera{justify-content:flex-start;}.footer-marca{align-items:center;}.footer-logo{width:60px;max-width:60px;}.acciones-biblioteca{flex-direction:column;}.boton-secundario,.acciones-biblioteca .enlace-material{width:100%;text-align:center;}}
+    @media (max-width:760px){.estructura-grid,.filtros-biblioteca,.footer-contenido,.meta-recurso{grid-template-columns:1fr;}.enlaces-cabecera{justify-content:flex-start;}.footer-marca{align-items:center;}.footer-logo{width:60px;max-width:60px;}.acciones-biblioteca{flex-direction:column;}.boton-secundario,.acciones-biblioteca .enlace-material{width:100%;text-align:center;}}
   </style>
 </head>
 <body>
@@ -94,7 +100,7 @@
           <p>Primero se consulta el catálogo institucional. Luego, si el material requerido no se encuentra disponible, se revisan fuentes abiertas, bases académicas o repositorios externos. Esta organización ayuda a evitar enlaces dispersos y facilita el mantenimiento del módulo.</p>
           <div class="acciones-biblioteca">
             <a class="enlace-material" href="#catalogo-biblioteca">Ver catálogo</a>
-            <a class="boton-secundario" href="#organizacion-biblioteca">Ver organización</a>
+            <a class="boton-secundario" href="criterios.html">Criterios de uso</a>
           </div>
         </article>
         <article class="bloque-destacado">
@@ -104,18 +110,9 @@
       </div>
 
       <div class="estructura-grid" aria-label="Secciones principales de la biblioteca">
-        <article class="tarjeta-material disponible">
-          <div><div class="material-icono" aria-hidden="true">LD</div><h3>Libros digitales</h3><p>Catálogo de libros, guías y documentos de lectura organizados por área, nivel, temática y condición de uso.</p></div>
-          <div class="tarjeta-pie"><span class="estado-material disponible">Base lista</span><a class="enlace-material" href="#catalogo-biblioteca">Explorar</a></div>
-        </article>
-        <article class="tarjeta-material disponible">
-          <div><div class="material-icono" aria-hidden="true">BA</div><h3>Bases académicas</h3><p>Accesos ordenados a buscadores, bases de datos, revistas, repositorios universitarios y fuentes de investigación.</p></div>
-          <div class="tarjeta-pie"><span class="estado-material disponible">Base lista</span><a class="enlace-material" href="#catalogo-biblioteca">Explorar</a></div>
-        </article>
-        <article class="tarjeta-material disponible">
-          <div><div class="material-icono" aria-hidden="true">LI</div><h3>Licencias y accesos</h3><p>Orientaciones para usuarios autorizados, solicitudes de acceso y uso responsable de recursos institucionales.</p></div>
-          <div class="tarjeta-pie"><span class="estado-material disponible">Base lista</span><a class="enlace-material" href="#catalogo-biblioteca">Explorar</a></div>
-        </article>
+        <article class="tarjeta-material disponible"><div><div class="material-icono" aria-hidden="true">LD</div><h3>Libros digitales</h3><p>Catálogo de libros, guías y documentos de lectura organizados por área, nivel, temática y condición de uso.</p></div><div class="tarjeta-pie"><span class="estado-material disponible">Base lista</span><a class="enlace-material" href="#catalogo-biblioteca">Explorar</a></div></article>
+        <article class="tarjeta-material disponible"><div><div class="material-icono" aria-hidden="true">BA</div><h3>Bases académicas</h3><p>Accesos ordenados a buscadores, bases de datos, revistas, repositorios universitarios y fuentes de investigación.</p></div><div class="tarjeta-pie"><span class="estado-material disponible">Base lista</span><a class="enlace-material" href="#catalogo-biblioteca">Explorar</a></div></article>
+        <article class="tarjeta-material disponible"><div><div class="material-icono" aria-hidden="true">LI</div><h3>Licencias y accesos</h3><p>Orientaciones para usuarios autorizados, solicitudes de acceso y uso responsable de recursos institucionales.</p></div><div class="tarjeta-pie"><span class="estado-material disponible">Base lista</span><a class="enlace-material" href="#catalogo-biblioteca">Explorar</a></div></article>
       </div>
     </section>
 
@@ -125,7 +122,7 @@
           <div>
             <p class="sobretitulo">Catálogo inicial</p>
             <h2 id="titulo-catalogo-biblioteca">Recursos organizados por tipo</h2>
-            <p class="texto-panel">Esta estructura queda preparada para reemplazar los enlaces de ejemplo por carpetas institucionales, bases académicas o repositorios abiertos seleccionados.</p>
+            <p class="texto-panel">El catálogo se carga desde el archivo <strong>datos/recursos.json</strong>. Para agregar o actualizar recursos ya no es necesario modificar toda la página, solo editar el archivo de datos.</p>
           </div>
         </div>
 
@@ -147,57 +144,9 @@
           </div>
           <button id="limpiar-biblioteca" class="boton-secundario" type="button">Limpiar</button>
         </div>
-        <p id="contador-biblioteca" class="resultado-biblioteca" aria-live="polite">Mostrando recursos disponibles.</p>
-
-        <div class="lista-recursos" id="lista-biblioteca">
-          <article class="tarjeta-recurso" data-tipo="institucional" data-texto="repositorio institucional materiales propios autorizados crebe docentes estudiantes">
-            <div>
-              <div class="cabecera-recurso"><div class="icono-recurso" aria-hidden="true">RI</div><div><p class="tipo-recurso">Institucional</p><h3>Repositorio institucional</h3></div></div>
-              <p>Espacio para materiales propios, documentos autorizados, guías internas y recursos elaborados para la comunidad educativa.</p>
-            </div>
-            <div class="tarjeta-pie"><span class="estado-material pendiente">Pendiente de enlace</span><span class="enlace-material deshabilitado">Configurar</span></div>
-          </article>
-
-          <article class="tarjeta-recurso" data-tipo="libros" data-texto="libros digitales lectura pdf epub dominio publico recursos abiertos">
-            <div>
-              <div class="cabecera-recurso"><div class="icono-recurso" aria-hidden="true">LD</div><div><p class="tipo-recurso">Libros digitales</p><h3>Libros de libre acceso</h3></div></div>
-              <p>Sección para enlaces a libros digitales permitidos, documentos de dominio público o materiales con licencia abierta.</p>
-            </div>
-            <div class="tarjeta-pie"><span class="estado-material pendiente">Pendiente de enlace</span><span class="enlace-material deshabilitado">Configurar</span></div>
-          </article>
-
-          <article class="tarjeta-recurso" data-tipo="academico" data-texto="bases academicas articulos revistas tesis repositorios universitarios investigacion">
-            <div>
-              <div class="cabecera-recurso"><div class="icono-recurso" aria-hidden="true">BA</div><div><p class="tipo-recurso">Académico</p><h3>Bases académicas y repositorios</h3></div></div>
-              <p>Acceso organizado a fuentes académicas, revistas, repositorios universitarios y buscadores útiles para investigación educativa.</p>
-            </div>
-            <div class="tarjeta-pie"><span class="estado-material pendiente">Pendiente de enlace</span><span class="enlace-material deshabilitado">Configurar</span></div>
-          </article>
-
-          <article class="tarjeta-recurso" data-tipo="licencias" data-texto="licencias acceso usuarios credenciales solicitud institucional claves permisos">
-            <div>
-              <div class="cabecera-recurso"><div class="icono-recurso" aria-hidden="true">LI</div><div><p class="tipo-recurso">Licencias</p><h3>Accesos para usuarios autorizados</h3></div></div>
-              <p>Orientación para solicitar accesos institucionales. Las credenciales deben compartirse por canales privados y no dentro de una página pública.</p>
-            </div>
-            <div class="tarjeta-pie"><span class="estado-material pendiente">Pendiente de enlace</span><span class="enlace-material deshabilitado">Configurar</span></div>
-          </article>
-
-          <article class="tarjeta-recurso" data-tipo="guias" data-texto="guias tutoriales orientacion como buscar citar descargar usar biblioteca">
-            <div>
-              <div class="cabecera-recurso"><div class="icono-recurso" aria-hidden="true">GU</div><div><p class="tipo-recurso">Guías</p><h3>Guías de búsqueda y uso</h3></div></div>
-              <p>Material de orientación para aprender a buscar, seleccionar, citar y utilizar recursos digitales de forma responsable.</p>
-            </div>
-            <div class="tarjeta-pie"><span class="estado-material pendiente">Pendiente de enlace</span><span class="enlace-material deshabilitado">Configurar</span></div>
-          </article>
-
-          <article class="tarjeta-recurso" data-tipo="institucional" data-texto="solicitud de materiales docentes estudiantes formulario recurso no encontrado biblioteca">
-            <div>
-              <div class="cabecera-recurso"><div class="icono-recurso" aria-hidden="true">SM</div><div><p class="tipo-recurso">Institucional</p><h3>Solicitud de materiales</h3></div></div>
-              <p>Sección para conectar un formulario de solicitud cuando el docente o estudiante requiera un material no ubicado en el catálogo.</p>
-            </div>
-            <div class="tarjeta-pie"><span class="estado-material pendiente">Pendiente de enlace</span><span class="enlace-material deshabilitado">Configurar</span></div>
-          </article>
-        </div>
+        <p id="contador-biblioteca" class="resultado-biblioteca" aria-live="polite">Cargando recursos disponibles.</p>
+        <div id="estado-catalogo" class="estado-catalogo" role="status" aria-live="polite">Preparando el catálogo digital...</div>
+        <div class="lista-recursos" id="lista-biblioteca" aria-label="Recursos de la biblioteca"></div>
       </div>
     </section>
 
@@ -208,15 +157,13 @@
         <p class="texto-panel">La mejor alternativa es mantener esta biblioteca como una sección propia dentro de BDA, con enlaces controlados y categorías estables. Si más adelante aumenta el número de recursos, se puede migrar el catálogo a una hoja de cálculo, una base de datos o un servicio externo.</p>
 
         <div class="mapa-biblioteca">
-          <article class="paso-biblioteca"><h3>1. Catálogo básico</h3><p>Registro manual de recursos con título, tipo, descripción, público recomendado y enlace de acceso.</p></article>
+          <article class="paso-biblioteca"><h3>1. Catálogo básico</h3><p>Registro de recursos en <strong>datos/recursos.json</strong>, con título, tipo, descripción, público recomendado, fuente y enlace.</p></article>
           <article class="paso-biblioteca"><h3>2. Almacenamiento externo</h3><p>Uso de carpetas institucionales o servicios de almacenamiento para evitar cargar archivos pesados dentro del repositorio.</p></article>
           <article class="paso-biblioteca"><h3>3. Accesos protegidos</h3><p>Orientación pública para el usuario y entrega privada de credenciales cuando existan licencias institucionales.</p></article>
           <article class="paso-biblioteca"><h3>4. Actualización periódica</h3><p>Revisión de enlaces, retiro de recursos vencidos e incorporación de nuevas fuentes según necesidad educativa.</p></article>
         </div>
 
-        <div class="nota-uso">
-          Esta biblioteca no debe publicar libros protegidos sin autorización. Lo más seguro es enlazar fuentes oficiales, materiales propios, documentos autorizados o recursos con licencia abierta.
-        </div>
+        <div class="nota-uso">Esta biblioteca no debe publicar libros protegidos sin autorización. Lo más seguro es enlazar fuentes oficiales, materiales propios, documentos autorizados o recursos con licencia abierta.</div>
       </div>
     </section>
   </main>
@@ -237,6 +184,7 @@
           <a href="../index.html">Banco Digital Accesible</a><br>
           <a href="../lsp/index.html">Lengua de Señas Peruana</a><br>
           <a href="../braille/index.html">Sistema Braille</a><br>
+          <a href="criterios.html">Criterios de uso</a><br>
           <a href="https://gabriel-lsp.github.io/repositorio-accesible/">Repositorio Accesible</a><br>
         </p>
       </nav>
@@ -261,34 +209,146 @@
     const tipo = document.getElementById('tipo-biblioteca');
     const limpiar = document.getElementById('limpiar-biblioteca');
     const contador = document.getElementById('contador-biblioteca');
-    const tarjetas = Array.from(document.querySelectorAll('.tarjeta-recurso'));
+    const lista = document.getElementById('lista-biblioteca');
+    const estadoCatalogo = document.getElementById('estado-catalogo');
+    let recursos = [];
 
-    function filtrarBiblioteca(){
-      const texto = busqueda.value.trim().toLowerCase();
+    function normalizar(texto){
+      return String(texto || '').normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase();
+    }
+
+    function crearTarjeta(recurso){
+      const articulo = document.createElement('article');
+      articulo.className = 'tarjeta-recurso';
+      articulo.dataset.tipo = recurso.tipo || '';
+      articulo.dataset.texto = normalizar([
+        recurso.titulo,
+        recurso.tipoEtiqueta,
+        recurso.descripcion,
+        recurso.area,
+        recurso.nivel,
+        recurso.fuente,
+        recurso.condicion
+      ].join(' '));
+
+      const contenido = document.createElement('div');
+      const cabecera = document.createElement('div');
+      cabecera.className = 'cabecera-recurso';
+
+      const icono = document.createElement('div');
+      icono.className = 'icono-recurso';
+      icono.setAttribute('aria-hidden','true');
+      icono.textContent = recurso.icono || 'BIB';
+
+      const datosTitulo = document.createElement('div');
+      const etiqueta = document.createElement('p');
+      etiqueta.className = 'tipo-recurso';
+      etiqueta.textContent = recurso.tipoEtiqueta || 'Recurso';
+      const titulo = document.createElement('h3');
+      titulo.textContent = recurso.titulo || 'Recurso sin título';
+      datosTitulo.append(etiqueta,titulo);
+      cabecera.append(icono,datosTitulo);
+
+      const descripcion = document.createElement('p');
+      descripcion.textContent = recurso.descripcion || 'Recurso pendiente de descripción.';
+
+      const meta = document.createElement('div');
+      meta.className = 'meta-recurso';
+      const campos = [
+        ['Área', recurso.area],
+        ['Dirigido a', recurso.nivel],
+        ['Fuente', recurso.fuente],
+        ['Condición', recurso.condicion]
+      ];
+      campos.forEach(([nombre, valor]) => {
+        const caja = document.createElement('div');
+        const span = document.createElement('span');
+        span.textContent = nombre;
+        const parrafo = document.createElement('p');
+        parrafo.textContent = valor || 'Por definir';
+        caja.append(span,parrafo);
+        meta.appendChild(caja);
+      });
+
+      contenido.append(cabecera,descripcion,meta);
+
+      const pie = document.createElement('div');
+      pie.className = 'tarjeta-pie';
+      const estado = document.createElement('span');
+      estado.className = `estado-material ${recurso.estado === 'disponible' ? 'disponible' : 'pendiente'}`;
+      estado.textContent = recurso.estadoEtiqueta || 'Pendiente';
+      pie.appendChild(estado);
+
+      if(recurso.enlace){
+        const enlace = document.createElement('a');
+        enlace.className = 'enlace-material';
+        enlace.href = recurso.enlace;
+        enlace.textContent = recurso.accion || 'Acceder';
+        if(/^https?:\/\//.test(recurso.enlace)){
+          enlace.target = '_blank';
+          enlace.rel = 'noopener noreferrer';
+        }
+        pie.appendChild(enlace);
+      }else{
+        const pendiente = document.createElement('span');
+        pendiente.className = 'enlace-material deshabilitado';
+        pendiente.textContent = recurso.accion || 'Configurar';
+        pie.appendChild(pendiente);
+      }
+
+      articulo.append(contenido,pie);
+      return articulo;
+    }
+
+    function renderizarRecursos(){
+      const texto = normalizar(busqueda.value.trim());
       const tipoSeleccionado = tipo.value;
       let visibles = 0;
+      lista.innerHTML = '';
 
-      tarjetas.forEach((tarjeta) => {
-        const coincideTexto = !texto || tarjeta.dataset.texto.includes(texto) || tarjeta.textContent.toLowerCase().includes(texto);
-        const coincideTipo = !tipoSeleccionado || tarjeta.dataset.tipo === tipoSeleccionado;
-        const mostrar = coincideTexto && coincideTipo;
-        tarjeta.hidden = !mostrar;
-        if(mostrar) visibles += 1;
+      recursos.forEach((recurso) => {
+        const tarjeta = crearTarjeta(recurso);
+        const coincideTexto = !texto || tarjeta.dataset.texto.includes(texto);
+        const coincideTipo = !tipoSeleccionado || recurso.tipo === tipoSeleccionado;
+        if(coincideTexto && coincideTipo){
+          lista.appendChild(tarjeta);
+          visibles += 1;
+        }
       });
 
       contador.textContent = visibles === 1 ? 'Mostrando 1 recurso.' : `Mostrando ${visibles} recursos.`;
+      estadoCatalogo.hidden = visibles > 0;
+      if(visibles === 0){
+        estadoCatalogo.textContent = 'No se encontraron recursos con esos criterios. Prueba con otra palabra o limpia el filtro.';
+      }
     }
 
-    busqueda.addEventListener('input', filtrarBiblioteca);
-    tipo.addEventListener('change', filtrarBiblioteca);
+    async function cargarCatalogo(){
+      try{
+        const respuesta = await fetch('datos/recursos.json?v=1');
+        if(!respuesta.ok){throw new Error('No se pudo cargar el archivo de datos.');}
+        recursos = await respuesta.json();
+        estadoCatalogo.hidden = true;
+        renderizarRecursos();
+      }catch(error){
+        recursos = [];
+        lista.innerHTML = '';
+        contador.textContent = 'No hay recursos cargados.';
+        estadoCatalogo.hidden = false;
+        estadoCatalogo.textContent = 'No se pudo cargar el catálogo. Revisa el archivo datos/recursos.json o la conexión del sitio.';
+      }
+    }
+
+    busqueda.addEventListener('input', renderizarRecursos);
+    tipo.addEventListener('change', renderizarRecursos);
     limpiar.addEventListener('click', () => {
       busqueda.value = '';
       tipo.value = '';
-      filtrarBiblioteca();
+      renderizarRecursos();
       busqueda.focus();
     });
 
-    filtrarBiblioteca();
+    cargarCatalogo();
   </script>
 </body>
 </html>
