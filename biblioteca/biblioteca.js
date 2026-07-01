@@ -69,8 +69,9 @@ function crearTarjetaRecurso(recurso){
   articulo.dataset.estado = recurso.estado || '';
   articulo.dataset.texto = normalizar([
     recurso.titulo, recurso.autor, recurso.anio, recurso.tipoEtiqueta,
-    recurso.descripcion, recurso.area, recurso.nivel, recurso.fuente,
-    recurso.formato, recurso.licencia, recurso.condicion,
+    recurso.descripcion, recurso.resumen, recurso.area, recurso.tema,
+    recurso.nivel, recurso.publico, recurso.idioma, recurso.fuente,
+    recurso.repositorio, recurso.formato, recurso.licencia, recurso.condicion,
     Array.isArray(recurso.palabrasClave) ? recurso.palabrasClave.join(' ') : ''
   ].join(' '));
 
@@ -122,6 +123,12 @@ function crearTarjetaRecurso(recurso){
   estado.textContent = recurso.estadoEtiqueta || 'Pendiente';
   pie.appendChild(estado);
 
+  const ficha = document.createElement('a');
+  ficha.className = 'boton-secundario';
+  ficha.href = `recurso.html?id=${encodeURIComponent(recurso.id)}`;
+  ficha.textContent = 'Ver ficha';
+  pie.appendChild(ficha);
+
   if(recurso.enlace){
     const enlace = document.createElement('a');
     enlace.className = 'enlace-material';
@@ -170,7 +177,7 @@ function renderizarCatalogo(){
 
 async function cargarCatalogo(){
   try{
-    const respuesta = await fetch('datos/recursos.json?v=2');
+    const respuesta = await fetch('datos/recursos.json?v=3');
     if(!respuesta.ok){throw new Error('No se pudo cargar el archivo de datos.');}
     recursos = await respuesta.json();
     estadoCatalogo.hidden = true;
