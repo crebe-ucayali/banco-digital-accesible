@@ -1,0 +1,294 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Biblioteca Accesible del Banco Digital Accesible: espacio organizado para libros digitales, bases académicas, repositorios abiertos y accesos institucionales.">
+  <title>Biblioteca Accesible | Banco Digital Accesible</title>
+  <link rel="stylesheet" href="../estilos.css?v=2">
+  <style>
+    .enlaces-cabecera{display:flex;align-items:center;justify-content:flex-end;flex-wrap:wrap;gap:12px;}
+    .patron-portada{position:absolute;inset:0;z-index:0;overflow:hidden;pointer-events:none;background-image:url("../patron-shipibo.png");background-repeat:repeat;background-size:cover;background-position:center;opacity:.26;filter:saturate(1.12) contrast(1.06);}
+    .cabecera .navegacion,.cabecera .portada{position:relative;z-index:1;}
+    .portada{max-width:1120px;margin:70px auto 0;}
+    .biblioteca-intro{display:grid;grid-template-columns:1.15fr .85fr;gap:24px;align-items:stretch;margin-top:28px;}
+    .bloque-destacado{background:linear-gradient(180deg,#ffffff 0%,#eef9f6 100%);border:1px solid rgba(15,118,110,.28);border-radius:24px;padding:24px;box-shadow:0 10px 22px rgba(16,42,67,.06);}
+    .bloque-destacado h3{margin:0 0 10px;color:#0b2f4a;font-size:1.12rem;line-height:1.3;}
+    .bloque-destacado p{margin:0;color:var(--texto-suave);line-height:1.65;}
+    .acciones-biblioteca{display:flex;flex-wrap:wrap;gap:12px;margin-top:20px;}
+    .boton-secundario{display:inline-flex;align-items:center;justify-content:center;min-height:44px;padding:10px 18px;color:var(--verde);background:#ffffff;border:1px solid rgba(15,118,110,.35);border-radius:999px;font-weight:800;text-decoration:none;cursor:pointer;}
+    .boton-secundario:hover,.boton-secundario:focus{background:var(--verde-suave);}
+    .estructura-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:28px;}
+    .filtros-biblioteca{display:grid;grid-template-columns:1.2fr .8fr auto;gap:14px;align-items:end;margin-top:28px;}
+    .campo-biblioteca label{display:block;margin:0 0 8px;color:#0b2f4a;font-weight:800;}
+    .campo-biblioteca input,.campo-biblioteca select{width:100%;min-height:46px;border:1px solid var(--borde);border-radius:16px;padding:10px 14px;color:var(--texto);background:#ffffff;font:inherit;}
+    .resultado-biblioteca{margin:18px 0 0;color:var(--texto-suave);line-height:1.6;}
+    .lista-recursos{display:grid;grid-template-columns:repeat(2,1fr);gap:18px;margin-top:22px;}
+    .tarjeta-recurso{background:#ffffff;border:1px solid var(--borde);border-radius:24px;padding:22px;display:flex;flex-direction:column;justify-content:space-between;box-shadow:0 10px 22px rgba(16,42,67,.06);}
+    .tarjeta-recurso[hidden]{display:none;}
+    .cabecera-recurso{display:flex;gap:14px;align-items:flex-start;margin-bottom:14px;}
+    .icono-recurso{width:52px;height:52px;border-radius:18px;background:var(--verde-suave);color:var(--verde);display:flex;align-items:center;justify-content:center;font-weight:900;flex:0 0 auto;}
+    .tipo-recurso{margin:0 0 6px;color:var(--verde);font-size:.78rem;font-weight:900;letter-spacing:.12em;text-transform:uppercase;}
+    .tarjeta-recurso h3{margin:0;color:#0b2f4a;font-size:1.08rem;line-height:1.3;}
+    .tarjeta-recurso p{margin:0;color:var(--texto-suave);line-height:1.62;font-size:.96rem;}
+    .tarjeta-recurso .tarjeta-pie{margin-top:20px;}
+    .estado-material.pendiente{background:#fff8e5;color:#725918;border:1px solid #ebd599;}
+    .seccion-organizacion{margin-top:28px;}
+    .panel-organizacion{background:var(--blanco);border:1px solid var(--borde);border-radius:26px;box-shadow:var(--sombra);padding:34px 42px;}
+    .mapa-biblioteca{display:grid;grid-template-columns:repeat(2,1fr);gap:18px;margin-top:24px;}
+    .paso-biblioteca{border:1px solid var(--borde);border-radius:22px;padding:20px;background:#ffffff;}
+    .paso-biblioteca h3{margin:0 0 10px;color:#0b2f4a;font-size:1.04rem;}
+    .paso-biblioteca p{margin:0;color:var(--texto-suave);line-height:1.65;}
+    .nota-uso{margin-top:24px;padding:20px 22px;border-radius:22px;background:#f7fbfa;border:1px solid rgba(15,118,110,.22);color:var(--texto-suave);line-height:1.65;}
+    .footer-marca{display:flex;align-items:flex-start;gap:16px;}
+    .footer-logo{width:72px;max-width:72px;height:auto;object-fit:contain;display:block;flex-shrink:0;}
+    .footer-contenido{grid-template-columns:1.2fr 1fr 1.25fr;gap:32px;}
+    .footer-bloque a{text-decoration:underline;text-underline-offset:3px;}
+    @media (max-width:1000px){.estructura-grid{grid-template-columns:repeat(2,1fr);}.biblioteca-intro,.lista-recursos,.mapa-biblioteca{grid-template-columns:1fr;}}
+    @media (max-width:760px){.estructura-grid,.filtros-biblioteca,.footer-contenido{grid-template-columns:1fr;}.enlaces-cabecera{justify-content:flex-start;}.footer-marca{align-items:center;}.footer-logo{width:60px;max-width:60px;}.acciones-biblioteca{flex-direction:column;}.boton-secundario,.acciones-biblioteca .enlace-material{width:100%;text-align:center;}}
+  </style>
+</head>
+<body>
+  <a class="salto-contenido" href="#contenido-principal">Ir al contenido</a>
+
+  <header class="cabecera">
+    <div class="patron-portada" aria-hidden="true"></div>
+    <nav class="navegacion" aria-label="Navegación principal">
+      <a class="marca" href="../index.html" aria-label="Volver al Banco Digital Accesible">
+        <span class="marca-icono" aria-hidden="true">BIB</span>
+        <span>Biblioteca Accesible</span>
+      </a>
+      <div class="enlaces-cabecera">
+        <a class="enlace-cabecera" href="../index.html">Volver a BDA</a>
+        <a class="enlace-cabecera" href="https://gabriel-lsp.github.io/accesos-complementarios/paginas/contacto.html">Contacto Institucional</a>
+      </div>
+    </nav>
+
+    <div class="portada">
+      <div class="bloque-institucional" aria-label="Identidad institucional">
+        <img class="logo-crebe" src="https://gabriel-lsp.github.io/banco-digital-accesible/logo-crebe.png" alt="Logo del CREBE Señor de los Milagros - Ucayali">
+        <div class="texto-institucional">
+          <p class="nombre-institucional">CREBE "Señor de los Milagros" - Ucayali</p>
+          <p class="detalle-institucional">Centro de Recursos de Educación Básica Especial</p>
+        </div>
+      </div>
+      <p class="etiqueta">Consulta educativa y académica</p>
+      <h1>Biblioteca Accesible</h1>
+      <p class="subtitulo">Espacio organizado para reunir libros digitales, bases académicas, repositorios abiertos y accesos de consulta para docentes, estudiantes y familias.</p>
+    </div>
+  </header>
+
+  <main id="contenido-principal">
+    <section class="panel-busqueda" aria-labelledby="titulo-biblioteca">
+      <div class="panel-encabezado">
+        <div>
+          <p class="sobretitulo">Biblioteca digital</p>
+          <h2 id="titulo-biblioteca">Accede a recursos de consulta</h2>
+          <p class="texto-panel">La biblioteca se organiza como un submódulo del Banco Digital Accesible. Su función es ordenar los accesos a materiales de lectura, fuentes académicas y recursos externos autorizados, sin mezclar su finalidad con los espacios de LSP o Braille.</p>
+        </div>
+      </div>
+
+      <div class="biblioteca-intro">
+        <article class="bloque-destacado">
+          <h3>Ruta recomendada de uso</h3>
+          <p>Primero se consulta el catálogo institucional. Luego, si el material requerido no se encuentra disponible, se revisan fuentes abiertas, bases académicas o repositorios externos. Esta organización ayuda a evitar enlaces dispersos y facilita el mantenimiento del módulo.</p>
+          <div class="acciones-biblioteca">
+            <a class="enlace-material" href="#catalogo-biblioteca">Ver catálogo</a>
+            <a class="boton-secundario" href="#organizacion-biblioteca">Ver organización</a>
+          </div>
+        </article>
+        <article class="bloque-destacado">
+          <h3>Criterio de incorporación</h3>
+          <p>Los materiales deben ser propios, autorizados, de dominio público o enlazados desde fuentes oficiales. Las licencias institucionales se muestran como orientación de acceso, pero las claves o credenciales no deben publicarse de forma abierta.</p>
+        </article>
+      </div>
+
+      <div class="estructura-grid" aria-label="Secciones principales de la biblioteca">
+        <article class="tarjeta-material disponible">
+          <div><div class="material-icono" aria-hidden="true">LD</div><h3>Libros digitales</h3><p>Catálogo de libros, guías y documentos de lectura organizados por área, nivel, temática y condición de uso.</p></div>
+          <div class="tarjeta-pie"><span class="estado-material disponible">Base lista</span><a class="enlace-material" href="#catalogo-biblioteca">Explorar</a></div>
+        </article>
+        <article class="tarjeta-material disponible">
+          <div><div class="material-icono" aria-hidden="true">BA</div><h3>Bases académicas</h3><p>Accesos ordenados a buscadores, bases de datos, revistas, repositorios universitarios y fuentes de investigación.</p></div>
+          <div class="tarjeta-pie"><span class="estado-material disponible">Base lista</span><a class="enlace-material" href="#catalogo-biblioteca">Explorar</a></div>
+        </article>
+        <article class="tarjeta-material disponible">
+          <div><div class="material-icono" aria-hidden="true">LI</div><h3>Licencias y accesos</h3><p>Orientaciones para usuarios autorizados, solicitudes de acceso y uso responsable de recursos institucionales.</p></div>
+          <div class="tarjeta-pie"><span class="estado-material disponible">Base lista</span><a class="enlace-material" href="#catalogo-biblioteca">Explorar</a></div>
+        </article>
+      </div>
+    </section>
+
+    <section id="catalogo-biblioteca" class="seccion-presentacion" aria-labelledby="titulo-catalogo-biblioteca">
+      <div class="panel-busqueda">
+        <div class="panel-encabezado">
+          <div>
+            <p class="sobretitulo">Catálogo inicial</p>
+            <h2 id="titulo-catalogo-biblioteca">Recursos organizados por tipo</h2>
+            <p class="texto-panel">Esta estructura queda preparada para reemplazar los enlaces de ejemplo por carpetas institucionales, bases académicas o repositorios abiertos seleccionados.</p>
+          </div>
+        </div>
+
+        <div class="filtros-biblioteca" aria-label="Filtros del catálogo">
+          <div class="campo-biblioteca">
+            <label for="busqueda-biblioteca">Buscar recurso</label>
+            <input id="busqueda-biblioteca" type="search" placeholder="Ejemplo: lectura, base académica, licencia">
+          </div>
+          <div class="campo-biblioteca">
+            <label for="tipo-biblioteca">Filtrar por tipo</label>
+            <select id="tipo-biblioteca">
+              <option value="">Todos los tipos</option>
+              <option value="institucional">Institucional</option>
+              <option value="libros">Libros digitales</option>
+              <option value="academico">Académico</option>
+              <option value="licencias">Licencias</option>
+              <option value="guias">Guías</option>
+            </select>
+          </div>
+          <button id="limpiar-biblioteca" class="boton-secundario" type="button">Limpiar</button>
+        </div>
+        <p id="contador-biblioteca" class="resultado-biblioteca" aria-live="polite">Mostrando recursos disponibles.</p>
+
+        <div class="lista-recursos" id="lista-biblioteca">
+          <article class="tarjeta-recurso" data-tipo="institucional" data-texto="repositorio institucional materiales propios autorizados crebe docentes estudiantes">
+            <div>
+              <div class="cabecera-recurso"><div class="icono-recurso" aria-hidden="true">RI</div><div><p class="tipo-recurso">Institucional</p><h3>Repositorio institucional</h3></div></div>
+              <p>Espacio para materiales propios, documentos autorizados, guías internas y recursos elaborados para la comunidad educativa.</p>
+            </div>
+            <div class="tarjeta-pie"><span class="estado-material pendiente">Pendiente de enlace</span><span class="enlace-material deshabilitado">Configurar</span></div>
+          </article>
+
+          <article class="tarjeta-recurso" data-tipo="libros" data-texto="libros digitales lectura pdf epub dominio publico recursos abiertos">
+            <div>
+              <div class="cabecera-recurso"><div class="icono-recurso" aria-hidden="true">LD</div><div><p class="tipo-recurso">Libros digitales</p><h3>Libros de libre acceso</h3></div></div>
+              <p>Sección para enlaces a libros digitales permitidos, documentos de dominio público o materiales con licencia abierta.</p>
+            </div>
+            <div class="tarjeta-pie"><span class="estado-material pendiente">Pendiente de enlace</span><span class="enlace-material deshabilitado">Configurar</span></div>
+          </article>
+
+          <article class="tarjeta-recurso" data-tipo="academico" data-texto="bases academicas articulos revistas tesis repositorios universitarios investigacion">
+            <div>
+              <div class="cabecera-recurso"><div class="icono-recurso" aria-hidden="true">BA</div><div><p class="tipo-recurso">Académico</p><h3>Bases académicas y repositorios</h3></div></div>
+              <p>Acceso organizado a fuentes académicas, revistas, repositorios universitarios y buscadores útiles para investigación educativa.</p>
+            </div>
+            <div class="tarjeta-pie"><span class="estado-material pendiente">Pendiente de enlace</span><span class="enlace-material deshabilitado">Configurar</span></div>
+          </article>
+
+          <article class="tarjeta-recurso" data-tipo="licencias" data-texto="licencias acceso usuarios credenciales solicitud institucional claves permisos">
+            <div>
+              <div class="cabecera-recurso"><div class="icono-recurso" aria-hidden="true">LI</div><div><p class="tipo-recurso">Licencias</p><h3>Accesos para usuarios autorizados</h3></div></div>
+              <p>Orientación para solicitar accesos institucionales. Las credenciales deben compartirse por canales privados y no dentro de una página pública.</p>
+            </div>
+            <div class="tarjeta-pie"><span class="estado-material pendiente">Pendiente de enlace</span><span class="enlace-material deshabilitado">Configurar</span></div>
+          </article>
+
+          <article class="tarjeta-recurso" data-tipo="guias" data-texto="guias tutoriales orientacion como buscar citar descargar usar biblioteca">
+            <div>
+              <div class="cabecera-recurso"><div class="icono-recurso" aria-hidden="true">GU</div><div><p class="tipo-recurso">Guías</p><h3>Guías de búsqueda y uso</h3></div></div>
+              <p>Material de orientación para aprender a buscar, seleccionar, citar y utilizar recursos digitales de forma responsable.</p>
+            </div>
+            <div class="tarjeta-pie"><span class="estado-material pendiente">Pendiente de enlace</span><span class="enlace-material deshabilitado">Configurar</span></div>
+          </article>
+
+          <article class="tarjeta-recurso" data-tipo="institucional" data-texto="solicitud de materiales docentes estudiantes formulario recurso no encontrado biblioteca">
+            <div>
+              <div class="cabecera-recurso"><div class="icono-recurso" aria-hidden="true">SM</div><div><p class="tipo-recurso">Institucional</p><h3>Solicitud de materiales</h3></div></div>
+              <p>Sección para conectar un formulario de solicitud cuando el docente o estudiante requiera un material no ubicado en el catálogo.</p>
+            </div>
+            <div class="tarjeta-pie"><span class="estado-material pendiente">Pendiente de enlace</span><span class="enlace-material deshabilitado">Configurar</span></div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="organizacion-biblioteca" class="seccion-organizacion" aria-labelledby="titulo-organizacion-biblioteca">
+      <div class="panel-organizacion">
+        <p class="sobretitulo">Organización sugerida</p>
+        <h2 id="titulo-organizacion-biblioteca">Modelo de crecimiento del módulo</h2>
+        <p class="texto-panel">La mejor alternativa es mantener esta biblioteca como una sección propia dentro de BDA, con enlaces controlados y categorías estables. Si más adelante aumenta el número de recursos, se puede migrar el catálogo a una hoja de cálculo, una base de datos o un servicio externo.</p>
+
+        <div class="mapa-biblioteca">
+          <article class="paso-biblioteca"><h3>1. Catálogo básico</h3><p>Registro manual de recursos con título, tipo, descripción, público recomendado y enlace de acceso.</p></article>
+          <article class="paso-biblioteca"><h3>2. Almacenamiento externo</h3><p>Uso de carpetas institucionales o servicios de almacenamiento para evitar cargar archivos pesados dentro del repositorio.</p></article>
+          <article class="paso-biblioteca"><h3>3. Accesos protegidos</h3><p>Orientación pública para el usuario y entrega privada de credenciales cuando existan licencias institucionales.</p></article>
+          <article class="paso-biblioteca"><h3>4. Actualización periódica</h3><p>Revisión de enlaces, retiro de recursos vencidos e incorporación de nuevas fuentes según necesidad educativa.</p></article>
+        </div>
+
+        <div class="nota-uso">
+          Esta biblioteca no debe publicar libros protegidos sin autorización. Lo más seguro es enlazar fuentes oficiales, materiales propios, documentos autorizados o recursos con licencia abierta.
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer-crebe" aria-label="Pie de página institucional">
+    <div class="footer-contenido footer-contenedor">
+      <section class="footer-bloque footer-columna footer-marca" aria-labelledby="titulo-footer-descripcion">
+        <img class="footer-logo" src="https://gabriel-lsp.github.io/banco-digital-accesible/logo-crebe.png" alt="Logo del CREBE Señor de los Milagros - Ucayali">
+        <div>
+          <h2 id="titulo-footer-descripcion">Biblioteca Accesible</h2>
+          <p>Submódulo del Banco Digital Accesible para organizar recursos de consulta, lectura, investigación y acceso académico.</p>
+        </div>
+      </section>
+
+      <nav class="footer-bloque footer-columna" aria-labelledby="titulo-footer-enlaces">
+        <h2 id="titulo-footer-enlaces">Enlaces</h2>
+        <p>
+          <a href="../index.html">Banco Digital Accesible</a><br>
+          <a href="../lsp/index.html">Lengua de Señas Peruana</a><br>
+          <a href="../braille/index.html">Sistema Braille</a><br>
+          <a href="https://gabriel-lsp.github.io/repositorio-accesible/">Repositorio Accesible</a><br>
+        </p>
+      </nav>
+
+      <section class="footer-bloque footer-columna contacto-footer" aria-labelledby="titulo-footer-contacto">
+        <h2 id="titulo-footer-contacto">Contacto</h2>
+        <p>
+          <a href="https://gabriel-lsp.github.io/accesos-complementarios/paginas/contacto.html">Contacto Institucional</a><br>
+          CREBE "Señor de los Milagros" - Ucayali<br>
+          Horario: lunes a viernes, 8:00 a.m. - 12:00 p.m.
+        </p>
+      </section>
+    </div>
+
+    <div class="footer-final">
+      <p>© 2026 Gabriel Berrospi. Desarrollo original. Uso institucional autorizado al CREBE "Señor de los Milagros" - Ucayali.</p>
+    </div>
+  </footer>
+
+  <script>
+    const busqueda = document.getElementById('busqueda-biblioteca');
+    const tipo = document.getElementById('tipo-biblioteca');
+    const limpiar = document.getElementById('limpiar-biblioteca');
+    const contador = document.getElementById('contador-biblioteca');
+    const tarjetas = Array.from(document.querySelectorAll('.tarjeta-recurso'));
+
+    function filtrarBiblioteca(){
+      const texto = busqueda.value.trim().toLowerCase();
+      const tipoSeleccionado = tipo.value;
+      let visibles = 0;
+
+      tarjetas.forEach((tarjeta) => {
+        const coincideTexto = !texto || tarjeta.dataset.texto.includes(texto) || tarjeta.textContent.toLowerCase().includes(texto);
+        const coincideTipo = !tipoSeleccionado || tarjeta.dataset.tipo === tipoSeleccionado;
+        const mostrar = coincideTexto && coincideTipo;
+        tarjeta.hidden = !mostrar;
+        if(mostrar) visibles += 1;
+      });
+
+      contador.textContent = visibles === 1 ? 'Mostrando 1 recurso.' : `Mostrando ${visibles} recursos.`;
+    }
+
+    busqueda.addEventListener('input', filtrarBiblioteca);
+    tipo.addEventListener('change', filtrarBiblioteca);
+    limpiar.addEventListener('click', () => {
+      busqueda.value = '';
+      tipo.value = '';
+      filtrarBiblioteca();
+      busqueda.focus();
+    });
+
+    filtrarBiblioteca();
+  </script>
+</body>
+</html>
