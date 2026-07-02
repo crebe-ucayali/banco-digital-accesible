@@ -39,7 +39,7 @@
 
       <section class="hero-busqueda" aria-labelledby="titulo-busqueda-principal">
         <h2 id="titulo-busqueda-principal">¿Qué material necesitas encontrar?</h2>
-        <p>Usa el buscador para consultar el catálogo interno o explorar libros abiertos. Puedes buscar por tema, autor, título, área o palabra clave.</p>
+        <p>Usa el buscador para consultar recursos bibliográficos y explorar libros abiertos. Puedes buscar por tema, autor, título, área o palabra clave.</p>
         <form class="form-busqueda-principal" id="form-busqueda-principal" aria-label="Búsqueda principal de biblioteca digital">
           <div class="campo-biblioteca">
             <label for="busqueda-principal">Buscar material</label>
@@ -52,7 +52,6 @@
               <option value="libros">Libros</option>
               <option value="academico">Artículos / investigación</option>
               <option value="guias">Guías</option>
-              <option value="institucional">Institucional</option>
               <option value="externos">Fuentes abiertas</option>
             </select>
           </div>
@@ -74,10 +73,10 @@
         <div>
           <p class="sobretitulo">Biblioteca digital</p>
           <h2 id="titulo-presentacion-bd">Búsqueda organizada de materiales bibliográficos</h2>
-          <p class="texto-panel">Esta biblioteca integra un catálogo curado y una búsqueda externa de libros abiertos. Los recursos se presentan con datos bibliográficos básicos para facilitar la consulta, la selección y la citación inicial.</p>
+          <p class="texto-panel">Esta biblioteca integra recursos bibliográficos, fuentes académicas y búsqueda externa de libros abiertos. Los recursos se presentan con datos básicos para facilitar la consulta, la selección y la citación inicial.</p>
         </div>
       </div>
-      <div class="nota-uso">Los materiales del catálogo deben ser propios, autorizados, de acceso abierto o enlazados desde fuentes oficiales. Las credenciales o licencias institucionales no deben publicarse en una página abierta.</div>
+      <div class="nota-uso">Los materiales del catálogo deben ser de acceso abierto o enlazados desde fuentes oficiales. La biblioteca solo organiza referencias y rutas de consulta pública.</div>
     </section>
 
     <section id="resultados-biblioteca" class="panel-biblioteca" aria-labelledby="titulo-resultados-bd">
@@ -85,7 +84,7 @@
         <div>
           <p class="sobretitulo">Resultados</p>
           <h2 id="titulo-resultados-bd">Explora el catálogo y las fuentes abiertas</h2>
-          <p class="texto-panel">El catálogo interno se administra desde <strong>datos/recursos.json</strong>. La búsqueda externa utiliza únicamente libros abiertos de Project Gutenberg mediante Gutendex.</p>
+          <p class="texto-panel">El catálogo se administra desde <strong>datos/recursos.json</strong>. La búsqueda externa utiliza únicamente libros abiertos de Project Gutenberg mediante Gutendex.</p>
         </div>
       </div>
 
@@ -94,7 +93,7 @@
       </div>
 
       <section id="panel-catalogo" class="panel-tab" role="tabpanel" aria-labelledby="Catálogo interno">
-        <div class="filtros-biblioteca" aria-label="Filtros del catálogo interno">
+        <div class="filtros-biblioteca" aria-label="Filtros del catálogo">
           <div class="campo-biblioteca">
             <label for="busqueda-biblioteca">Buscar en catálogo</label>
             <input id="busqueda-biblioteca" type="search" placeholder="Tema, autor, título o palabra clave">
@@ -103,10 +102,8 @@
             <label for="tipo-biblioteca">Tipo</label>
             <select id="tipo-biblioteca">
               <option value="">Todos los tipos</option>
-              <option value="institucional">Institucional</option>
               <option value="libros">Libros</option>
               <option value="academico">Artículos / investigación</option>
-              <option value="licencias">Licencias</option>
               <option value="guias">Guías</option>
               <option value="solicitudes">Solicitudes</option>
             </select>
@@ -160,9 +157,9 @@
     <section class="panel-organizacion" aria-labelledby="titulo-organizacion-biblioteca">
       <p class="sobretitulo">Organización sugerida</p>
       <h2 id="titulo-organizacion-biblioteca">Modelo de crecimiento del módulo</h2>
-      <p class="texto-panel">La biblioteca debe crecer primero como catálogo curado y luego incorporar más fuentes externas. Para artículos académicos, se recomienda una fase posterior separada de Gutendex, ya que Gutendex está orientado a libros abiertos.</p>
+      <p class="texto-panel">La biblioteca debe crecer primero como catálogo bibliográfico y luego incorporar más fuentes externas. Para artículos académicos, se recomienda una fase posterior separada de Gutendex, ya que Gutendex está orientado a libros abiertos.</p>
       <div class="mapa-biblioteca">
-        <article class="paso-biblioteca"><h3>1. Catálogo curado</h3><p>Registrar recursos reales con autor, año, tipo, fuente, formato, licencia, enlace, palabras clave y fecha de revisión.</p></article>
+        <article class="paso-biblioteca"><h3>1. Catálogo bibliográfico</h3><p>Registrar recursos con autor, año, tipo, fuente, formato, licencia, enlace, palabras clave y fecha de revisión.</p></article>
         <article class="paso-biblioteca"><h3>2. Búsqueda externa</h3><p>Usar Gutendex únicamente para libros abiertos, manteniendo los resultados como consulta externa.</p></article>
         <article class="paso-biblioteca"><h3>3. Artículos académicos</h3><p>Incorporar en una fase posterior una búsqueda separada para artículos, tesis o DOI, sin mezclarla con libros abiertos.</p></article>
         <article class="paso-biblioteca"><h3>4. Mantenimiento</h3><p>Revisar enlaces, actualizar fechas de revisión y retirar recursos vencidos o sin fuente clara.</p></article>
@@ -176,7 +173,7 @@
         <img class="footer-logo" src="https://gabriel-lsp.github.io/banco-digital-accesible/logo-crebe.png" alt="Logo del CREBE Señor de los Milagros - Ucayali">
         <div>
           <h2 id="titulo-footer-descripcion">Biblioteca Digital Accesible</h2>
-          <p>Submódulo del Banco Digital Accesible para organizar recursos bibliográficos, libros abiertos, guías, fuentes de investigación y accesos institucionales.</p>
+          <p>Submódulo del Banco Digital Accesible para organizar recursos bibliográficos, libros abiertos, guías y fuentes de investigación.</p>
         </div>
       </section>
 
