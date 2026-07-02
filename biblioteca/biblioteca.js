@@ -9,17 +9,14 @@ const contadorCatalogo = document.getElementById('contador-biblioteca');
 const listaCatalogo = document.getElementById('lista-biblioteca');
 const estadoCatalogo = document.getElementById('estado-catalogo');
 
-const formGutendex = document.getElementById('form-gutendex');
-const busquedaGutendex = document.getElementById('busqueda-gutendex');
-const idiomaGutendex = document.getElementById('idioma-gutendex');
 const listaGutendex = document.getElementById('lista-gutendex');
 const contadorGutendex = document.getElementById('contador-gutendex');
 const estadoGutendex = document.getElementById('estado-gutendex');
-const sugerenciasGutendex = Array.from(document.querySelectorAll('.sugerencia-api'));
 
 let recursos = [];
 let filtroCatalogoTexto = '';
 let filtroCatalogoTipo = '';
+let ultimaBusquedaPrincipal = 'education';
 
 const equivalenciasGutendex = {
   educacion:'education', educativo:'education', escuela:'school',
@@ -247,9 +244,8 @@ function crearTarjetaGutendex(libro){
   return articulo;
 }
 
-async function consultarGutendex(consulta, idioma){
+async function consultarGutendex(consulta){
   const parametros = new URLSearchParams({search: consulta});
-  if(idioma){parametros.set('languages', idioma);}
   const respuesta = await fetch(`https://gutendex.com/books/?${parametros.toString()}`);
   if(!respuesta.ok){throw new Error('No se pudo consultar Gutendex.');}
   const datos = await respuesta.json();
@@ -274,24 +270,24 @@ function mostrarResultadosGutendex(resultados, mensaje){
   if(mensaje){estadoGutendex.textContent = mensaje;}
 }
 
-async function ejecutarBusquedaGutendex(consulta, idioma, esInicial = false){
+async function ejecutarBusquedaGutendex(consulta, esInicial = false){
+  const termino = consulta && consulta.trim() ? consulta.trim() : 'education';
   listaGutendex.innerHTML = '';
   estadoGutendex.hidden = false;
-  estadoGutendex.textContent = 'Consultando libros abiertos...';
+  estadoGutendex.textContent = 'Consultando libros abiertos con la búsqueda principal...';
   contadorGutendex.textContent = 'Buscando libros abiertos.';
-  const intentos = consultasAlternativas(consulta);
+  const intentos = consultasAlternativas(termino);
 
   try{
     for(const intento of intentos){
-      let resultados = await consultarGutendex(intento, idioma);
-      if(!resultados.length && idioma){resultados = await consultarGutendex(intento, '');}
+      const resultados = await consultarGutendex(intento);
       if(resultados.length){
-        const mensaje = intento !== consulta || idioma ? `Resultados encontrados usando "${intento}". Si el filtro de idioma no devuelve libros, se muestran coincidencias generales.` : '';
-        mostrarResultadosGutendex(resultados, esInicial ? 'Búsqueda inicial cargada automáticamente para comprobar el funcionamiento de libros abiertos.' : mensaje);
+        const mensaje = esInicial ? 'Búsqueda inicial cargada automáticamente. Escribe una palabra en el buscador principal para actualizar estos resultados.' : `Resultados de libros abiertos relacionados con "${termino}".`;
+        mostrarResultadosGutendex(resultados, mensaje);
         return;
       }
     }
-    mostrarResultadosGutendex([], 'No se encontraron libros con esos criterios. Prueba con los botones sugeridos o usa términos como education, children, language o psychology.');
+    mostrarResultadosGutendex([], 'No se encontraron libros abiertos con la palabra del buscador principal. Prueba con otro tema en el buscador superior.');
   }catch(error){
     listaGutendex.innerHTML = '';
     contadorGutendex.textContent = 'No se pudo completar la búsqueda.';
@@ -300,32 +296,17 @@ async function ejecutarBusquedaGutendex(consulta, idioma, esInicial = false){
   }
 }
 
-async function buscarGutendex(evento){
-  evento.preventDefault();
-  const consulta = busquedaGutendex.value.trim();
-  const idioma = idiomaGutendex.value;
-  if(!consulta){
-    listaGutendex.innerHTML = '';
-    contadorGutendex.textContent = 'Escribe una palabra para buscar libros abiertos.';
-    estadoGutendex.hidden = false;
-    estadoGutendex.textContent = 'La búsqueda necesita una palabra, tema, título o autor.';
-    busquedaGutendex.focus();
-    return;
-  }
-  await ejecutarBusquedaGutendex(consulta, idioma);
-}
-
 function ejecutarBusquedaPrincipal(evento){
   evento.preventDefault();
   const texto = busquedaPrincipal.value.trim();
   const tipo = tipoPrincipal.value;
+  ultimaBusquedaPrincipal = texto || 'education';
   filtroCatalogoTexto = texto;
   filtroCatalogoTipo = tipo === 'externos' ? '' : tipo;
   renderizarCatalogo();
 
   if(tipo === 'externos' || tipo === 'libros'){
-    busquedaGutendex.value = texto || 'education';
-    ejecutarBusquedaGutendex(busquedaGutendex.value, '');
+    ejecutarBusquedaGutendex(ultimaBusquedaPrincipal);
     cambiarTab('panel-externos');
   }else{
     cambiarTab('panel-catalogo');
@@ -341,17 +322,16 @@ atajosBusqueda.forEach((boton) => {
     formPrincipal.requestSubmit();
   });
 });
-tabs.forEach((tab) => tab.addEventListener('click', () => cambiarTab(tab.dataset.tab)));
-formGutendex.addEventListener('submit', buscarGutendex);
-sugerenciasGutendex.forEach((boton) => {
-  boton.addEventListener('click', () => {
-    busquedaGutendex.value = boton.dataset.consulta || '';
-    idiomaGutendex.value = '';
-    ejecutarBusquedaGutendex(busquedaGutendex.value, '');
+tabs.forEach((tab) => {
+  tab.addEventListener('click', () => {
+    cambiarTab(tab.dataset.tab);
+    if(tab.dataset.tab === 'panel-externos'){
+      ultimaBusquedaPrincipal = busquedaPrincipal.value.trim() || ultimaBusquedaPrincipal || 'education';
+      ejecutarBusquedaGutendex(ultimaBusquedaPrincipal);
+    }
   });
 });
 
 cargarCatalogo();
 cambiarTab('panel-catalogo');
-busquedaGutendex.value = 'education';
-ejecutarBusquedaGutendex('education', '', true);
+ejecutarBusquedaGutendex(ultimaBusquedaPrincipal, true);
