@@ -99,30 +99,7 @@
       </section>
 
       <section id="panel-externos" class="panel-tab" role="tabpanel" aria-labelledby="Libros abiertos" hidden>
-        <form class="form-api" id="form-gutendex" aria-label="Buscar libros abiertos en Gutendex">
-          <div class="campo-biblioteca">
-            <label for="busqueda-gutendex">Buscar libro abierto</label>
-            <input id="busqueda-gutendex" type="search" placeholder="Ejemplo: education, children, language" autocomplete="off">
-          </div>
-          <div class="campo-biblioteca">
-            <label for="idioma-gutendex">Idioma</label>
-            <select id="idioma-gutendex">
-              <option value="">Todos</option>
-              <option value="es">Español</option>
-              <option value="en">Inglés</option>
-              <option value="fr">Francés</option>
-              <option value="pt">Portugués</option>
-            </select>
-          </div>
-          <button class="enlace-material" type="submit">Buscar libros</button>
-        </form>
-        <div class="sugerencias-api" aria-label="Búsquedas sugeridas">
-          <button class="sugerencia-api" type="button" data-consulta="education">Educación</button>
-          <button class="sugerencia-api" type="button" data-consulta="children">Infancia</button>
-          <button class="sugerencia-api" type="button" data-consulta="language">Lenguaje</button>
-          <button class="sugerencia-api" type="button" data-consulta="psychology">Psicología</button>
-        </div>
-        <p id="contador-gutendex" class="resultado-biblioteca" aria-live="polite">Cargando búsqueda inicial de libros abiertos.</p>
+        <p id="contador-gutendex" class="resultado-biblioteca" aria-live="polite">Los libros abiertos se consultan usando la palabra del buscador principal.</p>
         <div id="estado-gutendex" class="estado-catalogo" role="status" aria-live="polite" hidden></div>
         <div class="lista-api" id="lista-gutendex" aria-label="Resultados de libros abiertos"></div>
       </section>
@@ -165,6 +142,6 @@
     </div>
   </footer>
 
-  <script src="biblioteca.js?v=2" defer></script>
+  <script src="biblioteca.js?v=3" defer></script>
 </body>
 </html>
