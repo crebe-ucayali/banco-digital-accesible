@@ -10,6 +10,7 @@
   <title>Lengua de Señas Peruana</title>
   <link rel="stylesheet" href="estilos.css?v=17">
   <link rel="stylesheet" href="cabecera-bda.css?v=5">
+  <link rel="stylesheet" href="../accesibilidad.css?v=1">
   <style>
     .patron-portada{position:absolute;inset:0;z-index:0;overflow:hidden;pointer-events:none;background-image:url("../patron-shipibo.webp");background-repeat:repeat;background-size:cover;background-position:center;opacity:.30;filter:saturate(1.15) contrast(1.08);}
     .cabecera{padding:30px 18px 145px;}
@@ -65,106 +66,32 @@
   <main id="contenido-principal">
     <section class="panel-busqueda" aria-labelledby="titulo-busqueda">
       <div class="panel-encabezado">
-        <div>
-          <p class="seccion-etiqueta">Explorar el módulo</p>
-          <h2 id="titulo-busqueda">Encuentra una seña</h2>
-        </div>
-        <div class="acciones-panel-lsp">
-          <button id="limpiar" class="boton-secundario" type="button">
-            Limpiar búsqueda
-          </button>
-          <div class="enlaces-apoyo-lsp" aria-label="Enlaces de apoyo del módulo LSP">
-            <a class="boton-apoyo-lsp" href="faq.html">Preguntas frecuentes</a>
-            <a class="boton-apoyo-lsp" href="accesibilidad.html">Accesibilidad</a>
-          </div>
-        </div>
+        <div><p class="seccion-etiqueta">Explorar el módulo</p><h2 id="titulo-busqueda">Encuentra una seña</h2></div>
+        <div class="acciones-panel-lsp"><button id="limpiar" class="boton-secundario" type="button">Limpiar búsqueda</button><div class="enlaces-apoyo-lsp" aria-label="Enlaces de apoyo del módulo LSP"><a class="boton-apoyo-lsp" href="faq.html">Preguntas frecuentes</a><a class="boton-apoyo-lsp" href="accesibilidad.html">Accesibilidad</a></div></div>
       </div>
-
       <div class="controles">
-        <div class="campo">
-          <label for="busqueda">Buscar por palabra</label>
-          <div class="entrada-busqueda">
-            <svg aria-hidden="true" viewBox="0 0 24 24" width="20" height="20">
-              <path d="m21 21-4.7-4.7m2.2-5.3a7.5 7.5 0 1 1-15 0 7.5 7.5 0 0 1 15 0Z" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
-            </svg>
-            <input id="busqueda" type="search" placeholder="Ejemplo: familia, agua, estudiar">
-          </div>
-        </div>
-
-        <div class="campo">
-          <label for="categoria">Filtrar por categoría</label>
-          <select id="categoria">
-            <option value="">Todas las categorías</option>
-          </select>
-        </div>
+        <div class="campo"><label for="busqueda">Buscar por palabra</label><div class="entrada-busqueda"><svg aria-hidden="true" viewBox="0 0 24 24" width="20" height="20"><path d="m21 21-4.7-4.7m2.2-5.3a7.5 7.5 0 1 1-15 0 7.5 7.5 0 0 1 15 0Z" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" /></svg><input id="busqueda" type="search" placeholder="Ejemplo: familia, agua, estudiar"></div></div>
+        <div class="campo"><label for="categoria">Filtrar por categoría</label><select id="categoria"><option value="">Todas las categorías</option></select></div>
       </div>
-
-      <div class="resultado-resumen" aria-live="polite">
-        <p id="contador">Preparando contenidos…</p>
-        <p id="mostrando" class="mostrando"></p>
-      </div>
-
-      <div id="estado" class="estado-carga" role="status" aria-live="polite">
-        Preparando el módulo de Lengua de Señas Peruana…
-      </div>
-
+      <div class="resultado-resumen" aria-live="polite"><p id="contador">Preparando contenidos…</p><p id="mostrando" class="mostrando"></p></div>
+      <div id="estado" class="estado-carga" role="status" aria-live="polite">Preparando el módulo de Lengua de Señas Peruana…</div>
       <div id="galeria" class="galeria" aria-label="Resultados de señas"></div>
-
-      <div class="acciones-galeria">
-        <button id="cargar-mas" class="boton-principal" type="button" hidden>
-          Mostrar más señas
-        </button>
-      </div>
+      <div class="acciones-galeria"><button id="cargar-mas" class="boton-principal" type="button" hidden>Mostrar más señas</button></div>
     </section>
   </main>
 
-  <template id="plantilla-tarjeta">
-    <article class="tarjeta">
-      <div class="marco-imagen">
-        <img class="imagen-sena" src="" alt="">
-      </div>
-      <div class="tarjeta-contenido">
-        <p class="categoria-tarjeta"></p>
-        <h3 class="palabra-tarjeta"></h3>
-        <p class="descripcion-tarjeta" hidden></p>
-        <p class="fuente-tarjeta" hidden></p>
-      </div>
-    </article>
-  </template>
+  <template id="plantilla-tarjeta"><article class="tarjeta"><div class="marco-imagen"><img class="imagen-sena" src="" alt=""></div><div class="tarjeta-contenido"><p class="categoria-tarjeta"></p><h3 class="palabra-tarjeta"></h3><p class="descripcion-tarjeta" hidden></p><p class="fuente-tarjeta" hidden></p></div></article></template>
 
   <footer class="footer-crebe" aria-label="Pie de página institucional">
     <div class="footer-contenido footer-contenedor">
-      <section class="footer-bloque footer-columna" aria-labelledby="titulo-footer-descripcion">
-        <h2 id="titulo-footer-descripcion">Lengua de Señas Peruana</h2>
-        <p>Recurso visual de apoyo para consultar señas organizadas por palabra y categoría dentro del Banco Digital Accesible.</p>
-        <p>Los recursos deben emplearse con acompañamiento pedagógico, considerando el contexto y las características de cada estudiante.</p>
-      </section>
-
-      <nav class="footer-bloque footer-columna" aria-labelledby="titulo-footer-enlaces">
-        <h2 id="titulo-footer-enlaces">Enlaces</h2>
-        <p>
-          <a href="../index.html">Banco Digital Accesible</a><br>
-          <a href="index.html">Inicio LSP</a><br>
-          <a href="creditos.html">Créditos LSP</a><br>
-          <a href="faq.html">Preguntas frecuentes</a><br>
-          <a href="accesibilidad.html">Accesibilidad LSP</a>
-        </p>
-      </nav>
-
-      <section class="footer-bloque footer-columna contacto-footer" aria-labelledby="titulo-footer-contacto">
-        <h2 id="titulo-footer-contacto">Contacto</h2>
-        <p>
-          <a href="https://gabriel-lsp.github.io/accesos-complementarios/paginas/contacto.html">Contacto Institucional</a><br>
-          CREBE "Señor de los Milagros" - Ucayali<br>
-          Horario: lunes a viernes, 8:00 a.m. - 12:00 p.m.</p>
-      </section>
+      <section class="footer-bloque footer-columna" aria-labelledby="titulo-footer-descripcion"><h2 id="titulo-footer-descripcion">Lengua de Señas Peruana</h2><p>Recurso visual de apoyo para consultar señas organizadas por palabra y categoría dentro del Banco Digital Accesible.</p><p>Los recursos deben emplearse con acompañamiento pedagógico, considerando el contexto y las características de cada estudiante.</p></section>
+      <nav class="footer-bloque footer-columna" aria-labelledby="titulo-footer-enlaces"><h2 id="titulo-footer-enlaces">Enlaces</h2><p><a href="../index.html">Banco Digital Accesible</a><br><a href="index.html">Inicio LSP</a><br><a href="creditos.html">Créditos LSP</a><br><a href="faq.html">Preguntas frecuentes</a><br><a href="accesibilidad.html">Accesibilidad LSP</a></p></nav>
+      <section class="footer-bloque footer-columna contacto-footer" aria-labelledby="titulo-footer-contacto"><h2 id="titulo-footer-contacto">Contacto</h2><p><a href="https://gabriel-lsp.github.io/accesos-complementarios/paginas/contacto.html">Contacto Institucional</a><br>CREBE "Señor de los Milagros" - Ucayali<br>Horario: lunes a viernes, 8:00 a.m. - 12:00 p.m.</p></section>
     </div>
-
-    <div class="footer-final">
-      <p>© 2026 Gabriel Berrospi. Desarrollo original. Uso institucional autorizado al CREBE "Señor de los Milagros" - Ucayali.</p>
-    </div>
+    <div class="footer-final"><p>© 2026 Gabriel Berrospi. Desarrollo original. Uso institucional autorizado al CREBE "Señor de los Milagros" - Ucayali.</p></div>
   </footer>
 
+  <script src="../accesibilidad.js?v=1" defer></script>
   <script src="app.js?v=20"></script>
 </body>
 </html>
