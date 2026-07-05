@@ -11,6 +11,27 @@
   <link rel="stylesheet" href="estilos.css?v=6">
   <link rel="stylesheet" href="cabecera-bda.css?v=1">
   <link rel="stylesheet" href="index.css">
+  <style>
+    .patron-portada{position:absolute;inset:0;z-index:0;overflow:hidden;pointer-events:none;background-image:url("../patron-shipibo.webp");background-repeat:repeat;background-size:cover;background-position:center;opacity:.30;filter:saturate(1.15) contrast(1.08);}
+    .cabecera{padding:30px 18px 145px;}
+    .cabecera .navegacion,.cabecera .portada{position:relative;z-index:1;}
+    .navegacion{max-width:1120px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap;}
+    .enlaces-cabecera{display:flex;align-items:center;justify-content:flex-end;flex-wrap:wrap;gap:12px;}
+    .enlace-cabecera{display:inline-flex;align-items:center;justify-content:center;min-height:46px;padding:10px 22px;border:1px solid rgba(255,255,255,.45);border-radius:999px;color:#ffffff;text-decoration:none;font-weight:800;background:rgba(255,255,255,.08);font-size:1rem;}
+    .enlace-cabecera:hover{background:rgba(255,255,255,.16);color:#ffffff;}
+    .marca-institucional{display:inline-flex;align-items:center;gap:14px;max-width:min(560px,100%);color:#ffffff;text-decoration:none;font-weight:900;font-size:1.05rem;}
+    .marca-logo-superior{display:block;width:58px;height:58px;object-fit:contain;flex-shrink:0;padding:4px;background:rgba(255,255,255,.96);border-radius:18px;box-shadow:0 10px 24px rgba(0,0,0,.14);}
+    .marca-texto-superior{display:block;padding-left:14px;border-left:2px solid rgba(255,255,255,.35);text-shadow:0 2px 4px rgba(0,0,0,.28);}
+    .marca-modulo{display:block;margin:0 0 3px;color:#c9f7ee;font-size:.76rem;font-weight:900;line-height:1.15;letter-spacing:.16em;text-transform:uppercase;}
+    .marca-nombre-institucional{display:block;color:#ffffff;font-size:1.02rem;font-weight:900;line-height:1.2;}
+    .marca-detalle-institucional{display:block;margin-top:4px;color:rgba(255,255,255,.94);font-size:.88rem;font-weight:750;line-height:1.25;}
+    .portada{position:relative;z-index:1;max-width:1120px;margin:70px auto 0;}
+    .etiqueta{margin:0 0 14px;color:#c9f7ee;font-size:.86rem;font-weight:900;letter-spacing:.18em;text-transform:uppercase;}
+    .portada h1{max-width:900px;margin:0 0 22px;color:#ffffff;font-family:Georgia,"Times New Roman",serif;font-size:clamp(2.5rem,5.8vw,4.15rem);line-height:1.04;letter-spacing:-.04em;}
+    .subtitulo{max-width:880px;margin:0;color:rgba(255,255,255,.96);font-size:1.22rem;line-height:1.65;}
+    main{margin-top:-78px;}
+    @media (max-width:700px){.cabecera{padding:26px 18px 116px;}.navegacion{align-items:flex-start;flex-direction:column;}.portada{margin-top:54px;}.marca-institucional{align-items:flex-start;}.marca-logo-superior{width:52px;height:52px;border-radius:16px;}.marca-texto-superior{padding-left:12px;}.marca-nombre-institucional{font-size:.94rem;}.marca-detalle-institucional{font-size:.82rem;}.enlaces-cabecera{justify-content:flex-start;}}
+  </style>
 </head>
 
 <body>
@@ -19,45 +40,28 @@
   </a>
 
   <header class="cabecera">
+    <div class="patron-portada" aria-hidden="true"></div>
     <nav class="navegacion" aria-label="Navegación principal">
-      <a
-        class="marca"
-        href="../index.html"
-        aria-label="Volver al Banco Digital Accesible"
-      >
-        <span class="marca-icono" aria-hidden="true">BR</span>
-        <span>Sistema Braille</span>
+      <a class="marca marca-institucional" href="../index.html" aria-label="Volver al inicio del Banco Digital Accesible">
+        <img class="marca-logo-superior" src="https://gabriel-lsp.github.io/banco-digital-accesible/logo-crebe.png" alt="Logo del CREBE Señor de los Milagros - Ucayali">
+        <span class="marca-texto-superior">
+          <span class="marca-modulo">Banco Digital Accesible</span>
+          <span class="marca-nombre-institucional">CREBE "Señor de los Milagros" - Ucayali</span>
+          <span class="marca-detalle-institucional">Centro de Recursos de Educación Básica Especial</span>
+        </span>
       </a>
 
       <div class="enlaces-cabecera">
         <a class="enlace-cabecera" href="../index.html">Volver a BDA</a>
-        <a class="enlace-cabecera" href="https://gabriel-lsp.github.io/accesos-complementarios/contacto.html">Contacto Institucional</a>
+        <a class="enlace-cabecera" href="https://crebeucayali.weebly.com/">Inicio principal</a>
+        <a class="enlace-cabecera" href="https://gabriel-lsp.github.io/accesos-complementarios/paginas/contacto.html">Contacto</a>
       </div>
     </nav>
 
     <div class="portada">
-      <div class="bloque-institucional" aria-label="Identidad institucional">
-        <img
-          class="logo-crebe"
-          src="https://gabriel-lsp.github.io/banco-digital-accesible/logo-crebe.png"
-          alt="Logo del CREBE Señor de los Milagros - Ucayali"
-        >
-        <div class="texto-institucional">
-          <p class="nombre-institucional">
-            CREBE "Señor de los Milagros" - Ucayali
-          </p>
-          <p class="detalle-institucional">
-            Centro de Recursos de Educación Básica Especial
-          </p>
-        </div>
-      </div>
-
-      <p class="etiqueta">Plataforma educativa accesible</p>
-      <h1>Banco Digital del Sistema Braille</h1>
-      <p class="subtitulo">
-        Recurso educativo para la consulta, reconocimiento y práctica inicial
-        del sistema Braille
-      </p>
+      <p class="etiqueta">ECOSISTEMA VIRTUAL ACCESIBLE</p>
+      <h1>Banco Digital Accesible</h1>
+      <p class="subtitulo">Espacio central de acceso a recursos digitales para fortalecer la inclusión educativa, la accesibilidad, la comunicación y la atención a la diversidad.</p>
     </div>
   </header>
 
@@ -290,7 +294,7 @@
       <section class="footer-bloque footer-columna contacto-footer" aria-labelledby="titulo-footer-contacto">
         <h2 id="titulo-footer-contacto">Contacto</h2>
         <p>
-          <a href="https://gabriel-lsp.github.io/accesos-complementarios/contacto.html">Contacto Institucional</a><br>
+          <a href="https://gabriel-lsp.github.io/accesos-complementarios/paginas/contacto.html">Contacto Institucional</a><br>
           CREBE "Señor de los Milagros" - Ucayali<br>
           Horario: lunes a viernes, 8:00 a.m. - 12:00 p.m.
         </p>
