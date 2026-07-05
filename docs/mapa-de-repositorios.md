@@ -1,12 +1,12 @@
 # Mapa de organización del Banco Digital Accesible
 
-Este documento organiza los módulos y recursos que forman parte del Banco Digital Accesible.
+Este documento organiza los módulos y recursos que forman parte del Banco Digital Accesible - BDA dentro del Ecosistema Virtual Accesible, EVA.
 
 ## Repositorio principal
 
-### Banco Digital Accesible
+### Banco Digital Accesible - BDA
 
-Función: repositorio integrador y plataforma central de acceso.
+Función: repositorio integrador y plataforma central de acceso a recursos digitales accesibles.
 
 Propósito: reunir y organizar recursos educativos digitales vinculados a accesibilidad, inclusión educativa y atención a la diversidad.
 
@@ -18,32 +18,36 @@ Estado: en construcción y ampliación progresiva.
 
 Función: módulo visual de consulta de vocabulario básico en Lengua de Señas Peruana.
 
-Propósito: facilitar la búsqueda, reconocimiento y consulta inicial de señas con finalidad educativa.
-
 ### Sistema Braille
 
 Función: módulo digital para consulta visual y práctica básica del sistema Braille.
 
-Propósito: apoyar el reconocimiento inicial de letras, números, signos y palabras en Braille desde un entorno digital.
+## Repositorios complementarios del EVA
 
-## Repositorios complementarios
-
-### Materiales Educativos Accesibles
+### Materiales Educativos Accesibles - MEA
 
 Función: repositorio de materiales, fichas, apoyos visuales y recursos adaptados.
 
-### Juegos Interactivos Accesibles
+### Juegos Interactivos Accesibles - JIA
 
 Función: repositorio de juegos y actividades digitales accesibles.
 
-### Capacitaciones CREBE Ucayali
+### Capacitaciones Accesibles - CAP
 
-Función: repositorio de materiales formativos, flyers, diapositivas, infografías, videos o recursos de capacitación.
+Función: repositorio de materiales formativos, recursos de capacitación y contenidos de orientación educativa.
 
-### Noti Inclusivos
+### Noti Inclusivos - NI
 
-Función: boletín digital educativo.
+Función: boletín digital educativo orientado a información, noticias, comunicados y recursos vinculados a inclusión y accesibilidad.
+
+### Repositorio Accesible - RA
+
+Función: repositorio general de recursos accesibles, materiales, documentos, herramientas y producciones educativas.
+
+### Accesos Complementarios - AC
+
+Función: módulo transversal de apoyo para páginas auxiliares, contacto, directorios, rutas, firma de visita y recursos complementarios.
 
 ## Estado del mapa
 
-Este mapa puede actualizarse cada vez que se agregue, retire o reorganice un módulo o recurso vinculado.
+Este mapa puede actualizarse cada vez que se agregue, retire o reorganice un módulo o recurso vinculado al Ecosistema Virtual Accesible, EVA.

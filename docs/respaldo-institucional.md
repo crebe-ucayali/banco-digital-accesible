@@ -1,28 +1,17 @@
-# Respaldo institucional
+# Respaldo de uso autorizado
 
-Este documento describe el sentido del respaldo institucional del Banco Digital Accesible.
+Este documento describe el sentido del uso autorizado del Banco Digital Accesible - BDA dentro del Ecosistema Virtual Accesible, EVA.
 
-El proyecto puede ser utilizado como plataforma educativa digital de apoyo en acciones vinculadas a la accesibilidad, inclusión educativa, sensibilización, orientación docente, acompañamiento familiar y fortalecimiento de materiales pedagógicos para la atención a la diversidad.
+BDA es un módulo personal desarrollado y organizado por el Psicólogo Gabriel Berrospi. Su finalidad es educativa, accesible, inclusiva y no comercial. Puede ser utilizado como recurso de apoyo en acciones vinculadas a accesibilidad, inclusión educativa, sensibilización, orientación docente, acompañamiento familiar y fortalecimiento de materiales pedagógicos para la atención a la diversidad.
 
-Cuando el recurso sea empleado dentro de actividades del CREBE "Señor de los Milagros" - Ucayali, su uso debe entenderse como apoyo institucional y pedagógico, sin que ello implique transferencia de autoría ni pérdida del reconocimiento del responsable del desarrollo del proyecto.
+El uso del recurso en espacios educativos, formativos, familiares, comunitarios o institucionales debe entenderse como una autorización de consulta o apoyo pedagógico. Dicho uso no implica transferencia de autoría, titularidad, administración exclusiva ni cesión de derechos sobre el proyecto original.
 
-El reconocimiento institucional puede expresarse mediante una fórmula como la siguiente:
+El reconocimiento sugerido es el siguiente:
 
-Banco Digital Accesible. Plataforma educativa digital desarrollada por Gabriel Berrospi con apoyo institucional del CREBE "Señor de los Milagros" - Ucayali, para fines educativos, accesibles y de atención a la diversidad.
+Banco Digital Accesible - BDA, módulo del Ecosistema Virtual Accesible, EVA, desarrollado y organizado por el Psicólogo Gabriel Berrospi, con finalidad educativa, accesible, inclusiva y no comercial.
 
-El apoyo institucional puede comprender revisión pedagógica, validación de pertinencia educativa, difusión interna, orientación de uso, sugerencias de mejora, coordinación con docentes o articulación con actividades dirigidas a familias y comunidad educativa.
+Cualquier uso externo debe conservar el reconocimiento de autoría, la denominación del proyecto mayor como Ecosistema Virtual Accesible, EVA, la finalidad educativa y la diferenciación entre el recurso original y futuras adaptaciones.
 
-El uso de logos, nombres institucionales, materiales propios del CREBE, documentos oficiales o referencias institucionales debe realizarse con autorización o coordinación correspondiente.
+El uso de logos, nombres, documentos oficiales, fotografías, materiales internos o signos distintivos de terceros debe realizarse únicamente con autorización correspondiente. EVA puede publicarse y mantenerse como versión personal del autor sin incorporar elementos identificables de entidades externas.
 
-La referencia institucional no convierte automáticamente el repositorio en documento normativo, canal oficial único ni material de alcance obligatorio. Para comunicaciones formales, informes institucionales o versiones oficiales, deben mantenerse los procedimientos que correspondan.
-
-Para mayor sostenibilidad, se recomienda que cualquier uso institucional conserve:
-
-- Reconocimiento de autoría.
-- Finalidad educativa, accesible y no comercial.
-- Identificación del CREBE cuando exista coordinación o apoyo institucional.
-- Registro de fuentes y materiales utilizados.
-- Diferenciación entre el recurso original y futuras adaptaciones.
-- Registro de cambios importantes.
-
-Este documento puede servir como base para presentaciones de proyecto, informes de innovación educativa, acuerdos de uso interno o sustentos de difusión institucional.
+Este documento puede servir como base para presentaciones del proyecto, sustentos de difusión, acuerdos de uso o autorizaciones específicas, siempre que se respete la autoría y la titularidad personal del desarrollo original.

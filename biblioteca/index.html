@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Biblioteca Accesible del Banco Digital Accesible: buscador de libros, artículos, guías, recursos bibliográficos y fuentes abiertas.">
+  <title>Biblioteca Accesible | Banco Digital Accesible</title>
+  <link rel="stylesheet" href="../estilos.css?v=2">
+  <link rel="stylesheet" href="biblioteca.css?v=1">
+</head>
+<body>
+  <a class="salto-contenido" href="#contenido-principal">Ir al contenido</a>
+
+  <header class="cabecera">
+    <div class="patron-portada" aria-hidden="true"></div>
+    <nav class="navegacion" aria-label="Navegación principal">
+      <a class="marca" href="../index.html" aria-label="Volver al Banco Digital Accesible">
+        <span class="marca-icono" aria-hidden="true">BD</span>
+        <span>Biblioteca Digital Accesible</span>
+      </a>
+      <div class="enlaces-cabecera">
+        <a class="enlace-cabecera" href="../index.html">Volver a BDA</a>
+        <a class="enlace-cabecera" href="criterios.html">Criterios de uso</a>
+        <a class="enlace-cabecera" href="https://gabriel-lsp.github.io/accesos-complementarios/paginas/contacto.html">Contacto Institucional</a>
+      </div>
+    </nav>
+
+    <div class="portada">
+      <div class="bloque-institucional" aria-label="Identidad institucional">
+        <img class="logo-crebe" src="https://gabriel-lsp.github.io/banco-digital-accesible/logo-crebe.png" alt="Logo del CREBE Señor de los Milagros - Ucayali">
+        <div class="texto-institucional">
+          <p class="nombre-institucional">CREBE "Señor de los Milagros" - Ucayali</p>
+          <p class="detalle-institucional">Centro de Recursos de Educación Básica Especial</p>
+        </div>
+      </div>
+      <p class="etiqueta">Búsqueda bibliográfica y académica</p>
+      <h1>Biblioteca Digital Accesible</h1>
+      <p class="subtitulo">Busca libros, guías, artículos, tesis, recursos educativos y fuentes abiertas para consulta, indagación e investigación.</p>
+
+      <section class="hero-busqueda" aria-labelledby="titulo-busqueda-principal">
+        <h2 id="titulo-busqueda-principal">¿Qué material necesitas encontrar?</h2>
+        <p>Usa el buscador para consultar recursos bibliográficos y explorar libros abiertos. Puedes buscar por tema, autor, título, área o palabra clave.</p>
+        <form class="form-busqueda-principal" id="form-busqueda-principal" aria-label="Búsqueda principal de biblioteca digital">
+          <div class="campo-biblioteca">
+            <label for="busqueda-principal">Buscar material</label>
+            <input id="busqueda-principal" type="search" placeholder="Ejemplo: educación inclusiva, lenguaje, psicología, infancia" autocomplete="off">
+          </div>
+          <div class="campo-biblioteca">
+            <label for="tipo-principal">Tipo de búsqueda</label>
+            <select id="tipo-principal">
+              <option value="todos">Todo el catálogo</option>
+              <option value="libros">Libros</option>
+              <option value="academico">Artículos / investigación</option>
+              <option value="guias">Guías</option>
+              <option value="externos">Fuentes abiertas</option>
+            </select>
+          </div>
+          <button class="enlace-material" type="submit">Buscar</button>
+        </form>
+        <div class="atajos-busqueda" aria-label="Búsquedas rápidas">
+          <button class="atajo-busqueda" type="button" data-consulta="educación" data-tipo="todos">Educación</button>
+          <button class="atajo-busqueda" type="button" data-consulta="infancia" data-tipo="libros">Infancia</button>
+          <button class="atajo-busqueda" type="button" data-consulta="psicología" data-tipo="externos">Psicología</button>
+          <button class="atajo-busqueda" type="button" data-consulta="investigación" data-tipo="academico">Investigación</button>
+        </div>
+      </section>
+    </div>
+  </header>
+
+  <main id="contenido-principal">
+    <section class="panel-biblioteca" aria-labelledby="titulo-presentacion-bd">
+      <div class="panel-encabezado-bd">
+        <div>
+          <p class="sobretitulo">Biblioteca digital</p>
+          <h2 id="titulo-presentacion-bd">Búsqueda organizada de materiales bibliográficos</h2>
+          <p class="texto-panel">Esta biblioteca integra recursos bibliográficos, fuentes académicas y búsqueda externa de libros abiertos. Los recursos se presentan con datos básicos para facilitar la consulta, la selección y la citación inicial.</p>
+        </div>
+      </div>
+      <div class="nota-uso">Los materiales del catálogo deben ser de acceso abierto o enlazados desde fuentes oficiales. La biblioteca solo organiza referencias y rutas de consulta pública.</div>
+    </section>
+
+    <section id="resultados-biblioteca" class="panel-biblioteca" aria-labelledby="titulo-resultados-bd">
+      <div class="panel-encabezado-bd">
+        <div>
+          <p class="sobretitulo">Resultados</p>
+          <h2 id="titulo-resultados-bd">Explora el catálogo y las fuentes abiertas</h2>
+          <p class="texto-panel">Los resultados se actualizan desde el buscador principal.</p>
+        </div>
+      </div>
+
+      <div class="tabs-biblioteca" role="tablist" aria-label="Opciones de búsqueda de la biblioteca">
+        <button class="tab-biblioteca" type="button" role="tab" aria-selected="false" data-tab="panel-externos">Libros abiertos</button>
+      </div>
+
+      <section id="panel-catalogo" class="panel-tab" role="tabpanel" aria-labelledby="Catálogo bibliográfico">
+        <p id="contador-biblioteca" class="resultado-biblioteca" aria-live="polite">Cargando recursos bibliográficos.</p>
+        <div id="estado-catalogo" class="estado-catalogo" role="status" aria-live="polite">Preparando el catálogo digital...</div>
+        <div class="lista-recursos" id="lista-biblioteca" aria-label="Recursos bibliográficos del catálogo"></div>
+      </section>
+
+      <section id="panel-externos" class="panel-tab" role="tabpanel" aria-labelledby="Libros abiertos" hidden>
+        <p id="contador-gutendex" class="resultado-biblioteca" aria-live="polite">Los libros abiertos se consultan usando la palabra del buscador principal.</p>
+        <div id="estado-gutendex" class="estado-catalogo" role="status" aria-live="polite" hidden></div>
+        <div class="lista-api" id="lista-gutendex" aria-label="Resultados de libros abiertos"></div>
+      </section>
+    </section>
+  </main>
+
+  <footer class="footer-crebe" aria-label="Pie de página institucional">
+    <div class="footer-contenido footer-contenedor">
+      <section class="footer-bloque footer-columna footer-marca" aria-labelledby="titulo-footer-descripcion">
+        <img class="footer-logo" src="https://gabriel-lsp.github.io/banco-digital-accesible/logo-crebe.png" alt="Logo del CREBE Señor de los Milagros - Ucayali">
+        <div>
+          <h2 id="titulo-footer-descripcion">Biblioteca Digital Accesible</h2>
+          <p>Submódulo del Banco Digital Accesible para organizar recursos bibliográficos, libros abiertos, guías y fuentes de investigación.</p>
+        </div>
+      </section>
+
+      <nav class="footer-bloque footer-columna" aria-labelledby="titulo-footer-enlaces">
+        <h2 id="titulo-footer-enlaces">Enlaces</h2>
+        <p>
+          <a href="../index.html">Banco Digital Accesible</a><br>
+          <a href="../lsp/index.html">Lengua de Señas Peruana</a><br>
+          <a href="../braille/index.html">Sistema Braille</a><br>
+          <a href="criterios.html">Criterios de uso</a><br>
+          <a href="https://gabriel-lsp.github.io/repositorio-accesible/">Repositorio Accesible</a><br>
+        </p>
+      </nav>
+
+      <section class="footer-bloque footer-columna contacto-footer" aria-labelledby="titulo-footer-contacto">
+        <h2 id="titulo-footer-contacto">Contacto</h2>
+        <p>
+          <a href="https://gabriel-lsp.github.io/accesos-complementarios/paginas/contacto.html">Contacto Institucional</a><br>
+          CREBE "Señor de los Milagros" - Ucayali<br>
+          Horario: lunes a viernes, 8:00 a.m. - 12:00 p.m.
+        </p>
+      </section>
+    </div>
+
+    <div class="footer-final">
+      <p>© 2026 Gabriel Berrospi. Desarrollo original. Uso institucional autorizado al CREBE "Señor de los Milagros" - Ucayali.</p>
+    </div>
+  </footer>
+
+  <script src="biblioteca.js?v=3" defer></script>
+</body>
+</html>

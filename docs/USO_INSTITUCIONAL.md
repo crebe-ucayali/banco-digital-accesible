@@ -1,24 +1,24 @@
-# Condiciones de uso institucional
+# Condiciones de uso autorizado
 
-## Banco Digital de Lengua de Señas Peruana
+## Banco Digital Accesible - BDA
 
-El Banco Digital de Lengua de Señas Peruana puede ser utilizado por instituciones educativas, docentes, familias, profesionales y comunidad educativa como recurso de consulta, apoyo pedagógico, accesibilidad e inclusión educativa.
+El Banco Digital Accesible, identificado con las siglas BDA, forma parte del Ecosistema Virtual Accesible, EVA. Es un proyecto personal desarrollado, organizado y documentado por el Psicólogo Gabriel Berrospi, con finalidad educativa, accesible, inclusiva y no comercial.
 
-El uso institucional del proyecto no implica transferencia de autoría ni cesión total de derechos sobre la estructura digital, código fuente, organización de contenidos, clasificación, diseño funcional, base de datos, textos propios y sistematización pedagógica desarrollada por Gabriel Berrospi.
+El uso de este módulo por parte de instituciones educativas, docentes, familias, profesionales, organizaciones o comunidad educativa no implica transferencia de autoría, titularidad ni cesión total de derechos sobre la estructura digital, código fuente, organización de contenidos, clasificación, diseño funcional, textos propios, documentación, sistematización pedagógica ni componentes desarrollados por el autor.
 
 ## Uso permitido
 
-Se permite el uso institucional del proyecto con fines educativos, pedagógicos, formativos, familiares, comunitarios, de sensibilización y de accesibilidad, siempre que no exista finalidad comercial directa o indirecta.
+Se permite la consulta y difusión del enlace oficial del proyecto con fines educativos, pedagógicos, formativos, familiares, comunitarios, de sensibilización, accesibilidad e inclusión, siempre que no exista finalidad comercial directa o indirecta y se conserve el reconocimiento de autoría correspondiente.
 
-Las instituciones pueden compartir el enlace oficial del proyecto, utilizarlo en actividades educativas, capacitaciones, talleres, sesiones de orientación, acompañamiento pedagógico y acciones vinculadas a la inclusión educativa.
+El recurso puede emplearse como apoyo en actividades educativas, talleres, capacitaciones, sesiones de orientación, acompañamiento pedagógico, acciones familiares y procesos de sensibilización vinculados a la atención a la diversidad.
 
 ## Reconocimiento obligatorio
 
-Toda institución que utilice, difunda, recomiende o incorpore este recurso debe conservar el reconocimiento de autoría correspondiente:
+Toda persona, institución, grupo u organización que utilice, difunda, recomiende o incorpore este recurso debe conservar el reconocimiento de autoría correspondiente:
 
-Banco Digital de Lengua de Señas Peruana, desarrollado por Gabriel Berrospi, 2026.
+Banco Digital Accesible - BDA, módulo del Ecosistema Virtual Accesible, EVA, desarrollado y organizado por el Psicólogo Gabriel Berrospi, 2026.
 
-Cuando corresponda, también debe mantenerse la referencia al CREBE "Señor de los Milagros" - Ucayali como apoyo institucional y al Ministerio de Educación del Perú como fuente de referencia del material visual.
+El reconocimiento debe mantenerse en cualquier referencia pública, presentación, adaptación autorizada, material derivado o uso educativo del recurso.
 
 ## Restricciones
 
@@ -26,27 +26,30 @@ No se autoriza:
 
 - Presentar el proyecto como obra propia de otra persona, institución, empresa u organización.
 - Eliminar, ocultar o modificar los créditos de autoría.
-- Registrar el banco digital, total o parcialmente, como creación propia de otra entidad.
+- Registrar el módulo, total o parcialmente, como creación propia de otra entidad.
 - Vender, alquilar, sublicenciar, monetizar o integrar el proyecto en productos comerciales sin autorización expresa del autor.
-- Modificar la identidad del proyecto para atribuirlo a otra institución sin acuerdo previo.
-- Reutilizar la estructura, diseño, código, base de datos o clasificación del proyecto como si fueran de autoría ajena.
+- Modificar la identidad del proyecto para atribuirlo a terceros sin autorización previa.
+- Reutilizar la estructura, diseño, código, organización, clasificación o documentación del proyecto como si fueran de autoría ajena.
+- Incorporar logos, nombres, documentos, imágenes o signos distintivos de terceros sin autorización correspondiente.
 
-## Adaptaciones institucionales
+## Adaptaciones externas
 
-Cualquier adaptación institucional, cambio de identidad visual, incorporación de logos, modificación de contenidos, ampliación del banco, integración en otra plataforma o uso exclusivo deberá contar con autorización previa y expresa del autor.
+Cualquier adaptación, cambio de identidad visual, incorporación de logos, modificación de contenidos, ampliación del banco, integración en otra plataforma o uso exclusivo deberá contar con autorización previa y expresa del autor.
 
-La autorización puede establecerse mediante acuerdo escrito, convenio institucional, licencia de uso o documento equivalente, precisando el alcance del uso, el tiempo de vigencia, las condiciones de reconocimiento y las responsabilidades de cada parte.
+La autorización puede establecerse mediante acuerdo escrito, licencia de uso, acta, convenio, autorización expresa o documento equivalente, precisando el alcance del uso, el tiempo de vigencia, las condiciones de reconocimiento y las responsabilidades de cada parte.
 
-## Apoyo institucional
+## Contenidos externos
 
-El apoyo institucional del CREBE "Señor de los Milagros" - Ucayali se reconoce como respaldo educativo e institucional del proyecto.
+Los materiales, imágenes, textos, documentos, pictogramas, íconos, recursos gráficos o contenidos elaborados por terceros conservan sus propias condiciones de autoría, licencia, uso, difusión y reproducción.
 
-Dicho apoyo no implica transferencia automática de autoría sobre la estructura digital, programación, organización, clasificación, textos propios, diseño funcional ni sistematización pedagógica desarrollada por Gabriel Berrospi.
+La incorporación, referencia o enlace a recursos externos dentro del BDA no implica apropiación de dichos contenidos ni transferencia de derechos hacia el autor del EVA. Su uso debe respetar las fuentes y condiciones correspondientes.
 
 ## Contacto para autorización
 
-Para solicitar autorización de uso, adaptación, colaboración institucional, incorporación en otras plataformas o modificación del proyecto, debe comunicarse previamente con el autor.
+Para solicitar autorización de uso, adaptación, colaboración, incorporación en otras plataformas o modificación del proyecto, debe comunicarse previamente con el autor.
 
-Autor y desarrollador principal: Gabriel Berrospi  
+Autor y desarrollador: Psicólogo Gabriel Berrospi  
+Proyecto mayor: Ecosistema Virtual Accesible, EVA  
+Módulo: Banco Digital Accesible - BDA  
 Año: 2026  
 Finalidad: educativa, accesible, inclusiva y no comercial
