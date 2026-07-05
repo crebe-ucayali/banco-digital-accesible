@@ -8,29 +8,36 @@
     content="Banco Digital del Sistema Braille: recurso educativo para consultar letras, números, signos y palabras básicas en Braille."
   >
   <title>Banco Digital del Sistema Braille</title>
-  <link rel="stylesheet" href="estilos.css?v=6">
-  <link rel="stylesheet" href="cabecera-bda.css?v=1">
-  <link rel="stylesheet" href="index.css">
+  <link rel="stylesheet" href="estilos.css?v=7">
+  <link rel="stylesheet" href="cabecera-bda.css?v=2">
+  <link rel="stylesheet" href="index.css?v=2">
   <style>
-    .patron-portada{position:absolute;inset:0;z-index:0;overflow:hidden;pointer-events:none;background-image:url("../patron-shipibo.webp");background-repeat:repeat;background-size:cover;background-position:center;opacity:.30;filter:saturate(1.15) contrast(1.08);}
-    .cabecera{padding:30px 18px 145px;}
-    .cabecera .navegacion,.cabecera .portada{position:relative;z-index:1;}
-    .navegacion{max-width:1120px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap;}
-    .enlaces-cabecera{display:flex;align-items:center;justify-content:flex-end;flex-wrap:wrap;gap:12px;}
-    .enlace-cabecera{display:inline-flex;align-items:center;justify-content:center;min-height:46px;padding:10px 22px;border:1px solid rgba(255,255,255,.45);border-radius:999px;color:#ffffff;text-decoration:none;font-weight:800;background:rgba(255,255,255,.08);font-size:1rem;}
-    .enlace-cabecera:hover{background:rgba(255,255,255,.16);color:#ffffff;}
-    .marca-institucional{display:inline-flex;align-items:center;gap:14px;max-width:min(560px,100%);color:#ffffff;text-decoration:none;font-weight:900;font-size:1.05rem;}
-    .marca-logo-superior{display:block;width:58px;height:58px;object-fit:contain;flex-shrink:0;padding:4px;background:rgba(255,255,255,.96);border-radius:18px;box-shadow:0 10px 24px rgba(0,0,0,.14);}
-    .marca-texto-superior{display:block;padding-left:14px;border-left:2px solid rgba(255,255,255,.35);text-shadow:0 2px 4px rgba(0,0,0,.28);}
-    .marca-modulo{display:block;margin:0 0 3px;color:#c9f7ee;font-size:.76rem;font-weight:900;line-height:1.15;letter-spacing:.16em;text-transform:uppercase;}
-    .marca-nombre-institucional{display:block;color:#ffffff;font-size:1.02rem;font-weight:900;line-height:1.2;}
-    .marca-detalle-institucional{display:block;margin-top:4px;color:rgba(255,255,255,.94);font-size:.88rem;font-weight:750;line-height:1.25;}
-    .portada{position:relative;z-index:1;max-width:1120px;margin:70px auto 0;}
-    .etiqueta{margin:0 0 14px;color:#c9f7ee;font-size:.86rem;font-weight:900;letter-spacing:.18em;text-transform:uppercase;}
-    .portada h1{max-width:900px;margin:0 0 22px;color:#ffffff;font-family:Georgia,"Times New Roman",serif;font-size:clamp(2.5rem,5.8vw,4.15rem);line-height:1.04;letter-spacing:-.04em;}
-    .subtitulo{max-width:880px;margin:0;color:rgba(255,255,255,.96);font-size:1.22rem;line-height:1.65;}
-    main{margin-top:-78px;}
-    @media (max-width:700px){.cabecera{padding:26px 18px 116px;}.navegacion{align-items:flex-start;flex-direction:column;}.portada{margin-top:54px;}.marca-institucional{align-items:flex-start;}.marca-logo-superior{width:52px;height:52px;border-radius:16px;}.marca-texto-superior{padding-left:12px;}.marca-nombre-institucional{font-size:.94rem;}.marca-detalle-institucional{font-size:.82rem;}.enlaces-cabecera{justify-content:flex-start;}}
+    body .cabecera{
+      position:relative !important;
+      overflow:hidden !important;
+      padding:30px 18px 145px !important;
+      color:#ffffff !important;
+      background:radial-gradient(circle at 84% 70%, rgba(255,255,255,.11) 0 22%, transparent 23%),radial-gradient(circle at 86% 74%, rgba(255,255,255,.08) 0 36%, transparent 37%),linear-gradient(135deg,#0b3550 0%,#0f4f57 48%,#0f766e 100%) !important;
+    }
+    body .cabecera::after{display:none !important;content:none !important;}
+    body .patron-portada{position:absolute !important;inset:0 !important;z-index:0 !important;overflow:hidden !important;pointer-events:none !important;background-image:url("../patron-shipibo.webp?v=2") !important;background-repeat:repeat !important;background-size:cover !important;background-position:center !important;opacity:.30 !important;filter:saturate(1.15) contrast(1.08) !important;}
+    body .cabecera .navegacion,body .cabecera .portada{position:relative !important;z-index:1 !important;}
+    body .navegacion{max-width:1120px !important;margin:0 auto !important;display:flex !important;align-items:center !important;justify-content:space-between !important;gap:20px !important;flex-wrap:wrap !important;}
+    body .enlaces-cabecera{display:flex !important;align-items:center !important;justify-content:flex-end !important;flex-wrap:wrap !important;gap:12px !important;}
+    body .enlace-cabecera{display:inline-flex !important;align-items:center !important;justify-content:center !important;min-height:46px !important;padding:10px 22px !important;border:1px solid rgba(255,255,255,.45) !important;border-radius:999px !important;color:#ffffff !important;text-decoration:none !important;font-weight:800 !important;background:rgba(255,255,255,.08) !important;font-size:1rem !important;}
+    body .enlace-cabecera:hover{background:rgba(255,255,255,.16) !important;color:#ffffff !important;}
+    body .marca-institucional{display:inline-flex !important;align-items:center !important;gap:14px !important;max-width:min(560px,100%) !important;color:#ffffff !important;text-decoration:none !important;font-weight:900 !important;font-size:1.05rem !important;}
+    body .marca-logo-superior{display:block !important;width:58px !important;height:58px !important;object-fit:contain !important;flex-shrink:0 !important;padding:4px !important;background:rgba(255,255,255,.96) !important;border-radius:18px !important;box-shadow:0 10px 24px rgba(0,0,0,.14) !important;}
+    body .marca-texto-superior{display:block !important;padding-left:14px !important;border-left:2px solid rgba(255,255,255,.35) !important;text-shadow:0 2px 4px rgba(0,0,0,.28) !important;}
+    body .marca-modulo{display:block !important;margin:0 0 3px !important;color:#c9f7ee !important;font-size:.76rem !important;font-weight:900 !important;line-height:1.15 !important;letter-spacing:.16em !important;text-transform:uppercase !important;}
+    body .marca-nombre-institucional{display:block !important;color:#ffffff !important;font-size:1.02rem !important;font-weight:900 !important;line-height:1.2 !important;}
+    body .marca-detalle-institucional{display:block !important;margin-top:4px !important;color:rgba(255,255,255,.94) !important;font-size:.88rem !important;font-weight:750 !important;line-height:1.25 !important;}
+    body .portada{position:relative !important;z-index:1 !important;max-width:1120px !important;margin:70px auto 0 !important;}
+    body .etiqueta{margin:0 0 14px !important;color:#c9f7ee !important;font-size:.86rem !important;font-weight:900 !important;letter-spacing:.18em !important;text-transform:uppercase !important;}
+    body .portada h1{max-width:900px !important;margin:0 0 22px !important;color:#ffffff !important;font-family:Georgia,"Times New Roman",serif !important;font-size:clamp(2.5rem,5.8vw,4.15rem) !important;line-height:1.04 !important;letter-spacing:-.04em !important;}
+    body .subtitulo{max-width:880px !important;margin:0 !important;color:rgba(255,255,255,.96) !important;font-size:1.22rem !important;line-height:1.65 !important;}
+    body main{margin-top:-78px !important;}
+    @media (max-width:700px){body .cabecera{padding:26px 18px 116px !important;}body .navegacion{align-items:flex-start !important;flex-direction:column !important;}body .portada{margin-top:54px !important;}body .marca-institucional{align-items:flex-start !important;}body .marca-logo-superior{width:52px !important;height:52px !important;border-radius:16px !important;}body .marca-texto-superior{padding-left:12px !important;}body .marca-nombre-institucional{font-size:.94rem !important;}body .marca-detalle-institucional{font-size:.82rem !important;}body .enlaces-cabecera{justify-content:flex-start !important;}}
   </style>
 </head>
 
@@ -135,64 +142,18 @@
         <div class="grupo-filtros">
           <p id="titulo-filtros">Filtrar por categoría</p>
           <div class="filtros" role="group" aria-labelledby="titulo-filtros">
-            <button
-              class="filtro activo"
-              type="button"
-              data-categoria="todas"
-              aria-pressed="true"
-            >
-              Todas
-            </button>
-            <button
-              class="filtro"
-              type="button"
-              data-categoria="alfabeto"
-              aria-pressed="false"
-            >
-              Alfabeto
-            </button>
-            <button
-              class="filtro"
-              type="button"
-              data-categoria="numeros"
-              aria-pressed="false"
-            >
-              Números
-            </button>
-            <button
-              class="filtro"
-              type="button"
-              data-categoria="signos-basicos"
-              aria-pressed="false"
-            >
-              Signos básicos
-            </button>
-            <button
-              class="filtro"
-              type="button"
-              data-categoria="vocales-acentuadas"
-              aria-pressed="false"
-            >
-              Vocales acentuadas
-            </button>
-            <button
-              class="filtro"
-              type="button"
-              data-categoria="palabras-basicas"
-              aria-pressed="false"
-            >
-              Palabras básicas
-            </button>
+            <button class="filtro activo" type="button" data-categoria="todas" aria-pressed="true">Todas</button>
+            <button class="filtro" type="button" data-categoria="alfabeto" aria-pressed="false">Alfabeto</button>
+            <button class="filtro" type="button" data-categoria="numeros" aria-pressed="false">Números</button>
+            <button class="filtro" type="button" data-categoria="signos-basicos" aria-pressed="false">Signos básicos</button>
+            <button class="filtro" type="button" data-categoria="vocales-acentuadas" aria-pressed="false">Vocales acentuadas</button>
+            <button class="filtro" type="button" data-categoria="palabras-basicas" aria-pressed="false">Palabras básicas</button>
           </div>
         </div>
       </div>
     </section>
 
-    <section
-      id="presentacion"
-      class="seccion-presentacion"
-      aria-labelledby="titulo-presentacion"
-    >
+    <section id="presentacion" class="seccion-presentacion" aria-labelledby="titulo-presentacion">
       <div class="panel-presentacion">
         <div>
           <p class="sobretitulo">Conoce el recurso</p>
@@ -201,9 +162,7 @@
           </h2>
         </div>
         <p>
-          Explora la representación en Braille de letras, números, signos y
-          palabras de uso cotidiano. Utiliza el buscador o selecciona una
-          categoría para encontrar rápidamente el contenido que necesitas.
+          Explora la representación en Braille de letras, números, signos y palabras de uso cotidiano. Utiliza el buscador o selecciona una categoría para encontrar rápidamente el contenido que necesitas.
         </p>
       </div>
     </section>
@@ -215,11 +174,7 @@
       <div id="lista-tarjetas" class="lista-tarjetas" aria-busy="true"></div>
 
       <div class="contenedor-boton-mas">
-        <button
-          id="mostrar-aleatorio"
-          class="boton-mas"
-          type="button"
-        >
+        <button id="mostrar-aleatorio" class="boton-mas" type="button">
           Mostrar más signos
         </button>
       </div>
@@ -230,11 +185,7 @@
         <p>
           Prueba con otro término o selecciona una categoría diferente.
         </p>
-        <button
-          id="limpiar-filtros"
-          class="boton boton-primario"
-          type="button"
-        >
+        <button id="limpiar-filtros" class="boton boton-primario" type="button">
           Ver todos los contenidos
         </button>
       </div>
@@ -242,24 +193,18 @@
       <div id="mensaje-error" class="mensaje-error" role="alert" hidden>
         <h3>No se pudieron cargar los contenidos</h3>
         <p>
-          Abre el sitio desde un servidor web local o desde GitHub Pages e
-          inténtalo nuevamente.
+          Abre el sitio desde un servidor web local o desde GitHub Pages e inténtalo nuevamente.
         </p>
       </div>
     </section>
 
-    <section
-      id="aviso-pedagogico"
-      class="seccion-aviso"
-      aria-labelledby="titulo-aviso"
-    >
+    <section id="aviso-pedagogico" class="seccion-aviso" aria-labelledby="titulo-aviso">
       <aside class="aviso-pedagogico">
         <div class="aviso-icono" aria-hidden="true">i</div>
         <div>
           <h2 id="titulo-aviso">Advertencia pedagógica</h2>
           <p>
-            Este recurso facilita la consulta visual del sistema Braille. No
-            reemplaza el aprendizaje táctil en material impreso en relieve.
+            Este recurso facilita la consulta visual del sistema Braille. No reemplaza el aprendizaje táctil en material impreso en relieve.
           </p>
         </div>
       </aside>
@@ -271,12 +216,10 @@
       <section class="footer-bloque footer-columna" aria-labelledby="titulo-footer-descripcion">
         <h2 id="titulo-footer-descripcion">Banco Digital Braille</h2>
         <p>
-          Recurso educativo para la consulta y el reconocimiento inicial del
-          sistema Braille en contextos inclusivos.
+          Recurso educativo para la consulta y el reconocimiento inicial del sistema Braille en contextos inclusivos.
         </p>
         <p>
-          Contenido organizado para una consulta visual clara y compatible con
-          navegación por teclado.
+          Contenido organizado para una consulta visual clara y compatible con navegación por teclado.
         </p>
       </section>
 
@@ -308,6 +251,6 @@
     </div>
   </footer>
 
-  <script src="app.js?v=9" defer></script>
+  <script src="app.js?v=10" defer></script>
 </body>
 </html>
