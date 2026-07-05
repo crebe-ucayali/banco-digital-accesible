@@ -3,32 +3,67 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta
-    name="description"
-    content="Créditos generales, autoría, fuentes y condiciones de uso del Banco Digital Accesible."
-  >
+  <meta name="description" content="Créditos generales, autoría, fuentes y condiciones de uso del Banco Digital Accesible.">
   <title>Créditos | Banco Digital Accesible</title>
-  <link rel="stylesheet" href="estilos.css">
+  <link rel="stylesheet" href="estilos.css?v=7">
   <style>
-    .enlaces-cabecera{display:flex;align-items:center;justify-content:flex-end;flex-wrap:wrap;gap:12px;}
-    @media (max-width:700px){.enlaces-cabecera{justify-content:flex-start;}}
+    body .cabecera{position:relative!important;overflow:hidden!important;padding:30px 18px 145px!important;color:#ffffff!important;background:radial-gradient(circle at 84% 70%,rgba(255,255,255,.11) 0 22%,transparent 23%),radial-gradient(circle at 86% 74%,rgba(255,255,255,.08) 0 36%,transparent 37%),linear-gradient(135deg,#0b3550 0%,#0f4f57 48%,#0f766e 100%)!important;}
+    body .cabecera::after{display:none!important;content:none!important;}
+    body .patron-portada{position:absolute!important;inset:0!important;z-index:0!important;overflow:hidden!important;pointer-events:none!important;background-image:url("patron-shipibo.webp?v=2")!important;background-repeat:repeat!important;background-size:cover!important;background-position:center!important;opacity:.30!important;filter:saturate(1.15) contrast(1.08)!important;}
+    body .cabecera .navegacion,body .cabecera .portada{position:relative!important;z-index:1!important;}
+    body .navegacion{max-width:1120px!important;margin:0 auto!important;display:flex!important;align-items:center!important;justify-content:space-between!important;gap:20px!important;flex-wrap:wrap!important;}
+    body .marca-institucional{display:inline-flex!important;align-items:center!important;gap:14px!important;max-width:min(560px,100%)!important;color:#ffffff!important;text-decoration:none!important;font-weight:900!important;font-size:1.05rem!important;}
+    body .marca-logo-superior{display:block!important;width:58px!important;height:58px!important;object-fit:contain!important;flex-shrink:0!important;padding:4px!important;background:rgba(255,255,255,.96)!important;border-radius:18px!important;box-shadow:0 10px 24px rgba(0,0,0,.14)!important;}
+    body .marca-texto-superior{display:block!important;padding-left:14px!important;border-left:2px solid rgba(255,255,255,.35)!important;text-shadow:0 2px 4px rgba(0,0,0,.28)!important;}
+    body .marca-modulo{display:block!important;margin:0 0 3px!important;color:#c9f7ee!important;font-size:.76rem!important;font-weight:900!important;line-height:1.15!important;letter-spacing:.16em!important;text-transform:uppercase!important;}
+    body .marca-nombre-institucional{display:block!important;color:#ffffff!important;font-size:1.02rem!important;font-weight:900!important;line-height:1.2!important;}
+    body .marca-detalle-institucional{display:block!important;margin-top:4px!important;color:rgba(255,255,255,.94)!important;font-size:.88rem!important;font-weight:750!important;line-height:1.25!important;}
+    body .enlaces-cabecera{display:flex!important;align-items:center!important;justify-content:flex-end!important;flex-wrap:wrap!important;gap:12px!important;}
+    body .enlace-cabecera{display:inline-flex!important;align-items:center!important;justify-content:center!important;min-height:46px!important;padding:10px 22px!important;border:1px solid rgba(255,255,255,.45)!important;border-radius:999px!important;color:#ffffff!important;text-decoration:none!important;font-size:1rem!important;font-weight:800!important;background:rgba(255,255,255,.08)!important;text-shadow:0 2px 4px rgba(0,0,0,.24)!important;}
+    body .enlace-cabecera:hover{color:#ffffff!important;background:rgba(255,255,255,.16)!important;}
+    body .portada{position:relative!important;z-index:1!important;max-width:1120px!important;margin:70px auto 0!important;}
+    body .etiqueta{margin:0 0 14px!important;color:#c9f7ee!important;font-size:.86rem!important;font-weight:900!important;letter-spacing:.18em!important;text-transform:uppercase!important;text-shadow:0 2px 4px rgba(0,0,0,.28)!important;}
+    body .portada h1{max-width:900px!important;margin:0 0 22px!important;color:#ffffff!important;font-family:Georgia,"Times New Roman",serif!important;font-size:clamp(2.5rem,5.8vw,4.15rem)!important;line-height:1.04!important;letter-spacing:-.04em!important;text-shadow:0 3px 5px rgba(0,0,0,.22)!important;}
+    body .subtitulo{max-width:880px!important;margin:0!important;color:rgba(255,255,255,.96)!important;font-size:1.22rem!important;line-height:1.65!important;text-shadow:0 2px 4px rgba(0,0,0,.28)!important;}
+    body main.contenido-creditos{position:relative!important;z-index:2!important;width:min(1120px,calc(100% - 40px))!important;margin:-78px auto 0!important;}
+    body .volver{display:inline-flex!important;align-items:center!important;justify-content:center!important;min-height:44px!important;margin:0 0 18px!important;padding:10px 18px!important;color:#0b3550!important;background:#e6f4f1!important;border:1px solid rgba(15,118,110,.22)!important;border-radius:999px!important;font-weight:900!important;text-decoration:none!important;}
+    body .tarjeta-creditos{background:#ffffff!important;border:1px solid #d9e2ec!important;border-radius:26px!important;box-shadow:0 14px 34px rgba(16,42,67,.12)!important;padding:clamp(24px,4vw,42px)!important;}
+    body .tarjeta-creditos h1{margin:0 0 16px!important;color:#07324a!important;font-family:Georgia,"Times New Roman",serif!important;font-size:clamp(1.9rem,3vw,2.7rem)!important;line-height:1.15!important;}
+    body .tarjeta-creditos h2{margin:28px 0 10px!important;color:#07324a!important;font-size:1.25rem!important;}
+    body .tarjeta-creditos p{color:#486581!important;line-height:1.7!important;}
+    body .seccion-etiqueta{margin:0 0 10px!important;color:#0f766e!important;font-size:.82rem!important;font-weight:900!important;letter-spacing:.14em!important;text-transform:uppercase!important;}
+    body .introduccion{max-width:900px!important;margin:0 0 18px!important;color:#334e68!important;font-size:1.06rem!important;}
+    body footer{margin-top:56px!important;padding:34px 18px!important;color:#dbe9ee!important;background:#07324a!important;text-align:center!important;}
+    body footer p{max-width:1120px!important;margin:0 auto!important;color:#dbe9ee!important;line-height:1.6!important;}
+    @media(max-width:700px){body .cabecera{padding:26px 18px 116px!important;}body .navegacion{align-items:flex-start!important;flex-direction:column!important;}body .portada{margin-top:54px!important;}body .marca-institucional{align-items:flex-start!important;}body .marca-logo-superior{width:52px!important;height:52px!important;border-radius:16px!important;}body .marca-texto-superior{padding-left:12px!important;}body .marca-nombre-institucional{font-size:.94rem!important;}body .marca-detalle-institucional{font-size:.82rem!important;}body .enlaces-cabecera{justify-content:flex-start!important;}body main.contenido-creditos{width:min(100% - 28px,1120px)!important;}}
   </style>
 </head>
 <body class="pagina-creditos">
   <a class="salto-contenido" href="#contenido">Ir al contenido</a>
 
-  <header class="cabecera cabecera-interior">
+  <header class="cabecera" id="inicio">
+    <div class="patron-portada" aria-hidden="true"></div>
     <nav class="navegacion" aria-label="Navegación principal">
-      <a class="marca" href="index.html" aria-label="Volver al Banco Digital Accesible">
-        <span class="marca-icono" aria-hidden="true">BDA</span>
-        <span>Banco Digital Accesible</span>
+      <a class="marca marca-institucional" href="index.html" aria-label="Volver al Banco Digital Accesible">
+        <img class="marca-logo-superior" src="https://gabriel-lsp.github.io/banco-digital-accesible/logo-crebe.png" alt="Logo del CREBE Señor de los Milagros - Ucayali">
+        <span class="marca-texto-superior">
+          <span class="marca-modulo">Banco Digital Accesible</span>
+          <span class="marca-nombre-institucional">CREBE "Señor de los Milagros" - Ucayali</span>
+          <span class="marca-detalle-institucional">Centro de Recursos de Educación Básica Especial</span>
+        </span>
       </a>
-
       <div class="enlaces-cabecera">
+        <a class="enlace-cabecera" href="index.html">Volver a BDA</a>
         <a class="enlace-cabecera" href="https://crebeucayali.weebly.com/">Inicio principal</a>
-        <a class="enlace-cabecera" href="https://gabriel-lsp.github.io/accesos-complementarios/contacto.html">Contacto Institucional</a>
+        <a class="enlace-cabecera" href="https://gabriel-lsp.github.io/accesos-complementarios/paginas/contacto.html">Contacto</a>
       </div>
     </nav>
+
+    <div class="portada">
+      <p class="etiqueta">ECOSISTEMA VIRTUAL ACCESIBLE</p>
+      <h1>Banco Digital Accesible</h1>
+      <p class="subtitulo">Espacio central de acceso a recursos digitales para fortalecer la inclusión educativa, la accesibilidad, la comunicación y la atención a la diversidad.</p>
+    </div>
   </header>
 
   <main id="contenido" class="contenido-creditos">
@@ -37,80 +72,42 @@
     <article class="tarjeta-creditos">
       <p class="seccion-etiqueta">Información general del proyecto</p>
       <h1>Créditos y condiciones de uso del Banco Digital Accesible</h1>
-      <p class="introduccion">
-        El Banco Digital Accesible es una plataforma educativa digital organizada
-        para reunir módulos y recursos vinculados a la accesibilidad, la inclusión
-        educativa, la comunicación y la atención a la diversidad.
-      </p>
+      <p class="introduccion">El Banco Digital Accesible es una plataforma educativa digital organizada para reunir módulos y recursos vinculados a la accesibilidad, la inclusión educativa, la comunicación y la atención a la diversidad.</p>
 
       <section>
         <h2>Autoría y desarrollo</h2>
-        <p>
-          La organización general de la plataforma, la estructura de navegación,
-          la adaptación digital, la clasificación de recursos, la presentación web
-          y la integración de módulos corresponden al trabajo desarrollado por
-          Gabriel Berrospi como responsable del proyecto digital.
-        </p>
+        <p>La organización general de la plataforma, la estructura de navegación, la adaptación digital, la clasificación de recursos, la presentación web y la integración de módulos corresponden al trabajo desarrollado por Gabriel Berrospi como responsable del proyecto digital.</p>
       </section>
 
       <section>
         <h2>Contexto institucional de uso</h2>
-        <p>
-          El recurso puede ser utilizado en acciones educativas vinculadas al CREBE
-          "Señor de los Milagros" - Ucayali, en el marco de una finalidad pedagógica,
-          accesible y no comercial. Esta referencia institucional debe entenderse
-          como contexto de uso o coordinación, sin transferencia de autoría ni
-          titularidad del proyecto digital.
-        </p>
+        <p>El recurso puede ser utilizado en acciones educativas vinculadas al CREBE "Señor de los Milagros" - Ucayali, en el marco de una finalidad pedagógica, accesible y no comercial. Esta referencia institucional debe entenderse como contexto de uso o coordinación, sin transferencia de autoría ni titularidad del proyecto digital.</p>
       </section>
 
       <section>
         <h2>Módulos integrados</h2>
-        <p>
-          El Banco Digital Accesible integra módulos internos como Lengua de Señas
-          Peruana y Sistema Braille. También puede enlazar o articular otros espacios
-          relacionados, como materiales educativos accesibles, juegos interactivos,
-          capacitaciones, boletines y accesos complementarios.
-        </p>
+        <p>El Banco Digital Accesible integra módulos internos como Lengua de Señas Peruana y Sistema Braille. También puede enlazar o articular otros espacios relacionados, como materiales educativos accesibles, juegos interactivos, capacitaciones, boletines y accesos complementarios.</p>
       </section>
 
       <section>
         <h2>Fuentes y recursos externos</h2>
-        <p>
-          Los contenidos, imágenes, documentos, logos, materiales educativos o
-          recursos de terceros que se incorporen o enlacen dentro del proyecto
-          conservan su propia autoría, fuente y condición de uso. La integración en
-          el Banco Digital Accesible no convierte dichos recursos externos en
-          propiedad del proyecto.
-        </p>
+        <p>Los contenidos, imágenes, documentos, logos, materiales educativos o recursos de terceros que se incorporen o enlacen dentro del proyecto conservan su propia autoría, fuente y condición de uso. La integración en el Banco Digital Accesible no convierte dichos recursos externos en propiedad del proyecto.</p>
       </section>
 
       <section>
         <h2>Condiciones de uso</h2>
-        <p>
-          El proyecto tiene finalidad educativa, accesible y no comercial. Toda
-          reutilización, adaptación o difusión debe conservar el nombre del proyecto,
-          la autoría de Gabriel Berrospi, los créditos de las fuentes externas y la
-          identificación clara de cualquier modificación realizada.
-        </p>
+        <p>El proyecto tiene finalidad educativa, accesible y no comercial. Toda reutilización, adaptación o difusión debe conservar el nombre del proyecto, la autoría de Gabriel Berrospi, los créditos de las fuentes externas y la identificación clara de cualquier modificación realizada.</p>
       </section>
 
       <section>
         <h2>Alcance pedagógico</h2>
-        <p>
-          Los recursos del Banco Digital Accesible funcionan como apoyo pedagógico
-          y organizativo. No reemplazan la planificación docente, la evaluación
-          profesional, la enseñanza especializada ni los ajustes razonables que cada
-          estudiante pueda requerir.
-        </p>
+        <p>Los recursos del Banco Digital Accesible funcionan como apoyo pedagógico y organizativo. No reemplazan la planificación docente, la evaluación profesional, la enseñanza especializada ni los ajustes razonables que cada estudiante pueda requerir.</p>
       </section>
     </article>
   </main>
 
   <footer>
-    <p>
-      © 2026 Gabriel Berrospi. Desarrollo original. Uso institucional autorizado al CREBE "Señor de los Milagros" - Ucayali.
-    </p>
+    <p>© 2026 Gabriel Berrospi. Desarrollo original. Uso institucional autorizado al CREBE "Señor de los Milagros" - Ucayali.</p>
   </footer>
 </body>
 </html>
