@@ -1,0 +1,322 @@
+/* ==========================================================
+   ACCESIBILIDAD TRANSVERSAL BDA
+   Banco Digital Accesible | Ecosistema Virtual Accesible
+   ========================================================== */
+
+:root{
+  --accesibilidad-azul:#0b3550;
+  --accesibilidad-verde:#0f766e;
+  --accesibilidad-claro:#c9f7ee;
+  --accesibilidad-fondo:#ffffff;
+  --accesibilidad-texto:#102a43;
+  --accesibilidad-borde:#d9e2ec;
+  --accesibilidad-sombra:0 18px 44px rgba(6,38,58,.24);
+}
+
+html.texto-grande{
+  font-size:18px;
+}
+
+html.texto-grande body{
+  line-height:1.75;
+}
+
+body.modo-contraste{
+  color:#ffffff !important;
+  background:#000000 !important;
+}
+
+body.modo-contraste .cabecera,
+body.modo-contraste footer,
+body.modo-contraste .footer-crebe{
+  color:#ffffff !important;
+  background:#000000 !important;
+}
+
+body.modo-contraste .patron-portada{
+  opacity:.10 !important;
+  filter:grayscale(1) contrast(1.2) !important;
+}
+
+body.modo-contraste main,
+body.modo-contraste .panel-busqueda,
+body.modo-contraste .panel-presentacion,
+body.modo-contraste .panel-biblioteca,
+body.modo-contraste .hero-busqueda,
+body.modo-contraste .aviso-pedagogico,
+body.modo-contraste .tarjeta-material,
+body.modo-contraste .tarjeta,
+body.modo-contraste .nota-uso,
+body.modo-contraste .panel-tab,
+body.modo-contraste .lista-recursos article,
+body.modo-contraste .estado-catalogo,
+body.modo-contraste .estado-carga{
+  color:#ffffff !important;
+  background:#000000 !important;
+  border-color:#ffffff !important;
+  box-shadow:none !important;
+}
+
+body.modo-contraste h1,
+body.modo-contraste h2,
+body.modo-contraste h3,
+body.modo-contraste p,
+body.modo-contraste label,
+body.modo-contraste .texto-panel,
+body.modo-contraste .subtitulo,
+body.modo-contraste .sobretitulo,
+body.modo-contraste .etiqueta,
+body.modo-contraste .tarjeta-material p,
+body.modo-contraste .footer-final p,
+body.modo-contraste .footer-bloque p,
+body.modo-contraste .footer-bloque a{
+  color:#ffffff !important;
+}
+
+body.modo-contraste a,
+body.modo-contraste button,
+body.modo-contraste .enlace-material,
+body.modo-contraste .enlace-cabecera,
+body.modo-contraste .boton-principal,
+body.modo-contraste .boton-secundario,
+body.modo-contraste .boton-mas,
+body.modo-contraste .boton-braille-teoria,
+body.modo-contraste .atajo-busqueda,
+body.modo-contraste .tab-biblioteca,
+body.modo-contraste .filtro{
+  color:#000000 !important;
+  background:#ffff00 !important;
+  border-color:#ffffff !important;
+  text-decoration:none !important;
+}
+
+body.modo-contraste input,
+body.modo-contraste select,
+body.modo-contraste textarea{
+  color:#ffffff !important;
+  background:#000000 !important;
+  border-color:#ffffff !important;
+}
+
+body.modo-contraste img{
+  background:#ffffff;
+}
+
+:focus-visible{
+  outline:4px solid var(--accesibilidad-claro) !important;
+  outline-offset:4px !important;
+}
+
+.control-accesibilidad{
+  position:fixed;
+  right:18px;
+  bottom:18px;
+  z-index:10000;
+  display:flex;
+  flex-direction:column;
+  align-items:flex-end;
+  gap:10px;
+  font-family:Arial, Helvetica, sans-serif;
+}
+
+.boton-accesibilidad{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  min-height:48px;
+  padding:12px 18px;
+  color:#ffffff;
+  background:linear-gradient(135deg,var(--accesibilidad-azul),var(--accesibilidad-verde));
+  border:2px solid rgba(255,255,255,.78);
+  border-radius:999px;
+  box-shadow:var(--accesibilidad-sombra);
+  font-weight:900;
+  cursor:pointer;
+}
+
+.boton-accesibilidad:hover{
+  background:linear-gradient(135deg,#082f49,#0b4f4a);
+}
+
+.panel-accesibilidad{
+  width:min(310px,calc(100vw - 36px));
+  padding:18px;
+  color:var(--accesibilidad-texto);
+  background:var(--accesibilidad-fondo);
+  border:1px solid var(--accesibilidad-borde);
+  border-radius:22px;
+  box-shadow:var(--accesibilidad-sombra);
+}
+
+.panel-accesibilidad[hidden]{
+  display:none;
+}
+
+.panel-accesibilidad h2{
+  margin:0 0 6px;
+  color:var(--accesibilidad-azul);
+  font-size:1.05rem;
+  font-weight:900;
+  line-height:1.25;
+}
+
+.panel-accesibilidad p{
+  margin:0 0 14px;
+  color:#486581;
+  font-size:.93rem;
+  line-height:1.45;
+}
+
+.opciones-accesibilidad{
+  display:grid;
+  gap:9px;
+}
+
+.opcion-accesibilidad{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  min-height:44px;
+  width:100%;
+  padding:10px 14px;
+  color:var(--accesibilidad-azul);
+  background:#e6f4f1;
+  border:1px solid #b7ddd5;
+  border-radius:14px;
+  font-weight:900;
+  cursor:pointer;
+}
+
+.opcion-accesibilidad:hover,
+.opcion-accesibilidad[aria-pressed="true"]{
+  color:#ffffff;
+  background:var(--accesibilidad-verde);
+}
+
+.guia-resaltado{
+  position:fixed;
+  z-index:10001;
+  border:4px solid #fef3c7;
+  outline:3px solid var(--accesibilidad-verde);
+  border-radius:20px;
+  box-shadow:0 0 0 9999px rgba(6,38,58,.36),0 0 30px rgba(254,243,199,.96);
+  pointer-events:none;
+  transition:top .18s ease,left .18s ease,width .18s ease,height .18s ease;
+}
+
+.caja-guia{
+  position:fixed;
+  z-index:10002;
+  width:min(360px,calc(100vw - 32px));
+  padding:20px;
+  color:var(--accesibilidad-texto);
+  background:#ffffff;
+  border:2px solid var(--accesibilidad-verde);
+  border-radius:24px;
+  box-shadow:var(--accesibilidad-sombra);
+  font-family:Arial, Helvetica, sans-serif;
+}
+
+.caja-guia h2{
+  margin:0 0 8px;
+  color:var(--accesibilidad-azul);
+  font-size:1.18rem;
+  line-height:1.25;
+}
+
+.caja-guia p{
+  margin:0 0 14px;
+  color:#334e68;
+  line-height:1.55;
+}
+
+.guia-progreso{
+  margin:0 0 14px;
+  color:#486581;
+  font-size:.9rem;
+  font-weight:800;
+}
+
+.controles-guia{
+  display:flex;
+  flex-wrap:wrap;
+  gap:8px;
+  justify-content:flex-end;
+}
+
+.controles-guia button{
+  min-height:42px;
+  padding:9px 14px;
+  color:#ffffff;
+  background:var(--accesibilidad-azul);
+  border:0;
+  border-radius:999px;
+  font-weight:900;
+  cursor:pointer;
+}
+
+.controles-guia button:hover{
+  background:var(--accesibilidad-verde);
+}
+
+.controles-guia button[disabled]{
+  opacity:.45;
+  cursor:not-allowed;
+}
+
+body.modo-contraste .panel-accesibilidad,
+body.modo-contraste .caja-guia{
+  color:#ffffff !important;
+  background:#000000 !important;
+  border-color:#ffffff !important;
+}
+
+body.modo-contraste .panel-accesibilidad h2,
+body.modo-contraste .panel-accesibilidad p,
+body.modo-contraste .caja-guia h2,
+body.modo-contraste .caja-guia p,
+body.modo-contraste .guia-progreso{
+  color:#ffffff !important;
+}
+
+body.modo-contraste .boton-accesibilidad,
+body.modo-contraste .opcion-accesibilidad,
+body.modo-contraste .controles-guia button{
+  color:#000000 !important;
+  background:#ffff00 !important;
+  border-color:#ffffff !important;
+}
+
+@media(max-width:640px){
+  html.texto-grande{
+    font-size:17px;
+  }
+
+  .control-accesibilidad{
+    right:12px;
+    bottom:12px;
+    left:12px;
+    align-items:stretch;
+  }
+
+  .boton-accesibilidad,
+  .panel-accesibilidad{
+    width:100%;
+  }
+
+  .caja-guia{
+    left:16px !important;
+    right:16px !important;
+    bottom:16px !important;
+    top:auto !important;
+    width:auto;
+  }
+
+  .controles-guia{
+    justify-content:stretch;
+  }
+
+  .controles-guia button{
+    flex:1 1 auto;
+  }
+}
