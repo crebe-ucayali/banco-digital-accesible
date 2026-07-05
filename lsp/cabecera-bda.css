@@ -28,6 +28,96 @@
   background:rgba(255,255,255,.16);
 }
 
+.cabecera-bda-compacta{
+  position:relative;
+  overflow:hidden;
+  min-height:196px;
+  padding:40px 18px 46px;
+  color:#ffffff;
+  background:#5c8c91;
+}
+
+.cabecera-bda-compacta .patron-portada{
+  position:absolute;
+  inset:0;
+  z-index:0;
+  overflow:hidden;
+  pointer-events:none;
+  background-image:url("../patron-shipibo.webp");
+  background-repeat:repeat;
+  background-size:420px auto;
+  background-position:center;
+  opacity:.58;
+  filter:saturate(1.12) contrast(1.08);
+}
+
+.cabecera-identidad-bda{
+  position:relative;
+  z-index:1;
+  display:flex;
+  align-items:center;
+  max-width:1120px;
+  margin:0 auto;
+}
+
+.marca-bda-compacta{
+  display:inline-flex;
+  align-items:center;
+  gap:14px;
+  color:#ffffff;
+  text-decoration:none;
+}
+
+.logo-bda-compacto{
+  display:block;
+  width:80px;
+  height:80px;
+  padding:8px;
+  object-fit:contain;
+  flex-shrink:0;
+  background:rgba(255,255,255,.98);
+  border-radius:22px;
+  box-shadow:0 12px 28px rgba(0,0,0,.20);
+}
+
+.texto-bda-compacto{
+  display:block;
+  padding-left:0;
+  text-shadow:0 2px 4px rgba(0,0,0,.34);
+}
+
+.modulo-bda-compacto{
+  display:block;
+  margin:0 0 4px;
+  color:#e6fbf6;
+  font-size:.82rem;
+  font-weight:900;
+  line-height:1.1;
+  letter-spacing:.26em;
+  text-transform:uppercase;
+}
+
+.nombre-bda-compacto{
+  display:block;
+  margin:0 0 4px;
+  color:#ffffff;
+  font-size:1.42rem;
+  font-weight:900;
+  line-height:1.15;
+}
+
+.detalle-bda-compacto{
+  display:block;
+  color:#ffffff;
+  font-size:1.02rem;
+  font-weight:800;
+  line-height:1.25;
+}
+
+.cabecera-bda-compacta + main .panel-busqueda{
+  margin-top:-34px;
+}
+
 .footer-crebe,
 footer{
   margin-top:60px;
@@ -102,5 +192,50 @@ footer{
 @media(max-width:760px){
   .enlaces-cabecera{
     justify-content:flex-start;
+  }
+
+  .cabecera-bda-compacta{
+    min-height:auto;
+    padding:30px 18px 42px;
+  }
+
+  .marca-bda-compacta{
+    align-items:center;
+    gap:12px;
+  }
+
+  .logo-bda-compacto{
+    width:70px;
+    height:70px;
+    border-radius:20px;
+  }
+
+  .modulo-bda-compacto{
+    font-size:.72rem;
+    letter-spacing:.18em;
+  }
+
+  .nombre-bda-compacto{
+    font-size:1.08rem;
+  }
+
+  .detalle-bda-compacto{
+    font-size:.88rem;
+  }
+}
+
+@media(max-width:520px){
+  .marca-bda-compacta{
+    align-items:flex-start;
+  }
+
+  .logo-bda-compacto{
+    width:62px;
+    height:62px;
+    padding:6px;
+  }
+
+  .texto-bda-compacto{
+    padding-top:2px;
   }
 }
