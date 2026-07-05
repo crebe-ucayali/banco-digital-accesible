@@ -9,89 +9,56 @@
   >
   <title>Lengua de Señas Peruana</title>
   <link rel="stylesheet" href="estilos.css?v=17">
-  <link rel="stylesheet" href="cabecera-bda.css?v=4">
+  <link rel="stylesheet" href="cabecera-bda.css?v=5">
   <style>
-    .acciones-panel-lsp{
-      display:flex;
-      flex-direction:column;
-      align-items:flex-end;
-      gap:10px;
-    }
-
-    .enlaces-apoyo-lsp{
-      display:flex;
-      flex-wrap:wrap;
-      justify-content:flex-end;
-      gap:10px;
-    }
-
-    .boton-apoyo-lsp{
-      display:inline-flex;
-      align-items:center;
-      justify-content:center;
-      min-height:44px;
-      padding:10px 18px;
-      color:#ffffff;
-      background:linear-gradient(135deg,#0b4f4a 0%,#0f766e 100%);
-      border:1px solid rgba(255,255,255,.18);
-      border-radius:999px;
-      box-shadow:0 8px 18px rgba(15,118,110,.20);
-      font-weight:800;
-      text-decoration:none;
-      white-space:nowrap;
-    }
-
-    .boton-apoyo-lsp:hover{
-      color:#ffffff;
-      background:linear-gradient(135deg,#0b3f3b 0%,#0b4f4a 100%);
-    }
-
-    @media (max-width:700px){
-      .acciones-panel-lsp{
-        align-items:stretch;
-        width:100%;
-      }
-
-      .enlaces-apoyo-lsp{
-        flex-direction:column;
-      }
-
-      .boton-apoyo-lsp{
-        width:100%;
-      }
-    }
+    .patron-portada{position:absolute;inset:0;z-index:0;overflow:hidden;pointer-events:none;background-image:url("../patron-shipibo.webp");background-repeat:repeat;background-size:cover;background-position:center;opacity:.30;filter:saturate(1.15) contrast(1.08);}
+    .cabecera{padding:30px 18px 145px;}
+    .cabecera .navegacion,.cabecera .portada{position:relative;z-index:1;}
+    .navegacion{max-width:1120px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap;}
+    .enlaces-cabecera{display:flex;align-items:center;justify-content:flex-end;flex-wrap:wrap;gap:12px;}
+    .enlace-cabecera{display:inline-flex;align-items:center;justify-content:center;min-height:46px;padding:10px 22px;border:1px solid rgba(255,255,255,.45);border-radius:999px;color:#ffffff;text-decoration:none;font-weight:800;background:rgba(255,255,255,.08);font-size:1rem;}
+    .enlace-cabecera:hover{background:rgba(255,255,255,.16);color:#ffffff;}
+    .marca-institucional{display:inline-flex;align-items:center;gap:14px;max-width:min(560px,100%);color:#ffffff;text-decoration:none;font-weight:900;font-size:1.05rem;}
+    .marca-logo-superior{display:block;width:58px;height:58px;object-fit:contain;flex-shrink:0;padding:4px;background:rgba(255,255,255,.96);border-radius:18px;box-shadow:0 10px 24px rgba(0,0,0,.14);}
+    .marca-texto-superior{display:block;padding-left:14px;border-left:2px solid rgba(255,255,255,.35);text-shadow:0 2px 4px rgba(0,0,0,.28);}
+    .marca-modulo{display:block;margin:0 0 3px;color:#c9f7ee;font-size:.76rem;font-weight:900;line-height:1.15;letter-spacing:.16em;text-transform:uppercase;}
+    .marca-nombre-institucional{display:block;color:#ffffff;font-size:1.02rem;font-weight:900;line-height:1.2;}
+    .marca-detalle-institucional{display:block;margin-top:4px;color:rgba(255,255,255,.94);font-size:.88rem;font-weight:750;line-height:1.25;}
+    .portada{position:relative;z-index:1;max-width:1120px;margin:70px auto 0;}
+    .etiqueta{margin:0 0 14px;color:#c9f7ee;font-size:.86rem;font-weight:900;letter-spacing:.18em;text-transform:uppercase;}
+    .portada h1{max-width:900px;margin:0 0 22px;color:#ffffff;font-family:Georgia,"Times New Roman",serif;font-size:clamp(2.5rem,5.8vw,4.15rem);line-height:1.04;letter-spacing:-.04em;}
+    .subtitulo{max-width:880px;margin:0;color:rgba(255,255,255,.96);font-size:1.22rem;line-height:1.65;}
+    main{margin-top:-78px;}
+    .acciones-panel-lsp{display:flex;flex-direction:column;align-items:flex-end;gap:10px;}
+    .enlaces-apoyo-lsp{display:flex;flex-wrap:wrap;justify-content:flex-end;gap:10px;}
+    .boton-apoyo-lsp{display:inline-flex;align-items:center;justify-content:center;min-height:44px;padding:10px 18px;color:#ffffff;background:linear-gradient(135deg,#0b4f4a 0%,#0f766e 100%);border:1px solid rgba(255,255,255,.18);border-radius:999px;box-shadow:0 8px 18px rgba(15,118,110,.20);font-weight:800;text-decoration:none;white-space:nowrap;}
+    .boton-apoyo-lsp:hover{color:#ffffff;background:linear-gradient(135deg,#0b3f3b 0%,#0b4f4a 100%);}
+    @media (max-width:700px){.cabecera{padding:26px 18px 116px;}.navegacion{align-items:flex-start;flex-direction:column;}.portada{margin-top:54px;}.marca-institucional{align-items:flex-start;}.marca-logo-superior{width:52px;height:52px;border-radius:16px;}.marca-texto-superior{padding-left:12px;}.marca-nombre-institucional{font-size:.94rem;}.marca-detalle-institucional{font-size:.82rem;}.enlaces-cabecera{justify-content:flex-start;}.acciones-panel-lsp{align-items:stretch;width:100%;}.enlaces-apoyo-lsp{flex-direction:column;}.boton-apoyo-lsp{width:100%;}}
   </style>
 </head>
 <body>
   <a class="salto-contenido" href="#contenido-principal">Ir al contenido</a>
 
-  <header class="cabecera cabecera-bda-hero">
+  <header class="cabecera">
     <div class="patron-portada" aria-hidden="true"></div>
-
-    <nav class="navegacion-bda-hero" aria-label="Navegación principal">
-      <a class="marca-bda-hero" href="../index.html" aria-label="Volver al Banco Digital Accesible">
-        <img
-          class="logo-bda-hero"
-          src="https://gabriel-lsp.github.io/banco-digital-accesible/logo-crebe.png"
-          alt="Logo del CREBE Señor de los Milagros - Ucayali"
-        >
-        <span class="texto-bda-hero">
-          <span class="modulo-bda-hero">Banco Digital Accesible</span>
-          <span class="nombre-bda-hero">CREBE "Señor de los Milagros" - Ucayali</span>
-          <span class="detalle-bda-hero">Centro de Recursos de Educación Básica Especial</span>
+    <nav class="navegacion" aria-label="Navegación principal">
+      <a class="marca marca-institucional" href="../index.html" aria-label="Volver al inicio del Banco Digital Accesible">
+        <img class="marca-logo-superior" src="https://gabriel-lsp.github.io/banco-digital-accesible/logo-crebe.png" alt="Logo del CREBE Señor de los Milagros - Ucayali">
+        <span class="marca-texto-superior">
+          <span class="marca-modulo">Banco Digital Accesible</span>
+          <span class="marca-nombre-institucional">CREBE "Señor de los Milagros" - Ucayali</span>
+          <span class="marca-detalle-institucional">Centro de Recursos de Educación Básica Especial</span>
         </span>
       </a>
-
       <div class="enlaces-cabecera">
         <a class="enlace-cabecera" href="https://crebeucayali.weebly.com/">Inicio principal</a>
         <a class="enlace-cabecera" href="https://gabriel-lsp.github.io/accesos-complementarios/paginas/contacto.html">Contacto</a>
       </div>
     </nav>
-
-    <div class="presentacion-bda-hero">
-      <p class="etiqueta-bda-hero">Ecosistema Virtual Accesible</p>
-      <h1 class="titulo-bda-hero">Banco Digital Accesible</h1>
-      <p class="subtitulo-bda-hero">Espacio central de acceso a recursos digitales para fortalecer la inclusión educativa, la accesibilidad, la comunicación y la atención a la diversidad.</p>
+    <div class="portada">
+      <p class="etiqueta">ECOSISTEMA VIRTUAL ACCESIBLE</p>
+      <h1>Banco Digital Accesible</h1>
+      <p class="subtitulo">Espacio central de acceso a recursos digitales para fortalecer la inclusión educativa, la accesibilidad, la comunicación y la atención a la diversidad.</p>
     </div>
   </header>
 
@@ -117,19 +84,8 @@
         <div class="campo">
           <label for="busqueda">Buscar por palabra</label>
           <div class="entrada-busqueda">
-            <svg
-              aria-hidden="true"
-              viewBox="0 0 24 24"
-              width="20"
-              height="20"
-            >
-              <path
-                d="m21 21-4.7-4.7m2.2-5.3a7.5 7.5 0 1 1-15 0 7.5 7.5 0 0 1 15 0Z"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-                stroke-linecap="round"
-              />
+            <svg aria-hidden="true" viewBox="0 0 24 24" width="20" height="20">
+              <path d="m21 21-4.7-4.7m2.2-5.3a7.5 7.5 0 1 1-15 0 7.5 7.5 0 0 1 15 0Z" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
             </svg>
             <input id="busqueda" type="search" placeholder="Ejemplo: familia, agua, estudiar">
           </div>
