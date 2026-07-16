@@ -1,39 +1,35 @@
-name: Actualizar enlaces a Netlify
+name: Corregir accesos pendientes
 
 on:
-  workflow_dispatch:
   push:
+    branches: [main]
     paths:
-      - ".github/workflows/actualizar-enlaces-netlify.yml"
+      - '.github/workflows/actualizar-enlaces-netlify.yml'
 
 permissions:
   contents: write
 
 jobs:
-  actualizar-enlaces:
+  corregir:
     runs-on: ubuntu-latest
     steps:
-      - name: Descargar repositorio
-        uses: actions/checkout@v4
-
-      - name: Reemplazar enlaces antiguos de Weebly
+      - uses: actions/checkout@v4
+      - name: Corregir accesos
+        shell: bash
         run: |
-          find . -type f \
-            \( -name "*.html" -o -name "*.css" -o -name "*.js" -o -name "*.md" -o -name "*.txt" -o -name "*.json" \) \
-            -not -path "./.git/*" \
-            -not -path "./.github/workflows/actualizar-enlaces-netlify.yml" \
-            -print0 | xargs -0 sed -i \
-            -e 's#https://crebeucayali.weebly.com/#https://crebe-ucayali.netlify.app/#g' \
-            -e 's#https://crebeucayali.weebly.com#https://crebe-ucayali.netlify.app/#g'
-
+          set -euo pipefail
+          mapfile -t archivos < <(find . -type f \( -name '*.html' -o -name '*.css' -o -name '*.js' -o -name '*.md' -o -name '*.txt' -o -name '*.json' -o -name '*.xml' \) -not -path './.git/*' -not -path './.github/workflows/actualizar-enlaces-netlify.yml')
+          sed -i \
+            -e 's#https://crebe-ucayali.netlify.app/#https://crebe-ucayali.github.io/#g' \
+            -e 's#https://crebe-ucayali.netlify.app#https://crebe-ucayali.github.io/#g' \
+            -e 's#gabriel-lsp#crebe-ucayali#g' \
+            "${archivos[@]}"
+          git rm .github/workflows/actualizar-enlaces-netlify.yml
       - name: Guardar cambios
+        shell: bash
         run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          if ! git diff --quiet; then
-            git add .
-            git commit -m "Actualizar enlaces de Weebly a Netlify"
-            git push
-          else
-            echo "No quedan enlaces antiguos por actualizar."
-          fi
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add -A
+          git commit -m 'Corregir accesos pendientes en BDA'
+          git push
