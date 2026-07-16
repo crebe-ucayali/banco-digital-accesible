@@ -8,7 +8,7 @@ Aunque cada módulo del EVA cumple una función específica, todos responden a u
 
 ## Enlace publicado
 
-https://gabriel-lsp.github.io/banco-digital-accesible/
+https://crebe-ucayali.github.io/banco-digital-accesible/
 
 La raíz del sitio conserva un `index.html` mínimo para mantener activa la entrada de GitHub Pages y dirigir hacia la portada organizada en `inicio/`. Esta organización permite diferenciar la entrada técnica del repositorio y la página principal visible para los usuarios.
 
