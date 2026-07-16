@@ -1,7 +1,7 @@
 "use strict";
 
-const BASE_ORIGINAL = "https://gabriel-lsp.github.io/banco-digital-lsp/";
-const BASE_BDA = "https://gabriel-lsp.github.io/banco-digital-accesible/lsp/";
+const BASE_ORIGINAL = "https://crebe-ucayali.github.io/banco-digital-lsp/";
+const BASE_BDA = "https://crebe-ucayali.github.io/banco-digital-accesible/lsp/";
 const RUTAS = [
   { url: BASE_ORIGINAL + "datos/diccionario_lsp.json", base: BASE_ORIGINAL },
   { url: "datos/diccionario_lsp.json", base: BASE_BDA },
@@ -150,7 +150,7 @@ function filtrar() {
   if (secuenciaActiva) {
     resultados = bancoSecuencias
       .filter((item) => item.categoria === secuenciaActiva)
-      .sort(compararPorSecuencia);
+      .sort(comparPorSecuencia);
     return;
   }
 
