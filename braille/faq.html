@@ -12,7 +12,7 @@
   <style>
     body .cabecera{position:relative!important;overflow:hidden!important;padding:30px 18px 145px!important;color:#ffffff!important;background:radial-gradient(circle at 84% 70%,rgba(255,255,255,.11) 0 22%,transparent 23%),radial-gradient(circle at 86% 74%,rgba(255,255,255,.08) 0 36%,transparent 37%),linear-gradient(135deg,#0b3550 0%,#0f4f57 48%,#0f766e 100%)!important;}
     body .cabecera::after{display:none!important;content:none!important;}
-    body .patron-portada{position:absolute!important;inset:0!important;z-index:0!important;overflow:hidden!important;pointer-events:none!important;background-image:url("../patron-shipibo.webp?v=2")!important;background-repeat:repeat!important;background-size:cover!important;background-position:center!important;opacity:.30!important;filter:saturate(1.15) contrast(1.08)!important;}
+    body .patron-portada{position:absolute!important;inset:0!important;z-index:0!important;overflow:hidden!important;pointer-events:none!important;background-image:url("../patron-shipibo.webp?v=5")!important;background-repeat:repeat!important;background-size:320px auto!important;background-position:top left!important;opacity:.30!important;filter:saturate(1.15) contrast(1.08)!important;}
     body .cabecera .navegacion,body .cabecera .portada{position:relative!important;z-index:1!important;}
     body .navegacion{max-width:1120px!important;margin:0 auto!important;display:flex!important;align-items:center!important;justify-content:space-between!important;gap:20px!important;flex-wrap:wrap!important;}
     body .marca-institucional{display:inline-flex!important;align-items:center!important;gap:14px!important;max-width:min(560px,100%)!important;color:#ffffff!important;text-decoration:none!important;font-weight:900!important;font-size:1.05rem!important;}
@@ -29,120 +29,44 @@
     body .portada h1{max-width:900px!important;margin:0 0 22px!important;color:#ffffff!important;font-family:Georgia,"Times New Roman",serif!important;font-size:clamp(2.5rem,5.8vw,4.15rem)!important;line-height:1.04!important;letter-spacing:-.04em!important;text-shadow:0 3px 5px rgba(0,0,0,.22)!important;}
     body .subtitulo{max-width:880px!important;margin:0!important;color:rgba(255,255,255,.96)!important;font-size:1.22rem!important;line-height:1.65!important;text-shadow:0 2px 4px rgba(0,0,0,.28)!important;}
     body main{margin-top:-78px!important;}
-    @media(max-width:700px){body .cabecera{padding:26px 18px 116px!important;}body .navegacion{align-items:flex-start!important;flex-direction:column!important;}body .portada{margin-top:54px!important;}body .marca-institucional{align-items:flex-start!important;}body .marca-logo-superior{width:52px!important;height:52px!important;border-radius:16px!important;}body .marca-texto-superior{padding-left:12px!important;}body .marca-nombre-institucional{font-size:.94rem!important;}body .marca-detalle-institucional{font-size:.82rem!important;}body .enlaces-cabecera{justify-content:flex-start!important;}}
+    @media(max-width:700px){body .cabecera{padding:26px 18px 116px!important;}body .patron-portada{background-size:260px auto!important;}body .navegacion{align-items:flex-start!important;flex-direction:column!important;}body .portada{margin-top:54px!important;}body .marca-institucional{align-items:flex-start!important;}body .marca-logo-superior{width:52px!important;height:52px!important;border-radius:16px!important;}body .marca-texto-superior{padding-left:12px!important;}body .marca-nombre-institucional{font-size:.94rem!important;}body .marca-detalle-institucional{font-size:.82rem!important;}body .enlaces-cabecera{justify-content:flex-start!important;}}
   </style>
 </head>
 <body>
   <a class="salto-contenido" href="#contenido-principal">Ir al contenido</a>
-
   <header class="cabecera">
     <div class="patron-portada" aria-hidden="true"></div>
     <nav class="navegacion" aria-label="Navegación principal">
       <a class="marca marca-institucional" href="../index.html" aria-label="Volver al Banco Digital Accesible">
         <img class="marca-logo-superior" src="https://crebe-ucayali.github.io/banco-digital-accesible/logo-crebe.png" alt="Logo del CREBE Señor de los Milagros - Ucayali">
-        <span class="marca-texto-superior">
-          <span class="marca-modulo">Banco Digital Accesible</span>
-          <span class="marca-nombre-institucional">CREBE "Señor de los Milagros" - Ucayali</span>
-          <span class="marca-detalle-institucional">Centro de Recursos de Educación Básica Especial</span>
-        </span>
+        <span class="marca-texto-superior"><span class="marca-modulo">Banco Digital Accesible</span><span class="marca-nombre-institucional">CREBE "Señor de los Milagros" - Ucayali</span><span class="marca-detalle-institucional">Centro de Recursos de Educación Básica Especial</span></span>
       </a>
-
-      <div class="enlaces-cabecera">
-        <a class="enlace-cabecera" href="index.html">Volver a Braille</a>
-        <a class="enlace-cabecera" href="../index.html">Volver a BDA</a>
-        <a class="enlace-cabecera" href="https://crebe-ucayali.github.io/">Inicio principal</a>
-        <a class="enlace-cabecera" href="https://crebe-ucayali.github.io/accesos-complementarios/paginas/contacto.html">Contacto</a>
-      </div>
+      <div class="enlaces-cabecera"><a class="enlace-cabecera" href="index.html">Volver a Braille</a><a class="enlace-cabecera" href="../index.html">Volver a BDA</a><a class="enlace-cabecera" href="https://crebe-ucayali.github.io/">Inicio principal</a><a class="enlace-cabecera" href="https://crebe-ucayali.github.io/accesos-complementarios/paginas/contacto.html">Contacto</a></div>
     </nav>
-
-    <div class="portada">
-      <p class="etiqueta">ECOSISTEMA VIRTUAL ACCESIBLE</p>
-      <h1>Banco Digital Accesible</h1>
-      <p class="subtitulo">Espacio central de acceso a recursos digitales para fortalecer la inclusión educativa, la accesibilidad, la comunicación y la atención a la diversidad.</p>
-    </div>
+    <div class="portada"><p class="etiqueta">ECOSISTEMA VIRTUAL ACCESIBLE</p><h1>Banco Digital Accesible</h1><p class="subtitulo">Espacio central de acceso a recursos digitales para fortalecer la inclusión educativa, la accesibilidad, la comunicación y la atención a la diversidad.</p></div>
   </header>
-
   <main id="contenido-principal">
     <section class="panel-busqueda" aria-labelledby="titulo-faq">
-      <div class="panel-encabezado">
-        <div>
-          <p class="sobretitulo">Información de apoyo</p>
-          <h2 id="titulo-faq">Preguntas frecuentes del Sistema Braille</h2>
-          <p class="ayuda">Estas preguntas orientan la consulta visual del sistema Braille y su uso como apoyo pedagógico inicial.</p>
-        </div>
-      </div>
-
+      <div class="panel-encabezado"><div><p class="sobretitulo">Información de apoyo</p><h2 id="titulo-faq">Preguntas frecuentes del Sistema Braille</h2><p class="ayuda">Estas preguntas orientan la consulta visual del sistema Braille y su uso como apoyo pedagógico inicial.</p></div></div>
       <div class="pagina-informativa">
-        <article class="tarjeta-info">
-          <h3>¿Qué es el Banco Digital del Sistema Braille?</h3>
-          <p>Es un recurso educativo de consulta visual que presenta letras, números, signos y palabras básicas en Braille para apoyar el reconocimiento inicial del sistema.</p>
-        </article>
-
-        <article class="tarjeta-info">
-          <h3>¿A quiénes está dirigido?</h3>
-          <p>Está dirigido a docentes, familias, estudiantes, profesionales de apoyo y comunidad educativa interesada en fortalecer el acercamiento inicial al sistema Braille.</p>
-        </article>
-
-        <article class="tarjeta-info">
-          <h3>¿El recurso reemplaza el aprendizaje táctil del Braille?</h3>
-          <p>No. Este banco facilita la consulta visual, pero no reemplaza el aprendizaje táctil con materiales en relieve, regleta, punzón, máquina Perkins u otros apoyos especializados.</p>
-        </article>
-
-        <article class="tarjeta-info">
-          <h3>¿Para qué sirve el buscador?</h3>
-          <p>El buscador permite ubicar letras, números, signos o palabras básicas de forma rápida. También reconoce términos escritos sin tilde para facilitar la consulta.</p>
-        </article>
-
-        <article class="tarjeta-info">
-          <h3>¿Cómo se debe usar en una sesión educativa?</h3>
-          <p>Puede emplearse como apoyo visual, introducción al sistema Braille, recurso de sensibilización o material complementario, siempre con orientación pedagógica y práctica táctil cuando corresponda.</p>
-        </article>
-
-        <article class="tarjeta-info">
-          <h3>¿Qué cuidados se deben tener?</h3>
-          <p>Debe evitarse presentar el recurso como sustituto de la enseñanza especializada. El Braille requiere práctica progresiva, orientación adecuada y materiales accesibles reales.</p>
-        </article>
+        <article class="tarjeta-info"><h3>¿Qué es el Banco Digital del Sistema Braille?</h3><p>Es un recurso educativo de consulta visual que presenta letras, números, signos y palabras básicas en Braille para apoyar el reconocimiento inicial del sistema.</p></article>
+        <article class="tarjeta-info"><h3>¿A quiénes está dirigido?</h3><p>Está dirigido a docentes, familias, estudiantes, profesionales de apoyo y comunidad educativa interesada en fortalecer el acercamiento inicial al sistema Braille.</p></article>
+        <article class="tarjeta-info"><h3>¿El recurso reemplaza el aprendizaje táctil del Braille?</h3><p>No. Este banco facilita la consulta visual, pero no reemplaza el aprendizaje táctil con materiales en relieve, regleta, punzón, máquina Perkins u otros apoyos especializados.</p></article>
+        <article class="tarjeta-info"><h3>¿Para qué sirve el buscador?</h3><p>El buscador permite ubicar letras, números, signos o palabras básicas de forma rápida. También reconoce términos escritos sin tilde para facilitar la consulta.</p></article>
+        <article class="tarjeta-info"><h3>¿Cómo se debe usar en una sesión educativa?</h3><p>Puede emplearse como apoyo visual, introducción al sistema Braille, recurso de sensibilización o material complementario, siempre con orientación pedagógica y práctica táctil cuando corresponda.</p></article>
+        <article class="tarjeta-info"><h3>¿Qué cuidados se deben tener?</h3><p>Debe evitarse presentar el recurso como sustituto de la enseñanza especializada. El Braille requiere práctica progresiva, orientación adecuada y materiales accesibles reales.</p></article>
       </div>
-
-      <div class="acciones-informativas">
-        <a class="boton-apoyo" href="index.html">Volver al módulo Braille</a>
-        <a class="boton-secundario-info" href="teoria.html">Conoce el sistema Braille</a>
-        <a class="boton-secundario-info" href="accesibilidad.html">Accesibilidad Braille</a>
-      </div>
+      <div class="acciones-informativas"><a class="boton-apoyo" href="index.html">Volver al módulo Braille</a><a class="boton-secundario-info" href="teoria.html">Conoce el sistema Braille</a><a class="boton-secundario-info" href="accesibilidad.html">Accesibilidad Braille</a></div>
     </section>
   </main>
-
   <footer>
     <div class="footer-contenido">
-      <div class="footer-bloque">
-        <h2>Banco Digital Braille</h2>
-        <p>Recurso educativo para la consulta y el reconocimiento inicial del sistema Braille en contextos inclusivos.</p>
-      </div>
-
-      <div class="footer-bloque">
-        <h2>Enlaces</h2>
-        <p>
-          <a href="../index.html">Banco Digital Accesible</a><br>
-          <a href="index.html">Inicio Braille</a><br>
-          <a href="teoria.html">Conoce el sistema Braille</a><br>
-          <a href="accesibilidad.html">Accesibilidad Braille</a>
-        </p>
-      </div>
-
-      <div class="footer-bloque">
-        <h2>Contacto</h2>
-        <p><a href="https://crebe-ucayali.github.io/accesos-complementarios/paginas/contacto.html">Contacto Institucional</a></p>
-      </div>
-
-      <div class="footer-bloque">
-        <h2>Uso pedagógico</h2>
-        <p>El recurso debe acompañarse con orientación especializada y materiales táctiles reales cuando se trabaje aprendizaje formal del Braille.</p>
-      </div>
+      <div class="footer-bloque"><h2>Banco Digital Braille</h2><p>Recurso educativo para la consulta y el reconocimiento inicial del sistema Braille en contextos inclusivos.</p></div>
+      <div class="footer-bloque"><h2>Enlaces</h2><p><a href="../index.html">Banco Digital Accesible</a><br><a href="index.html">Inicio Braille</a><br><a href="teoria.html">Conoce el sistema Braille</a><br><a href="accesibilidad.html">Accesibilidad Braille</a></p></div>
+      <div class="footer-bloque"><h2>Contacto</h2><p><a href="https://crebe-ucayali.github.io/accesos-complementarios/paginas/contacto.html">Contacto Institucional</a></p></div>
+      <div class="footer-bloque"><h2>Uso pedagógico</h2><p>El recurso debe acompañarse con orientación especializada y materiales táctiles reales cuando se trabaje aprendizaje formal del Braille.</p></div>
     </div>
-
-    <div class="footer-final">
-      <p>© 2026 Gabriel Berrospi. Desarrollo original. Uso institucional autorizado al CREBE "Señor de los Milagros" - Ucayali.</p>
-    </div>
+    <div class="footer-final"><p>© 2026 Gabriel Berrospi. Desarrollo original. Uso institucional autorizado al CREBE "Señor de los Milagros" - Ucayali.</p></div>
   </footer>
 </body>
 </html>
