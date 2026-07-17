@@ -12,7 +12,7 @@
   <style>
     body .cabecera{position:relative!important;overflow:hidden!important;padding:30px 18px 145px!important;color:#ffffff!important;background:radial-gradient(circle at 84% 70%,rgba(255,255,255,.11) 0 22%,transparent 23%),radial-gradient(circle at 86% 74%,rgba(255,255,255,.08) 0 36%,transparent 37%),linear-gradient(135deg,#0b3550 0%,#0f4f57 48%,#0f766e 100%)!important;}
     body .cabecera::after{display:none!important;content:none!important;}
-    body .patron-portada{position:absolute!important;inset:0!important;z-index:0!important;overflow:hidden!important;pointer-events:none!important;background-image:url("../patron-shipibo.webp?v=2")!important;background-repeat:repeat!important;background-size:cover!important;background-position:center!important;opacity:.30!important;filter:saturate(1.15) contrast(1.08)!important;}
+    body .patron-portada{position:absolute!important;inset:0!important;z-index:0!important;overflow:hidden!important;pointer-events:none!important;background-image:url("../patron-shipibo.webp?v=5")!important;background-repeat:repeat!important;background-size:320px auto!important;background-position:top left!important;opacity:.30!important;filter:saturate(1.15) contrast(1.08)!important;}
     body .cabecera .navegacion,body .cabecera .portada{position:relative!important;z-index:1!important;}
     body .navegacion{max-width:1120px!important;margin:0 auto!important;display:flex!important;align-items:center!important;justify-content:space-between!important;gap:20px!important;flex-wrap:wrap!important;}
     body .marca-institucional{display:inline-flex!important;align-items:center!important;gap:14px!important;max-width:min(560px,100%)!important;color:#ffffff!important;text-decoration:none!important;font-weight:900!important;font-size:1.05rem!important;}
@@ -29,48 +29,25 @@
     body .portada h1{max-width:900px!important;margin:0 0 22px!important;color:#ffffff!important;font-family:Georgia,"Times New Roman",serif!important;font-size:clamp(2.5rem,5.8vw,4.15rem)!important;line-height:1.04!important;letter-spacing:-.04em!important;text-shadow:0 3px 5px rgba(0,0,0,.22)!important;}
     body .subtitulo{max-width:880px!important;margin:0!important;color:rgba(255,255,255,.96)!important;font-size:1.22rem!important;line-height:1.65!important;text-shadow:0 2px 4px rgba(0,0,0,.28)!important;}
     body main{margin-top:-78px!important;}
-    @media(max-width:700px){body .cabecera{padding:26px 18px 116px!important;}body .navegacion{align-items:flex-start!important;flex-direction:column!important;}body .portada{margin-top:54px!important;}body .marca-institucional{align-items:flex-start!important;}body .marca-logo-superior{width:52px!important;height:52px!important;border-radius:16px!important;}body .marca-texto-superior{padding-left:12px!important;}body .marca-nombre-institucional{font-size:.94rem!important;}body .marca-detalle-institucional{font-size:.82rem!important;}body .enlaces-cabecera{justify-content:flex-start!important;}}
+    @media(max-width:700px){body .cabecera{padding:26px 18px 116px!important;}body .patron-portada{background-size:260px auto!important;}body .navegacion{align-items:flex-start!important;flex-direction:column!important;}body .portada{margin-top:54px!important;}body .marca-institucional{align-items:flex-start!important;}body .marca-logo-superior{width:52px!important;height:52px!important;border-radius:16px!important;}body .marca-texto-superior{padding-left:12px!important;}body .marca-nombre-institucional{font-size:.94rem!important;}body .marca-detalle-institucional{font-size:.82rem!important;}body .enlaces-cabecera{justify-content:flex-start!important;}}
   </style>
 </head>
 <body>
   <a class="salto-contenido" href="#contenido-principal">Ir al contenido</a>
-
   <header class="cabecera">
     <div class="patron-portada" aria-hidden="true"></div>
     <nav class="navegacion" aria-label="Navegación principal">
       <a class="marca marca-institucional" href="../index.html" aria-label="Volver al Banco Digital Accesible">
         <img class="marca-logo-superior" src="https://crebe-ucayali.github.io/banco-digital-accesible/logo-crebe.png" alt="Logo del CREBE Señor de los Milagros - Ucayali">
-        <span class="marca-texto-superior">
-          <span class="marca-modulo">Banco Digital Accesible</span>
-          <span class="marca-nombre-institucional">CREBE "Señor de los Milagros" - Ucayali</span>
-          <span class="marca-detalle-institucional">Centro de Recursos de Educación Básica Especial</span>
-        </span>
+        <span class="marca-texto-superior"><span class="marca-modulo">Banco Digital Accesible</span><span class="marca-nombre-institucional">CREBE "Señor de los Milagros" - Ucayali</span><span class="marca-detalle-institucional">Centro de Recursos de Educación Básica Especial</span></span>
       </a>
-      <div class="enlaces-cabecera">
-        <a class="enlace-cabecera" href="index.html">Volver a Braille</a>
-        <a class="enlace-cabecera" href="../index.html">Volver a BDA</a>
-        <a class="enlace-cabecera" href="https://crebe-ucayali.github.io/">Inicio principal</a>
-        <a class="enlace-cabecera" href="https://crebe-ucayali.github.io/accesos-complementarios/paginas/contacto.html">Contacto</a>
-      </div>
+      <div class="enlaces-cabecera"><a class="enlace-cabecera" href="index.html">Volver a Braille</a><a class="enlace-cabecera" href="../index.html">Volver a BDA</a><a class="enlace-cabecera" href="https://crebe-ucayali.github.io/">Inicio principal</a><a class="enlace-cabecera" href="https://crebe-ucayali.github.io/accesos-complementarios/paginas/contacto.html">Contacto</a></div>
     </nav>
-
-    <div class="portada">
-      <p class="etiqueta">ECOSISTEMA VIRTUAL ACCESIBLE</p>
-      <h1>Banco Digital Accesible</h1>
-      <p class="subtitulo">Espacio central de acceso a recursos digitales para fortalecer la inclusión educativa, la accesibilidad, la comunicación y la atención a la diversidad.</p>
-    </div>
+    <div class="portada"><p class="etiqueta">ECOSISTEMA VIRTUAL ACCESIBLE</p><h1>Banco Digital Accesible</h1><p class="subtitulo">Espacio central de acceso a recursos digitales para fortalecer la inclusión educativa, la accesibilidad, la comunicación y la atención a la diversidad.</p></div>
   </header>
-
   <main id="contenido-principal">
     <section class="panel-busqueda" aria-labelledby="titulo-accesibilidad">
-      <div class="panel-encabezado">
-        <div>
-          <p class="sobretitulo">Criterios de uso accesible</p>
-          <h2 id="titulo-accesibilidad">Accesibilidad del Sistema Braille</h2>
-          <p class="ayuda">Este apartado organiza los criterios de accesibilidad del módulo Braille en una lectura similar a preguntas frecuentes, para revisar cada punto de manera clara e independiente.</p>
-        </div>
-      </div>
-
+      <div class="panel-encabezado"><div><p class="sobretitulo">Criterios de uso accesible</p><h2 id="titulo-accesibilidad">Accesibilidad del Sistema Braille</h2><p class="ayuda">Este apartado organiza los criterios de accesibilidad del módulo Braille en una lectura similar a preguntas frecuentes, para revisar cada punto de manera clara e independiente.</p></div></div>
       <div class="pagina-informativa">
         <article class="tarjeta-info"><h3>¿Cómo se presenta el contenido Braille?</h3><p>El recurso muestra letras, números, signos y palabras básicas mediante una representación visual del carácter en tinta y su forma correspondiente en Braille.</p></article>
         <article class="tarjeta-info"><h3>¿Cómo ayuda la búsqueda?</h3><p>El buscador permite ubicar un contenido específico con rapidez, ya sea por letra, número, signo, palabra o categoría relacionada.</p></article>
@@ -79,19 +56,10 @@
         <article class="tarjeta-info"><h3>¿Se puede navegar con teclado?</h3><p>Los enlaces, botones, campo de búsqueda y filtros están preparados para ser utilizados mediante teclado, favoreciendo una navegación más accesible.</p></article>
         <article class="tarjeta-info"><h3>¿Qué límite tiene este recurso visual?</h3><p>El módulo facilita la consulta visual, pero no sustituye la lectura táctil en relieve. Para el aprendizaje formal del Braille se requieren materiales táctiles y acompañamiento especializado.</p></article>
       </div>
-
-      <div class="nota-accesibilidad">
-        <p>La accesibilidad del módulo puede seguir fortaleciéndose con recursos descargables, materiales táctiles complementarios, orientaciones para docentes y ejemplos de uso educativo.</p>
-      </div>
-
-      <div class="acciones-informativas">
-        <a class="boton-apoyo" href="index.html">Volver al módulo Braille</a>
-        <a class="boton-secundario-info" href="faq.html">Ver preguntas frecuentes</a>
-        <a class="boton-secundario-info" href="teoria.html">Conoce el sistema Braille</a>
-      </div>
+      <div class="nota-accesibilidad"><p>La accesibilidad del módulo puede seguir fortaleciéndose con recursos descargables, materiales táctiles complementarios, orientaciones para docentes y ejemplos de uso educativo.</p></div>
+      <div class="acciones-informativas"><a class="boton-apoyo" href="index.html">Volver al módulo Braille</a><a class="boton-secundario-info" href="faq.html">Ver preguntas frecuentes</a><a class="boton-secundario-info" href="teoria.html">Conoce el sistema Braille</a></div>
     </section>
   </main>
-
   <footer>
     <div class="footer-contenido">
       <div class="footer-bloque"><h2>Banco Digital Braille</h2><p>Recurso educativo para la consulta y el reconocimiento inicial del sistema Braille en contextos inclusivos.</p></div>
