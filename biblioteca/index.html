@@ -7,7 +7,26 @@
   <title>Biblioteca Accesible | Banco Digital Accesible</title>
   <link rel="stylesheet" href="../estilos.css?v=2">
   <link rel="stylesheet" href="biblioteca.css?v=1">
-  <link rel="stylesheet" href="../accesibilidad.css?v=1">
+  <link rel="stylesheet" href="../accesibilidad.css?v=2">
+  <style>
+    .cabecera{padding:30px 18px 145px;}
+    .cabecera .navegacion,.cabecera .portada{position:relative;z-index:1;}
+    .navegacion{max-width:1120px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap;}
+    .enlaces-cabecera{display:flex;align-items:center;justify-content:flex-end;flex-wrap:wrap;gap:12px;}
+    .enlace-cabecera{display:inline-flex;align-items:center;justify-content:center;min-height:46px;padding:10px 22px;border:1px solid rgba(255,255,255,.45);border-radius:999px;color:#ffffff;text-decoration:none;font-weight:800;background:rgba(255,255,255,.08);font-size:1rem;}
+    .enlace-cabecera:hover{background:rgba(255,255,255,.16);color:#ffffff;}
+    .marca-institucional{display:inline-flex;align-items:center;gap:14px;max-width:min(560px,100%);color:#ffffff;text-decoration:none;font-weight:900;font-size:1.05rem;}
+    .marca-logo-superior{display:block;width:58px;height:58px;object-fit:contain;flex-shrink:0;padding:4px;background:rgba(255,255,255,.96);border-radius:18px;box-shadow:0 10px 24px rgba(0,0,0,.14);}
+    .marca-texto-superior{display:block;padding-left:14px;border-left:2px solid rgba(255,255,255,.35);text-shadow:0 2px 4px rgba(0,0,0,.28);}
+    .marca-modulo{display:block;margin:0 0 3px;color:#c9f7ee;font-size:.76rem;font-weight:900;line-height:1.15;letter-spacing:.16em;text-transform:uppercase;}
+    .marca-nombre-institucional{display:block;color:#ffffff;font-size:1.02rem;font-weight:900;line-height:1.2;}
+    .marca-detalle-institucional{display:block;margin-top:4px;color:rgba(255,255,255,.94);font-size:.88rem;font-weight:750;line-height:1.25;}
+    .portada{position:relative;z-index:1;max-width:1120px;margin:70px auto 0;}
+    .etiqueta{margin:0 0 14px;color:#c9f7ee;font-size:.86rem;font-weight:900;letter-spacing:.18em;text-transform:uppercase;}
+    .portada h1{max-width:900px;margin:0 0 22px;color:#ffffff;font-family:Georgia,"Times New Roman",serif;font-size:clamp(2.5rem,5.8vw,4.15rem);line-height:1.04;letter-spacing:-.04em;}
+    .subtitulo{max-width:880px;margin:0;color:rgba(255,255,255,.96);font-size:1.22rem;line-height:1.65;}
+    @media (max-width:700px){.cabecera{padding:26px 18px 116px;}.navegacion{align-items:flex-start;flex-direction:column;}.portada{margin-top:54px;}.marca-institucional{align-items:flex-start;}.marca-logo-superior{width:52px;height:52px;border-radius:16px;}.marca-texto-superior{padding-left:12px;}.marca-nombre-institucional{font-size:.94rem;}.marca-detalle-institucional{font-size:.82rem;}.enlaces-cabecera{justify-content:flex-start;}}
+  </style>
 </head>
 <body>
   <a class="salto-contenido" href="#contenido-principal">Ir al contenido</a>
@@ -15,27 +34,24 @@
   <header class="cabecera">
     <div class="patron-portada" aria-hidden="true"></div>
     <nav class="navegacion" aria-label="Navegación principal">
-      <a class="marca" href="../index.html" aria-label="Volver al Banco Digital Accesible">
-        <span class="marca-icono" aria-hidden="true">BD</span>
-        <span>Biblioteca Digital Accesible</span>
+      <a class="marca marca-institucional" href="../index.html" aria-label="Volver al inicio del Banco Digital Accesible">
+        <img class="marca-logo-superior" src="https://crebe-ucayali.github.io/banco-digital-accesible/logo-crebe.png" alt="Logo del CREBE Señor de los Milagros - Ucayali">
+        <span class="marca-texto-superior">
+          <span class="marca-modulo">Biblioteca Accesible</span>
+          <span class="marca-nombre-institucional">CREBE "Señor de los Milagros" - Ucayali</span>
+          <span class="marca-detalle-institucional">Centro de Recursos de Educación Básica Especial</span>
+        </span>
       </a>
       <div class="enlaces-cabecera">
         <a class="enlace-cabecera" href="../index.html">Volver a BDA</a>
-        <a class="enlace-cabecera" href="criterios.html">Criterios de uso</a>
-        <a class="enlace-cabecera" href="https://crebe-ucayali.github.io/accesos-complementarios/paginas/contacto.html">Contacto Institucional</a>
+        <a class="enlace-cabecera" href="https://crebe-ucayali.github.io/">Inicio principal</a>
+        <a class="enlace-cabecera" href="https://crebe-ucayali.github.io/accesos-complementarios/paginas/contacto.html">Contacto</a>
       </div>
     </nav>
 
     <div class="portada">
-      <div class="bloque-institucional" aria-label="Identidad institucional">
-        <img class="logo-crebe" src="https://crebe-ucayali.github.io/banco-digital-accesible/logo-crebe.png" alt="Logo del CREBE Señor de los Milagros - Ucayali">
-        <div class="texto-institucional">
-          <p class="nombre-institucional">CREBE "Señor de los Milagros" - Ucayali</p>
-          <p class="detalle-institucional">Centro de Recursos de Educación Básica Especial</p>
-        </div>
-      </div>
-      <p class="etiqueta">Búsqueda bibliográfica y académica</p>
-      <h1>Biblioteca Digital Accesible</h1>
+      <p class="etiqueta">ECOSISTEMA VIRTUAL ACCESIBLE</p>
+      <h1>Biblioteca Accesible</h1>
       <p class="subtitulo">Busca libros, guías, artículos, tesis, recursos educativos y fuentes abiertas para consulta, indagación e investigación.</p>
 
       <section class="hero-busqueda" aria-labelledby="titulo-busqueda-principal">
