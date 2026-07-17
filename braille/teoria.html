@@ -11,7 +11,7 @@
   <style>
     body .cabecera{position:relative!important;overflow:hidden!important;padding:30px 18px 145px!important;color:#ffffff!important;background:radial-gradient(circle at 84% 70%,rgba(255,255,255,.11) 0 22%,transparent 23%),radial-gradient(circle at 86% 74%,rgba(255,255,255,.08) 0 36%,transparent 37%),linear-gradient(135deg,#0b3550 0%,#0f4f57 48%,#0f766e 100%)!important;}
     body .cabecera::after{display:none!important;content:none!important;}
-    body .patron-portada{position:absolute!important;inset:0!important;z-index:0!important;overflow:hidden!important;pointer-events:none!important;background-image:url("../patron-shipibo.webp?v=2")!important;background-repeat:repeat!important;background-size:cover!important;background-position:center!important;opacity:.30!important;filter:saturate(1.15) contrast(1.08)!important;}
+    body .patron-portada{position:absolute!important;inset:0!important;z-index:0!important;overflow:hidden!important;pointer-events:none!important;background-image:url("../patron-shipibo.webp?v=5")!important;background-repeat:repeat!important;background-size:320px auto!important;background-position:top left!important;opacity:.30!important;filter:saturate(1.15) contrast(1.08)!important;}
     body .cabecera .navegacion,body .cabecera .portada{position:relative!important;z-index:1!important;}
     body .navegacion{max-width:1120px!important;margin:0 auto!important;display:flex!important;align-items:center!important;justify-content:space-between!important;gap:20px!important;flex-wrap:wrap!important;}
     body .marca-institucional{display:inline-flex!important;align-items:center!important;gap:14px!important;max-width:min(560px,100%)!important;color:#ffffff!important;text-decoration:none!important;font-weight:900!important;font-size:1.05rem!important;}
@@ -28,39 +28,22 @@
     body .portada h1{max-width:900px!important;margin:0 0 22px!important;color:#ffffff!important;font-family:Georgia,"Times New Roman",serif!important;font-size:clamp(2.5rem,5.8vw,4.15rem)!important;line-height:1.04!important;letter-spacing:-.04em!important;text-shadow:0 3px 5px rgba(0,0,0,.22)!important;}
     body .subtitulo{max-width:880px!important;margin:0!important;color:rgba(255,255,255,.96)!important;font-size:1.22rem!important;line-height:1.65!important;text-shadow:0 2px 4px rgba(0,0,0,.28)!important;}
     body main{margin-top:-78px!important;}
-    @media(max-width:700px){body .cabecera{padding:26px 18px 116px!important;}body .navegacion{align-items:flex-start!important;flex-direction:column!important;}body .portada{margin-top:54px!important;}body .marca-institucional{align-items:flex-start!important;}body .marca-logo-superior{width:52px!important;height:52px!important;border-radius:16px!important;}body .marca-texto-superior{padding-left:12px!important;}body .marca-nombre-institucional{font-size:.94rem!important;}body .marca-detalle-institucional{font-size:.82rem!important;}body .enlaces-cabecera{justify-content:flex-start!important;}}
+    @media(max-width:700px){body .cabecera{padding:26px 18px 116px!important;}body .patron-portada{background-size:260px auto!important;}body .navegacion{align-items:flex-start!important;flex-direction:column!important;}body .portada{margin-top:54px!important;}body .marca-institucional{align-items:flex-start!important;}body .marca-logo-superior{width:52px!important;height:52px!important;border-radius:16px!important;}body .marca-texto-superior{padding-left:12px!important;}body .marca-nombre-institucional{font-size:.94rem!important;}body .marca-detalle-institucional{font-size:.82rem!important;}body .enlaces-cabecera{justify-content:flex-start!important;}}
   </style>
 </head>
 <body>
   <a class="salto-contenido" href="#contenido-principal">Ir al contenido</a>
-
   <header class="cabecera">
     <div class="patron-portada" aria-hidden="true"></div>
     <nav class="navegacion" aria-label="Navegación principal">
       <a class="marca marca-institucional" href="../index.html" aria-label="Volver al Banco Digital Accesible">
         <img class="marca-logo-superior" src="https://crebe-ucayali.github.io/banco-digital-accesible/logo-crebe.png" alt="Logo del CREBE Señor de los Milagros - Ucayali">
-        <span class="marca-texto-superior">
-          <span class="marca-modulo">Banco Digital Accesible</span>
-          <span class="marca-nombre-institucional">CREBE "Señor de los Milagros" - Ucayali</span>
-          <span class="marca-detalle-institucional">Centro de Recursos de Educación Básica Especial</span>
-        </span>
+        <span class="marca-texto-superior"><span class="marca-modulo">Banco Digital Accesible</span><span class="marca-nombre-institucional">CREBE "Señor de los Milagros" - Ucayali</span><span class="marca-detalle-institucional">Centro de Recursos de Educación Básica Especial</span></span>
       </a>
-
-      <div class="enlaces-cabecera">
-        <a class="enlace-cabecera" href="index.html">Volver a Braille</a>
-        <a class="enlace-cabecera" href="../index.html">Volver a BDA</a>
-        <a class="enlace-cabecera" href="https://crebe-ucayali.github.io/">Inicio principal</a>
-        <a class="enlace-cabecera" href="https://crebe-ucayali.github.io/accesos-complementarios/paginas/contacto.html">Contacto</a>
-      </div>
+      <div class="enlaces-cabecera"><a class="enlace-cabecera" href="index.html">Volver a Braille</a><a class="enlace-cabecera" href="../index.html">Volver a BDA</a><a class="enlace-cabecera" href="https://crebe-ucayali.github.io/">Inicio principal</a><a class="enlace-cabecera" href="https://crebe-ucayali.github.io/accesos-complementarios/paginas/contacto.html">Contacto</a></div>
     </nav>
-
-    <div class="portada">
-      <p class="etiqueta">ECOSISTEMA VIRTUAL ACCESIBLE</p>
-      <h1>Banco Digital Accesible</h1>
-      <p class="subtitulo">Espacio central de acceso a recursos digitales para fortalecer la inclusión educativa, la accesibilidad, la comunicación y la atención a la diversidad.</p>
-    </div>
+    <div class="portada"><p class="etiqueta">ECOSISTEMA VIRTUAL ACCESIBLE</p><h1>Banco Digital Accesible</h1><p class="subtitulo">Espacio central de acceso a recursos digitales para fortalecer la inclusión educativa, la accesibilidad, la comunicación y la atención a la diversidad.</p></div>
   </header>
-
   <main id="contenido-principal">
     <section class="panel-busqueda" aria-labelledby="titulo-teoria">
       <div class="panel-encabezado">
@@ -68,41 +51,13 @@
           <p class="sobretitulo">Módulo Braille</p>
           <h2 id="titulo-teoria">Conoce el sistema Braille</h2>
           <p class="ayuda">Contenido de apoyo para docentes, familias y comunidad educativa que requieren una explicación inicial y organizada sobre el sistema Braille.</p>
-
-          <nav class="menu-secciones" aria-label="Secciones de la página">
-            <a href="#que-es">Qué es</a>
-            <a href="#como-funciona">Cómo funciona</a>
-            <a href="#educacion">Uso educativo</a>
-            <a href="#orientaciones">Orientaciones</a>
-          </nav>
+          <nav class="menu-secciones" aria-label="Secciones de la página"><a href="#que-es">Qué es</a><a href="#como-funciona">Cómo funciona</a><a href="#educacion">Uso educativo</a><a href="#orientaciones">Orientaciones</a></nav>
         </div>
       </div>
-
       <div class="pagina-teoria">
-        <article class="tarjeta-teoria" id="que-es">
-          <h3>¿Qué es el sistema Braille?</h3>
-          <p>El Braille es un sistema de lectura y escritura basado en puntos en relieve. Estos puntos se perciben con el tacto, principalmente con las yemas de los dedos. Gracias a este sistema, una persona con discapacidad visual puede leer letras, números, signos de puntuación, palabras, frases y textos completos.</p>
-          <p>No se trata de un idioma diferente. El Braille es un código. Esto significa que puede representar distintos idiomas, como el español, el inglés, el quechua u otros, según las reglas que se utilicen.</p>
-          <p>Su valor educativo es muy importante porque permite que el estudiante acceda a la lectura y la escritura de manera directa. No depende únicamente de escuchar información, sino que puede explorar, leer, revisar, corregir y producir textos usando sus propias manos.</p>
-          <div class="nota-teoria">El Braille no reemplaza la voz, los audios ni la tecnología. Los complementa. Su propósito es fortalecer la autonomía, la alfabetización y el acceso real a la información escrita.</div>
-        </article>
-
-        <article class="tarjeta-teoria">
-          <h3>Breve historia del Braille</h3>
-          <p>El sistema Braille fue creado por Louis Braille, una persona francesa que perdió la visión durante su infancia. Desde muy joven buscó una forma más práctica para que las personas ciegas pudieran leer y escribir.</p>
-          <p>Su aporte fue usar una celda de seis puntos. Con esos seis puntos se podían formar distintas combinaciones para representar letras, números y signos. Esta idea permitió que la lectura táctil fuera más rápida, clara y accesible.</p>
-          <p>Con el tiempo, el Braille se difundió en muchos países y fue adaptándose a diferentes lenguas y necesidades. Hoy se usa en libros, materiales educativos, señalización, ascensores, medicamentos, documentos, tecnología y recursos de apoyo para la inclusión.</p>
-        </article>
-
-        <article class="tarjeta-teoria" id="como-funciona">
-          <h3>¿Cómo funciona la celda Braille?</h3>
-          <p>La base del sistema es la celda Braille. Esta celda está formada por seis puntos distribuidos en dos columnas y tres filas. Cada punto tiene una posición específica y se numera del 1 al 6.</p>
-          <div class="braille-demo" aria-label="Representación de los seis puntos Braille"><div class="punto">1</div><div class="punto">4</div><div class="punto">2</div><div class="punto">5</div><div class="punto">3</div><div class="punto">6</div></div>
-          <p>La columna izquierda contiene los puntos 1, 2 y 3. La columna derecha contiene los puntos 4, 5 y 6. Al combinar algunos de estos puntos, se forman las letras, los números y otros signos.</p>
-          <table class="tabla-simple"><thead><tr><th>Elemento</th><th>Explicación sencilla</th></tr></thead><tbody><tr><td>Celda Braille</td><td>Es el espacio básico donde se organizan los seis puntos.</td></tr><tr><td>Puntos en relieve</td><td>Son pequeños puntos que se pueden sentir con los dedos.</td></tr><tr><td>Combinación</td><td>Es la forma en que se activan algunos puntos para crear un signo.</td></tr><tr><td>Lectura táctil</td><td>Es la lectura que se realiza mediante el tacto, no mediante la vista.</td></tr></tbody></table>
-          <div class="nota-teoria">Para aprender Braille no basta con memorizar puntos. También se necesita práctica táctil, orientación, acompañamiento pedagógico y materiales adecuados.</div>
-        </article>
-
+        <article class="tarjeta-teoria" id="que-es"><h3>¿Qué es el sistema Braille?</h3><p>El Braille es un sistema de lectura y escritura basado en puntos en relieve. Estos puntos se perciben con el tacto, principalmente con las yemas de los dedos. Gracias a este sistema, una persona con discapacidad visual puede leer letras, números, signos de puntuación, palabras, frases y textos completos.</p><p>No se trata de un idioma diferente. El Braille es un código. Esto significa que puede representar distintos idiomas, como el español, el inglés, el quechua u otros, según las reglas que se utilicen.</p><p>Su valor educativo es muy importante porque permite que el estudiante acceda a la lectura y la escritura de manera directa. No depende únicamente de escuchar información, sino que puede explorar, leer, revisar, corregir y producir textos usando sus propias manos.</p><div class="nota-teoria">El Braille no reemplaza la voz, los audios ni la tecnología. Los complementa. Su propósito es fortalecer la autonomía, la alfabetización y el acceso real a la información escrita.</div></article>
+        <article class="tarjeta-teoria"><h3>Breve historia del Braille</h3><p>El sistema Braille fue creado por Louis Braille, una persona francesa que perdió la visión durante su infancia. Desde muy joven buscó una forma más práctica para que las personas ciegas pudieran leer y escribir.</p><p>Su aporte fue usar una celda de seis puntos. Con esos seis puntos se podían formar distintas combinaciones para representar letras, números y signos. Esta idea permitió que la lectura táctil fuera más rápida, clara y accesible.</p><p>Con el tiempo, el Braille se difundió en muchos países y fue adaptándose a diferentes lenguas y necesidades. Hoy se usa en libros, materiales educativos, señalización, ascensores, medicamentos, documentos, tecnología y recursos de apoyo para la inclusión.</p></article>
+        <article class="tarjeta-teoria" id="como-funciona"><h3>¿Cómo funciona la celda Braille?</h3><p>La base del sistema es la celda Braille. Esta celda está formada por seis puntos distribuidos en dos columnas y tres filas. Cada punto tiene una posición específica y se numera del 1 al 6.</p><div class="braille-demo" aria-label="Representación de los seis puntos Braille"><div class="punto">1</div><div class="punto">4</div><div class="punto">2</div><div class="punto">5</div><div class="punto">3</div><div class="punto">6</div></div><p>La columna izquierda contiene los puntos 1, 2 y 3. La columna derecha contiene los puntos 4, 5 y 6. Al combinar algunos de estos puntos, se forman las letras, los números y otros signos.</p><table class="tabla-simple"><thead><tr><th>Elemento</th><th>Explicación sencilla</th></tr></thead><tbody><tr><td>Celda Braille</td><td>Es el espacio básico donde se organizan los seis puntos.</td></tr><tr><td>Puntos en relieve</td><td>Son pequeños puntos que se pueden sentir con los dedos.</td></tr><tr><td>Combinación</td><td>Es la forma en que se activan algunos puntos para crear un signo.</td></tr><tr><td>Lectura táctil</td><td>Es la lectura que se realiza mediante el tacto, no mediante la vista.</td></tr></tbody></table><div class="nota-teoria">Para aprender Braille no basta con memorizar puntos. También se necesita práctica táctil, orientación, acompañamiento pedagógico y materiales adecuados.</div></article>
         <article class="tarjeta-teoria"><h3>Letras, números y signos</h3><p>En Braille, cada letra se representa mediante una combinación específica de puntos. Las primeras letras del alfabeto son especialmente importantes porque sirven como base para comprender otras combinaciones.</p><p>Los números también se representan en Braille, pero normalmente requieren un signo previo que indica que lo que sigue debe leerse como número. Una misma combinación puede tener valor de letra o de número, según el signo que la antecede.</p><p>También existen signos para la puntuación, las vocales acentuadas, las mayúsculas y otros usos específicos. Esto permite escribir frases completas, textos escolares, indicaciones, nombres, fechas y contenidos de distintas áreas curriculares.</p></article>
         <article class="tarjeta-teoria"><h3>Lectura y escritura en Braille</h3><p>La lectura en Braille se realiza pasando los dedos sobre los puntos en relieve. Generalmente se usan ambas manos, aunque cada persona puede desarrollar su propio ritmo. La lectura requiere sensibilidad táctil, memoria, coordinación y práctica constante.</p><p>La escritura puede realizarse de varias maneras. Una forma tradicional es usar la regleta y el punzón. También se puede emplear una máquina Perkins, impresoras Braille o dispositivos electrónicos especializados.</p><p>En la escritura con regleta y punzón, la persona marca los puntos sobre el papel. Luego, al voltear la hoja, los puntos quedan en relieve y pueden ser leídos con los dedos. Este proceso requiere orientación, paciencia y entrenamiento progresivo.</p></article>
         <article class="tarjeta-teoria" id="educacion"><h3>Importancia del Braille en la educación</h3><p>El Braille es una herramienta clave para la inclusión educativa de estudiantes con discapacidad visual. Su enseñanza favorece el acceso a la lectura, la escritura, la comprensión de textos y la participación en actividades escolares.</p><p>Cuando un estudiante aprende Braille, también desarrolla autonomía para revisar sus propios escritos, reconocer palabras, organizar información, tomar apuntes, leer indicaciones y participar en tareas académicas.</p><p>En el contexto escolar, el Braille debe integrarse a las actividades de aprendizaje y no presentarse como un contenido separado de la vida cotidiana del estudiante.</p></article>
@@ -111,22 +66,11 @@
         <article class="tarjeta-teoria"><h3>Cómo usar esta plataforma</h3><p>Esta plataforma permite explorar signos Braille de manera sencilla. El usuario puede revisar letras, números, signos básicos, vocales acentuadas y palabras básicas. También puede usar la búsqueda para ubicar un contenido específico.</p><p>La intención del recurso no es reemplazar la enseñanza directa del Braille, sino ofrecer un apoyo visual y pedagógico para docentes, familias, estudiantes y profesionales vinculados a la educación inclusiva.</p><p>Puede utilizarse como material de consulta, apoyo para sesiones educativas, introducción al sistema Braille o recurso complementario durante actividades de sensibilización.</p><div class="nota-teoria">Para una enseñanza formal del Braille, se recomienda contar con orientación especializada y materiales táctiles reales, ya que la práctica con puntos en relieve es fundamental.</div></article>
         <article class="tarjeta-teoria"><h3>Cierre</h3><p>El sistema Braille representa una oportunidad para fortalecer la autonomía, la comunicación y el acceso a la educación. Su aprendizaje abre caminos para que las personas con discapacidad visual participen con mayor independencia en la escuela, la familia y la comunidad.</p><p>Conocer el Braille también ayuda a construir una mirada más inclusiva. Cuando docentes, familias y estudiantes comprenden su valor, se generan mejores condiciones para acompañar los procesos de aprendizaje y participación.</p></article>
       </div>
-
-      <div class="acciones-teoria">
-        <a class="boton-volver" href="index.html">Volver al módulo Braille</a>
-        <a class="boton-secundario-info" href="faq.html">Preguntas frecuentes</a>
-        <a class="boton-secundario-info" href="accesibilidad.html">Accesibilidad Braille</a>
-      </div>
+      <div class="acciones-teoria"><a class="boton-volver" href="index.html">Volver al módulo Braille</a><a class="boton-secundario-info" href="faq.html">Preguntas frecuentes</a><a class="boton-secundario-info" href="accesibilidad.html">Accesibilidad Braille</a></div>
     </section>
   </main>
-
   <footer>
-    <div class="footer-contenido">
-      <div class="footer-bloque"><h2>Banco Digital Braille</h2><p>Recurso educativo para la consulta y el reconocimiento inicial del sistema Braille en contextos inclusivos.</p></div>
-      <div class="footer-bloque"><h2>Enlaces</h2><p><a href="../index.html">Banco Digital Accesible</a><br><a href="index.html">Inicio Braille</a><br><a href="faq.html">Preguntas frecuentes</a><br><a href="accesibilidad.html">Accesibilidad Braille</a></p></div>
-      <div class="footer-bloque"><h2>Contacto</h2><p><a href="https://crebe-ucayali.github.io/accesos-complementarios/paginas/contacto.html">Contacto Institucional</a></p></div>
-      <div class="footer-bloque"><h2>Uso pedagógico</h2><p>El recurso debe acompañarse con orientación especializada y materiales táctiles reales cuando se trabaje aprendizaje formal del Braille.</p></div>
-    </div>
+    <div class="footer-contenido"><div class="footer-bloque"><h2>Banco Digital Braille</h2><p>Recurso educativo para la consulta y el reconocimiento inicial del sistema Braille en contextos inclusivos.</p></div><div class="footer-bloque"><h2>Enlaces</h2><p><a href="../index.html">Banco Digital Accesible</a><br><a href="index.html">Inicio Braille</a><br><a href="faq.html">Preguntas frecuentes</a><br><a href="accesibilidad.html">Accesibilidad Braille</a></p></div><div class="footer-bloque"><h2>Contacto</h2><p><a href="https://crebe-ucayali.github.io/accesos-complementarios/paginas/contacto.html">Contacto Institucional</a></p></div><div class="footer-bloque"><h2>Uso pedagógico</h2><p>El recurso debe acompañarse con orientación especializada y materiales táctiles reales cuando se trabaje aprendizaje formal del Braille.</p></div></div>
     <div class="footer-final"><p>© 2026 Gabriel Berrospi. Desarrollo original. Uso institucional autorizado al CREBE "Señor de los Milagros" - Ucayali.</p></div>
   </footer>
 </body>
