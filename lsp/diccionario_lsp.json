@@ -2530,7 +2530,7 @@
   {
     "id": "LSP-000318",
     "categoria": "colores",
-    "palabra": "marron",
+    "palabra": "marrón",
     "descripcion": "Configurar “M” y realizar un movimiento circular sobre la mejilla.",
     "archivo_imagen": "imagenes/colores/marron.png",
     "fuente": "Ministerio de Educación del Perú - Guía de Lengua de Señas Peruana"
@@ -3300,7 +3300,7 @@
     "categoria": "juguetes_juegos_deportes",
     "palabra": "avión",
     "descripcion": "Con los dedos pulgar, índice y meñique extendidos, describir un movimiento semicircular hacia arriba.",
-    "archivo_imagen": "imagenes/juguetes_juegos_deportes/revisar_pagina_207_tarjeta_01.png",
+    "archivo_imagen": "imagenes/juguetes_juegos_deportes/avión.png",
     "fuente": "Ministerio de Educación del Perú - Guía de Lengua de Señas Peruana"
   },
   {
