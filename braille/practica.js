@@ -10,14 +10,38 @@ const nombreConstancia = document.querySelector("#constancia-nombre");
 const fechaConstancia = document.querySelector("#constancia-fecha");
 const codigoConstancia = document.querySelector("#constancia-codigo");
 
-const respuestasCorrectas = {
-  pregunta1: "⠁",
-  pregunta2: "⠉",
-  pregunta3: "⠑",
-  pregunta4: "⠇",
-  pregunta5: "⠏"
-};
+const abecedarioBraille = [
+  { letra: "A", braille: "⠁" },
+  { letra: "B", braille: "⠃" },
+  { letra: "C", braille: "⠉" },
+  { letra: "D", braille: "⠙" },
+  { letra: "E", braille: "⠑" },
+  { letra: "F", braille: "⠋" },
+  { letra: "G", braille: "⠛" },
+  { letra: "H", braille: "⠓" },
+  { letra: "I", braille: "⠊" },
+  { letra: "J", braille: "⠚" },
+  { letra: "K", braille: "⠅" },
+  { letra: "L", braille: "⠇" },
+  { letra: "M", braille: "⠍" },
+  { letra: "N", braille: "⠝" },
+  { letra: "Ñ", braille: "⠻" },
+  { letra: "O", braille: "⠕" },
+  { letra: "P", braille: "⠏" },
+  { letra: "Q", braille: "⠟" },
+  { letra: "R", braille: "⠗" },
+  { letra: "S", braille: "⠎" },
+  { letra: "T", braille: "⠞" },
+  { letra: "U", braille: "⠥" },
+  { letra: "V", braille: "⠧" },
+  { letra: "W", braille: "⠺" },
+  { letra: "X", braille: "⠭" },
+  { letra: "Y", braille: "⠽" },
+  { letra: "Z", braille: "⠵" }
+];
 
+const respuestasCorrectas = {};
+const cantidadPreguntas = 5;
 let constanciaHabilitada = false;
 
 function mezclarElementos(elementos) {
@@ -31,33 +55,65 @@ function mezclarElementos(elementos) {
   return lista;
 }
 
-function randomizarPractica() {
+function crearOpcion(nombrePregunta, simbolo) {
+  const etiqueta = document.createElement("label");
+  etiqueta.className = "opcion-practica";
+
+  const entrada = document.createElement("input");
+  entrada.type = "radio";
+  entrada.name = nombrePregunta;
+  entrada.value = simbolo;
+
+  const texto = document.createElement("span");
+  texto.textContent = simbolo;
+
+  etiqueta.append(entrada, texto);
+  return etiqueta;
+}
+
+function generarPracticaAleatoria() {
   if (!formularioPractica) return;
 
   const contenedorPreguntas = formularioPractica.querySelector(".lista-preguntas");
   if (!contenedorPreguntas) return;
 
-  const preguntas = mezclarElementos(
-    contenedorPreguntas.querySelectorAll(":scope > .pregunta-practica")
-  );
+  Object.keys(respuestasCorrectas).forEach((clave) => delete respuestasCorrectas[clave]);
 
-  preguntas.forEach((pregunta, indice) => {
-    const leyenda = pregunta.querySelector(":scope > legend");
+  const leyendaGeneral = contenedorPreguntas.querySelector(":scope > legend");
+  contenedorPreguntas.querySelectorAll(":scope > .pregunta-practica").forEach((pregunta) => pregunta.remove());
 
-    if (leyenda) {
-      const textoPregunta = leyenda.textContent.replace(/^\s*\d+\.\s*/, "");
-      leyenda.textContent = `${indice + 1}. ${textoPregunta}`;
-    }
+  const letrasSeleccionadas = mezclarElementos(abecedarioBraille).slice(0, cantidadPreguntas);
 
-    const contenedorOpciones = pregunta.querySelector(".opciones-practica");
-    if (contenedorOpciones) {
-      mezclarElementos(contenedorOpciones.children).forEach((opcion) => {
-        contenedorOpciones.appendChild(opcion);
-      });
-    }
+  letrasSeleccionadas.forEach((elemento, indice) => {
+    const nombrePregunta = `pregunta${indice + 1}`;
+    respuestasCorrectas[nombrePregunta] = elemento.braille;
 
+    const distractores = mezclarElementos(
+      abecedarioBraille.filter((item) => item.letra !== elemento.letra)
+    ).slice(0, 2);
+
+    const alternativas = mezclarElementos([elemento, ...distractores]);
+
+    const pregunta = document.createElement("fieldset");
+    pregunta.className = "pregunta-practica";
+
+    const leyenda = document.createElement("legend");
+    leyenda.textContent = `${indice + 1}. ¿Cuál es la representación Braille de la letra ${elemento.letra}?`;
+
+    const opciones = document.createElement("div");
+    opciones.className = "opciones-practica";
+
+    alternativas.forEach((alternativa) => {
+      opciones.appendChild(crearOpcion(nombrePregunta, alternativa.braille));
+    });
+
+    pregunta.append(leyenda, opciones);
     contenedorPreguntas.appendChild(pregunta);
   });
+
+  if (leyendaGeneral) {
+    leyendaGeneral.textContent = "Cinco ejercicios aleatorios de reconocimiento Braille";
+  }
 }
 
 function limpiarNombre(nombre) {
@@ -132,14 +188,15 @@ function evaluarPractica(evento) {
     (total, [pregunta, respuesta]) => total + (datos.get(pregunta) === respuesta ? 1 : 0),
     0
   );
-  const porcentaje = Math.round((aciertos / Object.keys(respuestasCorrectas).length) * 100);
+  const totalPreguntas = Object.keys(respuestasCorrectas).length;
+  const porcentaje = Math.round((aciertos / totalPreguntas) * 100);
 
   if (porcentaje === 100) {
     constanciaHabilitada = true;
     completarConstancia(nombre);
     botonConstancia.hidden = false;
     mostrarResultado(
-      "¡Excelente! Lograste 5 de 5 respuestas correctas (100 %). Se habilitó tu constancia simbólica de participación.",
+      `¡Excelente! Lograste ${totalPreguntas} de ${totalPreguntas} respuestas correctas (100 %). Se habilitó tu constancia simbólica de participación.`,
       "exito"
     );
     botonConstancia.focus();
@@ -149,7 +206,7 @@ function evaluarPractica(evento) {
   constanciaHabilitada = false;
   botonConstancia.hidden = true;
   mostrarResultado(
-    `Obtuviste ${aciertos} de 5 respuestas correctas (${porcentaje} %). Revisa el banco Braille e inténtalo nuevamente. La constancia se habilita únicamente con 100 %.`,
+    `Obtuviste ${aciertos} de ${totalPreguntas} respuestas correctas (${porcentaje} %). Revisa el banco Braille e inténtalo nuevamente. La constancia se habilita únicamente con 100 %.`,
     "reintento"
   );
 }
@@ -177,11 +234,11 @@ function reiniciarPractica() {
   botonConstancia.hidden = true;
   resultadoPractica.hidden = true;
   resultadoPractica.className = "resultado-practica";
-  randomizarPractica();
+  generarPracticaAleatoria();
 }
 
 if (formularioPractica) {
-  randomizarPractica();
+  generarPracticaAleatoria();
   formularioPractica.addEventListener("submit", evaluarPractica);
   formularioPractica.addEventListener("reset", () => {
     window.setTimeout(reiniciarPractica, 0);
