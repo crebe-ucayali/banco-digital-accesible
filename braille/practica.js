@@ -20,6 +20,46 @@ const respuestasCorrectas = {
 
 let constanciaHabilitada = false;
 
+function mezclarElementos(elementos) {
+  const lista = [...elementos];
+
+  for (let indice = lista.length - 1; indice > 0; indice -= 1) {
+    const posicionAleatoria = Math.floor(Math.random() * (indice + 1));
+    [lista[indice], lista[posicionAleatoria]] = [lista[posicionAleatoria], lista[indice]];
+  }
+
+  return lista;
+}
+
+function randomizarPractica() {
+  if (!formularioPractica) return;
+
+  const contenedorPreguntas = formularioPractica.querySelector(".lista-preguntas");
+  if (!contenedorPreguntas) return;
+
+  const preguntas = mezclarElementos(
+    contenedorPreguntas.querySelectorAll(":scope > .pregunta-practica")
+  );
+
+  preguntas.forEach((pregunta, indice) => {
+    const leyenda = pregunta.querySelector(":scope > legend");
+
+    if (leyenda) {
+      const textoPregunta = leyenda.textContent.replace(/^\s*\d+\.\s*/, "");
+      leyenda.textContent = `${indice + 1}. ${textoPregunta}`;
+    }
+
+    const contenedorOpciones = pregunta.querySelector(".opciones-practica");
+    if (contenedorOpciones) {
+      mezclarElementos(contenedorOpciones.children).forEach((opcion) => {
+        contenedorOpciones.appendChild(opcion);
+      });
+    }
+
+    contenedorPreguntas.appendChild(pregunta);
+  });
+}
+
 function limpiarNombre(nombre) {
   return String(nombre || "")
     .replace(/\s+/g, " ")
@@ -137,9 +177,11 @@ function reiniciarPractica() {
   botonConstancia.hidden = true;
   resultadoPractica.hidden = true;
   resultadoPractica.className = "resultado-practica";
+  randomizarPractica();
 }
 
 if (formularioPractica) {
+  randomizarPractica();
   formularioPractica.addEventListener("submit", evaluarPractica);
   formularioPractica.addEventListener("reset", () => {
     window.setTimeout(reiniciarPractica, 0);
