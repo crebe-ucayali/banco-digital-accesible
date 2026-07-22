@@ -11,6 +11,7 @@
   <link rel="stylesheet" href="estilos.css?v=7">
   <link rel="stylesheet" href="cabecera-bda.css?v=2">
   <link rel="stylesheet" href="index.css?v=2">
+  <link rel="stylesheet" href="practica.css?v=1">
   <link rel="stylesheet" href="../accesibilidad.css?v=2">
   <style>
     body .cabecera{position:relative !important;overflow:hidden !important;padding:30px 18px 145px !important;color:#ffffff !important;background:radial-gradient(circle at 84% 70%, rgba(255,255,255,.11) 0 22%, transparent 23%),radial-gradient(circle at 86% 74%, rgba(255,255,255,.08) 0 36%, transparent 37%),linear-gradient(135deg,#0b3550 0%,#0f4f57 48%,#0f766e 100%) !important;}
@@ -52,7 +53,7 @@
     <section class="panel-busqueda" aria-labelledby="titulo-catalogo">
       <div class="panel-encabezado">
         <div><p class="sobretitulo">Banco de contenidos</p><h2 id="titulo-catalogo">Explora el sistema Braille</h2></div>
-        <div class="acciones-panel"><div class="botones-panel"><a href="teoria.html" class="boton-braille-teoria">Conoce el sistema Braille</a><a href="faq.html" class="boton-braille-teoria">Preguntas frecuentes</a><a href="accesibilidad.html" class="boton-braille-teoria">Accesibilidad</a></div><p id="contador-resultados" class="contador" role="status" aria-live="polite">Cargando contenidos…</p></div>
+        <div class="acciones-panel"><div class="botones-panel"><a href="teoria.html" class="boton-braille-teoria">Conoce el sistema Braille</a><a href="#practica-braille" class="boton-braille-teoria">Practica lo aprendido</a><a href="faq.html" class="boton-braille-teoria">Preguntas frecuentes</a><a href="accesibilidad.html" class="boton-braille-teoria">Accesibilidad</a></div><p id="contador-resultados" class="contador" role="status" aria-live="polite">Cargando contenidos…</p></div>
       </div>
       <div class="herramientas">
         <div class="grupo-busqueda"><label for="buscador">Buscar una letra, número, signo o palabra</label><div class="campo-busqueda"><svg aria-hidden="true" viewBox="0 0 24 24" width="20" height="20"><path d="m21 21-4.7-4.7m2.2-5.3a7.5 7.5 0 1 1-15 0 7.5 7.5 0 0 1 15 0Z" fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="2" /></svg><input id="buscador" name="buscador" type="search" placeholder="Ejemplo: A, 5, coma o casa" autocomplete="off" aria-describedby="ayuda-busqueda"></div><p id="ayuda-busqueda" class="ayuda">La búsqueda también reconoce palabras escritas sin tilde.</p></div>
@@ -61,10 +62,53 @@
     </section>
     <section id="presentacion" class="seccion-presentacion" aria-labelledby="titulo-presentacion"><div class="panel-presentacion"><div><p class="sobretitulo">Conoce el recurso</p><h2 id="titulo-presentacion">Una consulta inicial, clara y organizada</h2></div><p>Explora la representación en Braille de letras, números, signos y palabras de uso cotidiano. Utiliza el buscador o selecciona una categoría para encontrar rápidamente el contenido que necesitas.</p></div></section>
     <section class="catalogo" aria-labelledby="titulo-resultados"><h2 id="titulo-resultados" class="solo-lectores">Resultados de la consulta</h2><div id="lista-tarjetas" class="lista-tarjetas" aria-busy="true"></div><div class="contenedor-boton-mas"><button id="mostrar-aleatorio" class="boton-mas" type="button">Mostrar más signos</button></div><div id="estado-vacio" class="estado-vacio" hidden><p class="estado-vacio-simbolo" aria-hidden="true">⠿</p><h3>No encontramos resultados</h3><p>Prueba con otro término o selecciona una categoría diferente.</p><button id="limpiar-filtros" class="boton boton-primario" type="button">Ver todos los contenidos</button></div><div id="mensaje-error" class="mensaje-error" role="alert" hidden><h3>No se pudieron cargar los contenidos</h3><p>Abre el sitio desde un servidor web local o desde GitHub Pages e inténtalo nuevamente.</p></div></section>
+
+    <section id="practica-braille" class="seccion-practica" aria-labelledby="titulo-practica">
+      <div class="panel-practica">
+        <div class="practica-encabezado">
+          <div><p class="sobretitulo">Actividad de práctica</p><h2 id="titulo-practica">Reconoce las letras en Braille</h2><p>Selecciona la representación correcta en cada ejercicio. La constancia simbólica se habilitará únicamente cuando alcances el 100 % de respuestas correctas.</p></div>
+          <div class="insignia-practica" aria-hidden="true">⠿</div>
+        </div>
+        <form id="formulario-practica" class="formulario-practica">
+          <div class="campo-participante"><label for="nombre-participante">Nombre del participante</label><input id="nombre-participante" name="nombreParticipante" type="text" maxlength="80" autocomplete="name" required placeholder="Escribe tu nombre completo"></div>
+          <fieldset class="lista-preguntas">
+            <legend class="solo-lectores">Cinco ejercicios de reconocimiento Braille</legend>
+            <fieldset class="pregunta-practica"><legend>1. ¿Cuál es la representación Braille de la letra A?</legend><div class="opciones-practica"><label class="opcion-practica"><input type="radio" name="pregunta1" value="⠃"><span>⠃</span></label><label class="opcion-practica"><input type="radio" name="pregunta1" value="⠁"><span>⠁</span></label><label class="opcion-practica"><input type="radio" name="pregunta1" value="⠉"><span>⠉</span></label></div></fieldset>
+            <fieldset class="pregunta-practica"><legend>2. ¿Cuál es la representación Braille de la letra C?</legend><div class="opciones-practica"><label class="opcion-practica"><input type="radio" name="pregunta2" value="⠉"><span>⠉</span></label><label class="opcion-practica"><input type="radio" name="pregunta2" value="⠙"><span>⠙</span></label><label class="opcion-practica"><input type="radio" name="pregunta2" value="⠋"><span>⠋</span></label></div></fieldset>
+            <fieldset class="pregunta-practica"><legend>3. ¿Cuál es la representación Braille de la letra E?</legend><div class="opciones-practica"><label class="opcion-practica"><input type="radio" name="pregunta3" value="⠊"><span>⠊</span></label><label class="opcion-practica"><input type="radio" name="pregunta3" value="⠑"><span>⠑</span></label><label class="opcion-practica"><input type="radio" name="pregunta3" value="⠓"><span>⠓</span></label></div></fieldset>
+            <fieldset class="pregunta-practica"><legend>4. ¿Cuál es la representación Braille de la letra L?</legend><div class="opciones-practica"><label class="opcion-practica"><input type="radio" name="pregunta4" value="⠇"><span>⠇</span></label><label class="opcion-practica"><input type="radio" name="pregunta4" value="⠍"><span>⠍</span></label><label class="opcion-practica"><input type="radio" name="pregunta4" value="⠝"><span>⠝</span></label></div></fieldset>
+            <fieldset class="pregunta-practica"><legend>5. ¿Cuál es la representación Braille de la letra P?</legend><div class="opciones-practica"><label class="opcion-practica"><input type="radio" name="pregunta5" value="⠗"><span>⠗</span></label><label class="opcion-practica"><input type="radio" name="pregunta5" value="⠏"><span>⠏</span></label><label class="opcion-practica"><input type="radio" name="pregunta5" value="⠟"><span>⠟</span></label></div></fieldset>
+          </fieldset>
+          <div class="acciones-practica"><button class="boton-practica" type="submit">Revisar práctica</button><button class="boton-practica boton-practica-secundario" type="reset">Intentar nuevamente</button><button id="ver-constancia" class="boton-practica" type="button" hidden>Ver constancia simbólica</button></div>
+          <p id="resultado-practica" class="resultado-practica" role="status" tabindex="-1" aria-live="polite" hidden></p>
+          <p class="aviso-constancia"><strong>Importante:</strong> la constancia es simbólica, educativa y motivacional. No constituye certificado oficial, acreditación académica ni constancia institucional de capacitación.</p>
+        </form>
+      </div>
+    </section>
+
     <section id="aviso-pedagogico" class="seccion-aviso" aria-labelledby="titulo-aviso"><aside class="aviso-pedagogico"><div class="aviso-icono" aria-hidden="true">i</div><div><h2 id="titulo-aviso">Advertencia pedagógica</h2><p>Este recurso facilita la consulta visual del sistema Braille. No reemplaza el aprendizaje táctil en material impreso en relieve.</p></div></aside></section>
   </main>
-  <footer class="footer-crebe" aria-label="Pie de página institucional"><div class="footer-contenido footer-contenedor"><section class="footer-bloque footer-columna" aria-labelledby="titulo-footer-descripcion"><h2 id="titulo-footer-descripcion">Banco Digital Braille</h2><p>Recurso educativo para la consulta y el reconocimiento inicial del sistema Braille en contextos inclusivos.</p><p>Contenido organizado para una consulta visual clara y compatible con navegación por teclado.</p></section><nav class="footer-bloque footer-columna" aria-labelledby="titulo-footer-enlaces"><h2 id="titulo-footer-enlaces">Enlaces</h2><p><a href="../index.html">Banco Digital Accesible</a><br><a href="teoria.html">Conoce el sistema Braille</a><br><a href="faq.html">Preguntas frecuentes</a><br><a href="accesibilidad.html">Accesibilidad Braille</a><br><a href="../docs/fuentes-y-creditos.md">Licencias y fuentes</a></p></nav><section class="footer-bloque footer-columna contacto-footer" aria-labelledby="titulo-footer-contacto"><h2 id="titulo-footer-contacto">Contacto</h2><p><a href="https://crebe-ucayali.github.io/accesos-complementarios/paginas/contacto.html">Contacto Institucional</a><br>CREBE "Señor de los Milagros" - Ucayali<br>Horario: lunes a viernes, 8:00 a.m. - 12:00 p.m.</p></section></div><div class="footer-final"><p>© 2026 Gabriel Berrospi. Desarrollo original. Uso institucional autorizado al CREBE "Señor de los Milagros" - Ucayali.</p></div></footer>
+
+  <dialog id="constancia-dialogo" class="constancia-dialogo" aria-labelledby="titulo-constancia">
+    <div class="constancia-contenedor">
+      <div class="constancia-acciones"><button id="imprimir-constancia" class="boton-practica" type="button">Imprimir o guardar en PDF</button><button id="cerrar-constancia" class="boton-practica boton-practica-secundario" type="button">Cerrar</button></div>
+      <article class="constancia">
+        <p class="constancia-marca">Ecosistema Virtual Accesible · CREBE Ucayali</p>
+        <h2 id="titulo-constancia">Constancia simbólica de participación</h2>
+        <p class="constancia-subtitulo">Práctica inicial del sistema Braille</p>
+        <p>Se reconoce a:</p>
+        <p id="constancia-nombre" class="constancia-nombre">Participante</p>
+        <p class="constancia-texto">por completar satisfactoriamente la actividad digital de reconocimiento inicial de letras en Braille, alcanzando el 100 % de respuestas correctas.</p>
+        <p class="constancia-logro">Logro motivacional: Explorador Braille</p>
+        <div class="constancia-datos"><span><strong>Fecha:</strong> <span id="constancia-fecha"></span></span><span><strong>Código:</strong> <span id="constancia-codigo"></span></span></div>
+        <p class="constancia-nota">Documento simbólico de carácter educativo y motivacional. No constituye certificado oficial, acreditación académica ni constancia institucional de capacitación.</p>
+      </article>
+    </div>
+  </dialog>
+
+  <footer class="footer-crebe" aria-label="Pie de página institucional"><div class="footer-contenido footer-contenedor"><section class="footer-bloque footer-columna" aria-labelledby="titulo-footer-descripcion"><h2 id="titulo-footer-descripcion">Banco Digital Braille</h2><p>Recurso educativo para la consulta y el reconocimiento inicial del sistema Braille en contextos inclusivos.</p><p>Contenido organizado para una consulta visual clara y compatible con navegación por teclado.</p></section><nav class="footer-bloque footer-columna" aria-labelledby="titulo-footer-enlaces"><h2 id="titulo-footer-enlaces">Enlaces</h2><p><a href="../index.html">Banco Digital Accesible</a><br><a href="teoria.html">Conoce el sistema Braille</a><br><a href="#practica-braille">Práctica Braille</a><br><a href="faq.html">Preguntas frecuentes</a><br><a href="accesibilidad.html">Accesibilidad Braille</a><br><a href="../docs/fuentes-y-creditos.md">Licencias y fuentes</a></p></nav><section class="footer-bloque footer-columna contacto-footer" aria-labelledby="titulo-footer-contacto"><h2 id="titulo-footer-contacto">Contacto</h2><p><a href="https://crebe-ucayali.github.io/accesos-complementarios/paginas/contacto.html">Contacto Institucional</a><br>CREBE "Señor de los Milagros" - Ucayali<br>Horario: lunes a viernes, 8:00 a.m. - 12:00 p.m.</p></section></div><div class="footer-final"><p>© 2026 Gabriel Berrospi. Desarrollo original. Uso institucional autorizado al CREBE "Señor de los Milagros" - Ucayali.</p></div></footer>
   <script src="../accesibilidad.js?v=1" defer></script>
   <script src="app.js?v=10" defer></script>
+  <script src="practica.js?v=1" defer></script>
 </body>
 </html>
