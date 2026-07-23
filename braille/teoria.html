@@ -28,7 +28,6 @@
     body .portada h1{max-width:900px!important;margin:0 0 22px!important;color:#ffffff!important;font-family:Georgia,"Times New Roman",serif!important;font-size:clamp(2.5rem,5.8vw,4.15rem)!important;line-height:1.04!important;letter-spacing:-.04em!important;text-shadow:0 3px 5px rgba(0,0,0,.22)!important;}
     body .subtitulo{max-width:880px!important;margin:0!important;color:rgba(255,255,255,.96)!important;font-size:1.22rem!important;line-height:1.65!important;text-shadow:0 2px 4px rgba(0,0,0,.28)!important;}
     body main{margin-top:-78px!important;}
-
     .secuencia-grafica-braille{display:grid;gap:0;margin:24px 0;}
     .etapa-grafica{position:relative;padding:24px;background:#f8fbfc;border:1px solid #cbdde5;border-radius:22px;box-shadow:0 8px 18px rgba(16,42,67,.06);}
     .etapa-encabezado{display:flex;align-items:center;gap:12px;margin-bottom:16px;}
@@ -45,18 +44,14 @@
     .celda-palabra i{grid-area:signo;color:#0b3550;font-family:"Segoe UI Symbol","Noto Sans Symbols 2",Arial,sans-serif;font-size:2.35rem;font-style:normal;line-height:1;}
     .celda-palabra small{grid-area:orden;color:#486581;text-align:center;font-size:.76rem;font-weight:800;}
     .nota-ejemplo{margin:0;text-align:center;color:#486581;font-size:.94rem;}
-
     .montaje-regleta{position:relative;max-width:760px;margin:18px auto 12px;padding:44px 28px 34px;background:#eef4f6;border:1px solid #c4d7df;border-radius:22px;}
     .regleta-tapa,.regleta-base{position:relative;z-index:3;height:70px;border:5px solid #0b4f4a;border-radius:15px;background-color:#d9eee9;background-image:radial-gradient(circle,#0b4f4a 0 3px,transparent 4px);background-size:28px 22px;box-shadow:0 7px 16px rgba(16,42,67,.14);}
     .regleta-tapa{margin-bottom:-12px;}
     .papel-en-regleta{position:relative;z-index:2;display:grid;place-items:center;min-height:116px;margin:0 18px;padding:20px;color:#486581;background:#fffdf7;border:1px solid #d8d0bd;box-shadow:0 8px 18px rgba(16,42,67,.10);font-weight:800;text-align:center;}
     .regleta-base{z-index:1;height:42px;margin-top:-12px;background-image:none;background:#9fc7bd;}
     .etiqueta-pieza{position:absolute;z-index:5;padding:6px 10px;color:#fff;background:#0b3550;border-radius:999px;font-size:.78rem;font-weight:900;}
-    .etiqueta-tapa{top:12px;left:28px;}
-    .etiqueta-papel{top:50%;right:12px;transform:translateY(-50%);}
-    .etiqueta-base{bottom:8px;left:28px;}
+    .etiqueta-tapa{top:12px;left:28px;}.etiqueta-papel{top:50%;right:12px;transform:translateY(-50%);}.etiqueta-base{bottom:8px;left:28px;}
     .leyenda-esquema{margin:12px 0 0;text-align:center;color:#486581;font-size:.86rem;}
-
     .regleta-escritura{position:relative;max-width:780px;margin:18px auto;padding:28px 24px 22px;background:#d9eee9;border:5px solid #0b4f4a;border-radius:18px;box-shadow:0 9px 20px rgba(16,42,67,.12);}
     .fila-regleta{display:grid;grid-template-columns:repeat(4,minmax(92px,1fr));gap:10px;direction:ltr;}
     .celda-regleta{position:relative;display:grid;place-items:center;min-height:104px;padding:10px;color:#0b3550;background:#fffdf7;border:2px solid #8eb4aa;border-radius:12px;font-weight:900;}
@@ -66,38 +61,20 @@
     .punzon-grafico{position:absolute;right:50px;top:-50px;width:15px;height:72px;background:linear-gradient(#88511a 0 45%,#c7cbd0 46% 100%);border-radius:9px 9px 2px 2px;transform:rotate(18deg);box-shadow:0 5px 8px rgba(0,0,0,.18);}
     .punzon-grafico::after{content:"";position:absolute;bottom:-12px;left:4px;border-left:4px solid transparent;border-right:4px solid transparent;border-top:14px solid #59636c;}
     .orden-reverso{display:flex;justify-content:space-between;gap:12px;margin-top:12px;color:#0b3550;font-size:.82rem;font-weight:900;}
-
     .giro-hoja{display:grid;grid-template-columns:minmax(0,1fr) 84px minmax(0,1fr);align-items:center;gap:16px;max-width:820px;margin:18px auto;}
     .hoja-grafica{min-height:210px;padding:18px;background:#fffdf7;border:1px solid #d8d0bd;border-radius:8px;box-shadow:0 10px 22px rgba(16,42,67,.12);}
     .hoja-grafica strong{display:block;margin-bottom:16px;color:#0b3550;text-align:center;}
-    .hoja-reverso{transform:rotate(-2deg);}
-    .hoja-frente{transform:rotate(2deg);}
+    .hoja-reverso{transform:rotate(-2deg);}.hoja-frente{transform:rotate(2deg);}
     .mini-palabra{display:flex;justify-content:center;gap:8px;flex-wrap:wrap;margin-top:22px;}
     .mini-celda{display:grid;place-items:center;min-width:54px;min-height:66px;padding:6px;color:#0b3550;background:#f4f8f9;border:1px solid #b7ced9;border-radius:10px;font-weight:900;}
-    .mini-celda span{font-family:"Segoe UI Symbol","Noto Sans Symbols 2",Arial,sans-serif;font-size:1.8rem;line-height:1;}
-    .mini-celda.reversa span{transform:scaleX(-1);}
+    .mini-celda span{font-family:"Segoe UI Symbol","Noto Sans Symbols 2",Arial,sans-serif;font-size:1.8rem;line-height:1;}.mini-celda.reversa span{transform:scaleX(-1);}
     .flecha-giro{display:grid;place-items:center;color:#0f766e;font-size:4rem;font-weight:900;line-height:1;}
     .accion-hoja{margin-top:16px;color:#486581;text-align:center;font-size:.88rem;font-weight:800;}
     .clave-sentidos{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;margin:20px 0;}
-    .clave-sentidos div{padding:17px;background:#fff;border:1px solid #cbdde5;border-radius:16px;color:#486581;}
-    .clave-sentidos strong{display:block;margin-bottom:5px;color:#0b3550;}
-
-    @media(max-width:760px){
-      .fila-regleta{grid-template-columns:repeat(2,minmax(0,1fr));}
-      .giro-hoja{grid-template-columns:1fr;}
-      .flecha-giro{transform:rotate(90deg);font-size:3rem;}
-      .clave-sentidos{grid-template-columns:1fr;}
-      .etiqueta-papel{position:static;display:table;margin:14px auto 0;transform:none;}
-    }
+    .clave-sentidos div{padding:17px;background:#fff;border:1px solid #cbdde5;border-radius:16px;color:#486581;}.clave-sentidos strong{display:block;margin-bottom:5px;color:#0b3550;}
+    @media(max-width:760px){.fila-regleta{grid-template-columns:repeat(2,minmax(0,1fr));}.giro-hoja{grid-template-columns:1fr;}.flecha-giro{transform:rotate(90deg);font-size:3rem;}.clave-sentidos{grid-template-columns:1fr;}.etiqueta-papel{position:static;display:table;margin:14px auto 0;transform:none;}}
     @media(max-width:700px){body .cabecera{padding:26px 18px 116px!important;}body .patron-portada{background-size:260px auto!important;}body .navegacion{align-items:flex-start!important;flex-direction:column!important;}body .portada{margin-top:54px!important;}body .marca-institucional{align-items:flex-start!important;}body .marca-logo-superior{width:52px!important;height:52px!important;border-radius:16px!important;}body .marca-texto-superior{padding-left:12px!important;}body .marca-nombre-institucional{font-size:.94rem!important;}body .marca-detalle-institucional{font-size:.82rem!important;}body .enlaces-cabecera{justify-content:flex-start!important;}}
-    @media(max-width:520px){
-      .etapa-grafica{padding:20px 16px;}
-      .celda-palabra{min-width:90px;}
-      .montaje-regleta{padding:44px 12px 32px;}
-      .papel-en-regleta{margin:0 8px;}
-      .fila-regleta{grid-template-columns:1fr 1fr;}
-      .direccion-grafica{grid-template-columns:auto 1fr auto;gap:8px;}
-    }
+    @media(max-width:520px){.etapa-grafica{padding:20px 16px;}.celda-palabra{min-width:90px;}.montaje-regleta{padding:44px 12px 32px;}.papel-en-regleta{margin:0 8px;}.fila-regleta{grid-template-columns:1fr 1fr;}.direccion-grafica{grid-template-columns:auto 1fr auto;gap:8px;}}
   </style>
 </head>
 <body>
@@ -113,304 +90,26 @@
     </nav>
     <div class="portada"><p class="etiqueta">ECOSISTEMA VIRTUAL ACCESIBLE</p><h1>Banco Digital Accesible</h1><p class="subtitulo">Espacio central de acceso a recursos digitales para fortalecer la inclusión educativa, la accesibilidad, la comunicación y la atención a la diversidad.</p></div>
   </header>
-
   <main id="contenido-principal">
     <section class="panel-busqueda" aria-labelledby="titulo-teoria">
-      <div class="panel-encabezado">
-        <div>
-          <p class="sobretitulo">Módulo Braille</p>
-          <h2 id="titulo-teoria">Conoce el sistema Braille</h2>
-          <p class="ayuda">Contenido de apoyo para docentes, familias y comunidad educativa que requieren una explicación inicial y organizada sobre el sistema Braille.</p>
-          <nav class="menu-secciones" aria-label="Secciones de la página"><a href="#que-es">Qué es</a><a href="#como-funciona">Cómo funciona</a><a href="#alfabeto">Alfabeto</a><a href="#lectura-escritura">Lectura y escritura</a><a href="#educacion">Uso educativo</a><a href="#orientaciones">Orientaciones</a></nav>
-        </div>
-      </div>
-
+      <div class="panel-encabezado"><div><p class="sobretitulo">Módulo Braille</p><h2 id="titulo-teoria">Conoce el sistema Braille</h2><p class="ayuda">Contenido de apoyo para docentes, familias y comunidad educativa que requieren una explicación inicial y organizada sobre el sistema Braille.</p><nav class="menu-secciones" aria-label="Secciones de la página"><a href="#que-es">Qué es</a><a href="#como-funciona">Cómo funciona</a><a href="#alfabeto">Alfabeto</a><a href="#lectura-escritura">Lectura y escritura</a><a href="#educacion">Uso educativo</a><a href="#orientaciones">Orientaciones</a></nav></div></div>
       <div class="pagina-teoria">
-        <article class="tarjeta-teoria" id="que-es">
-          <h3>¿Qué es el sistema Braille?</h3>
-          <p>El Braille es un sistema de lectura y escritura basado en puntos en relieve. Estos puntos se perciben con el tacto, principalmente con las yemas de los dedos. Gracias a este sistema, una persona con discapacidad visual puede leer letras, números, signos de puntuación, palabras, frases y textos completos.</p>
-          <p>No se trata de un idioma diferente. El Braille es un código. Esto significa que puede representar distintos idiomas, como el español, el inglés, el quechua u otros, según las reglas que se utilicen.</p>
-          <p>Su valor educativo es muy importante porque permite que el estudiante acceda a la lectura y la escritura de manera directa. No depende únicamente de escuchar información, sino que puede explorar, leer, revisar, corregir y producir textos usando sus propias manos.</p>
-          <div class="nota-teoria">El Braille no reemplaza la voz, los audios ni la tecnología. Los complementa. Su propósito es fortalecer la autonomía, la alfabetización y el acceso real a la información escrita.</div>
-        </article>
-
-        <article class="tarjeta-teoria">
-          <h3>Breve historia del Braille</h3>
-          <p>El sistema Braille fue creado por Louis Braille, una persona francesa que perdió la visión durante su infancia. Desde muy joven buscó una forma más práctica para que las personas ciegas pudieran leer y escribir.</p>
-          <p>Su aporte fue usar una celda de seis puntos. Con esos seis puntos se podían formar distintas combinaciones para representar letras, números y signos. Esta idea permitió que la lectura táctil fuera más rápida, clara y accesible.</p>
-          <p>Con el tiempo, el Braille se difundió en muchos países y fue adaptándose a diferentes lenguas y necesidades. Hoy se usa en libros, materiales educativos, señalización, ascensores, medicamentos, documentos, tecnología y recursos de apoyo para la inclusión.</p>
-        </article>
-
-        <article class="tarjeta-teoria" id="como-funciona">
-          <h3>¿Cómo funciona la celda Braille?</h3>
-          <p>La base del sistema es la celda Braille. Esta celda está formada por seis puntos distribuidos en dos columnas y tres filas. Cada punto tiene una posición específica y se numera del 1 al 6.</p>
-          <div class="braille-demo" aria-label="Representación de los seis puntos Braille"><div class="punto">1</div><div class="punto">4</div><div class="punto">2</div><div class="punto">5</div><div class="punto">3</div><div class="punto">6</div></div>
-          <p>La columna izquierda contiene los puntos 1, 2 y 3. La columna derecha contiene los puntos 4, 5 y 6. Al combinar algunos de estos puntos, se forman las letras, los números y otros signos.</p>
-          <table class="tabla-simple">
-            <thead><tr><th>Elemento</th><th>Explicación sencilla</th></tr></thead>
-            <tbody>
-              <tr><td>Celda Braille</td><td>Es el espacio básico donde se organizan los seis puntos.</td></tr>
-              <tr><td>Puntos en relieve</td><td>Son pequeños puntos que se pueden sentir con los dedos.</td></tr>
-              <tr><td>Combinación</td><td>Es la forma en que se activan algunos puntos para crear un signo.</td></tr>
-              <tr><td>Lectura táctil</td><td>Es la lectura que se realiza mediante el tacto, no mediante la vista.</td></tr>
-            </tbody>
-          </table>
-          <div class="nota-teoria">Para aprender Braille no basta con memorizar puntos. También se necesita práctica táctil, orientación, acompañamiento pedagógico y materiales adecuados.</div>
-        </article>
-
-        <article class="tarjeta-teoria" id="alfabeto">
-          <h3>Construcción pedagógica del alfabeto Braille</h3>
-          <p>El alfabeto puede comprenderse por series. Esta organización permite reconocer que muchas letras nuevas se forman a partir de combinaciones ya aprendidas, añadiendo uno o dos puntos en la parte inferior de la celda.</p>
-
-          <h4>Primera serie: de la A a la J</h4>
-          <p>Las letras de la A a la J utilizan únicamente los puntos 1, 2, 4 y 5. En esta primera serie todavía no se emplean los puntos inferiores 3 y 6.</p>
-          <div class="alfabeto-braille" role="list" aria-label="Primera serie del alfabeto Braille, letras A a J">
-            <div class="letra-braille" role="listitem" aria-label="Letra a, punto 1"><span class="letra-latina">A</span><span class="signo-braille" aria-hidden="true">⠁</span><span class="puntos-letra">Punto 1</span></div>
-            <div class="letra-braille" role="listitem" aria-label="Letra b, puntos 1 y 2"><span class="letra-latina">B</span><span class="signo-braille" aria-hidden="true">⠃</span><span class="puntos-letra">Puntos 1-2</span></div>
-            <div class="letra-braille" role="listitem" aria-label="Letra c, puntos 1 y 4"><span class="letra-latina">C</span><span class="signo-braille" aria-hidden="true">⠉</span><span class="puntos-letra">Puntos 1-4</span></div>
-            <div class="letra-braille" role="listitem" aria-label="Letra d, puntos 1, 4 y 5"><span class="letra-latina">D</span><span class="signo-braille" aria-hidden="true">⠙</span><span class="puntos-letra">Puntos 1-4-5</span></div>
-            <div class="letra-braille" role="listitem" aria-label="Letra e, puntos 1 y 5"><span class="letra-latina">E</span><span class="signo-braille" aria-hidden="true">⠑</span><span class="puntos-letra">Puntos 1-5</span></div>
-            <div class="letra-braille" role="listitem" aria-label="Letra f, puntos 1, 2 y 4"><span class="letra-latina">F</span><span class="signo-braille" aria-hidden="true">⠋</span><span class="puntos-letra">Puntos 1-2-4</span></div>
-            <div class="letra-braille" role="listitem" aria-label="Letra g, puntos 1, 2, 4 y 5"><span class="letra-latina">G</span><span class="signo-braille" aria-hidden="true">⠛</span><span class="puntos-letra">Puntos 1-2-4-5</span></div>
-            <div class="letra-braille" role="listitem" aria-label="Letra h, puntos 1, 2 y 5"><span class="letra-latina">H</span><span class="signo-braille" aria-hidden="true">⠓</span><span class="puntos-letra">Puntos 1-2-5</span></div>
-            <div class="letra-braille" role="listitem" aria-label="Letra i, puntos 2 y 4"><span class="letra-latina">I</span><span class="signo-braille" aria-hidden="true">⠊</span><span class="puntos-letra">Puntos 2-4</span></div>
-            <div class="letra-braille" role="listitem" aria-label="Letra j, puntos 2, 4 y 5"><span class="letra-latina">J</span><span class="signo-braille" aria-hidden="true">⠚</span><span class="puntos-letra">Puntos 2-4-5</span></div>
-          </div>
-
-          <h4>Segunda serie: de la K a la T</h4>
-          <p>La segunda serie repite, en el mismo orden, las formas de la A a la J y añade el punto 3. Por ejemplo, la A se convierte en K; la B, en L; y la J, en T.</p>
-          <div class="alfabeto-braille" role="list" aria-label="Segunda serie del alfabeto Braille, letras K a T">
-            <div class="letra-braille" role="listitem" aria-label="Letra k, puntos 1 y 3"><span class="letra-latina">K</span><span class="signo-braille" aria-hidden="true">⠅</span><span class="puntos-letra">Puntos 1-3</span></div>
-            <div class="letra-braille" role="listitem" aria-label="Letra l, puntos 1, 2 y 3"><span class="letra-latina">L</span><span class="signo-braille" aria-hidden="true">⠇</span><span class="puntos-letra">Puntos 1-2-3</span></div>
-            <div class="letra-braille" role="listitem" aria-label="Letra m, puntos 1, 3 y 4"><span class="letra-latina">M</span><span class="signo-braille" aria-hidden="true">⠍</span><span class="puntos-letra">Puntos 1-3-4</span></div>
-            <div class="letra-braille" role="listitem" aria-label="Letra n, puntos 1, 3, 4 y 5"><span class="letra-latina">N</span><span class="signo-braille" aria-hidden="true">⠝</span><span class="puntos-letra">Puntos 1-3-4-5</span></div>
-            <div class="letra-braille" role="listitem" aria-label="Letra o, puntos 1, 3 y 5"><span class="letra-latina">O</span><span class="signo-braille" aria-hidden="true">⠕</span><span class="puntos-letra">Puntos 1-3-5</span></div>
-            <div class="letra-braille" role="listitem" aria-label="Letra p, puntos 1, 2, 3 y 4"><span class="letra-latina">P</span><span class="signo-braille" aria-hidden="true">⠏</span><span class="puntos-letra">Puntos 1-2-3-4</span></div>
-            <div class="letra-braille" role="listitem" aria-label="Letra q, puntos 1, 2, 3, 4 y 5"><span class="letra-latina">Q</span><span class="signo-braille" aria-hidden="true">⠟</span><span class="puntos-letra">Puntos 1-2-3-4-5</span></div>
-            <div class="letra-braille" role="listitem" aria-label="Letra r, puntos 1, 2, 3 y 5"><span class="letra-latina">R</span><span class="signo-braille" aria-hidden="true">⠗</span><span class="puntos-letra">Puntos 1-2-3-5</span></div>
-            <div class="letra-braille" role="listitem" aria-label="Letra s, puntos 2, 3 y 4"><span class="letra-latina">S</span><span class="signo-braille" aria-hidden="true">⠎</span><span class="puntos-letra">Puntos 2-3-4</span></div>
-            <div class="letra-braille" role="listitem" aria-label="Letra t, puntos 2, 3, 4 y 5"><span class="letra-latina">T</span><span class="signo-braille" aria-hidden="true">⠞</span><span class="puntos-letra">Puntos 2-3-4-5</span></div>
-          </div>
-
-          <h4>Tercera serie: U, V, X, Y y Z</h4>
-          <p>Para formar U, V, X, Y y Z se toman las letras K, L, M, N y O, que ya contienen el punto 3, y se añade el punto 6. Por eso esta serie conserva la forma anterior y completa la fila inferior de la celda.</p>
-          <table class="tabla-simple tabla-series">
-            <thead><tr><th>Primera serie</th><th>Más punto 3</th><th>Más punto 6</th></tr></thead>
-            <tbody>
-              <tr><td>A ⠁</td><td>K ⠅</td><td>U ⠥</td></tr>
-              <tr><td>B ⠃</td><td>L ⠇</td><td>V ⠧</td></tr>
-              <tr><td>C ⠉</td><td>M ⠍</td><td>X ⠭</td></tr>
-              <tr><td>D ⠙</td><td>N ⠝</td><td>Y ⠽</td></tr>
-              <tr><td>E ⠑</td><td>O ⠕</td><td>Z ⠵</td></tr>
-            </tbody>
-          </table>
-          <div class="alfabeto-braille" role="list" aria-label="Tercera serie del alfabeto Braille, letras U, V, X, Y y Z">
-            <div class="letra-braille" role="listitem" aria-label="Letra u, puntos 1, 3 y 6"><span class="letra-latina">U</span><span class="signo-braille" aria-hidden="true">⠥</span><span class="puntos-letra">Puntos 1-3-6</span></div>
-            <div class="letra-braille" role="listitem" aria-label="Letra v, puntos 1, 2, 3 y 6"><span class="letra-latina">V</span><span class="signo-braille" aria-hidden="true">⠧</span><span class="puntos-letra">Puntos 1-2-3-6</span></div>
-            <div class="letra-braille" role="listitem" aria-label="Letra x, puntos 1, 3, 4 y 6"><span class="letra-latina">X</span><span class="signo-braille" aria-hidden="true">⠭</span><span class="puntos-letra">Puntos 1-3-4-6</span></div>
-            <div class="letra-braille" role="listitem" aria-label="Letra y, puntos 1, 3, 4, 5 y 6"><span class="letra-latina">Y</span><span class="signo-braille" aria-hidden="true">⠽</span><span class="puntos-letra">Puntos 1-3-4-5-6</span></div>
-            <div class="letra-braille" role="listitem" aria-label="Letra z, puntos 1, 3, 5 y 6"><span class="letra-latina">Z</span><span class="signo-braille" aria-hidden="true">⠵</span><span class="puntos-letra">Puntos 1-3-5-6</span></div>
-          </div>
-
-          <h4>La W y la Ñ</h4>
-          <p>La W es una excepción dentro de esta secuencia y se representa con los puntos 2-4-5-6. La Ñ es una letra propia del alfabeto español y se representa con los puntos 1-2-4-5-6.</p>
-          <div class="alfabeto-braille alfabeto-complementario" role="list" aria-label="Letras complementarias W y Ñ">
-            <div class="letra-braille" role="listitem" aria-label="Letra w, puntos 2, 4, 5 y 6"><span class="letra-latina">W</span><span class="signo-braille" aria-hidden="true">⠺</span><span class="puntos-letra">Puntos 2-4-5-6</span></div>
-            <div class="letra-braille" role="listitem" aria-label="Letra ñ, puntos 1, 2, 4, 5 y 6"><span class="letra-latina">Ñ</span><span class="signo-braille" aria-hidden="true">⠻</span><span class="puntos-letra">Puntos 1-2-4-5-6</span></div>
-          </div>
-          <div class="nota-teoria">Secuencia sugerida: primero reconocer la celda y las letras A-J; después relacionar A-J con K-T mediante el punto 3; finalmente comparar K-O con U-V-X-Y-Z al añadir el punto 6. La W y la Ñ se enseñan como configuraciones específicas.</div>
-        </article>
-
-        <article class="tarjeta-teoria">
-          <h3>Letras, números y signos</h3>
-          <p>En Braille, cada letra se representa mediante una combinación específica de puntos. Las primeras letras del alfabeto son especialmente importantes porque sirven como base para comprender otras combinaciones.</p>
-          <p>Los números también se representan en Braille, pero normalmente requieren un signo previo que indica que lo que sigue debe leerse como número. Una misma combinación puede tener valor de letra o de número, según el signo que la antecede.</p>
-          <p>También existen signos para la puntuación, las vocales acentuadas, las mayúsculas y otros usos específicos. Esto permite escribir frases completas, textos escolares, indicaciones, nombres, fechas y contenidos de distintas áreas curriculares.</p>
-        </article>
-
-        <article class="tarjeta-teoria" id="lectura-escritura">
-          <h3>Lectura y escritura: sentidos diferentes según la herramienta</h3>
-          <p>El Braille se lee de izquierda a derecha, igual que un texto habitual en español. La escritura cambia de sentido únicamente cuando se utiliza una regleta convencional y un punzón, porque los puntos se marcan desde el reverso del papel para que aparezcan en relieve al voltearlo.</p>
-          <p>La siguiente secuencia utiliza la palabra "CASA" para mostrar todo el proceso, desde la lectura inicial hasta el resultado final.</p>
-
-          <div class="secuencia-grafica-braille" aria-label="Secuencia gráfica para leer y escribir Braille con regleta y punzón">
-            <section class="etapa-grafica" aria-labelledby="etapa-lectura">
-              <div class="etapa-encabezado"><span class="numero-etapa">1</span><h4 id="etapa-lectura">Observar cómo se lee</h4></div>
-              <div class="direccion-grafica"><span>Inicio</span><div class="linea-direccion derecha" aria-hidden="true"></div><span>Fin</span></div>
-              <div class="palabra-demostracion" aria-label="Palabra CASA organizada para leerse de izquierda a derecha">
-                <span class="celda-palabra"><b>C</b><i aria-hidden="true">⠉</i><small>Primera</small></span>
-                <span class="celda-palabra"><b>A</b><i aria-hidden="true">⠁</i><small>Segunda</small></span>
-                <span class="celda-palabra"><b>S</b><i aria-hidden="true">⠎</i><small>Tercera</small></span>
-                <span class="celda-palabra"><b>A</b><i aria-hidden="true">⠁</i><small>Cuarta</small></span>
-              </div>
-              <p class="nota-ejemplo">Los dedos comienzan en la primera celda situada a la izquierda y avanzan hacia la derecha: C → A → S → A.</p>
-            </section>
-
-            <div class="conector-etapas" aria-hidden="true">↓</div>
-
-            <section class="etapa-grafica" aria-labelledby="etapa-colocar-papel">
-              <div class="etapa-encabezado"><span class="numero-etapa">2</span><h4 id="etapa-colocar-papel">Colocar el papel dentro de la regleta</h4></div>
-              <p>Se abre la regleta y se introduce la hoja entre la parte inferior y la parte superior. La cara posterior del papel queda orientada hacia quien escribe, porque allí se presionará con el punzón.</p>
-              <div class="montaje-regleta" role="img" aria-label="Esquema de una hoja colocada entre la base y la tapa de una regleta Braille">
-                <span class="etiqueta-pieza etiqueta-tapa">Tapa o guía superior</span>
-                <div class="regleta-tapa" aria-hidden="true"></div>
-                <div class="papel-en-regleta">Papel colocado y sujetado<br>Cara posterior hacia arriba</div>
-                <div class="regleta-base" aria-hidden="true"></div>
-                <span class="etiqueta-pieza etiqueta-papel">Papel entre ambas partes</span>
-                <span class="etiqueta-pieza etiqueta-base">Base de la regleta</span>
-              </div>
-              <p class="leyenda-esquema">Esquema referencial. La forma y el sistema de cierre pueden variar según el modelo de regleta.</p>
-            </section>
-
-            <div class="conector-etapas" aria-hidden="true">↓</div>
-
-            <section class="etapa-grafica" aria-labelledby="etapa-escribir">
-              <div class="etapa-encabezado"><span class="numero-etapa">3</span><h4 id="etapa-escribir">Escribir por el reverso, de derecha a izquierda</h4></div>
-              <div class="direccion-grafica"><span>Fin</span><div class="linea-direccion izquierda" aria-hidden="true"></div><span>Inicio</span></div>
-              <p>Se empieza en la celda ubicada en el extremo derecho. Después de marcar la C, se avanza una celda hacia la izquierda para escribir la A, luego la S y finalmente la última A. Visto desde el reverso, el orden queda invertido.</p>
-              <div class="regleta-escritura" role="img" aria-label="Regleta con la palabra CASA escrita por el reverso, comenzando en la derecha y avanzando hacia la izquierda">
-                <span class="marca-inicio-escritura">Aquí comienza la escritura</span>
-                <span class="punzon-grafico" aria-hidden="true"></span>
-                <div class="fila-regleta">
-                  <div class="celda-regleta"><span class="signo-reverso" aria-hidden="true">⠁</span><small>A, cuarta letra escrita</small></div>
-                  <div class="celda-regleta"><span class="signo-reverso" aria-hidden="true">⠎</span><small>S, tercera letra escrita</small></div>
-                  <div class="celda-regleta"><span class="signo-reverso" aria-hidden="true">⠁</span><small>A, segunda letra escrita</small></div>
-                  <div class="celda-regleta"><span class="signo-reverso" aria-hidden="true">⠉</span><small>C, primera letra escrita</small></div>
-                </div>
-                <div class="orden-reverso"><span>El avance continúa hacia la izquierda</span><span>Inicio en el extremo derecho</span></div>
-              </div>
-              <p class="nota-ejemplo">Desde esta cara posterior se observa A - S - A - C. Los signos también se punzan en posición inversa para que, al voltear la hoja, aparezcan correctamente en relieve.</p>
-            </section>
-
-            <div class="conector-etapas" aria-hidden="true">↓</div>
-
-            <section class="etapa-grafica" aria-labelledby="etapa-voltear">
-              <div class="etapa-encabezado"><span class="numero-etapa">4</span><h4 id="etapa-voltear">Sacar el papel y voltearlo</h4></div>
-              <p>Al terminar, se abre la regleta, se retira la hoja y se gira para colocar hacia arriba la cara donde quedaron los puntos en relieve. Este giro transforma la posición inversa de escritura en la posición correcta de lectura.</p>
-              <div class="giro-hoja" role="img" aria-label="La hoja se retira de la regleta y se voltea desde el reverso hacia el frente">
-                <div class="hoja-grafica hoja-reverso">
-                  <strong>Antes de voltear: reverso</strong>
-                  <div class="mini-palabra">
-                    <span class="mini-celda reversa"><span aria-hidden="true">⠁</span>A</span>
-                    <span class="mini-celda reversa"><span aria-hidden="true">⠎</span>S</span>
-                    <span class="mini-celda reversa"><span aria-hidden="true">⠁</span>A</span>
-                    <span class="mini-celda reversa"><span aria-hidden="true">⠉</span>C</span>
-                  </div>
-                  <p class="accion-hoja">La palabra se observa invertida desde la cara donde fue punzada.</p>
-                </div>
-                <div class="flecha-giro" aria-hidden="true">↻</div>
-                <div class="hoja-grafica hoja-frente">
-                  <strong>Después de voltear: frente</strong>
-                  <div class="mini-palabra">
-                    <span class="mini-celda"><span aria-hidden="true">⠉</span>C</span>
-                    <span class="mini-celda"><span aria-hidden="true">⠁</span>A</span>
-                    <span class="mini-celda"><span aria-hidden="true">⠎</span>S</span>
-                    <span class="mini-celda"><span aria-hidden="true">⠁</span>A</span>
-                  </div>
-                  <p class="accion-hoja">Los puntos quedan en relieve y la palabra recupera el orden normal.</p>
-                </div>
-              </div>
-            </section>
-
-            <div class="conector-etapas" aria-hidden="true">↓</div>
-
-            <section class="etapa-grafica" aria-labelledby="etapa-resultado">
-              <div class="etapa-encabezado"><span class="numero-etapa">5</span><h4 id="etapa-resultado">Leer el resultado de izquierda a derecha</h4></div>
-              <div class="direccion-grafica"><span>Inicio</span><div class="linea-direccion derecha" aria-hidden="true"></div><span>Fin</span></div>
-              <div class="palabra-demostracion" aria-label="Resultado final de la palabra CASA en Braille para leerse de izquierda a derecha">
-                <span class="celda-palabra"><b>C</b><i aria-hidden="true">⠉</i><small>Primera</small></span>
-                <span class="celda-palabra"><b>A</b><i aria-hidden="true">⠁</i><small>Segunda</small></span>
-                <span class="celda-palabra"><b>S</b><i aria-hidden="true">⠎</i><small>Tercera</small></span>
-                <span class="celda-palabra"><b>A</b><i aria-hidden="true">⠁</i><small>Cuarta</small></span>
-              </div>
-              <p class="nota-ejemplo">La lectura vuelve a realizarse tal como estamos acostumbrados: se empieza a la izquierda y se continúa hacia la derecha.</p>
-            </section>
-          </div>
-
-          <div class="clave-sentidos">
-            <div><strong>Lectura y resultado final</strong>Siempre siguen el sentido de izquierda a derecha en español.</div>
-            <div><strong>Escritura con regleta y punzón convencionales</strong>Se realiza desde la derecha hacia la izquierda porque se trabaja por el reverso de la hoja.</div>
-          </div>
-
-          <p>La inversión corresponde al procedimiento para producir los puntos en relieve. No significa que el Braille se lea de derecha a izquierda. Con una máquina Perkins, una impresora Braille o una regleta positiva, la escritura se realiza directamente de izquierda a derecha.</p>
-
-          <h4>Orientación pedagógica para iniciar la escritura</h4>
-          <ol class="pasos-pedagogicos">
-            <li>Reconocer los puntos 1 al 6 en una celda presentada en posición de lectura.</li>
-            <li>Practicar cómo se abre la regleta y cómo se sujeta correctamente el papel.</li>
-            <li>Diferenciar la cara posterior donde se punza y la cara frontal donde se leerá el relieve.</li>
-            <li>Comparar una letra en lectura positiva con la posición inversa que debe marcarse desde el reverso.</li>
-            <li>Escribir letras y palabras breves comenzando en el extremo derecho de la regleta.</li>
-            <li>Retirar la hoja, voltearla y comprobar el resultado leyendo desde la izquierda.</li>
-          </ol>
-
-          <div class="nota-teoria">No todas las herramientas exigen escribir al revés. La inversión se aplica principalmente a la regleta y el punzón convencionales de escritura negativa.</div>
-        </article>
-
-        <article class="tarjeta-teoria" id="educacion">
-          <h3>Importancia del Braille en la educación</h3>
-          <p>El Braille es una herramienta clave para la inclusión educativa de estudiantes con discapacidad visual. Su enseñanza favorece el acceso a la lectura, la escritura, la comprensión de textos y la participación en actividades escolares.</p>
-          <p>Cuando un estudiante aprende Braille, también desarrolla autonomía para revisar sus propios escritos, reconocer palabras, organizar información, tomar apuntes, leer indicaciones y participar en tareas académicas.</p>
-          <p>En el contexto escolar, el Braille debe integrarse a las actividades de aprendizaje y no presentarse como un contenido separado de la vida cotidiana del estudiante.</p>
-        </article>
-
-        <article class="tarjeta-teoria" id="orientaciones">
-          <h3>Orientaciones para docentes y familias</h3>
-          <p>El aprendizaje del Braille debe ser gradual. Primero se puede trabajar la exploración táctil, la orientación espacial, la discriminación de texturas, la ubicación de puntos y el reconocimiento de formas simples. Luego se introducen letras, números, palabras y frases.</p>
-          <h3>Para docentes</h3>
-          <ul>
-            <li>Presentar el Braille como una forma válida de lectura y escritura, no como una actividad aislada.</li>
-            <li>Usar materiales claros, ordenados y con suficiente espacio entre elementos.</li>
-            <li>Evitar sobrecargar al estudiante con demasiados signos en una sola actividad.</li>
-            <li>Relacionar el Braille con palabras reales, objetos del aula y situaciones cotidianas.</li>
-            <li>Coordinar con la familia para reforzar el aprendizaje en casa.</li>
-          </ul>
-          <h3>Para familias</h3>
-          <ul>
-            <li>Acompañar con paciencia, sin presionar al estudiante.</li>
-            <li>Reconocer sus avances, aunque sean pequeños.</li>
-            <li>Usar etiquetas simples en objetos del hogar cuando sea pertinente.</li>
-            <li>Promover la autonomía en actividades diarias.</li>
-            <li>Consultar con especialistas cuando existan dudas sobre el proceso de aprendizaje.</li>
-          </ul>
-        </article>
-
-        <article class="tarjeta-teoria">
-          <h3>Ideas equivocadas sobre el Braille</h3>
-          <p>A veces se piensa que el Braille es muy difícil o que solo sirve para personas adultas. En realidad, puede aprenderse de manera progresiva desde edades tempranas, siempre que se respeten los ritmos y necesidades de cada estudiante.</p>
-          <table class="tabla-simple">
-            <thead><tr><th>Idea equivocada</th><th>Una mirada más adecuada</th></tr></thead>
-            <tbody>
-              <tr><td>"El Braille es un idioma".</td><td>El Braille es un sistema de lectura y escritura. Puede representar distintos idiomas.</td></tr>
-              <tr><td>"Solo sirve para leer libros".</td><td>También se usa en etiquetas, señalización, materiales escolares y tecnología.</td></tr>
-              <tr><td>"La tecnología reemplaza al Braille".</td><td>La tecnología ayuda, pero el Braille sigue siendo importante para la alfabetización.</td></tr>
-              <tr><td>"Aprender Braille es imposible".</td><td>Requiere práctica y acompañamiento, pero puede aprenderse paso a paso.</td></tr>
-            </tbody>
-          </table>
-        </article>
-
-        <article class="tarjeta-teoria">
-          <h3>Cómo usar esta plataforma</h3>
-          <p>Esta plataforma permite explorar signos Braille de manera sencilla. El usuario puede revisar letras, números, signos básicos, vocales acentuadas y palabras básicas. También puede usar la búsqueda para ubicar un contenido específico.</p>
-          <p>La intención del recurso no es reemplazar la enseñanza directa del Braille, sino ofrecer un apoyo visual y pedagógico para docentes, familias, estudiantes y profesionales vinculados a la educación inclusiva.</p>
-          <p>Puede utilizarse como material de consulta, apoyo para sesiones educativas, introducción al sistema Braille o recurso complementario durante actividades de sensibilización.</p>
-          <div class="nota-teoria">Para una enseñanza formal del Braille, se recomienda contar con orientación especializada y materiales táctiles reales, ya que la práctica con puntos en relieve es fundamental.</div>
-        </article>
-
-        <article class="tarjeta-teoria">
-          <h3>Cierre</h3>
-          <p>El sistema Braille representa una oportunidad para fortalecer la autonomía, la comunicación y el acceso a la educación. Su aprendizaje abre caminos para que las personas con discapacidad visual participen con mayor independencia en la escuela, la familia y la comunidad.</p>
-          <p>Conocer el Braille también ayuda a construir una mirada más inclusiva. Cuando docentes, familias y estudiantes comprenden su valor, se generan mejores condiciones para acompañar los procesos de aprendizaje y participación.</p>
-        </article>
+        <article class="tarjeta-teoria" id="que-es"><h3>¿Qué es el sistema Braille?</h3><p>El Braille es un sistema de lectura y escritura basado en puntos en relieve. Estos puntos se perciben con el tacto, principalmente con las yemas de los dedos. Gracias a este sistema, una persona con discapacidad visual puede leer letras, números, signos de puntuación, palabras, frases y textos completos.</p><p>No se trata de un idioma diferente. El Braille es un código. Esto significa que puede representar distintos idiomas, como el español, el inglés, el quechua u otros, según las reglas que se utilicen.</p><p>Su valor educativo es muy importante porque permite que el estudiante acceda a la lectura y la escritura de manera directa. No depende únicamente de escuchar información, sino que puede explorar, leer, revisar, corregir y producir textos usando sus propias manos.</p><div class="nota-teoria">El Braille no reemplaza la voz, los audios ni la tecnología. Los complementa. Su propósito es fortalecer la autonomía, la alfabetización y el acceso real a la información escrita.</div></article>
+        <article class="tarjeta-teoria"><h3>Breve historia del Braille</h3><p>El sistema Braille fue creado por Louis Braille, una persona francesa que perdió la visión durante su infancia. Desde muy joven buscó una forma más práctica para que las personas ciegas pudieran leer y escribir.</p><p>Su aporte fue usar una celda de seis puntos. Con esos seis puntos se podían formar distintas combinaciones para representar letras, números y signos. Esta idea permitió que la lectura táctil fuera más rápida, clara y accesible.</p><p>Con el tiempo, el Braille se difundió en muchos países y fue adaptándose a diferentes lenguas y necesidades. Hoy se usa en libros, materiales educativos, señalización, ascensores, medicamentos, documentos, tecnología y recursos de apoyo para la inclusión.</p></article>
+        <article class="tarjeta-teoria" id="como-funciona"><h3>¿Cómo funciona la celda Braille?</h3><p>La base del sistema es la celda Braille. Esta celda está formada por seis puntos distribuidos en dos columnas y tres filas. Cada punto tiene una posición específica y se numera del 1 al 6.</p><div class="braille-demo" aria-label="Representación de los seis puntos Braille"><div class="punto">1</div><div class="punto">4</div><div class="punto">2</div><div class="punto">5</div><div class="punto">3</div><div class="punto">6</div></div><p>La columna izquierda contiene los puntos 1, 2 y 3. La columna derecha contiene los puntos 4, 5 y 6. Al combinar algunos de estos puntos, se forman las letras, los números y otros signos.</p><table class="tabla-simple"><thead><tr><th>Elemento</th><th>Explicación sencilla</th></tr></thead><tbody><tr><td>Celda Braille</td><td>Es el espacio básico donde se organizan los seis puntos.</td></tr><tr><td>Puntos en relieve</td><td>Son pequeños puntos que se pueden sentir con los dedos.</td></tr><tr><td>Combinación</td><td>Es la forma en que se activan algunos puntos para crear un signo.</td></tr><tr><td>Lectura táctil</td><td>Es la lectura que se realiza mediante el tacto, no mediante la vista.</td></tr></tbody></table><div class="nota-teoria">Para aprender Braille no basta con memorizar puntos. También se necesita práctica táctil, orientación, acompañamiento pedagógico y materiales adecuados.</div></article>
+        <article class="tarjeta-teoria" id="alfabeto"><h3>Construcción pedagógica del alfabeto Braille</h3><p>El alfabeto puede comprenderse por series. Esta organización permite reconocer que muchas letras nuevas se forman a partir de combinaciones ya aprendidas, añadiendo uno o dos puntos en la parte inferior de la celda.</p><h4>Primera serie: de la A a la J</h4><p>Las letras de la A a la J utilizan únicamente los puntos 1, 2, 4 y 5. En esta primera serie todavía no se emplean los puntos inferiores 3 y 6.</p><div class="alfabeto-braille" role="list" aria-label="Primera serie del alfabeto Braille, letras A a J"><div class="letra-braille" role="listitem" aria-label="Letra a, punto 1"><span class="letra-latina">A</span><span class="signo-braille" aria-hidden="true">⠁</span><span class="puntos-letra">Punto 1</span></div><div class="letra-braille" role="listitem" aria-label="Letra b, puntos 1 y 2"><span class="letra-latina">B</span><span class="signo-braille" aria-hidden="true">⠃</span><span class="puntos-letra">Puntos 1-2</span></div><div class="letra-braille" role="listitem" aria-label="Letra c, puntos 1 y 4"><span class="letra-latina">C</span><span class="signo-braille" aria-hidden="true">⠉</span><span class="puntos-letra">Puntos 1-4</span></div><div class="letra-braille" role="listitem" aria-label="Letra d, puntos 1, 4 y 5"><span class="letra-latina">D</span><span class="signo-braille" aria-hidden="true">⠙</span><span class="puntos-letra">Puntos 1-4-5</span></div><div class="letra-braille" role="listitem" aria-label="Letra e, puntos 1 y 5"><span class="letra-latina">E</span><span class="signo-braille" aria-hidden="true">⠑</span><span class="puntos-letra">Puntos 1-5</span></div><div class="letra-braille" role="listitem" aria-label="Letra f, puntos 1, 2 y 4"><span class="letra-latina">F</span><span class="signo-braille" aria-hidden="true">⠋</span><span class="puntos-letra">Puntos 1-2-4</span></div><div class="letra-braille" role="listitem" aria-label="Letra g, puntos 1, 2, 4 y 5"><span class="letra-latina">G</span><span class="signo-braille" aria-hidden="true">⠛</span><span class="puntos-letra">Puntos 1-2-4-5</span></div><div class="letra-braille" role="listitem" aria-label="Letra h, puntos 1, 2 y 5"><span class="letra-latina">H</span><span class="signo-braille" aria-hidden="true">⠓</span><span class="puntos-letra">Puntos 1-2-5</span></div><div class="letra-braille" role="listitem" aria-label="Letra i, puntos 2 y 4"><span class="letra-latina">I</span><span class="signo-braille" aria-hidden="true">⠊</span><span class="puntos-letra">Puntos 2-4</span></div><div class="letra-braille" role="listitem" aria-label="Letra j, puntos 2, 4 y 5"><span class="letra-latina">J</span><span class="signo-braille" aria-hidden="true">⠚</span><span class="puntos-letra">Puntos 2-4-5</span></div></div><h4>Segunda serie: de la K a la T</h4><p>La segunda serie repite, en el mismo orden, las formas de la A a la J y añade el punto 3. Por ejemplo, la A se convierte en K; la B, en L; y la J, en T.</p><div class="alfabeto-braille" role="list" aria-label="Segunda serie del alfabeto Braille, letras K a T"><div class="letra-braille" role="listitem" aria-label="Letra k, puntos 1 y 3"><span class="letra-latina">K</span><span class="signo-braille" aria-hidden="true">⠅</span><span class="puntos-letra">Puntos 1-3</span></div><div class="letra-braille" role="listitem" aria-label="Letra l, puntos 1, 2 y 3"><span class="letra-latina">L</span><span class="signo-braille" aria-hidden="true">⠇</span><span class="puntos-letra">Puntos 1-2-3</span></div><div class="letra-braille" role="listitem" aria-label="Letra m, puntos 1, 3 y 4"><span class="letra-latina">M</span><span class="signo-braille" aria-hidden="true">⠍</span><span class="puntos-letra">Puntos 1-3-4</span></div><div class="letra-braille" role="listitem" aria-label="Letra n, puntos 1, 3, 4 y 5"><span class="letra-latina">N</span><span class="signo-braille" aria-hidden="true">⠝</span><span class="puntos-letra">Puntos 1-3-4-5</span></div><div class="letra-braille" role="listitem" aria-label="Letra o, puntos 1, 3 y 5"><span class="letra-latina">O</span><span class="signo-braille" aria-hidden="true">⠕</span><span class="puntos-letra">Puntos 1-3-5</span></div><div class="letra-braille" role="listitem" aria-label="Letra p, puntos 1, 2, 3 y 4"><span class="letra-latina">P</span><span class="signo-braille" aria-hidden="true">⠏</span><span class="puntos-letra">Puntos 1-2-3-4</span></div><div class="letra-braille" role="listitem" aria-label="Letra q, puntos 1, 2, 3, 4 y 5"><span class="letra-latina">Q</span><span class="signo-braille" aria-hidden="true">⠟</span><span class="puntos-letra">Puntos 1-2-3-4-5</span></div><div class="letra-braille" role="listitem" aria-label="Letra r, puntos 1, 2, 3 y 5"><span class="letra-latina">R</span><span class="signo-braille" aria-hidden="true">⠗</span><span class="puntos-letra">Puntos 1-2-3-5</span></div><div class="letra-braille" role="listitem" aria-label="Letra s, puntos 2, 3 y 4"><span class="letra-latina">S</span><span class="signo-braille" aria-hidden="true">⠎</span><span class="puntos-letra">Puntos 2-3-4</span></div><div class="letra-braille" role="listitem" aria-label="Letra t, puntos 2, 3, 4 y 5"><span class="letra-latina">T</span><span class="signo-braille" aria-hidden="true">⠞</span><span class="puntos-letra">Puntos 2-3-4-5</span></div></div><h4>Tercera serie: U, V, X, Y y Z</h4><p>Para formar U, V, X, Y y Z se toman las letras K, L, M, N y O, que ya contienen el punto 3, y se añade el punto 6. Por eso esta serie conserva la forma anterior y completa la fila inferior de la celda.</p><table class="tabla-simple tabla-series"><thead><tr><th>Primera serie</th><th>Más punto 3</th><th>Más punto 6</th></tr></thead><tbody><tr><td>A ⠁</td><td>K ⠅</td><td>U ⠥</td></tr><tr><td>B ⠃</td><td>L ⠇</td><td>V ⠧</td></tr><tr><td>C ⠉</td><td>M ⠍</td><td>X ⠭</td></tr><tr><td>D ⠙</td><td>N ⠝</td><td>Y ⠽</td></tr><tr><td>E ⠑</td><td>O ⠕</td><td>Z ⠵</td></tr></tbody></table><div class="alfabeto-braille" role="list" aria-label="Tercera serie del alfabeto Braille, letras U, V, X, Y y Z"><div class="letra-braille" role="listitem" aria-label="Letra u, puntos 1, 3 y 6"><span class="letra-latina">U</span><span class="signo-braille" aria-hidden="true">⠥</span><span class="puntos-letra">Puntos 1-3-6</span></div><div class="letra-braille" role="listitem" aria-label="Letra v, puntos 1, 2, 3 y 6"><span class="letra-latina">V</span><span class="signo-braille" aria-hidden="true">⠧</span><span class="puntos-letra">Puntos 1-2-3-6</span></div><div class="letra-braille" role="listitem" aria-label="Letra x, puntos 1, 3, 4 y 6"><span class="letra-latina">X</span><span class="signo-braille" aria-hidden="true">⠭</span><span class="puntos-letra">Puntos 1-3-4-6</span></div><div class="letra-braille" role="listitem" aria-label="Letra y, puntos 1, 3, 4, 5 y 6"><span class="letra-latina">Y</span><span class="signo-braille" aria-hidden="true">⠽</span><span class="puntos-letra">Puntos 1-3-4-5-6</span></div><div class="letra-braille" role="listitem" aria-label="Letra z, puntos 1, 3, 5 y 6"><span class="letra-latina">Z</span><span class="signo-braille" aria-hidden="true">⠵</span><span class="puntos-letra">Puntos 1-3-5-6</span></div></div><h4>La W y la Ñ</h4><p>La W es una excepción dentro de esta secuencia y se representa con los puntos 2-4-5-6. La Ñ es una letra propia del alfabeto español y se representa con los puntos 1-2-4-5-6.</p><div class="alfabeto-braille alfabeto-complementario" role="list" aria-label="Letras complementarias W y Ñ"><div class="letra-braille" role="listitem" aria-label="Letra w, puntos 2, 4, 5 y 6"><span class="letra-latina">W</span><span class="signo-braille" aria-hidden="true">⠺</span><span class="puntos-letra">Puntos 2-4-5-6</span></div><div class="letra-braille" role="listitem" aria-label="Letra ñ, puntos 1, 2, 4, 5 y 6"><span class="letra-latina">Ñ</span><span class="signo-braille" aria-hidden="true">⠻</span><span class="puntos-letra">Puntos 1-2-4-5-6</span></div></div><div class="nota-teoria">Secuencia sugerida: primero reconocer la celda y las letras A-J; después relacionar A-J con K-T mediante el punto 3; finalmente comparar K-O con U-V-X-Y-Z al añadir el punto 6. La W y la Ñ se enseñan como configuraciones específicas.</div></article>
+        <article class="tarjeta-teoria"><h3>Letras, números y signos</h3><p>En Braille, cada letra se representa mediante una combinación específica de puntos. Las primeras letras del alfabeto son especialmente importantes porque sirven como base para comprender otras combinaciones.</p><p>Los números también se representan en Braille, pero normalmente requieren un signo previo que indica que lo que sigue debe leerse como número. Una misma combinación puede tener valor de letra o de número, según el signo que la antecede.</p><p>También existen signos para la puntuación, las vocales acentuadas, las mayúsculas y otros usos específicos. Esto permite escribir frases completas, textos escolares, indicaciones, nombres, fechas y contenidos de distintas áreas curriculares.</p></article>
+        <article class="tarjeta-teoria" id="lectura-escritura"><h3>Lectura y escritura: sentidos diferentes según la herramienta</h3><p>El Braille se lee de izquierda a derecha, igual que un texto habitual en español. La escritura cambia de sentido únicamente cuando se utiliza una regleta convencional y un punzón, porque los puntos se marcan desde el reverso del papel para que aparezcan en relieve al voltearlo.</p><p>La siguiente secuencia utiliza la palabra "CASA" para mostrar todo el proceso, desde la lectura inicial hasta el resultado final.</p><div class="secuencia-grafica-braille" aria-label="Secuencia gráfica para leer y escribir Braille con regleta y punzón"><section class="etapa-grafica" aria-labelledby="etapa-lectura"><div class="etapa-encabezado"><span class="numero-etapa">1</span><h4 id="etapa-lectura">Observar cómo se lee</h4></div><div class="direccion-grafica"><span>Inicio</span><div class="linea-direccion derecha" aria-hidden="true"></div><span>Fin</span></div><div class="palabra-demostracion" aria-label="Palabra CASA organizada para leerse de izquierda a derecha"><span class="celda-palabra"><b>C</b><i aria-hidden="true">⠉</i><small>Primera</small></span><span class="celda-palabra"><b>A</b><i aria-hidden="true">⠁</i><small>Segunda</small></span><span class="celda-palabra"><b>S</b><i aria-hidden="true">⠎</i><small>Tercera</small></span><span class="celda-palabra"><b>A</b><i aria-hidden="true">⠁</i><small>Cuarta</small></span></div><p class="nota-ejemplo">Los dedos comienzan en la primera celda situada a la izquierda y avanzan hacia la derecha: C → A → S → A.</p></section><div class="conector-etapas" aria-hidden="true">↓</div><section class="etapa-grafica" aria-labelledby="etapa-colocar-papel"><div class="etapa-encabezado"><span class="numero-etapa">2</span><h4 id="etapa-colocar-papel">Colocar el papel dentro de la regleta</h4></div><p>Se abre la regleta y se introduce la hoja entre la parte inferior y la parte superior. La cara posterior del papel queda orientada hacia quien escribe, porque allí se presionará con el punzón.</p><div class="montaje-regleta" role="img" aria-label="Esquema de una hoja colocada entre la base y la tapa de una regleta Braille"><span class="etiqueta-pieza etiqueta-tapa">Tapa o guía superior</span><div class="regleta-tapa" aria-hidden="true"></div><div class="papel-en-regleta">Papel colocado y sujetado<br>Cara posterior hacia arriba</div><div class="regleta-base" aria-hidden="true"></div><span class="etiqueta-pieza etiqueta-papel">Papel entre ambas partes</span><span class="etiqueta-pieza etiqueta-base">Base de la regleta</span></div><p class="leyenda-esquema">Esquema referencial. La forma y el sistema de cierre pueden variar según el modelo de regleta.</p></section><div class="conector-etapas" aria-hidden="true">↓</div><section class="etapa-grafica" aria-labelledby="etapa-escribir"><div class="etapa-encabezado"><span class="numero-etapa">3</span><h4 id="etapa-escribir">Escribir por el reverso, de derecha a izquierda</h4></div><div class="direccion-grafica"><span>Fin</span><div class="linea-direccion izquierda" aria-hidden="true"></div><span>Inicio</span></div><p>Se empieza en la celda ubicada en el extremo derecho. Después de marcar la C, se avanza una celda hacia la izquierda para escribir la A, luego la S y finalmente la última A. Visto desde el reverso, el orden queda invertido.</p><div class="regleta-escritura" role="img" aria-label="Regleta con la palabra CASA escrita por el reverso, comenzando en la derecha y avanzando hacia la izquierda"><span class="marca-inicio-escritura">Aquí comienza la escritura</span><span class="punzon-grafico" aria-hidden="true"></span><div class="fila-regleta"><div class="celda-regleta"><span class="signo-reverso" aria-hidden="true">⠁</span><small>A, cuarta letra escrita</small></div><div class="celda-regleta"><span class="signo-reverso" aria-hidden="true">⠎</span><small>S, tercera letra escrita</small></div><div class="celda-regleta"><span class="signo-reverso" aria-hidden="true">⠁</span><small>A, segunda letra escrita</small></div><div class="celda-regleta"><span class="signo-reverso" aria-hidden="true">⠉</span><small>C, primera letra escrita</small></div></div><div class="orden-reverso"><span>El avance continúa hacia la izquierda</span><span>Inicio en el extremo derecho</span></div></div><p class="nota-ejemplo">Desde esta cara posterior se observa A - S - A - C. Los signos también se punzan en posición inversa para que, al voltear la hoja, aparezcan correctamente en relieve.</p></section><div class="conector-etapas" aria-hidden="true">↓</div><section class="etapa-grafica" aria-labelledby="etapa-voltear"><div class="etapa-encabezado"><span class="numero-etapa">4</span><h4 id="etapa-voltear">Sacar el papel y voltearlo</h4></div><p>Al terminar, se abre la regleta, se retira la hoja y se gira para colocar hacia arriba la cara donde quedaron los puntos en relieve. Este giro transforma la posición inversa de escritura en la posición correcta de lectura.</p><div class="giro-hoja" role="img" aria-label="La hoja se retira de la regleta y se voltea desde el reverso hacia el frente"><div class="hoja-grafica hoja-reverso"><strong>Antes de voltear: reverso</strong><div class="mini-palabra"><span class="mini-celda reversa"><span aria-hidden="true">⠁</span>A</span><span class="mini-celda reversa"><span aria-hidden="true">⠎</span>S</span><span class="mini-celda reversa"><span aria-hidden="true">⠁</span>A</span><span class="mini-celda reversa"><span aria-hidden="true">⠉</span>C</span></div><p class="accion-hoja">La palabra se observa invertida desde la cara donde fue punzada.</p></div><div class="flecha-giro" aria-hidden="true">↻</div><div class="hoja-grafica hoja-frente"><strong>Después de voltear: frente</strong><div class="mini-palabra"><span class="mini-celda"><span aria-hidden="true">⠉</span>C</span><span class="mini-celda"><span aria-hidden="true">⠁</span>A</span><span class="mini-celda"><span aria-hidden="true">⠎</span>S</span><span class="mini-celda"><span aria-hidden="true">⠁</span>A</span></div><p class="accion-hoja">Los puntos quedan en relieve y la palabra recupera el orden normal.</p></div></div></section><div class="conector-etapas" aria-hidden="true">↓</div><section class="etapa-grafica" aria-labelledby="etapa-resultado"><div class="etapa-encabezado"><span class="numero-etapa">5</span><h4 id="etapa-resultado">Leer el resultado de izquierda a derecha</h4></div><div class="direccion-grafica"><span>Inicio</span><div class="linea-direccion derecha" aria-hidden="true"></div><span>Fin</span></div><div class="palabra-demostracion" aria-label="Resultado final de la palabra CASA en Braille para leerse de izquierda a derecha"><span class="celda-palabra"><b>C</b><i aria-hidden="true">⠉</i><small>Primera</small></span><span class="celda-palabra"><b>A</b><i aria-hidden="true">⠁</i><small>Segunda</small></span><span class="celda-palabra"><b>S</b><i aria-hidden="true">⠎</i><small>Tercera</small></span><span class="celda-palabra"><b>A</b><i aria-hidden="true">⠁</i><small>Cuarta</small></span></div><p class="nota-ejemplo">La lectura vuelve a realizarse tal como estamos acostumbrados: se empieza a la izquierda y se continúa hacia la derecha.</p></section></div><div class="clave-sentidos"><div><strong>Lectura y resultado final</strong>Siempre siguen el sentido de izquierda a derecha en español.</div><div><strong>Escritura con regleta y punzón convencionales</strong>Se realiza desde la derecha hacia la izquierda porque se trabaja por el reverso de la hoja.</div></div><p>La inversión corresponde al procedimiento para producir los puntos en relieve. No significa que el Braille se lea de derecha a izquierda. Con una máquina Perkins, una impresora Braille o una regleta positiva, la escritura se realiza directamente de izquierda a derecha.</p><h4>Orientación pedagógica para iniciar la escritura</h4><ol class="pasos-pedagogicos"><li>Reconocer los puntos 1 al 6 en una celda presentada en posición de lectura.</li><li>Practicar cómo se abre la regleta y cómo se sujeta correctamente el papel.</li><li>Diferenciar la cara posterior donde se punza y la cara frontal donde se leerá el relieve.</li><li>Comparar una letra en lectura positiva con la posición inversa que debe marcarse desde el reverso.</li><li>Escribir letras y palabras breves comenzando en el extremo derecho de la regleta.</li><li>Retirar la hoja, voltearla y comprobar el resultado leyendo desde la izquierda.</li></ol><div class="nota-teoria">No todas las herramientas exigen escribir al revés. La inversión se aplica principalmente a la regleta y el punzón convencionales de escritura negativa.</div></article>
+        <article class="tarjeta-teoria" id="educacion"><h3>Importancia del Braille en la educación</h3><p>El Braille es una herramienta clave para la inclusión educativa de estudiantes con discapacidad visual. Su enseñanza favorece el acceso a la lectura, la escritura, la comprensión de textos y la participación en actividades escolares.</p><p>Cuando un estudiante aprende Braille, también desarrolla autonomía para revisar sus propios escritos, reconocer palabras, organizar información, tomar apuntes, leer indicaciones y participar en tareas académicas.</p><p>En el contexto escolar, el Braille debe integrarse a las actividades de aprendizaje y no presentarse como un contenido separado de la vida cotidiana del estudiante.</p></article>
+        <article class="tarjeta-teoria" id="orientaciones"><h3>Orientaciones para docentes y familias</h3><p>El aprendizaje del Braille debe ser gradual. Primero se puede trabajar la exploración táctil, la orientación espacial, la discriminación de texturas, la ubicación de puntos y el reconocimiento de formas simples. Luego se introducen letras, números, palabras y frases.</p><h3>Para docentes</h3><ul><li>Presentar el Braille como una forma válida de lectura y escritura, no como una actividad aislada.</li><li>Usar materiales claros, ordenados y con suficiente espacio entre elementos.</li><li>Evitar sobrecargar al estudiante con demasiados signos en una sola actividad.</li><li>Relacionar el Braille con palabras reales, objetos del aula y situaciones cotidianas.</li><li>Coordinar con la familia para reforzar el aprendizaje en casa.</li></ul><h3>Para familias</h3><ul><li>Acompañar con paciencia, sin presionar al estudiante.</li><li>Reconocer sus avances, aunque sean pequeños.</li><li>Usar etiquetas simples en objetos del hogar cuando sea pertinente.</li><li>Promover la autonomía en actividades diarias.</li><li>Consultar con especialistas cuando existan dudas sobre el proceso de aprendizaje.</li></ul></article>
+        <article class="tarjeta-teoria"><h3>Ideas equivocadas sobre el Braille</h3><p>A veces se piensa que el Braille es muy difícil o que solo sirve para personas adultas. En realidad, puede aprenderse de manera progresiva desde edades tempranas, siempre que se respeten los ritmos y necesidades de cada estudiante.</p><table class="tabla-simple"><thead><tr><th>Idea equivocada</th><th>Una mirada más adecuada</th></tr></thead><tbody><tr><td>"El Braille es un idioma".</td><td>El Braille es un sistema de lectura y escritura. Puede representar distintos idiomas.</td></tr><tr><td>"Solo sirve para leer libros".</td><td>También se usa en etiquetas, señalización, materiales escolares y tecnología.</td></tr><tr><td>"La tecnología reemplaza al Braille".</td><td>La tecnología ayuda, pero el Braille sigue siendo importante para la alfabetización.</td></tr><tr><td>"Aprender Braille es imposible".</td><td>Requiere práctica y acompañamiento, pero puede aprenderse paso a paso.</td></tr></tbody></table></article>
+        <article class="tarjeta-teoria"><h3>Cómo usar esta plataforma</h3><p>Esta plataforma permite explorar signos Braille de manera sencilla. El usuario puede revisar letras, números, signos básicos, vocales acentuadas y palabras básicas. También puede usar la búsqueda para ubicar un contenido específico.</p><p>La intención del recurso no es reemplazar la enseñanza directa del Braille, sino ofrecer un apoyo visual y pedagógico para docentes, familias, estudiantes y profesionales vinculados a la educación inclusiva.</p><p>Puede utilizarse como material de consulta, apoyo para sesiones educativas, introducción al sistema Braille o recurso complementario durante actividades de sensibilización.</p><div class="nota-teoria">Para una enseñanza formal del Braille, se recomienda contar con orientación especializada y materiales táctiles reales, ya que la práctica con puntos en relieve es fundamental.</div></article>
+        <article class="tarjeta-teoria"><h3>Cierre</h3><p>El sistema Braille representa una oportunidad para fortalecer la autonomía, la comunicación y el acceso a la educación. Su aprendizaje abre caminos para que las personas con discapacidad visual participen con mayor independencia en la escuela, la familia y la comunidad.</p><p>Conocer el Braille también ayuda a construir una mirada más inclusiva. Cuando docentes, familias y estudiantes comprenden su valor, se generan mejores condiciones para acompañar los procesos de aprendizaje y participación.</p></article>
       </div>
-
       <div class="acciones-teoria"><a class="boton-volver" href="index.html">Volver al módulo Braille</a><a class="boton-secundario-info" href="faq.html">Preguntas frecuentes</a><a class="boton-secundario-info" href="accesibilidad.html">Accesibilidad Braille</a></div>
     </section>
   </main>
-
-  <footer>
-    <div class="footer-contenido"><div class="footer-bloque"><h2>Banco Digital Braille</h2><p>Recurso educativo para la consulta y el reconocimiento inicial del sistema Braille en contextos inclusivos.</p></div><div class="footer-bloque"><h2>Enlaces</h2><p><a href="../index.html">Banco Digital Accesible</a><br><a href="index.html">Inicio Braille</a><br><a href="faq.html">Preguntas frecuentes</a><br><a href="accesibilidad.html">Accesibilidad Braille</a></p></div><div class="footer-bloque"><h2>Contacto</h2><p><a href="https://crebe-ucayali.github.io/accesos-complementarios/paginas/contacto.html">Contacto Institucional</a></p></div><div class="footer-bloque"><h2>Uso pedagógico</h2><p>El recurso debe acompañarse con orientación especializada y materiales táctiles reales cuando se trabaje aprendizaje formal del Braille.</p></div></div>
-    <div class="footer-final"><p>© 2026 Gabriel Berrospi. Desarrollo original. Uso institucional autorizado al CREBE "Señor de los Milagros" - Ucayali.</p></div>
-  </footer>
+  <footer><div class="footer-contenido"><div class="footer-bloque"><h2>Banco Digital Braille</h2><p>Recurso educativo para la consulta y el reconocimiento inicial del sistema Braille en contextos inclusivos.</p></div><div class="footer-bloque"><h2>Enlaces</h2><p><a href="../index.html">Banco Digital Accesible</a><br><a href="index.html">Inicio Braille</a><br><a href="faq.html">Preguntas frecuentes</a><br><a href="accesibilidad.html">Accesibilidad Braille</a></p></div><div class="footer-bloque"><h2>Contacto</h2><p><a href="https://crebe-ucayali.github.io/accesos-complementarios/paginas/contacto.html">Contacto Institucional</a></p></div><div class="footer-bloque"><h2>Uso pedagógico</h2><p>El recurso debe acompañarse con orientación especializada y materiales táctiles reales cuando se trabaje aprendizaje formal del Braille.</p></div></div><div class="footer-final"><p>© 2026 Gabriel Berrospi. Desarrollo original. Uso institucional autorizado al CREBE "Señor de los Milagros" - Ucayali.</p></div></footer>
+  <script src="../accesibilidad.js?v=2" defer></script>
 </body>
 </html>
