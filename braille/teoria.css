@@ -52,6 +52,13 @@
   margin-top:0;
 }
 
+.tarjeta-teoria h4{
+  margin:24px 0 10px;
+  color:#0b3550;
+  font-size:1.02rem;
+  line-height:1.35;
+}
+
 .tarjeta-teoria p,
 .tarjeta-teoria li{
   color:#486581;
@@ -66,7 +73,8 @@
   margin-bottom:0;
 }
 
-.tarjeta-teoria ul{
+.tarjeta-teoria ul,
+.tarjeta-teoria ol{
   margin:10px 0 0;
   padding-left:22px;
 }
@@ -104,6 +112,60 @@
   color:#0b4f4a;
 }
 
+.alfabeto-braille{
+  display:grid;
+  grid-template-columns:repeat(5,minmax(105px,1fr));
+  gap:12px;
+  margin:16px 0 22px;
+}
+
+.alfabeto-complementario{
+  grid-template-columns:repeat(2,minmax(130px,190px));
+}
+
+.letra-braille{
+  display:grid;
+  grid-template-columns:auto 1fr;
+  grid-template-areas:
+    "letra signo"
+    "puntos puntos";
+  align-items:center;
+  gap:4px 12px;
+  min-height:112px;
+  padding:14px;
+  background:#f8fbfc;
+  border:1px solid #d9e2ec;
+  border-radius:18px;
+}
+
+.letra-latina{
+  grid-area:letra;
+  display:grid;
+  width:38px;
+  height:38px;
+  place-items:center;
+  color:#ffffff;
+  background:#0f766e;
+  border-radius:12px;
+  font-size:1.05rem;
+  font-weight:900;
+}
+
+.signo-braille{
+  grid-area:signo;
+  color:#0b3550;
+  font-family:"Segoe UI Symbol","Noto Sans Symbols 2",Arial,sans-serif;
+  font-size:2.55rem;
+  line-height:1;
+}
+
+.puntos-letra{
+  grid-area:puntos;
+  color:#486581;
+  font-size:.85rem;
+  font-weight:700;
+}
+
 .tabla-simple{
   width:100%;
   border-collapse:collapse;
@@ -124,6 +186,49 @@
 .tabla-simple th{
   background:#e6f4f1;
   color:#0b4f4a;
+}
+
+.tabla-series td{
+  font-size:1.08rem;
+  font-weight:800;
+}
+
+.flujo-braille{
+  display:grid;
+  grid-template-columns:repeat(3,minmax(0,1fr));
+  gap:14px;
+  margin:18px 0 22px;
+}
+
+.paso-braille{
+  padding:18px;
+  background:#f8fbfc;
+  border:1px solid #d9e2ec;
+  border-radius:18px;
+}
+
+.paso-braille strong{
+  display:block;
+  margin-bottom:8px;
+  color:#0b3550;
+  font-size:1rem;
+}
+
+.paso-braille span{
+  display:block;
+  margin-bottom:8px;
+  color:#0f766e;
+  font-size:1.1rem;
+  font-weight:900;
+}
+
+.paso-braille p{
+  margin:0;
+  font-size:.94rem;
+}
+
+.pasos-pedagogicos li{
+  margin-bottom:8px;
 }
 
 .acciones-teoria{
@@ -152,6 +257,16 @@
   color:#0b4f4a;
 }
 
+@media (max-width:900px){
+  .alfabeto-braille{
+    grid-template-columns:repeat(3,minmax(105px,1fr));
+  }
+
+  .flujo-braille{
+    grid-template-columns:1fr;
+  }
+}
+
 @media (max-width:700px){
   .menu-secciones,
   .acciones-teoria{
@@ -165,7 +280,23 @@
     text-align:center;
   }
 
+  .alfabeto-braille,
+  .alfabeto-complementario{
+    grid-template-columns:repeat(2,minmax(0,1fr));
+  }
+
   .tabla-simple{
     font-size:.94rem;
+  }
+}
+
+@media (max-width:430px){
+  .alfabeto-braille,
+  .alfabeto-complementario{
+    grid-template-columns:1fr;
+  }
+
+  .letra-braille{
+    min-height:96px;
   }
 }
